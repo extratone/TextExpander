@@ -1,5 +1,25 @@
-![Cute Git](https://user-images.githubusercontent.com/43663476/117531764-d6064100-afa9-11eb-9e09-783e189abe8e.gif)
+![[extratonebanner.jpeg]]
 
-# David Blue's GitHub Repository Template
+✖︎✖︎✖︎✖︎✖︎
 
-Howdy! I'm new to all of this and yet I've already grown quite tired of things like Labels not being set up the way I prefer, so I created this template for myself. It is very much a work in progress. I've left it public just in case it'd be of use to anyone else, and I hope it is! If there's any way I can catalyze that, please do reach out!
+![[tebanner.png]]
+
+# David Blue's TextExpander Collection
+
+My *brand new* public repository for [TextExpander](https://textexpander.com/presskit). As in, configuration, documentation, and anything else todo with TextExpander.
+
+## [Shared Collection](https://app.textexpander.com/public/14093096578d4f40eeea15649f5cefbb)
+
+(Just one for now.)
+
+***
+
+## Contact
+
+-   [Contact Card](https://bit.ly/whoisdavidblue)
+-   [Telegram](https://t.me/extratone)
+-   [Email](mailto:davidblue@extratone.com)
+-   [Twitter](https://twitter.com/NeoYokel)
+-   [Mastodon](https://mastodon.social/@DavidBlue)
+-   [Discord](https://discord.gg/0b9KQUKP858b0iZF)
+-   [Everywhere](https://raindrop.io/davidblue/social-directory-21059174)…
