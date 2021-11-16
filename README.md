@@ -1,8 +1,8 @@
-![[extratonebanner.jpeg]]
+![Extratone](https://user-images.githubusercontent.com/43663476/142074991-fbe671b8-a413-4564-b909-298c8b9c1c48.jpeg)
 
 ✖︎✖︎✖︎✖︎✖︎
 
-![[tebanner.png]]
+![TextExpander Banner](https://user-images.githubusercontent.com/43663476/142074836-487effe4-7845-4434-b68b-faa7ba60a100.png)
 
 # David Blue's TextExpander Collection
 
@@ -23,3 +23,5 @@ My *brand new* public repository for [TextExpander](https://textexpander.com/pre
 -   [Mastodon](https://mastodon.social/@DavidBlue)
 -   [Discord](https://discord.gg/0b9KQUKP858b0iZF)
 -   [Everywhere](https://raindrop.io/davidblue/social-directory-21059174)…
+
+![TextExpander](https://user-images.githubusercontent.com/43663476/142075017-26a1c2cc-024c-43c7-8c4d-19b9e749f6a7.png)
