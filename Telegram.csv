@@ -1,0 +1,24 @@
+﻿"app","https://apps.apple.com/us/app/telegram-messenger/id686449807","URL to Telegram Messenger for iOS."
+"db","https://t.me/davidblue","David Blue on Telegram."
+"extras","https://bilge.world/telegram-extras","URL to “Telegram Extras” on The Psalms."
+"fill","{mention}{first}{last}{id}{username}{fullname}","Rose/Telegram Fillings."
+"hi","Hello. Are you reaching out about @columbiamo?","Columbia MO local Telegram Group Chat Prompt"
+"idbreak","-1001140240303","Breakcore Pagans group chat id."
+"idco","-1001227145846","@ColumbiaMO’s chat id."
+"num+","I left my own phone number - +15738234380 - in the `Default Number` field of the Ask for Input action very much on purpose - I promise it'll make my day if you use me as a test subject.",""
+"repo","https://github.com/extratone/t","My Telegram-specific GitHub repository."
+"rules","https://github.com/extratone/columbia/blob/main/rules.md","URL to @ColumbiaMO’s chat rules in its GitHub Repository."
+"scheme","tg://msg?text=[[draft]]&to=+15738234380","Replicate the Telegram URL scheme."
+"tbutton","[%|](buttonurl://%pasteboard)","Rose ButtonURLs."
+"teshare","https://app.textexpander.com/public/de52c54ef169a96393d50cb4752706ce","The share URL for this snippet group."
+"tid","https://t.me/%filltext:name=Channel ID:default=extratone%/%filltext:name=Message ID:default=9941%","Construct a Telegram message link by specifying the channel ID and message number."
+"trust","https://bilge.world/telegram","URL to “I Trust Telegram” on The Psalms."
+"urlco","https://t.me/columbiamo","Link to Columbia’s Local Telegram Group chat."
+"welcome","/setwelcome
+⅁🇴🇴⍙  ㎚@ⓡⓝ⌶🅽g !⏚⏚ {mention}{first}{last}{id}{username}{fullname}!
+%%%%%%
+{mention}{first}{last}{id}{username}{fullname} ARRIVAL
+%%%%%%
+G̏̽o͌ͭoͩ͒d̋̃ ͐ͣm̌orͬͥ n̋ͧi͛̉n̔̎g̏͂! {mention}{first}{last}{id}{username}{fullname}
+
+{rules}",""
