@@ -8,9 +8,21 @@
 
 My *brand new* public repository for [TextExpander](https://textexpander.com/presskit). As in, configuration, documentation, and anything else todo with TextExpander.
 
-## [Shared Collection](https://app.textexpander.com/public/14093096578d4f40eeea15649f5cefbb)
+## Snippet Groups
+- [r/davidblue](https://reddit.com/r/davidblue/comments/siy633/textexpander_snippet_groups/)
+- [Psalms Wiki](https://github.com/extratone/bilge/wiki/TextExpander-Snippet-Groups)
 
-(Just one for now.)
+### [Extratext](https://app.textexpander.com/public/14093096578d4f40eeea15649f5cefbb)
+My general use snippet group. Not particularly useful to anyone.
+
+### [Telegram](https://app.textexpander.com/public/de52c54ef169a96393d50cb4752706ce)
+A Telegram-specific snippet group. Possibly useful for channel/group admins.
+
+### [Tot](https://app.textexpander.com/public/4cef7d32b411c6686d50c7eaff75a7a7)
+A snippet group specific to [Tot for macOS](https://apps.apple.com/us/app/tot/id1491071483).
+
+### [Text Fuck](https://app.textexpander.com/public/12c50fb2360617d3cc66d757cf26383b)
+A snippet group for fucked text.
 
 ***
 
