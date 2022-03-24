@@ -1,0 +1,719 @@
+﻿"","#! imessage --text ""hi"" --contacts ""asphaltapostle@icloud.com""  ",""
+"#","+1 (573) 823-4380","My phone number, internationally formatted."
+"$htmlpage","<!DOCTYPE html>
+<html>
+	<head>
+	%fillpart:name=Include a page title?:default=yes%
+			<title>%filltext:name=Page Title:width=40%</title>%fillpartend%
+	</head>
+	<body>
+	
+	</body>
+</html>","HTML Basic Page Template"
+".neocities","https://%fillpopup:name=NeoCities subdomain:davidblue:iowa:default=uikeycommand:softwarehistory:suc:textfuck:freq:dieselgoth:futureland:periscope%.neocities.org","Keeping track of my absurd number of NeoCities sites."
+".wgetall","wget -e robots=off -R --recursive --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows --domains bilge.world --no-parent %clipboard","Another wget command."
+"12pm","https://support.apple.com/kb/SP832","URL to Apple’s “iPhone 12 Pro Max Technical Specifications” documentation."
+"15","https://bilge.world/ios-15-family-review","URL to “iOS 15 Reviewed for My Family” on The Psalms."
+"1line","TextExpander.pasteboardText.replace(/\r?\n|\r/g, "" "").replace(""  "", "" "").trim()","Take multiple lines of text on the clipboard and merge to a single line."
+"3ts","%@+3h%m%d%Y-%H%M%S","Timestamp in DavodTime + 3 hours"
+"4","https://davidblue.bandcamp.com/album/four","URL to my fourth improv album on bandcamp."
+"Donald Trump","𝘛 𝘜 𝘔 𝘗","Donald Trump ⇨ 𝘛 𝘜 𝘔 𝘗"
+"I'd be remiss","remisss???",""
+"ORCID","0000-0002-9307-2251","My ORCID."
+"\ieeg","tell application ""Safari""
+	
+	activate
+	
+	open location ""https://davidblue.wtf/ieeg""
+	
+end tell","Opens ""e.g. / i.e. / et al."" | John A. Dutton e-Education Institute."
+"\shortieeg","#! shortcuts run ""i.e.-e.g.""","Opens ""e.g. / i.e. / et al."" | John A. Dutton e-Education Institute."
+"a-shell","https://apps.apple.com/us/app/a-shell/id1473805438","App Store share URL for a-Shell for iOS."
+"actions","https://apps.apple.com/us/app/actions/id1586435171","App Store share URL for Actions by Sindre Sorhus."
+"apple","https://music.apple.com/profile/asphaltapostle","URL to my Apple Music profile."
+"appwish","https://apps.apple.com/us/app/appwish-simple-wishlist/id1291909819","App Store share URL for AppWish for iOS."
+"as","https://write.as/bilge/%clipboard/edit","Blog post string to edit page."
+"aud","<audio controls>
+  <source src=""%pasteboard"">
+</audio>","<audio> Element Embed"
+"avalon","https://youtu.be/vC2-RAhBqu0","URL to “Begging the Toyota Avalon for Self-Fulfillment” on YouTube."
+"aviary","https://apps.apple.com/us/app/aviary-for-twitter/id1522043420","App Store share URL for Aviary for iOS."
+"backtap","https://support.apple.com/en-us/HT211781","URL to ""Use Back Tap on your iPhone” Apple documentation."
+"bandcamp","https://bilge.world/bandcamp-streaming-music","Bandcamp - Streaming’s Secret Savior"
+"basic","basic documentation regarding Bluetooth keyboard support for its native apps on iPhone","“…basic documentation regarding Bluetooth keyboard support for its native apps on iPhone”"
+"bbuild","https://bear.app/xurlbuilder/open_note/","URL to the Bear x-callback-url builder."
+"bear","https://apps.apple.com/us/app/bear-markdown-notes/id1016366447","URL to Bear on the App Store."
+"bg","https://bit.ly/dbiosbg","Bit.ly link to my shared iOS wallpapers album."
+"bigsig","<p class=""paragraph""><a href=""https://davidblue.wtf/db.vcf""><u><span class=""size"" style=""font-size:30px""><i>David Blue</i></span></u></a><br></p><p class=""paragraph""><a href=""mailto:davidblue@extratone.com"">davidblue@extratone.com</a><br></p><p class=""paragraph""><a href=""https://bilge.world"">https://bilge.world</a></p>","An old school take on my email signature."
+"bilge","https://bilge.world/%clipboard","Canonical URL of a blog post string."
+"bios","https://bear.app/faq/Shortcuts%%20and%%20more/iOS%%20Shortcuts/","URL to Bear’s documentation for iOS keyboard shortcuts."
+"biotxt","<p style=""margin: 0px 0px 18.6px; font-style: normal; font-variant-caps: normal; font-weight: normal; font-stretch: normal; line-height: normal; -webkit-text-stroke-width: initial; -webkit-text-stroke-color: rgb(0, 0, 238);""><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">Self-Described </span></span></span><a href=""https://bilge.world/why""><u><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">Software Historian</span></span></span></u></a><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">, </span></span></span><a href=""https://github.com/extratone/bilge""><u><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">Writing In Public</span></span></span></u></a><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)""> and </span></span></span><a href=""https://uikeycommand.neocities.org/""><u><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">H e r e 2 H e l p</span></span></span></u></a><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">. (</span></span></span><a href=""https://bit.ly/whoisdavidblue""><u><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">Here’s my contact card</span></span></span></u></a><span class=""size"" style=""font-size:18px""><span class=""font"" style=""font-family:&quot;Trebuchet MS&quot;, sans-serif""><span class=""colour"" style=""color:rgb(0, 0, 107)"">.)</span></span></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><br></span></p><ul style=""list-style-type: disc""><li style=""margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Verdana; color: #0000ee; -webkit-text-stroke: #0000ee""><span class=""font"" style=""font-family:Verdana""><a href=""https://t.me/extratone""><span class=""font"" style=""font-family:Verdana""><u><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">Telegram</span></span></u></span></a></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px""><br></span></span></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Verdana; color: #0000ee; -webkit-text-stroke: #0000ee""><span class=""font"" style=""font-family:Verdana""><a href=""mailto:davidblue@extratone.com""><span class=""font"" style=""font-family:Verdana""><u><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">Email</span></span></u></span></a></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px""><br></span></span></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Verdana; color: #0000ee; -webkit-text-stroke: #0000ee""><span class=""font"" style=""font-family:Verdana""><a href=""https://twitter.com/NeoYokel""><span class=""font"" style=""font-family:Verdana""><u><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">Twitter</span></span></u></span></a></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px""><br></span></span></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Verdana; color: #0000ee; -webkit-text-stroke: #0000ee""><span class=""font"" style=""font-family:Verdana""><a href=""https://mastodon.social/@DavidBlue""><span class=""font"" style=""font-family:Verdana""><u><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">Mastodon</span></span></u></span></a></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px""><br></span></span></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Verdana; color: #0000ee; -webkit-text-stroke: #0000ee""><span class=""font"" style=""font-family:Verdana""><a href=""https://discord.gg/0b9KQUKP858b0iZF""><span class=""font"" style=""font-family:Verdana""><u><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">Discord</span></span></u></span></a></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px""><br></span></span></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; font: 18.7px Verdana; color: #0000ee; -webkit-text-stroke: #0000ee""><i><span class=""font"" style=""font-family:Verdana""><a href=""https://raindrop.io/davidblue/social-directory-21059174""><i><span class=""font"" style=""font-family:Verdana""><u><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">Everywhere</span></span></u></span></i></a></span></i><span class=""font"" style=""font-family:Verdana""><span class=""colour"" style=""color:rgb(0, 0, 107)""><span class=""size"" style=""font-size:12px"">…</span></span></span><span class=""colour"" style=""color:rgb(0, 0, 107)""><br></span></li></ul><p class=""paragraph""></p>","Bio in Rich Text"
+"blimp","https://bilge.world/blimps-burden-chapter-6","URL to “Blimp’s Burden, Chapter VI” on The Psalms."
+"blink","https://testflight.apple.com/v1/app/1156707581","Testflight link to Blink Shell “Community Edition.”"
+"bmac","https://bear.app/faq/Shortcuts%%20and%%20more/Mac%%20shortcuts/","URL to Bear’s documentation for macOS keyboard shortcuts."
+"bnotif","echo -e ""\033]9;%clipboard%|\a""","Construct a Blink notification command."
+"brad","https://anchor.fm/davidblue/episodes/Brad-Varol--Father-of-Whyp-es12ge","URL to my audio interview of Brad Varol, founder of Whyp."
+"break","%%0A","Line break representation in URL schemes."
+"capscolossus","Nᴏᴛ ʟɪᴋᴇ ᴛʜᴇ ʙʀᴀᴢᴇɴ ɢɪᴀɴᴛ ᴏғ Gʀᴇᴇᴋ ғᴀᴍᴇ,
+Wɪᴛʜ ᴄᴏɴǫᴜᴇʀɪɴɢ ʟɪᴍʙs ᴀsᴛʀɪᴅᴇ ғʀᴏᴍ ʟᴀɴᴅ ᴛᴏ ʟᴀɴᴅ;
+Hᴇʀᴇ ᴀᴛ ᴏᴜʀ sᴇᴀ-ᴡᴀsʜᴇᴅ, sᴜɴsᴇᴛ ɢᴀᴛᴇs sʜᴀʟʟ sᴛᴀɴᴅ
+A ᴍɪɢʜᴛʏ ᴡᴏᴍᴀɴ ᴡɪᴛʜ ᴀ ᴛᴏʀᴄʜ, ᴡʜᴏsᴇ ғʟᴀᴍᴇ
+Is ᴛʜᴇ ɪᴍᴘʀɪsᴏɴᴇᴅ ʟɪɢʜᴛɴɪɴɢ, ᴀɴᴅ ʜᴇʀ ɴᴀᴍᴇ
+Mᴏᴛʜᴇʀ ᴏғ Exɪʟᴇs. Fʀᴏᴍ ʜᴇʀ ʙᴇᴀᴄᴏɴ-ʜᴀɴᴅ
+Gʟᴏᴡs ᴡᴏʀʟᴅ-ᴡɪᴅᴇ ᴡᴇʟᴄᴏᴍᴇ; ʜᴇʀ ᴍɪʟᴅ ᴇʏᴇs ᴄᴏᴍᴍᴀɴᴅ
+Tʜᴇ ᴀɪʀ-ʙʀɪᴅɢᴇᴅ ʜᴀʀʙᴏʀ ᴛʜᴀᴛ ᴛᴡɪɴ ᴄɪᴛɪᴇs ғʀᴀᴍᴇ.
+“Kᴇᴇᴘ, ᴀɴᴄɪᴇɴᴛ ʟᴀɴᴅs, ʏᴏᴜʀ sᴛᴏʀɪᴇᴅ ᴘᴏᴍᴘ!” ᴄʀɪᴇs sʜᴇ
+Wɪᴛʜ sɪʟᴇɴᴛ ʟɪᴘs. “Gɪᴠᴇ ᴍᴇ ʏᴏᴜʀ ᴛɪʀᴇᴅ, ʏᴏᴜʀ ᴘᴏᴏʀ,
+Yᴏᴜʀ ʜᴜᴅᴅʟᴇᴅ ᴍᴀssᴇs ʏᴇᴀʀɴɪɴɢ ᴛᴏ ʙʀᴇᴀᴛʜᴇ ғʀᴇᴇ,
+Tʜᴇ ᴡʀᴇᴛᴄʜᴇᴅ ʀᴇғᴜsᴇ ᴏғ ʏᴏᴜʀ ᴛᴇᴇᴍɪɴɢ sʜᴏʀᴇ.
+Sᴇɴᴅ ᴛʜᴇsᴇ, ᴛʜᴇ ʜᴏᴍᴇʟᴇss, ᴛᴇᴍᴘᴇsᴛ-ᴛᴏsᴛ ᴛᴏ ᴍᴇ,
+I ʟɪғᴛ ᴍʏ ʟᴀᴍᴘ ʙᴇsɪᴅᴇ ᴛʜᴇ ɢᴏʟᴅᴇɴ ᴅᴏᴏʀ!”","Colossus in small caps."
+"cardhop","https://apps.apple.com/us/app/cardhop/id1448744070","App Store share URL for Cardhop for iOS."
+"case","function capitalizeFirstLetter(input){
+    return input.charAt(0).toUpperCase() + input.substring(1);
+}
+
+var lowerCaseWords = [
+""a"",
+""an"",
+""the"",
+""for"",
+""and"",
+""nor"",
+""but"",
+""or"",
+""yet"",
+""so"",
+""such"",
+""as"",
+""at"",
+""around"",
+""by"",
+""after"",
+""along"",
+""for"",
+""from"",
+""of"",
+""on"",
+""to"",
+""with"",
+""without""
+];
+
+var words = TextExpander.pasteboardText.toLowerCase().split("" "");
+
+for(var i = 0; i < words.length; i++){
+    if(!lowerCaseWords.includes(words[i]) || i == 0 || i == words.length-1) words[i] = capitalizeFirstLetter(words[i]);
+}
+
+words.join("" "");","Clipboard text to title case."
+"cassi","https://www.matthewcassinelli.com/actions/","Root of Matthew Cassinelli’s Action Directory"
+"chaff","https://write.as/chaff/%|/edit","Construct URL for beta site."
+"chuck","https://bilge.world/chuck-klosterman-x","URL to “The Case for Chuck Klosterman.”"
+"cms","https://whatcms.org/API/Tech?key=w64w67om47g3xfcudiiakqrm0zxej81mg7k95r4fj4y3b81lrizol7l0gnn2x8z2mn6lah&url=%clipboard","WhatCMS API query clipboard URL."
+"colophon","http://bilge.world/colophon","URL to The Psalms’ Colophon."
+"color","https://colorhound.net","URL to ColorHound - the indispensible Hex-parsing tool"
+"colossus","Not like the brazen giant of Greek fame,
+With conquering limbs astride from land to land;
+Here at our sea-washed, sunset gates shall stand
+A mighty woman with a torch, whose flame
+Is the imprisoned lightning, and her name
+Mother of Exiles. From her beacon-hand
+Glows world-wide welcome; her mild eyes command
+The air-bridged harbor that twin cities frame.
+“Keep, ancient lands, your storied pomp!” cries she
+With silent lips. “Give me your tired, your poor,
+Your huddled masses yearning to breathe free,
+The wretched refuse of your teeming shore.
+Send these, the homeless, tempest-tost to me,
+I lift my lamp beside the golden door!”","“The New Colossus” by Emma Lazarus - used mostly as lorem ipsum."
+"comment","<!--comment-->","Comment tag for Remark.as."
+"consultation","https://fantastical.app/davidblue/general-consultation","Fantastical Openings link for my “General Consultation.”"
+"contactmd","- [Contact Card](https://davidblue.wtf/db.vcf)
+- [Telegram](https://t.me/extratone)
+- [Email](mailto:davidblue@extratone.com) 
+- [Twitter](https://twitter.com/NeoYokel)
+- [Mastodon](https://mastodon.social/@DavidBlue)
+- [Discord](https://discord.gg/0b9KQUKP858b0iZF)
+- [*Everywhere*](https://raindrop.io/davidblue/social-directory-21059174)...","A list of essential social links in markdown."
+"courderoyed","https://www.icloud.com/shortcuts/75dc92926bed47af9a62faa83f2540d2","URL to my “COURDEROYED” meme Siri Shortcut. "
+"cpq","𝘾𝙊𝙈𝙋𝘼𝙌","COMPAQ CHURCH"
+"crosspost","https://crossposter.masto.donte.com.br","URL to the Mastodon-Twitter crossposter."
+"cut","[%clipboard%|](shortcuts://run-shortcut?name=%clipboard)","Construct a Shortcuts Run Link. "
+"date","%m%d%Y","Date in DavodTime™"
+"davodtime","MMDDYYYY-HHmmss","Print DavodTime™  format meta (mostly used for Calendar actions in Siri Shortcuts.)"
+"dbe1","extratone%key:enter%David%key:enter%Blue%key:enter%davidblue@extratone.com","Boiler plate account fields when signing up for just about anything. I expect variations."
+"dbmasto","https://mastodon.social/@DavidBlue","URL to my mastodon.social profile."
+"ddchange","https://docs.getdrafts.com/changelog/","URL to the Drafts Directory full changelog."
+"ddencom","https://directory.getdrafts.com/t/1wg","Drafts Directory URL to my “ENCOM” theme."
+"dderror","https://actions.getdrafts.com/a/1wV","Drafts Directory share URL to my “Error” action."
+"ddeternal","https://actions.getdrafts.com/t/1wT","Drafts Directory URL for my “Windows Eternal” theme."
+"ddforums","https://forums.getdrafts.com/u/blue","URL to my profile on the Drafts Directory Forums."
+"ddiowa","https://actions.getdrafts.com/t/1kY","URL to my “Windows Iowa” dark theme in the Drafts Directory."
+"ddmasto","https://actions.getdrafts.com/a/1v8","URL to the “Post to Mastodon” action in the Drafts directory."
+"ddpsalms","https://actions.getdrafts.com/t/1km","URL to “The Psalms” theme in the Drafts Action Directory."
+"ddthemes","https://actions.getdrafts.com/theme_definitions?order=updated","URL to the Drafts themes directory, ordered by most recent."
+"ddwarm","https://actions.getdrafts.com/t/1jP","Drafts Directory URL to Matt Birchler’s Warm & Bright Drafts theme."
+"ddxcall","drafts://x-callback-url/create?text=","Construct a Drafts x-callback-url."
+"ddzalgo","https://actions.getdrafts.com/a/1vM","URL to zalgo drafts action."
+"desc","※⃣   ※⃣   ※⃣   ※⃣   ※⃣   ※⃣   ※⃣   ※⃣   ※⃣   ※⃣
+World Wide Web: https://bilge.world 
+Contact Card: https://davidblue.wtf/db.vcf
+Twitter: https://twitter.com/NeoYokel 
+Mastodon: https://mastodon.social/@DavidBlue 
+Instagram: https://instagram.com/asphaltapostle
+davidblue@extratone.com 
+
+【※】【※】【※】【※】【※】【※】【※】【※】【※】【※】
+
+『※』『※』『※』『※』『※』『※』『※』『※』『※』『※』
+
+≋※≋※≋※≋※≋※≋※≋※≋※≋※≋※≋
+
+░※░※░※░※░※░※░※░※░※░※░","Video streaming service description template - the contact links and decorative matter."
+"dforum","https://forums.getdrafts.com/u/blue/preferences/profile","URL to my profile on the Drafts Discourse Forums."
+"dfrtsts","[[date|%%m%%d%%Y-%%H%%M%%S]]","DavodTime Drafts Template Tag."
+"dine","WHEN IM COMIN DINE IN MY FOREIGN AND IM ROLLIN ONE DEEP THAT SHOULD TELL YA BOUT ME","Z-Ro’s statement of purpose - a longtime personal meme."
+"dmvid","howdy! so I’m working on a public contacts list to link folks whenever/if I next find myself randomly in a Twitter Space with a YouTube celebrity lol 
+
+I’ll add your name and Twitter link to it.","Video Editors DM"
+"docs","https://davidblue.wtf/extratext/","URL to documentation of this Snippet Group on my NeoCities site."
+"documentation","Documentation is not about developers. Documentation is **for the user**. There is no excuse - business or otherwise - for poor documentation. If your software is poorly documented, you have failed as a software organization.","My rant about documentation."
+"docx","pandoc -s %pasteboard.docx -t markdown -o %pasteboard.md","Convert .docx to .md with Pandoc."
+"down","⇩","⇩"
+"dractions","https://davidblue.wtf/drafts/actionsindex","Drafts Actions Index"
+"drafts","https://github.com/extratone/bilge/tree/main/drafts/","URL of Drafts on The Psalms’ GitHub repository."
+"drivey","https://apps.apple.com/us/app/drivey/id1590360678","App Store share URL for Drivey for iOS."
+"drybirt","http://bit.ly/drybirt","Drywall Birthday"
+"drynet","https://iowa.neocities.org","URL to the Drywall Website Archive on NeoCities"
+"enpass","https://apps.apple.com/us/app/enpass-password-manager/id455566716","App Store share URL for Enpass for iOS."
+"fantastical","https://apps.apple.com/us/app/fantastical-calendar/id718043190","App Store share URL for Fantastical for iOS."
+"fb","https://www.facebook.com/AsphaltApostle","URL to my Facebook profile."
+"feebles","https://bit.ly/Feebles","Bit.ly link to “Feebles in Night” on Amazon."
+"ffmerge","ffmpeg -f concat -i [saidfile].txt -c copy output.mp4","ffmpeg Merge"
+"fft","ffmpeg -i xperia.ts -c:v libx264 -c:a aac xperia.mp4","ffmpeg .ts to .mp4"
+"fig","https://apps.apple.com/us/app/fig-for-discourse/id1485491193","App Store share URL for Fig - my preferred Discourse client on iOS."
+"flic4","https://www.flickr.com/photos/davidblue/albums/72157687536399666","URL to my “iPhone 4” album on Flickr."
+"flush","sudo dscacheutil -flushcache;sudo killall -HUP mDNSResponder","macOS DNS flush command."
+"followgist","https://gist.github.com/extratone/8b762de50de414f8a4be05f9b0407fd8","URL to my ""Why I Didn't Follow You Back"" reference document in GitHub Gist form."
+"followmd","![Twitter Follow Limits](https://i.snap.as/hKqfPWNd.png)
+
+**There is a limit to how many accounts you can follow on Twitter**. It was finally documented in this [official help document](https://help.twitter.com/en/using-twitter/twitter-follow-limit), dated March 2019, but for more than ten years, it was implemented without any explanation from the service, and was known only to those of us who'd actually encountered it.
+
+Here's what happens when I try to follow a new account from [@NeoYokel](https://twitter.com/NeoYokel):
+
+![Follow Limit Notice](https://i.snap.as/qWuogwAX.jpeg)
+
+I was only able to verify that this has been the case since October 20th, 2017 - naturally, I didn't bother to note the actual date I first received that notice.
+
+**If you're a recent follower of mine and you've found this document**, please know that I have seen your expressed desire to keep in touch in some way (which is what following someone ""says,"" I think we can agree,) and have probably responded by adding you to one of my [Twitter Lists](https://twitter.com/NeoYokel/lists). You may have received a notification about this, but if you haven't, it's because I have not yet chosen to make the List to which I added you public. 
+
+I also want you to know that I am available to speak directly about this if you have questions - whether that be on [Twitter](https://twitter.com/NeoYokel), by [email](mailto:davidblue@extratone.com), or [otherwise](https://davidblue.wtf). Here's my personal phone number: +1 (573) 823-4380
+
+For whatever it's worth, *thanks for the follow*. I hope to hear from you but if I don't, thanks okay, too.","Twitter Follow Limit Notice"
+"followwiki","https://github.com/extratone/bilge/wiki/Why-I-Didn’t-Follow-You-Back",""
+"frames","https://www.icloud.com/sharedalbum/#B0e59UlCqG71rh8","iCloud Photos Share URL to my Frames shared album."
+"friends","https://twitter.com/i/lists/36971117","URL to my private Friends list on Twitter."
+"garageband","https://apps.apple.com/us/app/garageband/id408709785","App Store share URL to Garageband for iOS."
+"garden","https://apps.apple.com/us/app/radio-garden-live/id1339670993","App Store share URL for Radio Garden for iOS."
+"gauto","%fillpopup:name=External repository slug.:bilge:default=i:keys:columbia:t:extratone:drafts:odette:jorts%-%key:tab%https://github.com/extratone/%fillpopup:name=External repository slug.:bilge:default=i:keys:columbia:t:extratone:drafts:odette:jorts%/issues/<num>%key:tab%%key:enter%","GitHub Autolinks to external GitHub Issues."
+"gero","https://raindrop.io/davidblue/-13387737","URL to my music-listening Raindrop collection."
+"google","https://bilge.world/google-soul-ledger-dont-be-evil","URL to “Google Will Soon Replace God and The Church” on The Psalms."
+"greg","https://twitter.com/draftsapp/status/1492645727729766400","URL to Greg Pierce’s Zalgo Tweet."
+"greyhound","https://actions.getdrafts.com/t/1uk","URL to my Greyhound Drafts theme in the Drafts Directory."
+"halide","https://apps.apple.com/us/app/halide-mark-ii-pro-camera/id885697368","App Store share URL for Halide for iOS."
+"hamura","https://ihadtopee.bandcamp.com/album/hamura","URL to the first Drywall album, “Hamura,” on Bandcamp."
+"hex","https://colornames.org/color/%clipboard","URL to ColorNames.org color."
+"higgins","https://mastodon.social/@DavidBlue/102564857843257870","URL to the Mastodon thread in which I realized the creator of Zalgo text and I were mutuals."
+"highlights","https://gist.github.com/6e0f5fef1156baaeeb4483170c76b4da","URL to my GitHub Gist containing all of my annotation with Finn Voorhees’ Highlights app."
+"hourology","https://apps.apple.com/us/app/hourology/id1564950603","App Store share URL for Hourology for iOS."
+"iblink","https://apps.apple.com/us/app/blink-shell-code/id1594898306","App Store share URL to Blink Shell & Code."
+"icolors","- color-pink: #ff2d55
+- color-purple: #5856d6
+- color-orange: #ff9500
+- color-yellow: #ffcc00
+- color-red: #ff3b30
+- color-teal-blue: #5ac8fa
+- color-blue: #007aff
+- color-green: #4cd964","iOS System Colors as Hex."
+"igit","https://github.com/extratone/i/issues","URL to my iOS-specific GitHub Repo."
+"ihadt","https://twitter.com/ihadtopee","URL to the Drywall Twitter account."
+"ilookup","https://apps.apple.com/us/app/lookup-english-dictionary/id872564448","App Store share URL for LookUp for iOS."
+"imasto","https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974","Link to Mastodon for iPhone on the App Store."
+"img","![%|](%clipboard)","Construct a markdown image link."
+"imovie","https://apps.apple.com/us/app/imovie/id377298193","App Store share URL to iMovie for iOS."
+"import","https://app.raindrop.io/settings/import","URL to Import page in Raindrop."
+"imusic","https://bilge.world/iphone-ios-music-apps","URL to “iPhone and Music” on The Psalms."
+"indie","https://indiecatalog.app/platform/iphone","URL to recently-released iPhone apps on indiecatelog.app."
+"int","‽‽‽","Interrobang‽‽‽ "
+"invite","https://mastodon.social/invite/hca7L5sY","An invitation to join me in Social Web heaven."
+"io","https://extratone.github.io/%|","Construct a GitHub Pages link for my GitHub account."
+"ipa","https://raindrop.io/davidblue/legacy-i-phone-23720627","URL to my “Legacy iPhone” Raindrop collection."
+"iphonemastodon","https://apps.apple.com/us/app/mastodon-for-iphone/id1571998974","URL to Mastodon for iPhone."
+"ishort","https://github.com/extratone/i/tree/main/shortcuts/","URL to the Shortcuts folder in my iOS-specific repo."
+"ishshell","https://apps.apple.com/us/app/ish-shell/id1436902243","App Store share URL for iSH Shell for iOS."
+"issue","https://github.com/extratone/%|/issues/","Construct a URL to a GitHub Issue."
+"isub","defaults write com.apple.MobileSMS MMSShowSubject 1","Terminal command to show Subject field in Messages on macOS."
+"itext","https://brettterpstra.com/ios-text-editors","URL to Brett Terpstra’s “iTextEditors” wiki."
+"itrimmer","https://apps.apple.com/us/app/audio-trimmer-trim-audio/id1602845668","App Store share URL to Audio Trimmer for iOS."
+"jail","https://bilge.world/twitter-jail","URL to ""The Fastest Route to Twitter Jail” on The Psalms."
+"jar","https://apps.apple.com/us/app/data-jar/id1453273600","URL to Data Jar for iOS."
+"jayson","https://apps.apple.com/us/app/jayson/id1468691718","App Store share URL to Jayson by Simon B."
+"johnny","https://bilge.world/johnny-tsunami-smart-house-slavery","URL to “Johnny Tsunami VI: Separate, but Equal” on The Psalms."
+"join","https://joinmastodon.org","The master joinmastodon.org URL."
+"jorts","https://github.com/extratone/jorts","URL to the GitHub Repository for my iPhone 12 Pro Max, named Jorts."
+"katie","KⒶTIE KEURIG","KⒶTIE KEURIG"
+"keys","https://uikeycommand.com","URL to UIKeyCommand main project page."
+"kill","killall ""Shortcuts""","Force quits the Shortcuts app - need to figure out a way to actually kill the *process*."
+"koder","https://apps.apple.com/us/app/koder-code-editor/id1447489375","URL to Koder on the App Store."
+"left","⇦","⇦"
+"legacybio","// 420 smoke propane // adderall hotbox // origin of the good morning and wednesday memes // pizza slave // gas house anthems // #Team*̶͜͝͏̳̦̫̳̹̻̻̝̥̝̳&̨̧̥̖","MomMilitia Bio"
+"license","https://gist.github.com/extratone/140a11428b5dd1dda500b3928e0438b1","URL to the Gist for “The Unlicense, Davod Edition.”"
+"life","https://write.as/community/chat-with-david-blue","URL to my community chat with Write.as’ CJ Eller."
+"line","---","Create a three-dash horizontal line."
+"linking","https://linkingmanifesto.org","URL to The Ubiquitous Linking Manifesto. "
+"linky","https://apps.apple.com/us/app/linky-for-twitter-and-mastodon/id438090426","App Store share URL for Linky for iOS."
+"macdrafts","https://apps.apple.com/us/app/drafts/id1435957248","URL to Drafts for macOS on the App Store."
+"macos","","URL to the macOS User Guide."
+"macver","#!/bin/zsh
+pver=$(sw_vers -productVersion)
+bver=$(sw_vers -buildVersion)
+lic=$(awk '/SOFTWARE LICENSE AGREEMENT FOR/' '/System/Library/CoreServices/Setup Assistant.app/Contents/Resources/en.lproj/OSXSoftwareLicense.rtf' | sed 's/\\f0\\b SOFTWARE LICENSE AGREEMENT FOR //')
+
+if [ `echo $lic | grep -oc 'macOS'` -eq 1 ]
+then
+	name='macOS'
+elif [ `echo $lic | grep -oc 'OS X'` -eq 1 ]
+then
+	name='OS X'
+else
+	name='unspecified'
+fi
+
+codename=$(echo $lic | sed ""s/$name //"")
+
+echo $name $pver, $codename '('$bver')'","Mac version details."
+"magazines","https://raindrop.io/davidblue/magazines-13419360","URL to my digital magazine collection via Raindrop."
+"magic","https://extratone.github.io/table/","URL to my personal Table-Magic install."
+"mannano","https://davidblue.wtf/manuals/nano/","URL to the full GNU nano manual on WTF."
+"manpage","man -t %filltext:name=Man subject:width=10:default=curl% | open -fa Preview","Construct a shell command to show a man page in Preview."
+"masto","https://mastodon.social/@DavidBlue","Mastodon"
+"mdbio","Self-Described [Software Historian](https://bilge.world/why), [Writing In Public](https://github.com/extratone/bilge) and [H e r e   2   H e l p](https://uikeycommand.neocities.org). ([Here’s my contact card](https://bit.ly/whoisdavidblue).)","Biography"
+"mdtel","[@%clipboard on Telegram](https://t.me/%clipboard)","Telegram @ to markdown formatted link to Telegram profile."
+"minecraft","https://youtu.be/C4td17BTiio","URL to “Minecraft Flying Tutorial."""
+"mon","​​I have pulled a lot of stupid stunts in bars, though I’ve yet to be physically struck in one, despite some very persistent attempts at provocation by other parties, and I’m proud of the fact. I’m not going to tell to you that you shouldn’t enjoy a good bar fight – especially if you’ve a lust for violence that may otherwise manifest in less-than-consensual, more malicious activities – but otherwise, be aware that the vast majority of Huffy Yokels can be talked down from even the Most Bothered of dispositions with intelligently-applied finesse, should you care to use your time alternatively.
+
+Of course, one would do best not to allow himself and his own designed influence over his outward image and subsequent bearing in a given social biome to become rampant and/or obsessive patronization. By nature, such a pursuit will only metamorphose into a slope of blisteringly-multiplying inclination which terminates singularly into the oxymoronic undoing of itself. A preoccupation with the petty maneuvers of one’s local bar culture tends to rapidly illuminate one’s weaknesses like a psychosexual flare gun. Be wary of your own undue satisfaction with petty demonstrations of power over the older, more-regional crowd. The greenest patron (those who’ve just arrived at legal drinking age, for instance) may find the low-risk, relatively collateral-resistant nature of this environment incubatory, at first, but they would do well to agitate their social pool astutely, lest they become ensnared in some of the various crud on which the other, ruminating citizens of these foul associations have found themselves caught.","Out-of-context monolog for ipsem."
+"more","<!--more-->","Read More Tag"
+"moyai","<p class=""paragraph"">🗿</p>",""
+"musicharbor","https://apps.apple.com/us/app/musicharbor-track-new-music/id1440405750","App Store share URL for MusicHarbor for iOS."
+"mute1","s ʇ d n ɹ ɹ ǝ ʇ u ı   o ı p n ɐ","For bitching about audio interrupts on iOS."
+"mute2","🅐 🅤 🅓 🅘 🅞   🅘 🅝 🅣 🅔 🅡 🅡 🅤 🅟 🅣 🅢","For bitching about audio interrupts on iOS."
+"nano","https://tilde.town/~extratone/nano","URL to my duplicate of the full GNU-nano manual."
+"ncode","encodeURI(TextExpander.pasteboardText);",""
+"neighbor","https://song.link/i/596244311","Odesli URL to Z-Ro’s “Nigga From the Hood.”"
+"neoad","https://actions.getdrafts.com/g/1uF","URL to my NeoCities Action Group in the Drafts Action Directory."
+"neocities","https://davidblue.wtf","URL to my main NeoCities website."
+"netcut","https://www.icloud.com/shortcuts/6418f65c0153408086cf15a5378c2e04","iCloud share URL to my “cut” Siri Shortcut."
+"newest","https://actions.getdrafts.com/drafts_actions?order=recent","URL to the newest actions in the Drafts Action Directory."
+"nofollow","just a reminder:
+
+if you followed me recently and are wondering why I didn’t follow you back, it’s because I can’t! https://bit.ly/dbfollow","Follow explanation."
+"noir","https://apps.apple.com/us/app/noir-dark-mode-for-safari/id1581140954","App Store share URL for Noir for iOS."
+"nomd","Email: davidblue@extratone.com
+Contact card: bit.ly/whoisdavidblue
+Telegram: t.me/extratone
+Twitter: twitter.com/NeoYokel
+Reddit: reddit.com/u/asphaltapostle
+Mastodon: mastodon.social/@DavidBlue
+EVERYWHERE: bit.ly/dbrolodex","Social Links Plain"
+"notes","https://github.com/extratone/bilge/tree/main/notes/","URL of Notes on The Psalms’ GitHub repository."
+"notifications","https://twitter.com/notifications","URL to open directly to Twitter notifications in the desktop app."
+"notion","https://rotund.notion.site","URL to my main notion page."
+"num","TextExpander.pasteboardText.replace(/(^.*)/gm, ""1\. $1"");","Clipboard to numbered list."
+"odette","https://github.com/extratone/odette","Odette Repo"
+"opt","⌥","opt ⇨ ⌥"
+"pag","https://actions.getdrafts.com/g/1tq","Drafts Directory URL to “The Psalms Action Group” - my primary, unlisted Drafts Action Group."
+"paper","https://bilge.world/evernote-dropbox-paper-word-processing-history","URL to “Evernote, Dropbox Paper, and the History of Word Processing” on The Psalms."
+"parrot","curl parrot.live","Parrot dot live by hugomd."
+"pfwtl","https://github.com/extratone/fuckme/blob/main/PFWTL.md","URL to the main target file in the GitHub repository for my work-in-progress, public domain-equivalent license."
+"piss","https://github.com/extratone/piss","URL to “For God’s Sake, Just Sit Down to Piss’” GitHub Repository."
+"pith","In the right hour, the woodland springtime metamorphic processes of the neighboring Lake Geneva suburb’s in-betweens were in a paused state – the toads again hushed; the crickets tired, and the human populace, too. In the right hour, the fickle wind and the social owls were the only sound, and nothing moved but the sparse, light-footed doe in careful segments with her fawn. From the main gated lane of *The Nice, Huge Estate*, Lenny Lather slid through the muddy barrier and started bouncing West on the blacktop, brogues squeaking every third step. The overcasted clouds were having trouble deciding whether or not to let down their rain – as they had been all day – and the old, heavy early-March mist softened the yellow glow of the tall, buzzing streetlamps so much that he couldn’t help but intermittently wipe his eyes, for the spreading light convinced his mind that his eyelashes must’ve been wetted.
+
+Theodore Pith’s big old house was now burrowed between two mismatched neighborhoods – the bleaker Easterly, which was too new for its alien trees to have recovered from the brutality of its development’s clear-cutting and contained within one of its central featureless backyards an unidentifiable creature which made all through the night the most unimaginably ghastly, disturbingly human child-like shrieking; the opposing Westerly’s trees further enough along in their regrowth – ten or twenty years perhaps – to appear more of the planet Earth to Manhattan-bred Lenny Lather, who still found the colorless destruction of suburbia unendingly upsetting, especially when coming down. In the interest of his regular withdrawal’s mitigation, he had already established two short, repeatable tracks and a longer, several mile-long loop which skirted him sufficiently around the East’s center to avoid hearing the shrieks in all but the stillest nights. Never in his years – on these walks he was *especially* reminded of just how many there were – had he been able to feel such absolute ownership of his surroundings. The eroding Earth slipping away from the hem of the warped, stained wood fences; the sidewalks, cracked, bent, sloped helter-skelter, often muddied in the troughs and joints – generally laying haphazardly in layers after having been steadily tossed about by the glacial forces of their intermixture with clay, precipitation, and the tumultuous temperature-dependent torture of the two – these were his, entirely, in the right hour. Between two and five in the morning when the earliest risers would blearily revive their dewy automobiles from long, silent hibernation, the whole world – everything in his sight and more at any moment – it was all *his*, without a single worthy challenger.
+
+In the right hour, the roads were completely and totally abandoned – for the New Yorker, an unfathomable absolute – and all humanity was at rest. In the right hour, Lenny Lather was the appointed guardian of the worn domesticity of a small nation, though the lonely occupation was astoundingly lax, for in the miles and miles of empty streets he had already traversed in his nightly holidays from the World of Pith, he had yet to encounter a single unexpected factor or minutely threatening presence. Since shortly after his December arrival, he’d walked through even the most frigid mornings. Of course, the stillness had then been *even more* otherworldly, and Lenny was curious to see how his new most private domain would change with the seasons. Though the auxiliary guest room which he now called home was no smaller or less hospitable than the master bedroom of his late Hudson Yards flat shared with his late Wife, it proved to be a poor respite from Theodore Pith, who treated him – when they were “home” at *Nice, Huge* – as the puppy he never had, and expected his participation to remain entirely vulnerable to his any whim. Granted – in their shared abuse of amphetamines, cocaine, and assorted other stimulants – Lenny Lather was vastly more prepared for the games than any circadian guest could’ve possibly been. At first, the ten-foot door of his dawn-facing room had closed without latching, but with the warmth and moisture brought with the Midwestern Spring, the most secure state in which the engorged wood could be forcibly arranged still left a half-inch crack, and Lather’s last chance of privacy was lost.
+
+The latest favorite pastime of *Nice, Big*’s Master necessitated a willing, capable driver, and – as keeping a single Butler (much less an entire household staff) was proving extremely difficult for him – Lenny Lather was the sole pick of the draft. In the earliest hours of one Tuesday morning in February, he’d been pleasantly dosing and drooling on his laptop after an evening of obsessive, incoherent notetaking when the huge door had been kicked ajar by a deep black, blindingly shiny oxford with excessively violent force. Attached to the shoe in an equally blinding penguin tuxedo, towering bowler hat, and cartoonish fake mustache was the Great, Blown Pith.
+
+“Hope you’re not busy,” he’d said quite loudly to the lolling Lather, leaning and tilting his head into the lamp light, which had dislodged his monocle and briefly occupied him with untangling its chain.
+
+…
+
+“You’re not *busy*, are ya?!” he’d shouted, tapping the shiny brass lion’s head of his shiny black cane against the vanity… then swatting it with a flicking wrist… then clubbing it with a full, two-handed homerun swing – taking huge, vaguely cat nose-shaped gouges from the surface of the wood. The splintery wood chips had rained down upon the hunched Lenny; he’d stirred with one found its way in his open mouth – he’d chewed it slowly and swallowed it, but he still had not awoken. Nevertheless, Theodore Pith’s coked-up enthusiasm couldn’t possibly have yielded to common decencies like his guest’s nighttime peace.
+
+…
+
+“SHOOT, LENNY,” he’d screamed in his companion’s ear, having traversed the room to his bedside.
+
+“I SURE HOPE YOU’RE NOT BUSY RIGHT NOW!”
+
+…
+
+Finally, he’d resorted to tickling Lenny’s nose with the ornament, which had reeked with the urinal smell of metal polish – the sudden, overwhelming delivery of which to the writer’s olfactory nerves finally causing ample alarm in his nervous system to justify bringing him abruptly back to his life and deluded host.
+
+“I need a favor. The Duesie’s warming up. We’re going for a ride.”
+
+Unable to form a linguistic response, Lenny Lather had obeyed Theo’s frenzied, repeating instructions and stumbled into the matching suit he’d brought over his arm – wondering with marginal, arrested clarity at how well-tailored it was for him. He had not the soundness of perception to protest when Pith had whipped a deep black, blindingly shiny bowtie around his already-congested esophagus, nor when he’d adheased the huge, itchy matching fake moustache to his upper lip and nearly pulled the matching Tower of Bowler all the way down over his ears. He had been unresponsive when he’d been sat on the bench under the agonizing fluorescent lights of the laundry room, affixed with deep black, blindingly shiny matching oxfords, and asked if he smoked and how well he could say *guffaw.*
+
+…
+
+“Just wait… you have no idea… you have no idea how much fun this is going to be.”
+
+Lenny Lather had not… *could not* have made a sound through the confusing nonsense of his waking pre-Great Depression dream, but when the old servant’s door had been opened before him and set the heartless, single-digit Winter wind upon his very soul, he had all at once arrived in the world, laughing and whooping together with Theodore Pith.
+
+“Jesus *Christ!*” he’d screamed as they’d hobbled to the stable, where a devilishly dark red Model J Duesenberg had sat shivering in a rough idle, staring out the retrofitted garage door with its basketball-sized lights as if it was, indeed, a flesh-and-blood steed that had just been frightened awake by a thunderstorm, but the sky had been as clear as it would’ve been from an asteroid – as it is only on the coldest nights – and almost comically dominated by the setting, gluttonously luminescent moon. Theodore had then grabbed a screwdriver from the workbench and bent down to remove the license plate – which had said *BLOOD* in big black bold block letters – and its containing frame. By the time he had settled into the frigid red leather of the exposed, roofless driver’s seat, Lenny Lather was full-to-bursting with adrenaline and laughing out huge streams of breathy steam. From behind him in the cabin, Pith had been *guffawing* plumes, too, as he’d briefly ignited his cocaine-sprinkled mustache instead of the bratwurst-sized cigar between his teeth. The smell of burning human hair had accented his explanation of the old car’s transmission and its direct path from source-to-nose for Pith had required a brief, unplanned intermission as it induced without warning his violent heaving – still part-*guffawing* – hanging half out of his beautifully-upholstered suicide door.
+
+As he had spewed – expertly sparing the swoop of the gleaming waxy fender – Lenny had found a pair of deep black, blindingly shiny gloves and – after less grinding than you would imagine, to his credit – first gear, setting the whole dastardly circus in motion.
+
+“Where to, Sire?” Lenny had asked, nose lifted to an untenable altitude in a pitiful approximation of an accent that’d never actually been used before by any person or persons in all of history, struggling for breath.
+
+“Left at the gates, Barnsward, old chap,” Theodore had replied in a contrasting fashion after again sitting upright from his heaves and taking a breath, ironing out – if anything – the flatness of his perforating Ohio Ds and Ps, resulting in such a culturally destructive racket that it had set both of them in uncontrollable, cloudy fits lasting long after Lather had swerved the great length of the car from the gravel to his abandoned asphalt retreat. The two had continued their banter down that soul-suckingly flat vector, one-upping each other’s etymologic barbarity against the savage thievery of the heatless wind.
+
+“Now to star-board, Budleigh, my good fellow!”
+
+…
+
+“Right-o, as you say, sir!”
+
+…
+
+“Down to the *pu-hb* for a *spaht* of *brahn*-dee with me *mae-its*!”
+
+…
+
+“*Oncemo-ar* right, pip pip!”
+
+…
+
+“By *jah-lee*, there we are!”
+
+…
+
+After the entirety of Northern European history had been decimated and subsequently forgotten, the Duesenberg named *BLOOD* had turned its orange, googley-eyed stare and narrow whitewalled hooves up the reflective, freshly-painted access of the new 24-hour grocery in the no-man’s-land between the cookie-cutter stares of the neatly-rowed Easterly neighborhood and the droning respiration of Interstate 43, two miles distant. It was 2:12 in the morning and most of the greasy-haired night stocking shift had been halfway through their third smoke break, circled around a store-used picnic table 50 yards from the far sliding airlock doors. The first to spot *BLOOD* had been the second shortest of the lot, whose weary scrutiny along the truest radian to the West from under his sweaty beanie in her entrance she had crossed, and the depth of her red as he first spied it had caused him vertigo – as if he would fall in – and cast upon the shorter-than-average length of his being an all-consuming existential doubt. The tallest and loudest of them had faced squarest the white faux-brick wall of the box building and was at that moment engaged upon a spirited rant about where and where’nt and when a vapist ought to buy his Suck juice between long, gasping Sucks from his super-shiny Suck box. Of course, the arrival of a customer even at such a late hour did not warrant notice at a huge, broadly-servicing operation like theirs, but as *BLOOD* had crept through all four reflective yellow-checkered pedestrian crossings, closing without a flinch, and the details of her occupying caricatures had become more and more numerous, she had stolen the attention of the huddle, one-by-one, and elicited from each the rarest under-breath profanity of true, unmolested wonder.
+
+“*Jesus Christ*,” had said the shortest.
+
+“*Holy fuck,*” had said the youngest.
+
+“*Gee whiz*,” had said the oldest.
+
+And the Sucking tallest, having realized he’d lost his audience, had been the last to turn and follow their eyes *BLOOD*’s way as she had halted coolly in front of the purely white glowing concrete leading into the closest customer entrance, and had – without the gradual exposure over the length of her approach that his peers had been afforded – dropped his Suck box and exclaimed at the sudden, undiluted immensity of the spectacle, simply, “*FUCK!*”
+
+The Sucking’s *FUCK* and the splitting shatter of his Suck against the glass of their smoking table had reached the two arrivees – albeit in a muted way – and through the onset of their frostbite’s early stages even further stoked their already-uncontrollable boyish giggling. Theodore Pith had paused briefly to affix his monocle as firmly as possible in his eye socket and stuff down his spasmic *guffaws* with a few lip-smacking puffs of his then successfully-lit cigar before swinging his right door open.
+
+“Stay here and wait at the ready, my good… my *best* Bagsy! I shan’t be a twinkle,” he had declared, clicking it lightly shut again and turning on his heels toward the pale light of the store, twirling his cane in dramatically shortened strides so as to reproduce the oversped effect of a silent motion picture, puff-puffing away. As the doors had sensed him and indiscriminately whirred aside, he had turned to the smokers – most of whom had still been reeling, grabbing for their hair – and bobbed the bulk of his big black bowler toward their communion with his gloved black fingers by the brim.
+
+“Tally-*ho*, my boys!” he had shouted, sending Lenny Lather’s wide open face toward the floor of the idling car as he doubled over himself in the first spontaneously asphyxiating, tear-lobbing laughter he’d yet to experience in the 21st century. As Theodore had entered the masterpiece of the boxed store’s bleakness in his cane twirling, head swinging, cigar puffing shuffle, he had made sure to stay his instinct to *sneak* for a swift, full-chat *dart*, instead, and the on-duty leather-faced embodiment of tedium’s wrath beneath his lone lit lane light had looked up from his *People* Magazine just in time to see the heel of a deeply black oxford and the last shiny inches of flowing black coattails disappear behind the potato sack endcap of the far Aisle 1. He’d hesitated, chin against palm, holding his next glossed page perpendicularly erect between his tightened thumb and index finger for a long few seconds of fantastic stillness – had hastily attempted a diagnostic of his present senses – before a locomotive-like segmented tube of cigar smoke had risen from against the light tiles and unsoiled trimming to intersect his line-of-sight where it met the darkened deli, recessed in the far wall from his hunch, the motion startling him into his own throat-clearing, counter-rounding, key-jingling, *excuse me*-shouting march toward the lumpy potato sacks and the climbing dissipation of the most unbelievable violation. As he had jingled, he had reflected on the few occasions in which he’d ever smelled tobacco smoke in *his* store: all incidental, most very brief, and many followed by a lengthy, unreasonably self-deprecating apology. To just walk in his Temple of Domestic Fulfilment during this most Serene Time of Silent Service, spewing orange nicotine on his premium, Food & Drug Administration-blessed body and blood offering to the middle class was surely in ignorance, but could have even been *in spite*. Regardless, the transgression was worthy of the most merciless wrath, and he had been selected as its willing, capable vessel. In just the fifteen seconds it’d taken him to jingle his way to Aisle 1, he’d thought himself and his leather into flash-broiling, fast-rising fury.
+
+Perhaps the least expected sight that could have possibly greeted this Apostle of Appraisal on the far side of Aisle 1 – as he rounded the potato sack endcap and filled his *excuse me* lungs in preparation through his nose – was the labored lifting of the 125-pound eldest child of the new, Parisian-trained, full-time, certified cheese artisan – whom the store had just won out of 175 competitors in a region-wide raffle of her pilot program – by the dashing, swinging, and smoking real-life manifestation of a young Rich Uncle Pennybags, yet shock did not long halt the Keys & Leather.
+
+“Sir! Excuse me!”
+
+…
+
+“*Excuse me!* Sir!”
+
+…
+
+Theodore Pith – having reevaluated the girth of his intended booty – had propped his shiny black cane against the sill of the refrigerator and popped each slack bottom up off his oxfords from his shins before squatting over the massive Holy Wheel of the Artisan where it lay displayed on a sturdy bespoke plinth.
+
+…
+
+“Sir! You need to put out that cigar… the cigar – put it out immediately!”
+
+Keys & Leather had the odd inability to both shout and shuffle at the same time, so he’d only made it to the pomegranate juice by the time Pith had mustered enough momentum to swing the cheese child into a high enough pendulum to carry it stably facing forward under his chin with his two hands spaced evenly on the Great Wheel’s bottom.
+
+…
+
+“Sir! I’m going to have to ask you to put that down… That is a four thousand dollar item… If you want to buy it, we need to go about-”
+
+“…now, see here!” Pith had replied with great effort, in the midst of weighing in his mind the worth of the cane as a casualty, then of the monocle, too, which had fallen out while he was weighing, and of his own physical intelligence, and whether or not it was capable of retrieving the cane by its brass lion’s head handle via the top of a flicking foot without losing his balance. Keys & Leather, meanwhile, had been tortured at great length witnessing – in Theodore’s gravitational struggle – the Cuban’s ashes knocked all over the precious round Immanuel; the artisan’s Beloved, Chosen son of cheese – a nauseating sensation of loss overwhelming all hope of his store’s defense. The Terrible Theodore had at once noticed his hesitation *and* arrived upon a plan to leave no prop behind. He had leaned forward with the girth of the wheel and closed the remaining few feet between them, advancing with the huge mass of Nazarethian dairy to bear it all down upon the unsuspecting Leather, who in his grief for the prized wheel was far too slow to deflect its incoming mass.
+
+“Now, see here, chum!” Pith had forced from the furthest possible extremis of his best mob mouth as he transferred his burden all at once to its most concerned party, who collapsed against the multilayered tables that made up the fresh cookie display, with the weight of the wheel on his belly. As the stunned Leather struggled to separate himself without further soiling the only item in his store that sold for double a month’s paycheck, Theodore had replaced his monocle and returned for his cane in a single stride, which he’d then used after a return step to the pile of chocolate chip, almond nut, and fuming night manager to rap loose with the snout of the terrible brass cat Leather’s white knuckle-tight grip on the wheel with a lampoonish *haha!* before rolling the freed cheese toward the door in a villainous cackle.
+
+“Man, *come on*,” the defeated Leather had yelled halfheartedly from his pile of sweets, struggling against the awkward, slippery boxes for enough footing to stand. His efforts, though, were interrupted after a time by the abrupt mute of Pith’s cackling in the second swooshing of the front sliding doors – he had missed his last chance of pursuit. It had all been in vain – he’d failed to guard the crown jewel of the whole suburb. As he had given up the chase and the cheese and slumped once more against the ruined pile, the ridiculousness of the crime against him nearly cracked a smile, but soon was deterred by the very real thought of explaining what had happened to his General Manager when she arrived in just five hours. After a moment, there, covered in cookies, dust, ashes, and shame, he had quietly begun to sob.
+
+After he had regained control of his diaphragm, Lenny Lather had been amused, outside, by the varying velocities in which the smokers of the night shift gave in to their curiosities about the presence of the seven-figure collectible and its purpose in waiting at its now healthier idle in front of their grocery store in the loneliest time of a Tuesday morning. The first and the bravest had been the one who first spotted their intrusion – the shortest – if only because he had remained entirely convinced for the duration that *BLOOD* and its two, period-dressed occupants were nothing but an apparition of his dead Grandfather and Great Uncle like others he’d thought he’d seen before, and – though he’d been terrified by the clarity of this realest visit yet, he’d been irritated more than anything, and wanted to know “why the hell can’t you just leave me *alone*?!” The others behind him had been staggered in the proximity to the waiting car they had achieved – the lesser and most cowardly being the largest – the Sucking evangelist – who had been waiting for the great automobile to leave so he could forge the exchange of his broken Suck box for a new one from the back. In the delirium of his exhaustion and progressing frostbite, Lenny Lather had thought the image of the men where they were would make for an interesting, organic graph on the nature of courage – their positions simply representing their unaltered datapoints, and had been considering how best to deal with or respond to the nearer, deluded one, who had by then come close enough to the elegant, professionally polished front-right fender to reach out and touch it with his unwashed hands, and appeared to be taking the matter under serious consideration. He’d been seconds away from finally deciding between his idiotic ideas for a joke response when by far the largest wheel of cheese he’d ever seen had come rolling out of the opening doors onto the concrete, followed closely behind by Theodore Pith who’d still had three-quarters or more of his cigar left to smoke and apparently switched to cheap mob clichés in his brief absence.
+
+“Haste, Don Lenny!” he’d yelled, re-opening his closest cabin door to chuck his cane in first. He’d then straddled the great wheel to position it against the step before making a scene of grunting and huffing against its side with his full weight. Again, the bewildered smokers had fallen silent – they did not recognize the ridiculous delicacy because it was special inventory and could only be handled by the Holy Artisan herself. Lather had started revving the huge old straight-8 to answer Pith’s urgency, who had found himself fresh out of phrases after the wheel had finally succumbed to its capture and rolled into the footwell.
+
+“Make haste, make haste, my boy!” he’d shouted, diving theatrically into the covered back seat, head-first, to which his icing chauffer had responded by revving the behemoth and briskly popping her clutch, which had lurched the pair into the last, getaway stage of their late grocery heist. As *BLOOD*’s razor-edged hood ornament had sliced through the night by the dumbstruck smokers, Theodore Pith was unable to think of anything to shout at them as he passed but for “bada-bing, bada-*BOOM!*”
+
+Though the Lake Geneva Police Department was shown the security footage of that first theft by management, the theatricality of their matching getup had inadvertently obscured their identities, and the organization’s extreme deficit of imagination had left them stumped by the lack of license plates on the car, despite the free and effortless ability of just about any casual enthusiast of early American luxury automobiles and/or lackadaisical disciple of the Concours religion to immediately identify *BLOOD* by *name* from the grainiest image, if consulted. If anything, their incompetence rewarded Pith and Lather’s continued focus on the products of the same store’s cheese artisan, as intelligence on the state of her latest flagship incubation was freely available with no more effort than it took to simply stop by her display amid regular shopping trips. Twice in two weeks, they stole both of her replacements for the biggest child without any significant alternation of their method, which frustrated her and the management nearly to the point of crises, and quickly lost all potential for fun in a third attempt – their kicks were in their absurdity, not their *effectiveness*, and neither of them cared much for the cheese.","Blimp’s Burden, Chapter VI."
+"pixelfed","https://pixelfed.social/DavidBlue","URL to my PixelFed profile."
+"pocket","https://lists.pocketcasts.com/5f61c88e-b3cf-4be9-afc9-7fe38cbd90bf","URL to my most recent PocketCasts export."
+"podcasts","https://github.com/extratone/bilge/blob/main/curation/podcasts.opml","URL to an OPML file of my podcasts subscriptions."
+"poweruser","https://bilge.world/poweruser-tips-software-shortcuts","URL to “Dirty Dave’s Poweruser Tips” on The Psalms."
+"psalmstr","https://bilge.world/text-replacement","URL to “Text Replacement” on The Psalms."
+"pshortlinks","https://bilge.world/run-siri-shortcuts-with-hyperlinks","URL to “Run Siri Shortcuts with Hyperlinks” on The Psalms."
+"public","Thanks for the heads up! I appreciate the sentiment behind the warning, but my %fillpopup:name=Contact Info Type:phone number:default=email address:location%'s actually been publicly listed for quite some time now. Feel free to %fillpopup:name=Contact Info Type Action:text me:default=email me:stalk%!","Response to warnings about my phone number/email address/location appearing in publicly-facing results."
+"punichar","http://bilge.world/unichar-for-ios-app-review","URL to “Unichar for iOS Review” on The Psalms"
+"rag","https://bilge.world/apple-polishing-cloth","URL to my “Apple Rag Review” on The Psalms."
+"raindrop","https://raindrop.io/davidblue","URL to my Raindrop profile."
+"rawscrubs","https://gist.githubusercontent.com/extratone/3f3748f2ee1cd0820ba099cb05809054/raw/4aa707e00d826835aefe7a7fe59ff3ee324b8c93/scrubs.md","URL to the RAW file of my Siri Shortcuts for Scrubs Gist."
+"rcreate","https://routinehub.co/shortcut/create","URL to the “Create New Shortcut” RoutineHub page."
+"reading","https://raindrop.io/davidblue/reading-list-13380406","URL to my Reading List Raindrop collection."
+"reboot","sudo shutdown -r now","Terminal command to reboot macOS."
+"recieve","receive","I cannot spell receive."
+"redacted","🆁🅴🅳🅰🅲🆃🅴🅳",""
+"reddit","https://www.reddit.com/user/AsphaltApostle","URL to my profile on Reddit."
+"remark","https://remark.as/extratone","URL to my Remark.as profiile."
+"repo","https://github.com/extratone/bilge","URL to The Psalms’ GitHub repository."
+"return","􁂆","􁂆"
+"rgb2hex","var intRed = %filltext:name=Red:width=3%;
+var intGreen = %filltext:name=Green:width=3%;
+var intBlue = %filltext:name=Blue:width=3%;
+
+// —————————————————————————
+//Functions cloned from:
+//    http://stackoverflow.com/questions/5623838/rgb-to-hex-and-hex-to-rgb
+
+function componentToHex(c) {
+    var hex = c.toString(16);
+    return hex.length == 1 ? ""0"" + hex : hex;
+}
+
+function rgbToHex(r, g, b) {
+    return ""#"" + componentToHex(r) + componentToHex(g) + componentToHex(b);
+}
+// —————————————————————————
+
+rgbToHex(intRed, intGreen, intBlue);
+
+%filltop%","Colour: RGB to Hex (JS)"
+"rh","https://routinehub.co/user/blue","Url to my RoutineHub profile."
+"richcontact","<p style=""margin: 0px 0px 14.9px; font-style: normal; font-variant-caps: normal; font-weight: normal; font-stretch: normal; line-height: normal; -webkit-text-stroke-width: initial; -webkit-text-stroke-color: rgb(0, 0, 0);""><br></p><ul style=""list-style-type: disc""><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><a href=""https://bit.ly/whoisdavidblue""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><u>Contact Card</u></span></span></a></span></span><br></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><a href=""https://t.me/extratone""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><u>Telegram</u></span></span></a></span></span><br></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><a href=""mailto:davidblue@extratone.com""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><u>Email</u></span></span></a></span></span><br></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><a href=""https://twitter.com/NeoYokel""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><u>Twitter</u></span></span></a></span></span><br></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><a href=""https://mastodon.social/@DavidBlue""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><u>Mastodon</u></span></span></a></span></span><br></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><a href=""https://discord.gg/0b9KQUKP858b0iZF""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px""><u>Discord</u></span></span></a></span></span><br></li><li style=""margin: 0.0px 0.0px 0.0px 0.0px; line-height: 16.8px; font: 12.0px 'System Font'; color: #627ec9; -webkit-text-stroke: #627ec9""><i><span class=""font"" style=""font-family:&quot;.SFUI-RegularItalic&quot;""><span class=""size"" style=""font-size:12px""><a href=""https://raindrop.io/davidblue/social-directory-21059174""><i><span class=""font"" style=""font-family:&quot;.SFUI-RegularItalic&quot;""><span class=""size"" style=""font-size:12px""><u>Everywhere</u></span></span></i></a></span></span></i><span class=""colour"" style=""color:rgb(0, 0, 0)""><span class=""font"" style=""font-family:&quot;.SFUI-Regular&quot;""><span class=""size"" style=""font-size:12px"">…</span></span></span><br></li></ul><p class=""paragraph""></p>","Essential contact links in an unordered list, rich text, mostly for Telegram."
+"right","⇨","⇨"
+"rs","shortcuts run ""%|""","Terminal Shortcuts CLI"
+"screen","1284x2778","iPhone 12 Pro Max screen dimensions."
+"scriptable","https://apps.apple.com/us/app/scriptable/id1405459188","App Store URL for Scriptable for iOS."
+"scrubs","https://gist.github.com/extratone/3f3748f2ee1cd0820ba099cb05809054","URL to the Gist for my Siri Shortcuts for Scrubs list."
+"search","https://routinehub.co/search/?q=%|","Construct a RoutineHub Search. (Remember +s!)"
+"share","https://app.textexpander.com/public/14093096578d4f40eeea15649f5cefbb","Shared URL of this snippet group (Extratext.)"
+"shell","blinkshell://run?key=361DC9&cmd=","Construct Blink Shell URL scheme."
+"shihab","https://apps.apple.com/us/developer/shihab-mehboob/id1533949185","App Store Market Tools Developer URL for Shihab Meboob."
+"shortcc","My contact information:
+
+Email: davidblue@extratone.com
+Contact card: bit.ly/whoisdavidblue
+RoutineHub Profile: https://routinehub.co/user/blue
+GitHub: https://github.com/extratone/i
+Telegram: t.me/extratone
+Twitter: twitter.com/NeoYokel
+Reddit: reddit.com/u/asphaltapostle
+Mastodon: mastodon.social/@DavidBlue
+EVERYWHERE: bit.ly/dbrolodex","Contact links list specifically for comments in published Siri Shortcuts."
+"shortdrop","https://raindrop.io/davidblue/siri-shortcuts-21598130","URL to my Siri Shortcuts Raindrop collection."
+"shorttwt","https://twitter.com/i/communities/1471151406451085313","URL to the Siri Shortcuts community on Twitter."
+"showcuts","https://showcuts.app","URL to ShowCuts."
+"sleepnow","#! pmset displaysleepnow","Immediately puts the mac display to sleep."
+"snap","https://www.snapchat.com/add/mommilitia","URL to my Snapchat profile."
+"soundcloud","https://soundcloud.com/chordoslut","URL to my profile on SoundCloud."
+"speedy","https://bilge.world/speedy-frames","URL to “Speedy Frames” on The Psalms."
+"spy","https://routinehub.co/shortcut/10919","URL to my “Spy Kids Spam” Shortcut on RoutineHub."
+"story","https://story.snapchat.com/@mommilitia","URL to my Snapchat Story."
+"style","https://davidblue.wtf/styleguide/","URL to my personal styleguide on WTF."
+"suburban","https://ihadtopee.bandcamp.com/album/suburban-anarchy","URL to the second Drywall album, “Suburban Anarchy,” on Bandcamp."
+"sys","https://github.com/extratone/iOSSystemSounds/blob/main/base64/%pasteboard.txt","Convert iOS System Sounds link (from repo) to base64 link."
+"table","var rows = Number(%filltext:name=bodyrows:default=2:width=5%); //body of table rows
+var cols  = Number(%filltext:name=cols:default=4:width=5%); //columns of table
+var rows = rows + 2; //add a rows to account for header and seperator
+var text  = ''; //variable to store the output
+
+for (rCount = 1; rCount <= rows; rCount++) {
+  for (cCount = 1; cCount <= cols; cCount++) {
+    if (rCount == 1) { // Header Row Output
+      if (cCount == 1) {
+        text += '**%|** |';
+      }
+      else if (cCount == cols) {
+        text += ' **Header**';
+      }
+      else {
+        text += ' **Header** |';
+      }
+    }
+    else if (rCount == 2) { // seperator row output
+      if (cCount == 1) {
+        text += '-- |';
+      }
+      else if (cCount == cols) {
+        text += ' --';
+      }
+      else {
+        text += ' -- |';
+      }
+    }
+    else { //content row outputs
+      if (cCount == 1) {
+        text += (rCount-2).toString() + 'x' + cCount.toString() + ' |';
+      }
+      else if (cCount == cols) {
+        text += ' ' + (rCount-2).toString() + 'x' + cCount.toString();
+      }
+      else {
+        text += ' ' + (rCount-2).toString() + 'x' + cCount.toString() + ' |';
+      }
+    }
+  }
+  text += '\n';
+}
+
+TextExpander.appendOutput(text);
+",""
+"tad","https://www.thoughtasylum.com/tadpole/","URL to the ThoughtAsylum tadpole library for Drafts."
+"taio","https://apps.apple.com/us/app/taio-markdown-text-actions/id1527036273","App Store share URL for Taio."
+"tauto","%fillpopup:name=Designated Telegram channel.:e:default=columbia%-%key:tab%https://t.me/s/%fillpopup:name=Channel slug:extratone:default=ColumbiaMO%/<num>%key:tab%%key:enter%","GitHub Autolinks to Telegram messages."
+"tb6","http://bilge.world/tweetbot-6-ios-review","URL to my “Tweetbot 6 for iOS Review” on The Psalms."
+"tblstart","| **Action** | **Command** |
+|:------:|:-------:|
+| %|      |         |","Start Markdown Table"
+"teapp","https://apps.apple.com/us/app/textexpander-keyboard/id1075927186","App Store share for TextExpander for iOS app."
+"tel@","https://t.me/%clipboard","Telegram @ to URL"
+"telegraph","https://telegra.ph/Telegraph-Links-to-Date-02-02","Telegraph links to date."
+"telenum","+15738234380","Full Phone Number"
+"terminology","https://apps.apple.com/us/app/terminology-dictionary/id687798859","App Store share URL for AgileTortoise’s Terminology."
+"test","https://davidblue.wtf/drafts/EC1F9B3A-DCEE-4375-A72F-250F95CD944F.html","URL to the UUID-specified link to my Test draft export."
+"textcase","https://apps.apple.com/us/app/text-case/id1492174677","App Store share URL for Christopher R. Hannah’s Text Case"
+"textcraft","https://apps.apple.com/us/app/textcraft/id1546719359","App Store share URL for Textcraft for iOS by Shihab Meboob."
+"thenew","https://twitter.com/i/lists/185793031","URL to my list on Twitter: “The New."""
+"tilde","https://raindrop.io/davidblue/tilde-22520136","Tilde.Town directory in Raindrop collection form."
+"titanic","https://youtu.be/4uOcE_IIi30","YouTube share URL for “Titanic VI: Jack Strikes Back” on Extratone’s channel."
+"tm","™","™"
+"toolbox","https://apps.apple.com/us/app/toolbox-pro-for-shortcuts/id1476205977","URL to Toolbox Pro for iOS."
+"totmac","https://apps.apple.com/us/app/tot/id1491071483","App Store share URL for Tot for macOS."
+"totpocket","https://apps.apple.com/us/app/tot-pocket/id1498235191","App Store share URL for Tot Pocket for iOS."
+"totshare","https://app.textexpander.com/public/4cef7d32b411c6686d50c7eaff75a7a7","Share the URL to my Tot-specific snippet group."
+"town","https://bilge.world/tildetown-iphone-blink-shell","URL to “TildeTown on iPhone with Blink Shell” on The Psalms."
+"tr","https://gist.github.com/extratone/3c7788e41d32958a04a2ab693fe0512c","URL to the GitHub Gist for my Text Replacement menu."
+"ts","%m%d%Y-%H%M%S","Timestamp in DavodTime"
+"ttest","https://tilde.town/~extratone/test","URL to my reserved Tilde.Town directory for general shell testing."
+"ttm","curl -F file=@%| https://ttm.sh | pbcopy","Curl files to Tilde.Town’s Null Pointer."
+"tube","https://www.youtube.com/watch?v=%clipboard","Construct a YouTube URL."
+"tumblr","https://drywallmusic.tumblr.com","URL to the Drywall Tumblr account."
+"tweetbot","https://apps.apple.com/us/app/tweetbot-6-for-twitter/id1527500834","URL to Tweetbot on the App Store."
+"twitch","https://twitch.tv/dieselgoth","URL to my Twitch channel."
+"twitdrop","https://raindrop.io/davidblue/twitter-13759854","URL to my gargantuan Twitter Raindrop collection."
+"twt","https://twitter.com/NeoYokel","Twitter"
+"txt+","pandoc -s *.txt -o %|.txt","Merge all .txt files in directory using Pandoc."
+"ul","#!/usr/bin/ruby
+
+# ruby script to make an unordered list from indented data. 
+
+data = %x{__CF_USER_TEXT_ENCODING=$UID:0x8000100:0x8000100 pbpaste}.strip
+
+result = ""<ul>\n""
+last_marker = []
+last_marker[0] = """"
+
+last_leading_space = """"
+g_tab_width = 4
+g_list_level = 0
+last_list_level = 0
+
+marker = item = leading_space = ''
+
+data.split(""\n"").each {|line|
+  next if line =~ /^[\s\t]*$/
+  parts = line.match(/^([\t ]*)(\d+\. |[\*\+\-] )?\s*(.*)/)
+  leading_space = parts[1]
+  marker = parts[2]
+  item = parts[3]
+  leading_space.gsub!(/\t/,'    ')
+  
+  if leading_space.length > last_leading_space.length + 3
+    last_list_level = g_list_level
+    g_list_level += 1
+    last_leading_space = leading_space
+    last_list_level = g_list_level
+    result += ""<ul>\n""
+  elsif leading_space.length + 3 < last_leading_space.length
+    g_list_level = leading_space.length / 4
+    last_leading_space = leading_space
+    g_list_level-last_list_level.times do
+      result += ""</ul>\n""
+    end
+    last_list_level = g_list_level
+  end
+  indent = """"
+
+  result += ""<li>#{item}</li>\n""
+} 
+
+puts result + ""</ul>""
+","Clipboard -> UL"
+"unichar","https://apps.apple.com/us/app/unichar-unicode-keyboard/id880811847","App Store share URL to Jordan Hipwell’s Unichar for iOS."
+"up","⇧","⇧"
+"valid","set the ClipURL to (the clipboard as string)
+try
+	set scriptCmd to ""curl -I -L -s \"""" & ClipURL & ""\"" | grep -c \""^HTTP/[^ ]* 200\""""
+	set scriptResult to do shell script scriptCmd
+on error
+	set scriptResult to """"
+end try
+if scriptResult is equal to ""1"" then
+	return escapedURL(ClipURL)
+else
+	beep
+	return ""XX "" & escapedURL (ClipURL)
+end if
+
+on escapedURL(theURL)
+	set resultURL to """"
+	repeat with eachChar in characters of theURL
+		set eachCharNum to ASCII number of eachChar
+		if eachCharNum = 37 then
+			set resultURL to resultURL & ""%%""
+		else
+			set resultURL to resultURL & eachChar
+		end
+	end
+	return resultURL
+end
+","Validate URL"
+"varmilo","https://bilge.world/varmilo-va108m-mechanical-keyboard","URL to my Varmilo 108M keyboard review on The Psalms."
+"vcf","https://davidblue.wtf/db.vcf","Contact Card Raw File Link"
+"vid","<video controls>
+  <source src=""%pasteboard"">
+</video>","<video> Element Embed"
+"warning","🅦 🅐 🅡 🅝 🅘 🅝 🅖","Bubble warning"
+"wcli","https://github.com/writeas/writeas-cli","URL to the GitHub Repository for the Write.as Command Line Interface."
+"weather","https://youtu.be/qg0ZPmSux_4","URL to “WEATHER” on the Extratone YouTube channel."
+"webdav","https://neocities.org/webdav","NeoCities’ webdav URL.... which I have found myself typing out an absurd amount lately."
+"wfios","https://apps.apple.com/us/app/writefreely/id1531530896","App Store share URL to WriteFreely for iOS."
+"wget","wget --recursive --page-requisites --adjust-extension --span-hosts --convert-links --restrict-file-names=windows --domains %pasteboard --no-parent %pasteboard","wget"
+"wiggling","https://bilge.world/star-wars-the-force-awakens-review","URL to “Stairs, Wiggling” on The Psalms."
+"wikidd","https://github.com/extratone/bilge/wiki/Drafts-Directory-Contributions","Open “Drafts Directory Contributions” on The Psalms’ Wiki."
+"wikiindex","https://github.com/extratone/bilge/wiki","Open The Psalms’ Wiki on GitHub."
+"wikirh","https://github.com/extratone/bilge/wiki/RoutineHub-Links","Open “RoutineHub Links” page on The Psalms’ wiki."
+"wikite","https://github.com/extratone/bilge/wiki/TextExpander-Snippet-Groups","Link to The Psalms’ Wiki page for public TextExpander groups."
+"wikitime","https://github.com/extratone/bilge/wiki/DavodTime","URL to the entry for DavodTime™ in The Psalms’ GitHub repo Wiki. "
+"wilw","https://twitter.com/neoyokel/status/675501693421793280","URL to the Tweet that got me blocked by Wil Wheaton."
+"winter","https://youtu.be/WTLDOxvvHJ8","Links to “Dave’s Top Ten Winter Driving Tips” on YouTube."
+"winvite","https://write.as/join/4bqc8482","Write.as invite URL."
+"workingcopy","https://apps.apple.com/us/app/working-copy-git-client/id896694807","App Store share URL to Working Copy for iOS."
+"wpget","wget --mirror -p --html-extension --convert-links -e robots=off -P . %pasteboard","wget for stuboorn WordPress sites."
+"writeas","writeas %filltext:name=Command:width=20:default=help% --help > %filltext:name=Command:width=20:default=help%.txt",""
+"wshort","https://routinehub.co/shortcut/10981/","URL to my ""Post to Write.as Blog (macOS)” shortcut on RoutineHub."
+"wtf","https://davidblue.wtf/%clipboard","WTF domain"
+"xjr","(ŌŌ(xxxÍxxx)ŌŌ)","Nevermore"
+"xlist","https://routinehub.co/shortcut/11143","URL to my ""Generate Shortcuts Run Links List” Siri Shortcut on RoutineHub."
+"yelp","https://www.yelp.com/user_details?userid=seYjUMcixeGvpOehekSOXg","URL to my Yelp! profile."
+"youtube","https://youtube.com/channel/UCKRJGK62ZfwE9dnac2s-pww","URL to my personal/tech YouTube channel."
+"ytags","technology,media,software,ios,smartphones,tech blog,tech vlog,tech,siri shortcut,personal automation,macos,desktop automation,macos big sur,ios 15","YouTube Siri Shortcuts Demos tag set. (Ongoing WIP)"
+"ytmp3","youtube-dl -i --extract-audio --audio-format mp3 --audio-quality 0 %clipboard","Download YouTube video as max quality .mp3."
+"zalgo","http://bilge.world/zalgo-generator-ios-app-review","URL to “Zalgo Generator for iOS Review” on The Psalms."
+"zsig","David Blue
+davidblue@extratone.com","Signature"
+"~","https://tilde.town/~extratone/","Tilde.Town profile."
