@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/importance-of-customer-service/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/importance-of-customer-service",
+    "feed_url": "https://textexpander.com/blog/importance-of-customer-service/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 6 Observations about the Importance of Customer Service",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/importance-of-customer-service#comment-11283",
+            "url": "https://textexpander.com/blog/importance-of-customer-service#comment-11283",
+            "content_html": "I belong to the bigger portion of Americans who aren't willing to purchase again from a certain store once I have experienced a bad customer experience. Personally, I wouldn't mind spending lots on the same store as long as they're willing to attend to my needs without making me feel bad. This also emphasizes the importance of customer service training for a lot of companies in the US.",
+            "content_text": "I belong to the bigger portion of Americans who aren't willing to purchase again from a certain store once I have experienced a bad customer experience. Personally, I wouldn't mind spending lots on the same store as long as they're willing to attend to my needs without making me feel bad. This also emphasizes the importance of customer service training for a lot of companies in the US.",
+            "date_published": "2020-10-23T06:37:59-07:00",
+            "authors": [
+                {
+                    "name": "Zoe Campos",
+                    "url": "https://cliffdragonetti.com/customer-service",
+                    "avatar": "https://secure.gravatar.com/avatar/fb095f4b017823a83d459632a628f9fe?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Zoe Campos",
+                "url": "https://cliffdragonetti.com/customer-service",
+                "avatar": "https://secure.gravatar.com/avatar/fb095f4b017823a83d459632a628f9fe?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/importance-of-customer-service#comment-10443",
+            "url": "https://textexpander.com/blog/importance-of-customer-service#comment-10443",
+            "content_html": "Great read! In my opinion, live chat integration has helped businesses bring the best of both worlds together in one single place to provide better customer support. I found an article on Engati that really help put things into perspective for me.",
+            "content_text": "Great read! In my opinion, live chat integration has helped businesses bring the best of both worlds together in one single place to provide better customer support. I found an article on Engati that really help put things into perspective for me.",
+            "date_published": "2020-09-12T23:08:46-07:00",
+            "authors": [
+                {
+                    "name": "Brad",
+                    "url": "https://www.engati.com/blog/engati-chatbot-integrates-live-chat-for-better-customer-support",
+                    "avatar": "https://secure.gravatar.com/avatar/023de6042a753c232342d3f5f25bed7e?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Brad",
+                "url": "https://www.engati.com/blog/engati-chatbot-integrates-live-chat-for-better-customer-support",
+                "avatar": "https://secure.gravatar.com/avatar/023de6042a753c232342d3f5f25bed7e?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

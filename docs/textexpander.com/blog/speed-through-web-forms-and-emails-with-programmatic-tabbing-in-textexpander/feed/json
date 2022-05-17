@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander",
+    "feed_url": "https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Speed Through Web Forms and Emails with Programmatic Tabbing in TextExpander",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander#comment-10392",
+            "url": "https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander#comment-10392",
+            "content_html": "In reply to <a href=\"https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander#comment-9684\">Rick Carter</a>.\n\nGreat recommendation!",
+            "content_text": "In reply to Rick Carter.\n\nGreat recommendation!",
+            "date_published": "2020-09-11T07:46:37-07:00",
+            "authors": [
+                {
+                    "name": "Diana Prodan",
+                    "url": "https://textexpander.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Diana Prodan",
+                "url": "https://textexpander.com/",
+                "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander#comment-9684",
+            "url": "https://textexpander.com/blog/speed-through-web-forms-and-emails-with-programmatic-tabbing-in-textexpander#comment-9684",
+            "content_html": "Please add SHIFT+TAB (backtab) to your list. Some (granted poorly-designed) websites sometimes require a change further down and then have to go back up to do something For instance, in sending a gmail email message in one snippet, I need to click on Bcc: first to get the fields right, and then I have to manually go up to the To: line for things to work properly. It'd be great if it could handle the back-tab up to the To: line for me.",
+            "content_text": "Please add SHIFT+TAB (backtab) to your list. Some (granted poorly-designed) websites sometimes require a change further down and then have to go back up to do something For instance, in sending a gmail email message in one snippet, I need to click on Bcc: first to get the fields right, and then I have to manually go up to the To: line for things to work properly. It'd be great if it could handle the back-tab up to the To: line for me.",
+            "date_published": "2020-08-24T09:34:03-07:00",
+            "authors": [
+                {
+                    "name": "Rick Carter",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/444818dc11f534ce6f86c97ffc103bab?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Rick Carter",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/444818dc11f534ce6f86c97ffc103bab?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

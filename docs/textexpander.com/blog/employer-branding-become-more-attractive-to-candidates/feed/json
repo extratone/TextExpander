@@ -1,0 +1,75 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates",
+    "feed_url": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Employer Branding: Become More Attractive to Candidates",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-10391",
+            "url": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-10391",
+            "content_html": "In reply to <a href=\"https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-10236\">Praveen Kumar</a>.\n\nSo glad you find them informative! Best of luck in your endeavors!",
+            "content_text": "In reply to Praveen Kumar.\n\nSo glad you find them informative! Best of luck in your endeavors!",
+            "date_published": "2020-09-11T07:45:18-07:00",
+            "authors": [
+                {
+                    "name": "Diana Prodan",
+                    "url": "https://textexpander.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Diana Prodan",
+                "url": "https://textexpander.com/",
+                "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-10236",
+            "url": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-10236",
+            "content_html": "That was very informative! We are currently working on our employer branding and these tips seems very helpful to us. Thanks for sharing it here! Do keep posted.",
+            "content_text": "That was very informative! We are currently working on our employer branding and these tips seems very helpful to us. Thanks for sharing it here! Do keep posted.",
+            "date_published": "2020-09-06T23:25:51-07:00",
+            "authors": [
+                {
+                    "name": "Praveen Kumar",
+                    "url": "https://www.whoosh-media.com/branding/",
+                    "avatar": "https://secure.gravatar.com/avatar/988fffb71018c8a00cda62d15e55c510?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Praveen Kumar",
+                "url": "https://www.whoosh-media.com/branding/",
+                "avatar": "https://secure.gravatar.com/avatar/988fffb71018c8a00cda62d15e55c510?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-7914",
+            "url": "https://textexpander.com/blog/employer-branding-become-more-attractive-to-candidates#comment-7914",
+            "content_html": "Interesting piece. \r\nMany companies focus on marketing to customers but don't  devote sufficient  resources to employer branding. As a result,  they are unable to hire the best and brightest to fuel growth of the organization.\r\nI am grateful to provide legal counsel to clients who appreciate the value of both types of branding.",
+            "content_text": "Interesting piece. \r\nMany companies focus on marketing to customers but don't  devote sufficient  resources to employer branding. As a result,  they are unable to hire the best and brightest to fuel growth of the organization.\r\nI am grateful to provide legal counsel to clients who appreciate the value of both types of branding.",
+            "date_published": "2020-07-01T14:14:09-07:00",
+            "authors": [
+                {
+                    "name": "Jeff Bodie",
+                    "url": "http://chenowethlaw.com",
+                    "avatar": "https://secure.gravatar.com/avatar/f7278aaaa33cf988002b7fe7dc262378?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Jeff Bodie",
+                "url": "http://chenowethlaw.com",
+                "avatar": "https://secure.gravatar.com/avatar/f7278aaaa33cf988002b7fe7dc262378?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

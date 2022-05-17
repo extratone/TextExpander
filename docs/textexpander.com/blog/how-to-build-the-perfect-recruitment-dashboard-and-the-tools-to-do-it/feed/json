@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/how-to-build-the-perfect-recruitment-dashboard-and-the-tools-to-do-it/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/how-to-build-the-perfect-recruitment-dashboard-and-the-tools-to-do-it",
+    "feed_url": "https://textexpander.com/blog/how-to-build-the-perfect-recruitment-dashboard-and-the-tools-to-do-it/feed/json",
+    "language": "en-US",
+    "title": "Comments on: How to Build the Perfect Recruitment Dashboard",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/how-to-build-the-perfect-recruitment-dashboard-and-the-tools-to-do-it#comment-3563",
+            "url": "https://textexpander.com/blog/how-to-build-the-perfect-recruitment-dashboard-and-the-tools-to-do-it#comment-3563",
+            "content_html": "Hmm it appears like your blog ate my first comment (it was super long) \r\nso I guess I'll just sum it up what I submitted and say, I'm thoroughly enjoying \r\nyour blog. I too am an aspiring blog blogger but I'm still new to everything.\r\nDo you have any tips and hints for novice blog writers?\r\n\r\nI'd definitely appreciate it.",
+            "content_text": "Hmm it appears like your blog ate my first comment (it was super long) \r\nso I guess I'll just sum it up what I submitted and say, I'm thoroughly enjoying \r\nyour blog. I too am an aspiring blog blogger but I'm still new to everything.\r\nDo you have any tips and hints for novice blog writers?\r\n\r\nI'd definitely appreciate it.",
+            "date_published": "2020-03-23T11:57:54-07:00",
+            "authors": [
+                {
+                    "name": "ayahuasca healings",
+                    "url": "http://yy7.com/howtorecoverfrombulimia53101",
+                    "avatar": "https://secure.gravatar.com/avatar/318918355cf2bed84dbc95116e26822b?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "ayahuasca healings",
+                "url": "http://yy7.com/howtorecoverfrombulimia53101",
+                "avatar": "https://secure.gravatar.com/avatar/318918355cf2bed84dbc95116e26822b?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/how-to-respond-to-customer-complaints/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/how-to-respond-to-customer-complaints",
+    "feed_url": "https://textexpander.com/blog/how-to-respond-to-customer-complaints/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 12 Great Examples of How To Respond to Customer Complaints",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/how-to-respond-to-customer-complaints#comment-9948",
+            "url": "https://textexpander.com/blog/how-to-respond-to-customer-complaints#comment-9948",
+            "content_html": "Thanks for sharing such an informative article. Great explanation.",
+            "content_text": "Thanks for sharing such an informative article. Great explanation.",
+            "date_published": "2020-08-31T04:40:29-07:00",
+            "authors": [
+                {
+                    "name": "Jessica Bennett",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/026c77f1d75a5cd599aba273d9ff6575?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Jessica Bennett",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/026c77f1d75a5cd599aba273d9ff6575?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/how-to-respond-to-customer-complaints#comment-7972",
+            "url": "https://textexpander.com/blog/how-to-respond-to-customer-complaints#comment-7972",
+            "content_html": "Very well written, negative comments can be a tough-ask to deal with, at times. In my opinion, acting promptly and trying to get the issue resolved can get you a lot of positive traction from the audience and enable a consumer to be your brand\u2019s loyal. Just need to make sure that you are doing everything right. Great explanations through examples though.",
+            "content_text": "Very well written, negative comments can be a tough-ask to deal with, at times. In my opinion, acting promptly and trying to get the issue resolved can get you a lot of positive traction from the audience and enable a consumer to be your brand\u2019s loyal. Just need to make sure that you are doing everything right. Great explanations through examples though.",
+            "date_published": "2020-07-03T04:24:16-07:00",
+            "authors": [
+                {
+                    "name": "Aaron Starc",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/d2b59b24dc37f256a49dff09cc3f1d2e?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Aaron Starc",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/d2b59b24dc37f256a49dff09cc3f1d2e?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

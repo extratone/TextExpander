@@ -1,0 +1,113 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round",
+    "feed_url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Party Planning Tips to Save Time &#8211; Lists All Round!",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-12009",
+            "url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-12009",
+            "content_html": "Planning a party or event shouldn't be stressful or intimidating. By staying organized and following your tips, one can plan, create, and host a memorable affair with ease. I want to add that Leave yourself for an hour to freshen up before guests arrive, slip into something party-ready, and light some candles for added ambiance. Thanks for the tips!",
+            "content_text": "Planning a party or event shouldn't be stressful or intimidating. By staying organized and following your tips, one can plan, create, and host a memorable affair with ease. I want to add that Leave yourself for an hour to freshen up before guests arrive, slip into something party-ready, and light some candles for added ambiance. Thanks for the tips!",
+            "date_published": "2020-11-23T01:22:43-07:00",
+            "authors": [
+                {
+                    "name": "Party In Miami",
+                    "url": "https://hautecouture-events.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/234ea39661520e563f1184378dca4457?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Party In Miami",
+                "url": "https://hautecouture-events.com/",
+                "avatar": "https://secure.gravatar.com/avatar/234ea39661520e563f1184378dca4457?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-4763",
+            "url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-4763",
+            "content_html": "You make an excellent point about preparing a checklist when we are planning an event as it ensures we do not leave anything out. My sister is planning to organize a family reunion and she is now in the stage of looking for entertainment. I will recommend her to prepare a checklist of what to consider when hiring an entertainer and remind her to base her decision on that list.",
+            "content_text": "You make an excellent point about preparing a checklist when we are planning an event as it ensures we do not leave anything out. My sister is planning to organize a family reunion and she is now in the stage of looking for entertainment. I will recommend her to prepare a checklist of what to consider when hiring an entertainer and remind her to base her decision on that list.",
+            "date_published": "2020-04-23T02:32:25-07:00",
+            "authors": [
+                {
+                    "name": "Kristofer Van Wagner",
+                    "url": "https://ollieent.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/bc01bdc6a8a840479f8429a7808a91c3?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Kristofer Van Wagner",
+                "url": "https://ollieent.com/",
+                "avatar": "https://secure.gravatar.com/avatar/bc01bdc6a8a840479f8429a7808a91c3?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-1232",
+            "url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-1232",
+            "content_html": "I like how you said that you can ask for help from family members when you are planning a party. My husband and I would like to celebrate my parents' anniversary but we haven't decided who to invite yet. I will talk to them about who they want to invite so that we can start looking at the chairs and tables that we will need to rent.",
+            "content_text": "I like how you said that you can ask for help from family members when you are planning a party. My husband and I would like to celebrate my parents' anniversary but we haven't decided who to invite yet. I will talk to them about who they want to invite so that we can start looking at the chairs and tables that we will need to rent.",
+            "date_published": "2020-01-17T14:05:08-07:00",
+            "authors": [
+                {
+                    "name": "Ellie Davis",
+                    "url": "https://bedazzlemyevents.com/wedding-party-rentals-los-angeles/",
+                    "avatar": "https://secure.gravatar.com/avatar/6ae7831012cfd2e11f4a1b8deea06086?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Ellie Davis",
+                "url": "https://bedazzlemyevents.com/wedding-party-rentals-los-angeles/",
+                "avatar": "https://secure.gravatar.com/avatar/6ae7831012cfd2e11f4a1b8deea06086?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-751",
+            "url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-751",
+            "content_html": "It's helpful to know that you should write even small tasks down when planning a party. My brother is getting married and needs to hold a reception. We'll have to find a place we can make private party reservations.",
+            "content_text": "It's helpful to know that you should write even small tasks down when planning a party. My brother is getting married and needs to hold a reception. We'll have to find a place we can make private party reservations.",
+            "date_published": "2020-01-02T13:27:04-07:00",
+            "authors": [
+                {
+                    "name": "David Johnson",
+                    "url": "https://www.montrio.com/private-parties/",
+                    "avatar": "https://secure.gravatar.com/avatar/abd6ce87f3bd0ff37674bbf60fe5749c?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "David Johnson",
+                "url": "https://www.montrio.com/private-parties/",
+                "avatar": "https://secure.gravatar.com/avatar/abd6ce87f3bd0ff37674bbf60fe5749c?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-748",
+            "url": "https://textexpander.com/blog/party-planning-tips-to-save-time-lists-all-round#comment-748",
+            "content_html": "Using this snippet, once I ve selected and filled out all the information I want to include, I can just hit  OK  and my entire email has been written for me.",
+            "content_text": "Using this snippet, once I ve selected and filled out all the information I want to include, I can just hit  OK  and my entire email has been written for me.",
+            "date_published": "2020-01-02T10:01:39-07:00",
+            "authors": [
+                {
+                    "name": "Artass",
+                    "url": "https://slavasozidatelyam.ru/",
+                    "avatar": "https://secure.gravatar.com/avatar/616473f4e2e751cbba6b8e85f8c447c8?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Artass",
+                "url": "https://slavasozidatelyam.ru/",
+                "avatar": "https://secure.gravatar.com/avatar/616473f4e2e751cbba6b8e85f8c447c8?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

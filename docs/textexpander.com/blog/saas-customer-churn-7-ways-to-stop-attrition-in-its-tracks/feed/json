@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/saas-customer-churn-7-ways-to-stop-attrition-in-its-tracks/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/saas-customer-churn-7-ways-to-stop-attrition-in-its-tracks",
+    "feed_url": "https://textexpander.com/blog/saas-customer-churn-7-ways-to-stop-attrition-in-its-tracks/feed/json",
+    "language": "en-US",
+    "title": "Comments on: SaaS Customer Churn: 7 Ways to Stop Attrition in Its Tracks",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/saas-customer-churn-7-ways-to-stop-attrition-in-its-tracks#comment-17323",
+            "url": "https://textexpander.com/blog/saas-customer-churn-7-ways-to-stop-attrition-in-its-tracks#comment-17323",
+            "content_html": "Thanks for your article. If I may, i would like to add one point: customer churn is an inevitable part of any business. If the churn is small - you shouldnt panic or change something. But the main thing is to keep track if the massive churn begins, then it worth analysing your business. The process of reducing churn in a SaaS company takes time. But in the end, you will see that the effort was worth it.",
+            "content_text": "Thanks for your article. If I may, i would like to add one point: customer churn is an inevitable part of any business. If the churn is small - you shouldnt panic or change something. But the main thing is to keep track if the massive churn begins, then it worth analysing your business. The process of reducing churn in a SaaS company takes time. But in the end, you will see that the effort was worth it.",
+            "date_published": "2021-03-09T08:40:47-07:00",
+            "authors": [
+                {
+                    "name": "Nancy Morrison",
+                    "url": "https://ardas-it.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/17d5f8890b7adbfef510d05ccc38a687?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Nancy Morrison",
+                "url": "https://ardas-it.com/",
+                "avatar": "https://secure.gravatar.com/avatar/17d5f8890b7adbfef510d05ccc38a687?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

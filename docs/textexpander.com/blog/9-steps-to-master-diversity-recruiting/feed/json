@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/9-steps-to-master-diversity-recruiting/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/9-steps-to-master-diversity-recruiting",
+    "feed_url": "https://textexpander.com/blog/9-steps-to-master-diversity-recruiting/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 9 Steps to Master Diversity Recruiting",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/9-steps-to-master-diversity-recruiting#comment-4826",
+            "url": "https://textexpander.com/blog/9-steps-to-master-diversity-recruiting#comment-4826",
+            "content_html": "Diversity hiring is hiring based on merit with special care taken to ensure procedures are free from biases related to a candidate\u2019s age, race, gender, religion, sexual orientation, and other personal characteristics that are unrelated to their job performance.",
+            "content_text": "Diversity hiring is hiring based on merit with special care taken to ensure procedures are free from biases related to a candidate\u2019s age, race, gender, religion, sexual orientation, and other personal characteristics that are unrelated to their job performance.",
+            "date_published": "2020-04-25T00:58:46-07:00",
+            "authors": [
+                {
+                    "name": "Albert Jones",
+                    "url": "https://joonko.co",
+                    "avatar": "https://secure.gravatar.com/avatar/3e0d093f7bb5dba615afe08bd005b14f?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Albert Jones",
+                "url": "https://joonko.co",
+                "avatar": "https://secure.gravatar.com/avatar/3e0d093f7bb5dba615afe08bd005b14f?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

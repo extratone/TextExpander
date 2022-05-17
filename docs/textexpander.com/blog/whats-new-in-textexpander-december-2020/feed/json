@@ -1,0 +1,75 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/whats-new-in-textexpander-december-2020/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020",
+    "feed_url": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020/feed/json",
+    "language": "en-US",
+    "title": "Comments on: What\u2019s New in TextExpander: Quick Actions, UI Updates, and Feature Parity",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020#comment-12748",
+            "url": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020#comment-12748",
+            "content_html": "Hi,\r\nGenerally a nice update, but I need the ability to change display font size.\r\n\r\nThe menu bar window is displaying them far too large. Feels almost as if I have some kind of accessibility setting for the visually impaired active.\r\n\r\nThanks",
+            "content_text": "Hi,\r\nGenerally a nice update, but I need the ability to change display font size.\r\n\r\nThe menu bar window is displaying them far too large. Feels almost as if I have some kind of accessibility setting for the visually impaired active.\r\n\r\nThanks",
+            "date_published": "2020-12-16T00:51:37-07:00",
+            "authors": [
+                {
+                    "name": "Kevin",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/a8b0e657cb02377fd642457947450ccd?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Kevin",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/a8b0e657cb02377fd642457947450ccd?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020#comment-12732",
+            "url": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020#comment-12732",
+            "content_html": "I have to ask... how many times does forgetting an appointment have to happen to encourage creating a snippet? LMAO",
+            "content_text": "I have to ask... how many times does forgetting an appointment have to happen to encourage creating a snippet? LMAO",
+            "date_published": "2020-12-15T11:02:34-07:00",
+            "authors": [
+                {
+                    "name": "Lisa Stewart",
+                    "url": "http://BuildYourOwnSMB.com",
+                    "avatar": "https://secure.gravatar.com/avatar/169d0148dd134de269f0301ab91a3d0a?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Lisa Stewart",
+                "url": "http://BuildYourOwnSMB.com",
+                "avatar": "https://secure.gravatar.com/avatar/169d0148dd134de269f0301ab91a3d0a?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020#comment-12725",
+            "url": "https://textexpander.com/blog/whats-new-in-textexpander-december-2020#comment-12725",
+            "content_html": "Could you please do a video showing the new features?",
+            "content_text": "Could you please do a video showing the new features?",
+            "date_published": "2020-12-15T07:51:09-07:00",
+            "authors": [
+                {
+                    "name": "Tony Winyard",
+                    "url": "http://tonywinyard.com",
+                    "avatar": "https://secure.gravatar.com/avatar/58f43a8d7f0c350f1e28f302ca994e62?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Tony Winyard",
+                "url": "http://tonywinyard.com",
+                "avatar": "https://secure.gravatar.com/avatar/58f43a8d7f0c350f1e28f302ca994e62?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

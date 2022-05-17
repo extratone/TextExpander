@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/ai-customer-service/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/ai-customer-service",
+    "feed_url": "https://textexpander.com/blog/ai-customer-service/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 4 Practical Ways to Use AI in Customer Service Today",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/ai-customer-service#comment-2004",
+            "url": "https://textexpander.com/blog/ai-customer-service#comment-2004",
+            "content_html": "One thing I've always loved about automated chatbots, is the analytics you can get to see how the answers are performing.\r\n\r\nMost companies don't spend the time thinking about if their support staff are answering questions via chat effectively, they just care about volume and time-to-response.\r\n\r\nAI seems to be allowing us to focus on the quality of the interaction, which is great (and slightly ironic, given the concern that computers wouldn't be as good at communicating as us!)",
+            "content_text": "One thing I've always loved about automated chatbots, is the analytics you can get to see how the answers are performing.\r\n\r\nMost companies don't spend the time thinking about if their support staff are answering questions via chat effectively, they just care about volume and time-to-response.\r\n\r\nAI seems to be allowing us to focus on the quality of the interaction, which is great (and slightly ironic, given the concern that computers wouldn't be as good at communicating as us!)",
+            "date_published": "2020-02-11T04:03:19-07:00",
+            "authors": [
+                {
+                    "name": "Toby Osbourn",
+                    "url": "https://tosbourn.com",
+                    "avatar": "https://secure.gravatar.com/avatar/f9df5ae464cd8080533092eac3a56135?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Toby Osbourn",
+                "url": "https://tosbourn.com",
+                "avatar": "https://secure.gravatar.com/avatar/f9df5ae464cd8080533092eac3a56135?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

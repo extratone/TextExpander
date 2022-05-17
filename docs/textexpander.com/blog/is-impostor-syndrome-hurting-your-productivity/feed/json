@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/is-impostor-syndrome-hurting-your-productivity/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/is-impostor-syndrome-hurting-your-productivity",
+    "feed_url": "https://textexpander.com/blog/is-impostor-syndrome-hurting-your-productivity/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Is Impostor Syndrome Hurting Your Productivity?",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/is-impostor-syndrome-hurting-your-productivity#comment-24020",
+            "url": "https://textexpander.com/blog/is-impostor-syndrome-hurting-your-productivity#comment-24020",
+            "content_html": "What a great article! I think many people may suffer from Imposter Syndrome and not even be aware of it. I have times like this myself. Thanks!",
+            "content_text": "What a great article! I think many people may suffer from Imposter Syndrome and not even be aware of it. I have times like this myself. Thanks!",
+            "date_published": "2021-06-13T18:49:15-07:00",
+            "authors": [
+                {
+                    "name": "Ann Plumb",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/6e2da0be6a81df688007350a88cb29be?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Ann Plumb",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/6e2da0be6a81df688007350a88cb29be?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

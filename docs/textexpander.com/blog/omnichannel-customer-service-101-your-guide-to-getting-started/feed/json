@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/omnichannel-customer-service-101-your-guide-to-getting-started/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/omnichannel-customer-service-101-your-guide-to-getting-started",
+    "feed_url": "https://textexpander.com/blog/omnichannel-customer-service-101-your-guide-to-getting-started/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Omnichannel Customer Service 101: Your Guide to Getting Started",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/omnichannel-customer-service-101-your-guide-to-getting-started#comment-8869",
+            "url": "https://textexpander.com/blog/omnichannel-customer-service-101-your-guide-to-getting-started#comment-8869",
+            "content_html": "Amazing blog, Today I gain lots of knowledge about Omnichannel Customer Support Services. It was very informative and easy to understand. \r\nThank you for sharing with us.",
+            "content_text": "Amazing blog, Today I gain lots of knowledge about Omnichannel Customer Support Services. It was very informative and easy to understand. \r\nThank you for sharing with us.",
+            "date_published": "2020-07-30T22:08:31-07:00",
+            "authors": [
+                {
+                    "name": "Hinal Shah",
+                    "url": "https://www.fusionfirst.com/services/omnichannel-customer-support-services/",
+                    "avatar": "https://secure.gravatar.com/avatar/452fedb27efdb042c26686f3d8b71613?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Hinal Shah",
+                "url": "https://www.fusionfirst.com/services/omnichannel-customer-support-services/",
+                "avatar": "https://secure.gravatar.com/avatar/452fedb27efdb042c26686f3d8b71613?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

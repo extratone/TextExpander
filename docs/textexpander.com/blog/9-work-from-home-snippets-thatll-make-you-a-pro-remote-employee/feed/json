@@ -1,0 +1,113 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee",
+    "feed_url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 9 Work-From-Home Snippets That\u2019ll Make You a PRO Remote Employee",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-7854",
+            "url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-7854",
+            "content_html": "Thank you for your tips!\r\n\r\nThe most useful tip: \r\nAlthough I am an experienced user (currently at 23,963 snippets expanded), I was unaware of the potential for using the \"fill-ins\" option for creating a snippet.",
+            "content_text": "Thank you for your tips!\r\n\r\nThe most useful tip: \r\nAlthough I am an experienced user (currently at 23,963 snippets expanded), I was unaware of the potential for using the \"fill-ins\" option for creating a snippet.",
+            "date_published": "2020-06-30T08:12:14-07:00",
+            "authors": [
+                {
+                    "name": "Gary Bollinger",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/5e75e43a37b211b71380317daf06e233?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Gary Bollinger",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/5e75e43a37b211b71380317daf06e233?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-5571",
+            "url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-5571",
+            "content_html": "In reply to <a href=\"https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-4835\">ashish sarode</a>.\n\nThanks for the feedback and for using TextExpander! Check out the <a href=\"https://textexpander.com/publicgroups/\">public group</a> called \"Past and Future Dates\" - there are some great date abbreviations in there that you may need. As for using TextExpander in Microsoft Word and Gmail, you shouldn't have any problems expanding in those applications. If you do - please reach out to support, they'll help you get everything up and running smoothly: https://textexpander.com/contact/.",
+            "content_text": "In reply to ashish sarode.\n\nThanks for the feedback and for using TextExpander! Check out the public group called \"Past and Future Dates\" - there are some great date abbreviations in there that you may need. As for using TextExpander in Microsoft Word and Gmail, you shouldn't have any problems expanding in those applications. If you do - please reach out to support, they'll help you get everything up and running smoothly: https://textexpander.com/contact/.",
+            "date_published": "2020-05-12T12:41:41-07:00",
+            "authors": [
+                {
+                    "name": "Diana Prodan",
+                    "url": "https://textexpander.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Diana Prodan",
+                "url": "https://textexpander.com/",
+                "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-5570",
+            "url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-5570",
+            "content_html": "In reply to <a href=\"https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-4808\">Bruce Wilson</a>.\n\nHello, thanks for reading! Sorry you couldn't find our public groups - you can find them here: https://textexpander.com/publicgroups/",
+            "content_text": "In reply to Bruce Wilson.\n\nHello, thanks for reading! Sorry you couldn't find our public groups - you can find them here: https://textexpander.com/publicgroups/",
+            "date_published": "2020-05-12T12:33:12-07:00",
+            "authors": [
+                {
+                    "name": "Diana Prodan",
+                    "url": "https://textexpander.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Diana Prodan",
+                "url": "https://textexpander.com/",
+                "avatar": "https://secure.gravatar.com/avatar/c4787bdc0498fd80884ecfc6ad7984f3?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-4835",
+            "url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-4835",
+            "content_html": "Thanks. I love your app. It's a very productive app. Just one suggestion, please make a standard sortcut for date and or time stamp. Also it would be great if the app also works on Microsoft word, Gmail apps",
+            "content_text": "Thanks. I love your app. It's a very productive app. Just one suggestion, please make a standard sortcut for date and or time stamp. Also it would be great if the app also works on Microsoft word, Gmail apps",
+            "date_published": "2020-04-25T06:54:39-07:00",
+            "authors": [
+                {
+                    "name": "ashish sarode",
+                    "url": "http://www.veinindia.com",
+                    "avatar": "https://secure.gravatar.com/avatar/a302f8f0399e10cbb94e121dcb8e842b?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "ashish sarode",
+                "url": "http://www.veinindia.com",
+                "avatar": "https://secure.gravatar.com/avatar/a302f8f0399e10cbb94e121dcb8e842b?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-4808",
+            "url": "https://textexpander.com/blog/9-work-from-home-snippets-thatll-make-you-a-pro-remote-employee#comment-4808",
+            "content_html": "Where do I find public groups and how do I use them?\r\n\r\nAlso, \"public group\" is not in your help index",
+            "content_text": "Where do I find public groups and how do I use them?\r\n\r\nAlso, \"public group\" is not in your help index",
+            "date_published": "2020-04-24T13:52:43-07:00",
+            "authors": [
+                {
+                    "name": "Bruce Wilson",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/7e5417265646ea5baebde4762b8864b8?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Bruce Wilson",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/7e5417265646ea5baebde4762b8864b8?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

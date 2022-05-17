@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/the-30-customer-service-scripts-your-team-needs-for-chat/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/the-30-customer-service-scripts-your-team-needs-for-chat",
+    "feed_url": "https://textexpander.com/blog/the-30-customer-service-scripts-your-team-needs-for-chat/feed/json",
+    "language": "en-US",
+    "title": "Comments on: The 30 Customer Service Scripts Your Team Needs for Chat",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/the-30-customer-service-scripts-your-team-needs-for-chat#comment-11174",
+            "url": "https://textexpander.com/blog/the-30-customer-service-scripts-your-team-needs-for-chat#comment-11174",
+            "content_html": "Great article, and really helps. Will implement and share with my team members for certain",
+            "content_text": "Great article, and really helps. Will implement and share with my team members for certain",
+            "date_published": "2020-10-16T22:15:16-07:00",
+            "authors": [
+                {
+                    "name": "Amit",
+                    "url": "https://coupon4all.in/",
+                    "avatar": "https://secure.gravatar.com/avatar/0eca8f8678d9c1a4674b0eb4af6e9945?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Amit",
+                "url": "https://coupon4all.in/",
+                "avatar": "https://secure.gravatar.com/avatar/0eca8f8678d9c1a4674b0eb4af6e9945?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

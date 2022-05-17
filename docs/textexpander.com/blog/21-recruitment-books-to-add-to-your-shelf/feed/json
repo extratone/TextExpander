@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf",
+    "feed_url": "https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 21 Recruitment Books to Add to Your Shelf",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf#comment-13954",
+            "url": "https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf#comment-13954",
+            "content_html": "[&#8230;] &#8211; 21 Recruitment Books to Add to Your Shelf by Maisha Cannon: https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf/Watch Maisha&#8217;s Sourcing Challenge Show Episode: [&#8230;]",
+            "content_text": "[&#8230;] &#8211; 21 Recruitment Books to Add to Your Shelf by Maisha Cannon: https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf/Watch Maisha&#8217;s Sourcing Challenge Show Episode: [&#8230;]",
+            "date_published": "2021-01-13T16:11:26-07:00",
+            "authors": [
+                {
+                    "name": "Sourcing Challenge Weekly &#8211; 2020 in Review &#8211; Sourcing Challenge",
+                    "url": "https://sourcingchallenge.com/weekly2",
+                    "avatar": false
+                }
+            ],
+            "author": {
+                "name": "Sourcing Challenge Weekly &#8211; 2020 in Review &#8211; Sourcing Challenge",
+                "url": "https://sourcingchallenge.com/weekly2",
+                "avatar": false
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf#comment-1404",
+            "url": "https://textexpander.com/blog/21-recruitment-books-to-add-to-your-shelf#comment-1404",
+            "content_html": "I'm excited to read some of the books on assessing talent \u2013 I've been on the panel of quite a few technical interviews and it is always a hard thing to assess.",
+            "content_text": "I'm excited to read some of the books on assessing talent \u2013 I've been on the panel of quite a few technical interviews and it is always a hard thing to assess.",
+            "date_published": "2020-01-23T10:08:58-07:00",
+            "authors": [
+                {
+                    "name": "Toby Osbourn",
+                    "url": "https://tosbourn.com",
+                    "avatar": "https://secure.gravatar.com/avatar/f9df5ae464cd8080533092eac3a56135?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Toby Osbourn",
+                "url": "https://tosbourn.com",
+                "avatar": "https://secure.gravatar.com/avatar/f9df5ae464cd8080533092eac3a56135?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

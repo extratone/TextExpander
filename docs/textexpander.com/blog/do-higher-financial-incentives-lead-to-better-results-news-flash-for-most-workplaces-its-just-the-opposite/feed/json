@@ -1,0 +1,16 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/do-higher-financial-incentives-lead-to-better-results-news-flash-for-most-workplaces-its-just-the-opposite/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/do-higher-financial-incentives-lead-to-better-results-news-flash-for-most-workplaces-its-just-the-opposite",
+    "feed_url": "https://textexpander.com/blog/do-higher-financial-incentives-lead-to-better-results-news-flash-for-most-workplaces-its-just-the-opposite/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Do Higher Financial Incentives Lead to Better Results? (News Flash: For Most Workplaces, It\u2019s Just the Opposite.)",
+    "description": "Communicate Smarter"
+}

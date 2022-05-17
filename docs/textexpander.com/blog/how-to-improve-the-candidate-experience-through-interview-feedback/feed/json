@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/how-to-improve-the-candidate-experience-through-interview-feedback/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/how-to-improve-the-candidate-experience-through-interview-feedback",
+    "feed_url": "https://textexpander.com/blog/how-to-improve-the-candidate-experience-through-interview-feedback/feed/json",
+    "language": "en-US",
+    "title": "Comments on: How to Improve the Candidate Experience Through Interview Feedback",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/how-to-improve-the-candidate-experience-through-interview-feedback#comment-7760",
+            "url": "https://textexpander.com/blog/how-to-improve-the-candidate-experience-through-interview-feedback#comment-7760",
+            "content_html": "thanks for shairing this post",
+            "content_text": "thanks for shairing this post",
+            "date_published": "2020-06-27T12:20:30-07:00",
+            "authors": [
+                {
+                    "name": "farshmartlink",
+                    "url": "https://farshmart.ir/",
+                    "avatar": "https://secure.gravatar.com/avatar/4b42c136ae2a1ccc125ba00388af83c6?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "farshmartlink",
+                "url": "https://farshmart.ir/",
+                "avatar": "https://secure.gravatar.com/avatar/4b42c136ae2a1ccc125ba00388af83c6?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

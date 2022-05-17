@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/3-sales-closing-techniques-to-help-you-win/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/3-sales-closing-techniques-to-help-you-win",
+    "feed_url": "https://textexpander.com/blog/3-sales-closing-techniques-to-help-you-win/feed/json",
+    "language": "en-US",
+    "title": "Comments on: The Only 3 Sales Closing Techniques You Need to Help You Win",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/3-sales-closing-techniques-to-help-you-win#comment-10574",
+            "url": "https://textexpander.com/blog/3-sales-closing-techniques-to-help-you-win#comment-10574",
+            "content_html": "Great piece, I definitely plan on implementing some of these tips.",
+            "content_text": "Great piece, I definitely plan on implementing some of these tips.",
+            "date_published": "2020-09-17T03:50:30-07:00",
+            "authors": [
+                {
+                    "name": "Shayur Maharaj",
+                    "url": "https://cloudapper.com/safety-assure-workplace-health-and-safety-compliance-software/",
+                    "avatar": "https://secure.gravatar.com/avatar/d86a7e91ec3733b5e72c71577ee2f342?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Shayur Maharaj",
+                "url": "https://cloudapper.com/safety-assure-workplace-health-and-safety-compliance-software/",
+                "avatar": "https://secure.gravatar.com/avatar/d86a7e91ec3733b5e72c71577ee2f342?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/introducing-te-7/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/introducing-te-7",
+    "feed_url": "https://textexpander.com/blog/introducing-te-7/feed/json",
+    "language": "en-US",
+    "title": "Comments on: What\u2019s New in TextExpander: 7.0 Brings New and Improved Features, Accessibility, and a New Learning Center!",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/introducing-te-7#comment-32968",
+            "url": "https://textexpander.com/blog/introducing-te-7#comment-32968",
+            "content_html": "In reply to <a href=\"https://textexpander.com/blog/introducing-te-7#comment-32678\">John Holter</a>.\n\nHi, John - \r\n\r\nVery sorry you're having trouble updating! The first thing to try is to manually trigger a TextExpander update. To do so, go to TextExpander \u2192 Check for Updates. If that works, great!\r\n\r\nBased on your message, however, I suspect you've already tried that with no luck. If that's the case, your best bet may be to manually reinstall TextExpander. To do so, please delete TextExpander from your Windows or Mac machine (don't worry - your snippets are tied to your account and won't be lost). Then just visit this page:\r\n\r\nhttps://textexpander.com/download\r\n\r\n...download the latest version and install it. You should then be able to open TextExpander, sign in, and get back to expanding.\r\n\r\nIf the above doesn't work, please reach out to our support team via the following link - they should be able to help you resolve the issue.\r\n\r\nhttps://textexpander.com/contact\r\n\r\nVery sorry again for the trouble!",
+            "content_text": "In reply to John Holter.\n\nHi, John - \r\n\r\nVery sorry you're having trouble updating! The first thing to try is to manually trigger a TextExpander update. To do so, go to TextExpander \u2192 Check for Updates. If that works, great!\r\n\r\nBased on your message, however, I suspect you've already tried that with no luck. If that's the case, your best bet may be to manually reinstall TextExpander. To do so, please delete TextExpander from your Windows or Mac machine (don't worry - your snippets are tied to your account and won't be lost). Then just visit this page:\r\n\r\nhttps://textexpander.com/download\r\n\r\n...download the latest version and install it. You should then be able to open TextExpander, sign in, and get back to expanding.\r\n\r\nIf the above doesn't work, please reach out to our support team via the following link - they should be able to help you resolve the issue.\r\n\r\nhttps://textexpander.com/contact\r\n\r\nVery sorry again for the trouble!",
+            "date_published": "2021-11-05T09:55:12-07:00",
+            "authors": [
+                {
+                    "name": "Kipp Chambers",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/d303782d334599c348948fba560b5d0b?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Kipp Chambers",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/d303782d334599c348948fba560b5d0b?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/introducing-te-7#comment-32678",
+            "url": "https://textexpander.com/blog/introducing-te-7#comment-32678",
+            "content_html": "Good morning,\r\n I'm getting a warning there's an update  error. I cannot update my Expander. let me know what to do to overcome this  warning",
+            "content_text": "Good morning,\r\n I'm getting a warning there's an update  error. I cannot update my Expander. let me know what to do to overcome this  warning",
+            "date_published": "2021-11-03T02:01:55-07:00",
+            "authors": [
+                {
+                    "name": "John Holter",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/38182ea31b556309c724315ff6c2c106?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "John Holter",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/38182ea31b556309c724315ff6c2c106?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

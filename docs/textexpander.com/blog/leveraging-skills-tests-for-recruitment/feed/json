@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/leveraging-skills-tests-for-recruitment/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/leveraging-skills-tests-for-recruitment",
+    "feed_url": "https://textexpander.com/blog/leveraging-skills-tests-for-recruitment/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Leveraging Skills Tests for Recruitment",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/leveraging-skills-tests-for-recruitment#comment-10355",
+            "url": "https://textexpander.com/blog/leveraging-skills-tests-for-recruitment#comment-10355",
+            "content_html": "I did not take part in skills tests, but I know that many companies have introduced such tests durig recruitment. It's a good way to test skills, but I believe that recruitment should not be limited to that. Sometimess stress tends to lower the score and personality is important.",
+            "content_text": "I did not take part in skills tests, but I know that many companies have introduced such tests durig recruitment. It's a good way to test skills, but I believe that recruitment should not be limited to that. Sometimess stress tends to lower the score and personality is important.",
+            "date_published": "2020-09-10T05:07:11-07:00",
+            "authors": [
+                {
+                    "name": "Sylwia Swierczek",
+                    "url": "https://wasko.software/",
+                    "avatar": "https://secure.gravatar.com/avatar/a493e4d5c3ed27a6da99afab280554be?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Sylwia Swierczek",
+                "url": "https://wasko.software/",
+                "avatar": "https://secure.gravatar.com/avatar/a493e4d5c3ed27a6da99afab280554be?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

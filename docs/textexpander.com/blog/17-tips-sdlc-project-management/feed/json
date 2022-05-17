@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/17-tips-sdlc-project-management/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/17-tips-sdlc-project-management",
+    "feed_url": "https://textexpander.com/blog/17-tips-sdlc-project-management/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 17 Tips to Make Your SDLC Project Management More Efficient",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/17-tips-sdlc-project-management#comment-10953",
+            "url": "https://textexpander.com/blog/17-tips-sdlc-project-management#comment-10953",
+            "content_html": "At what point in SDLC do you start entering change tickets?",
+            "content_text": "At what point in SDLC do you start entering change tickets?",
+            "date_published": "2020-10-04T18:38:55-07:00",
+            "authors": [
+                {
+                    "name": "Kim",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/4cc0086c508a0e484cbdf7b6985c09c7?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Kim",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/4cc0086c508a0e484cbdf7b6985c09c7?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

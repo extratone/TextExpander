@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/software-development-blogs/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/software-development-blogs",
+    "feed_url": "https://textexpander.com/blog/software-development-blogs/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Software Development Blogs &#8211; Why We Need Them &#038; Our 15 Favorites",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/software-development-blogs#comment-3918",
+            "url": "https://textexpander.com/blog/software-development-blogs#comment-3918",
+            "content_html": "Software development is a complicated process. It requires careful planning and execution to meet the goals. Sometimes a developer must react quickly and aggressively to meet ever changing market demands. Maintaining software quality hinders fast-paced software development, as many testing cycles are necessary to ensure quality products. I found these are the best software development blogs. These blogs are really helpful for software developers. Textexpander thank you for sharing such amazing software development blogs.",
+            "content_text": "Software development is a complicated process. It requires careful planning and execution to meet the goals. Sometimes a developer must react quickly and aggressively to meet ever changing market demands. Maintaining software quality hinders fast-paced software development, as many testing cycles are necessary to ensure quality products. I found these are the best software development blogs. These blogs are really helpful for software developers. Textexpander thank you for sharing such amazing software development blogs.",
+            "date_published": "2020-04-02T03:24:47-07:00",
+            "authors": [
+                {
+                    "name": "avgisolutions",
+                    "url": "https://www.avgisolutions.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/61fd4b034ea394637e8324b570df753f?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "avgisolutions",
+                "url": "https://www.avgisolutions.com/",
+                "avatar": "https://secure.gravatar.com/avatar/61fd4b034ea394637e8324b570df753f?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

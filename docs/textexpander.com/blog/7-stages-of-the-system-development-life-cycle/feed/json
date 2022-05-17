@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle",
+    "feed_url": "https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Mastering the 7 Stages of the System Development Life Cycle",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle#comment-22934",
+            "url": "https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle#comment-22934",
+            "content_html": "Thanks for the update.",
+            "content_text": "Thanks for the update.",
+            "date_published": "2021-06-01T15:09:19-07:00",
+            "authors": [
+                {
+                    "name": "Richard Agyapong",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/8656b4a2a53321c1b3797af215a1abcc?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Richard Agyapong",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/8656b4a2a53321c1b3797af215a1abcc?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle#comment-11855",
+            "url": "https://textexpander.com/blog/7-stages-of-the-system-development-life-cycle#comment-11855",
+            "content_html": "This is good and well articulated!",
+            "content_text": "This is good and well articulated!",
+            "date_published": "2020-11-17T09:39:40-07:00",
+            "authors": [
+                {
+                    "name": "Siamalambo Millan",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/c1bb86e41bc10275135e0ab58cb35040?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Siamalambo Millan",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/c1bb86e41bc10275135e0ab58cb35040?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

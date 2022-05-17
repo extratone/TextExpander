@@ -1,0 +1,94 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/team-management-in-software-development/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/team-management-in-software-development",
+    "feed_url": "https://textexpander.com/blog/team-management-in-software-development/feed/json",
+    "language": "en-US",
+    "title": "Comments on: Team Management in Software Development: Getting it Right",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/team-management-in-software-development#comment-19654",
+            "url": "https://textexpander.com/blog/team-management-in-software-development#comment-19654",
+            "content_html": "If your team has never used any project management software or tools before, this list will give you a great headstart regarding the different options to try out.",
+            "content_text": "If your team has never used any project management software or tools before, this list will give you a great headstart regarding the different options to try out.",
+            "date_published": "2021-04-22T14:40:13-07:00",
+            "authors": [
+                {
+                    "name": "Ronald E Cleaver",
+                    "url": "",
+                    "avatar": "https://secure.gravatar.com/avatar/670469b09f7688d17ee64053c42fa0d2?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Ronald E Cleaver",
+                "url": "",
+                "avatar": "https://secure.gravatar.com/avatar/670469b09f7688d17ee64053c42fa0d2?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/team-management-in-software-development#comment-12027",
+            "url": "https://textexpander.com/blog/team-management-in-software-development#comment-12027",
+            "content_html": "Very important article.It will help me further software development project from scratch.Thank you for giving such a good article to us.",
+            "content_text": "Very important article.It will help me further software development project from scratch.Thank you for giving such a good article to us.",
+            "date_published": "2020-11-24T02:10:14-07:00",
+            "authors": [
+                {
+                    "name": "Quad Que",
+                    "url": "https://quadque.tech/",
+                    "avatar": "https://secure.gravatar.com/avatar/7b534781904e4f1c77de635dc4c30a7e?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Quad Que",
+                "url": "https://quadque.tech/",
+                "avatar": "https://secure.gravatar.com/avatar/7b534781904e4f1c77de635dc4c30a7e?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/team-management-in-software-development#comment-11364",
+            "url": "https://textexpander.com/blog/team-management-in-software-development#comment-11364",
+            "content_html": "Software developers and engineers are clearly talented writing code is demanding and learning multiple languages is difficult, but they manage to do it all.",
+            "content_text": "Software developers and engineers are clearly talented writing code is demanding and learning multiple languages is difficult, but they manage to do it all.",
+            "date_published": "2020-10-28T11:01:23-07:00",
+            "authors": [
+                {
+                    "name": "Megha Jhariya",
+                    "url": "https://scalefusion.com/oneteam",
+                    "avatar": "https://secure.gravatar.com/avatar/28a18dc2e4d83d53fea867f920874837?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Megha Jhariya",
+                "url": "https://scalefusion.com/oneteam",
+                "avatar": "https://secure.gravatar.com/avatar/28a18dc2e4d83d53fea867f920874837?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/team-management-in-software-development#comment-10495",
+            "url": "https://textexpander.com/blog/team-management-in-software-development#comment-10495",
+            "content_html": "\"What engineers can do is work with designers to help them understand the constraints within the system and the need for consistency.\" They don't want to understand. Often I have heard this answered with \"that's your job, don't make me do your job too.\"",
+            "content_text": "\"What engineers can do is work with designers to help them understand the constraints within the system and the need for consistency.\" They don't want to understand. Often I have heard this answered with \"that's your job, don't make me do your job too.\"",
+            "date_published": "2020-09-14T01:38:06-07:00",
+            "authors": [
+                {
+                    "name": "Ryan Cormier",
+                    "url": "https://www.deskflex.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/ab37df212931381848593b3a9533d97f?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Ryan Cormier",
+                "url": "https://www.deskflex.com/",
+                "avatar": "https://secure.gravatar.com/avatar/ab37df212931381848593b3a9533d97f?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

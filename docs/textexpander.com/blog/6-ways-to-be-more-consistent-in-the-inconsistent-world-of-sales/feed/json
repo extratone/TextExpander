@@ -1,0 +1,16 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/6-ways-to-be-more-consistent-in-the-inconsistent-world-of-sales/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/6-ways-to-be-more-consistent-in-the-inconsistent-world-of-sales",
+    "feed_url": "https://textexpander.com/blog/6-ways-to-be-more-consistent-in-the-inconsistent-world-of-sales/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 6 Ways to Be More Consistent in the Inconsistent World of Sales",
+    "description": "Communicate Smarter"
+}

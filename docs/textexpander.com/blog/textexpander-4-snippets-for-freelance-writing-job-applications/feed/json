@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/textexpander-4-snippets-for-freelance-writing-job-applications/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/textexpander-4-snippets-for-freelance-writing-job-applications",
+    "feed_url": "https://textexpander.com/blog/textexpander-4-snippets-for-freelance-writing-job-applications/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 4 Snippets for Freelance Writing Job Applications",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/textexpander-4-snippets-for-freelance-writing-job-applications#comment-7",
+            "url": "https://textexpander.com/blog/textexpander-4-snippets-for-freelance-writing-job-applications#comment-7",
+            "content_html": "[&#8230;] an example, TextExpander offers this sample outreach email template for freelance [&#8230;]",
+            "content_text": "[&#8230;] an example, TextExpander offers this sample outreach email template for freelance [&#8230;]",
+            "date_published": "2019-09-12T14:57:02-07:00",
+            "authors": [
+                {
+                    "name": "5 Time-Sucking Tasks All Freelancers Should Automate in 2020 - Rising Tide",
+                    "url": "https://www.honeybook.com/risingtide/business-process-automation-examples/",
+                    "avatar": false
+                }
+            ],
+            "author": {
+                "name": "5 Time-Sucking Tasks All Freelancers Should Automate in 2020 - Rising Tide",
+                "url": "https://www.honeybook.com/risingtide/business-process-automation-examples/",
+                "avatar": false
+            }
+        }
+    ]
+}

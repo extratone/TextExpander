@@ -1,0 +1,75 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry",
+    "feed_url": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 23 Must-Read Recruitment Blogs to Keep Up with the Industry",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry#comment-8562",
+            "url": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry#comment-8562",
+            "content_html": "One of the most useful blogs covering links to multiple blogs as per the interest and reserach of the viewer. Recruitment is a huge and diverse topic and this post has definitely given a broader spectrum to the idea and perception to recruiters as well as jobseekers.",
+            "content_text": "One of the most useful blogs covering links to multiple blogs as per the interest and reserach of the viewer. Recruitment is a huge and diverse topic and this post has definitely given a broader spectrum to the idea and perception to recruiters as well as jobseekers.",
+            "date_published": "2020-07-19T23:13:03-07:00",
+            "authors": [
+                {
+                    "name": "Ashwath Shetty",
+                    "url": "https://talent500.co/",
+                    "avatar": "https://secure.gravatar.com/avatar/e9a71dc1bdb2c317d6aa0af0743aee17?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Ashwath Shetty",
+                "url": "https://talent500.co/",
+                "avatar": "https://secure.gravatar.com/avatar/e9a71dc1bdb2c317d6aa0af0743aee17?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry#comment-8514",
+            "url": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry#comment-8514",
+            "content_html": "Thanks for sharing this list, It will help us to expands our knowledge.",
+            "content_text": "Thanks for sharing this list, It will help us to expands our knowledge.",
+            "date_published": "2020-07-18T00:36:29-07:00",
+            "authors": [
+                {
+                    "name": "Jigna B.",
+                    "url": "https://bit.ly/3hcLMbc",
+                    "avatar": "https://secure.gravatar.com/avatar/3fc98bc2f2c2242134d7ac065f1629bb?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Jigna B.",
+                "url": "https://bit.ly/3hcLMbc",
+                "avatar": "https://secure.gravatar.com/avatar/3fc98bc2f2c2242134d7ac065f1629bb?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry#comment-4981",
+            "url": "https://textexpander.com/blog/23-must-read-recruitment-blogs-to-keep-up-with-the-industry#comment-4981",
+            "content_html": "Thank you for making this blog, it was really great to help. Continue your passion and keep on blogging.",
+            "content_text": "Thank you for making this blog, it was really great to help. Continue your passion and keep on blogging.",
+            "date_published": "2020-04-29T02:35:14-07:00",
+            "authors": [
+                {
+                    "name": "Cool Training",
+                    "url": "https://www.hrbe.com.au/",
+                    "avatar": "https://secure.gravatar.com/avatar/8ad5b19d3c5bfd86ed25b4b30e95ef52?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Cool Training",
+                "url": "https://www.hrbe.com.au/",
+                "avatar": "https://secure.gravatar.com/avatar/8ad5b19d3c5bfd86ed25b4b30e95ef52?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

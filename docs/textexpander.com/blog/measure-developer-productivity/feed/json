@@ -1,0 +1,56 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/measure-developer-productivity/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/measure-developer-productivity",
+    "feed_url": "https://textexpander.com/blog/measure-developer-productivity/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 7 Creative Ideas to Measure Developer Productivity",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/measure-developer-productivity#comment-2220",
+            "url": "https://textexpander.com/blog/measure-developer-productivity#comment-2220",
+            "content_html": "In reply to <a href=\"https://textexpander.com/blog/measure-developer-productivity#comment-2211\">Bill Harding</a>.\n\nThanks for your thoughts Bill!\r\n\r\nI completely agree that all tickets aren't created equal, which is why scoring is so important.\r\n\r\nI think with any metric, it should be treated as a data point to help with conversation. There shouldn't be a black and white \"you need to score '20' things this month\". When used conversationally the desire to game should be lessened.\r\n\r\nAnother bit of naunce missing here is knowing what way the team works. If working in a very agile way, then number of tickets is weak because there is often no end in sight.\r\n\r\nGreat to hear you can see value in TextExpander!",
+            "content_text": "In reply to Bill Harding.\n\nThanks for your thoughts Bill!\r\n\r\nI completely agree that all tickets aren't created equal, which is why scoring is so important.\r\n\r\nI think with any metric, it should be treated as a data point to help with conversation. There shouldn't be a black and white \"you need to score '20' things this month\". When used conversationally the desire to game should be lessened.\r\n\r\nAnother bit of naunce missing here is knowing what way the team works. If working in a very agile way, then number of tickets is weak because there is often no end in sight.\r\n\r\nGreat to hear you can see value in TextExpander!",
+            "date_published": "2020-02-18T03:27:19-07:00",
+            "authors": [
+                {
+                    "name": "Toby Osbourn",
+                    "url": "https://tosbourn.com",
+                    "avatar": "https://secure.gravatar.com/avatar/f9df5ae464cd8080533092eac3a56135?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Toby Osbourn",
+                "url": "https://tosbourn.com",
+                "avatar": "https://secure.gravatar.com/avatar/f9df5ae464cd8080533092eac3a56135?s=512&d=retro&r=g"
+            }
+        },
+        {
+            "id": "https://textexpander.com/blog/measure-developer-productivity#comment-2211",
+            "url": "https://textexpander.com/blog/measure-developer-productivity#comment-2211",
+            "content_html": "Not so sure about the quality of these. Tickets can regularly vary by a factor of 20x in how much work is required to implement them, thus the reason we included them in our list of \"four metrics that agitate developers.\"\r\n\r\n\"Deploys\" doesn't measure individuals, and like commits, they are an eminently game-able metric. \r\n\r\nDocumentation written is a pretty good metric, but if one isn't careful, they'll just be measuring lines of code, which isn't ideal. \r\n\r\nBTW, I started using your product about a week ago on the advice of a friend. It's an awesome idea, really excited about its potential to reduce busywork.",
+            "content_text": "Not so sure about the quality of these. Tickets can regularly vary by a factor of 20x in how much work is required to implement them, thus the reason we included them in our list of \"four metrics that agitate developers.\"\r\n\r\n\"Deploys\" doesn't measure individuals, and like commits, they are an eminently game-able metric. \r\n\r\nDocumentation written is a pretty good metric, but if one isn't careful, they'll just be measuring lines of code, which isn't ideal. \r\n\r\nBTW, I started using your product about a week ago on the advice of a friend. It's an awesome idea, really excited about its potential to reduce busywork.",
+            "date_published": "2020-02-17T22:52:35-07:00",
+            "authors": [
+                {
+                    "name": "Bill Harding",
+                    "url": "https://www.gitclear.com",
+                    "avatar": "https://secure.gravatar.com/avatar/68e05251700bebd11ccb85b74902f81b?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Bill Harding",
+                "url": "https://www.gitclear.com",
+                "avatar": "https://secure.gravatar.com/avatar/68e05251700bebd11ccb85b74902f81b?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

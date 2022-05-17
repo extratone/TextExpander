@@ -1,0 +1,37 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/11-recruitment-ideas-thatll-fill-your-open-positions/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/11-recruitment-ideas-thatll-fill-your-open-positions",
+    "feed_url": "https://textexpander.com/blog/11-recruitment-ideas-thatll-fill-your-open-positions/feed/json",
+    "language": "en-US",
+    "title": "Comments on: 11 Recruitment Ideas That\u2019ll Fill Your Open Positions",
+    "description": "Communicate Smarter",
+    "items": [
+        {
+            "id": "https://textexpander.com/blog/11-recruitment-ideas-thatll-fill-your-open-positions#comment-6998",
+            "url": "https://textexpander.com/blog/11-recruitment-ideas-thatll-fill-your-open-positions#comment-6998",
+            "content_html": "Referal is now a trend, the employee now act as an recruitment, this is a new strategy  in the company now.",
+            "content_text": "Referal is now a trend, the employee now act as an recruitment, this is a new strategy  in the company now.",
+            "date_published": "2020-06-04T11:24:05-07:00",
+            "authors": [
+                {
+                    "name": "Legal Search and Staffing",
+                    "url": "https://advocatesdenver.com/",
+                    "avatar": "https://secure.gravatar.com/avatar/f20c182751a6b1e8c02b54f8cc1d403a?s=512&d=retro&r=g"
+                }
+            ],
+            "author": {
+                "name": "Legal Search and Staffing",
+                "url": "https://advocatesdenver.com/",
+                "avatar": "https://secure.gravatar.com/avatar/f20c182751a6b1e8c02b54f8cc1d403a?s=512&d=retro&r=g"
+            }
+        }
+    ]
+}

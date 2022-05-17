@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /upgradev6
+Disallow: /entry/author/
+Disallow: /static/
+Disallow: /pdf/
+Disallow: /lp/
+Disallow: /standalone/
+Disallow: /affiliates/
+Disallow: /lp/omnichannel-thank-you
+Sitemap: https://textexpander.com/sitemap_index.xml

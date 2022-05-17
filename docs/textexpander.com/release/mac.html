@@ -1,0 +1,3047 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<script type="text/javascript">
+var gform;gform||(document.addEventListener("gform_main_scripts_loaded",function(){gform.scriptsLoaded=!0}),window.addEventListener("DOMContentLoaded",function(){gform.domLoaded=!0}),gform={domLoaded:!1,scriptsLoaded:!1,initializeOnLoaded:function(o){gform.domLoaded&&gform.scriptsLoaded?o():!gform.domLoaded&&gform.scriptsLoaded?window.addEventListener("DOMContentLoaded",o):document.addEventListener("gform_main_scripts_loaded",o)},hooks:{action:{},filter:{}},addAction:function(o,n,r,t){gform.addHook("action",o,n,r,t)},addFilter:function(o,n,r,t){gform.addHook("filter",o,n,r,t)},doAction:function(o){gform.doHook("action",o,arguments)},applyFilters:function(o){return gform.doHook("filter",o,arguments)},removeAction:function(o,n){gform.removeHook("action",o,n)},removeFilter:function(o,n,r){gform.removeHook("filter",o,n,r)},addHook:function(o,n,r,t,i){null==gform.hooks[o][n]&&(gform.hooks[o][n]=[]);var e=gform.hooks[o][n];null==i&&(i=n+"_"+e.length),gform.hooks[o][n].push({tag:i,callable:r,priority:t=null==t?10:t})},doHook:function(n,o,r){var t;if(r=Array.prototype.slice.call(r,1),null!=gform.hooks[n][o]&&((o=gform.hooks[n][o]).sort(function(o,n){return o.priority-n.priority}),o.forEach(function(o){"function"!=typeof(t=o.callable)&&(t=window[t]),"action"==n?t.apply(null,r):r[0]=t.apply(null,r)})),"filter"==n)return r[0]},removeHook:function(o,n,t,i){var r;null!=gform.hooks[o][n]&&(r=(r=gform.hooks[o][n]).filter(function(o,n,r){return!!(null!=i&&i!=o.tag||null!=t&&t!=o.priority)}),gform.hooks[o][n]=r)}});
+</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="facebook-domain-verification" content="0ttgl5w5sarsr2nlsel182tues91hx">
+<link rel="stylesheet" media="print" onload="this.onload=null;this.media='all';" id="ao_optimized_gfonts" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&amp;display=swap">
+<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mmfhhfjhpadoefoaahomoakamjcfcoil">
+<meta name="apple-itunes-app" content="app-id=1075927186">
+<link rel="profile" href="https://gmpg.org/xfn/11"> <script async src="https://kit.fontawesome.com/9cf6467e96.js" data-search-pseudo-elements crossorigin="anonymous"></script> <script type="text/javascript">var _iub = _iub || [];
+    _iub.csConfiguration = {
+        "invalidateConsentWithoutLog":true,
+        "lang":"en",
+        "siteId":1460050,
+        "consentOnContinuedBrowsing":false,
+        "countryDetection":true,
+        "cookiePolicyId":68518033, 
+        "banner":{ 
+            "rejectButtonDisplay":true,
+            "brandBackgroundColor":"none",
+            "rejectButtonCaptionColor":"white",
+            "rejectButtonColor":"#475264",
+            "closeButtonDisplay":false,
+            "textColor":"#475264",
+            "fontSizeBody":"16px",
+            "brandTextColor":"#475264",
+            "acceptButtonDisplay":true,
+            "acceptButtonColor":"#475264",
+            "acceptButtonCaptionColor":"white",
+            "explicitWithdrawal":true,
+            "backgroundColor":"#F8F9FB",
+            "position":"float-bottom-left" 
+        },
+        "callback": {
+            onConsentGiven: function() {
+                dataLayer.push({
+                    event: "iubenda_consent_given"
+                });
+
+            }
+        }
+    };</script> <link href="https://cdn.iubenda.com" rel="preconnect"> <script type="text/javascript" src="http://cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script> <script>var iCallback = function() {};
+				var _iub = _iub || {};
+
+				if ( typeof _iub.csConfiguration != 'undefined' ) {
+					if ( 'callback' in _iub.csConfiguration ) {
+						if ( 'onConsentGiven' in _iub.csConfiguration.callback )
+							iCallback = _iub.csConfiguration.callback.onConsentGiven;
+
+						_iub.csConfiguration.callback.onConsentGiven = function() {
+							iCallback();
+
+							/* separator */
+							jQuery('noscript._no_script_iub').each(function (a, b) { var el = jQuery(b); el.after(el.html()); });
+						}
+					}
+				}</script><meta name="robots" content="noindex, follow">
+<title>Release Notes &ndash; TextExpander for Mac</title>
+<meta name="description" content="Stay up-to-date on the latest features and releases from TextExpander for Mac.">
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="article">
+<meta property="og:title" content="TextExpander for Mac Release Notes">
+<meta property="og:description" content="Learn about the latest features and releases from TextExpander for Mac .">
+<meta property="og:url" content="https://textexpander.com/environment/mac">
+<meta property="og:site_name" content="TextExpander">
+<meta property="og:image" content="https://textexpander.com/wp-content/uploads/2017/09/Social-Media-Headers-02.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@textexpander"> <script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://textexpander.com/#organization","name":"TextExpander","url":"https://textexpander.com/","sameAs":["https://www.facebook.com/TextExpander/","https://www.instagram.com/textexpander/","https://www.linkedin.com/company/textexpander/","https://www.youtube.com/c/TextExpanderApp","https://twitter.com/textexpander"],"logo":{"@type":"ImageObject","inLanguage":"en-US","@id":"https://textexpander.com/#/schema/logo/image/","url":"https://textexpander.com/wp-content/uploads/textexpander-logo-square.png","contentUrl":"https://textexpander.com/wp-content/uploads/textexpander-logo-square.png","width":512,"height":512,"caption":"TextExpander"},"image":{"@id":"https://textexpander.com/#/schema/logo/image/"}},{"@type":"WebSite","@id":"https://textexpander.com/#website","url":"https://textexpander.com/","name":"TextExpander","description":"Communicate Smarter","publisher":{"@id":"https://textexpander.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://textexpander.com/?s={search_term_string}"},"query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"CollectionPage","@id":"https://textexpander.com/environment/mac#webpage","url":"https://textexpander.com/environment/mac","name":"Release Notes &ndash; TextExpander for Mac","isPartOf":{"@id":"https://textexpander.com/#website"},"description":"Stay up-to-date on the latest features and releases from TextExpander for Mac.","breadcrumb":{"@id":"https://textexpander.com/environment/mac#breadcrumb"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://textexpander.com/environment/mac"]}]},{"@type":"BreadcrumbList","@id":"https://textexpander.com/environment/mac#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://textexpander.com/"},{"@type":"ListItem","position":2,"name":"Mac"}]}]}</script> <link href="https://cdnjs.cloudflare.com" rel="preconnect">
+<link href="https://unpkg.com" rel="preconnect">
+<link href="https://fonts.gstatic.com" crossorigin="anonymous" rel="preconnect">
+<link href="https://cdn.iubenda.com" rel="preconnect">
+<link href="https://www.googletagmanager.com" rel="preconnect">
+<link href="https://www.google-analytics.com" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="TextExpander &raquo; Feed" href="../feed">
+<link rel="alternate" type="application/rss+xml" title="TextExpander &raquo; Comments Feed" href="../comments/feed">
+<link rel="alternate" type="application/rss+xml" title="TextExpander &raquo; Mac Environment Feed" href="../environment/mac/feed">
+<link rel="stylesheet" id="wp-block-library-css" href="../wp-includes/css/dist/block-library/style.min.css@ver=5.9.3.css" type="text/css" media="all">
+<link rel="stylesheet" id="wp-bootstrap-blocks-styles-css" href="../wp-content/cache/autoptimize/css/autoptimize_single_670ceb20bdffc3b0af99a495eb4e34ba.css@ver=4.1.0.css" type="text/css" media="all">
+<style id="global-styles-inline-css" type="text/css">body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url('mac.html');--wp--preset--duotone--grayscale: url('mac.html');--wp--preset--duotone--purple-yellow: url('mac.html');--wp--preset--duotone--blue-red: url('mac.html');--wp--preset--duotone--midnight: url('mac.html');--wp--preset--duotone--magenta-yellow: url('mac.html');--wp--preset--duotone--purple-green: url('mac.html');--wp--preset--duotone--blue-orange: url('mac.html');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}</style>
+<link rel="stylesheet" id="wpml-legacy-dropdown-click-0-css" href="../wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-dropdown-click/style.min.css@ver=1.css" type="text/css" media="all">
+<link rel="stylesheet" id="textexpander-bootstrap-css-css" href="../wp-content/themes/textexpander-web/styles/bootstrap.min.css@ver=4.5.css" type="text/css" media="screen">
+<link rel="stylesheet" id="textexpander-style-css" href="../wp-content/cache/autoptimize/css/autoptimize_single_78833a32d3562eb60aa82a8ac737b0c4.css@ver=1652745021.css" type="text/css" media="all"> <script type="text/javascript" src="../wp-includes/js/jquery/jquery.min.js@ver=3.6.0" id="jquery-core-js"></script> <script type="text/javascript" id="wpml-cookie-js-extra">var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":1,"path":"\/"}};</script> <script type="text/javascript" id="wpml-browser-redirect-js-extra">var wpml_browser_redirect_params = {"pageLanguage":"en","languageUrls":{"en_us":"https:\/\/textexpander.com\/environment\/mac","en":"https:\/\/textexpander.com\/environment\/mac","us":"https:\/\/textexpander.com\/environment\/mac"},"cookie":{"name":"_icl_visitor_lang_js","domain":"textexpander.com","path":"\/","expiration":24}};</script> <link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://textexpander.com/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="../wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.9.3">
+<meta name="generator" content="WPML ver:4.5.6 stt:1;"> <style type="text/css" media="screen">.g { margin:0px; padding:0px; overflow:hidden; line-height:1; zoom:1; }
+	.g img { height:auto; }
+	.g-col { position:relative; float:left; }
+	.g-col:first-child { margin-left: 0; }
+	.g-col:last-child { margin-right: 0; }
+	.g-3 {  margin: 0 auto; }
+	@media only screen and (max-width: 480px) {
+		.g-col, .g-dyn, .g-single { width:100%; margin-left:0; margin-right:0; }
+	}</style>
+<link rel="alternate" type="application/feed+json" title="TextExpander &raquo; JSON Feed" href="../feed/json">
+<link rel="alternate" type="application/feed+json" title="TextExpander &raquo; Mac Environment Feed" href="../environment/mac/feed/json">
+<link rel="mask-icon" href="../wp-content/themes/textexpander-web/images/icons/mask_icon.svg" color="black">
+<link rel="icon" type="image/png" href="../wp-content/themes/textexpander-web/images/icons/favicon16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="../wp-content/themes/textexpander-web/images/icons/favicon32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="../wp-content/themes/textexpander-web/images/icons/favicon96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="../wp-content/themes/textexpander-web/images/icons/favicon128.png" sizes="128x128">
+<link rel="icon" type="image/png" href="../wp-content/themes/textexpander-web/images/icons/favicon196.png" sizes="196x196">
+<link rel="apple-touch-icon" href="../wp-content/themes/textexpander-web/images/icons/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="../wp-content/themes/textexpander-web/images/icons/apple-touch-icon-180x180.png">
+<link rel="apple-touch-icon" sizes="152x152" href="../wp-content/themes/textexpander-web/images/icons/apple-touch-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="167x167" href="../wp-content/themes/textexpander-web/images/icons/apple-touch-icon-167x167.png">
+<meta property="fb:app_id" content="966242223397117">  <script type="text/plain" class=" _iub_cs_activate-inline" data-iub-purposes="2">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+				new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+				j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+				'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+				})(window,document,'script','dataLayer','GTM-K6D68D');</script> </head>
+<body class="archive tax-environment term-mac term-437 hfeed"> <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg> <noscript><iframe src="http://cdn.iubenda.com/cookie_solution/empty.html" height="0" width="0" style="display:none;visibility:hidden" suppressedsrc="https://www.googletagmanager.com/ns.html?id=GTM-K6D68D" class=" _iub_cs_activate" data-iub-purposes="2"></iframe></noscript>
+<div id="page" class="site"> <a class="skip-link screen-reader-text" href="mac.html#content">Skip to content</a><style>body{ padding-top:32px;}</style>
+<nav class="site-pre-header"><div class="site-pre-header-inner"><div class="d-flex justify-content-end">
+<div class="menu-pre-header-container"><ul id="pre-header" class="menu">
+<li id="menu-item-32294" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-32294"><a href="../learn/troubleshooting.html">Support</a></li>
+<li id="menu-item-35828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35828"><a href="../sales.html">Contact Sales</a></li>
+<li id="menu-item-32285" class="sign-in-link menu-item menu-item-type-custom menu-item-object-custom menu-item-32285"><a href="../../auth.textexpander.com/sign-in.html">Sign In</a></li>
+</ul></div>
+<div class="wpml-ls-statics-shortcode_actions wpml-ls wpml-ls-legacy-dropdown-click js-wpml-ls-legacy-dropdown-click"><ul><li class="wpml-ls-slot-shortcode_actions wpml-ls-item wpml-ls-item-en wpml-ls-current-language wpml-ls-first-item wpml-ls-last-item wpml-ls-item-legacy-dropdown-click"> <a href="mac.html#" class="js-wpml-ls-item-toggle wpml-ls-item-toggle"> <img class="wpml-ls-flag" src="../wp-content/uploads/flags/gb.svg" alt="" width="12" height="12"><span class="wpml-ls-native">EN</span></a><ul class="js-wpml-ls-sub-menu wpml-ls-sub-menu"></ul>
+</li></ul></div>
+</div></div></nav><header id="masthead" class="site-header"><div id="top-header">
+<div class="site-branding"> <span class="site-title"><style>.site-branding svg{width: 200px;}.site-branding svg .st0{fill:var(--primary);}.site-branding svg .st1{fill:var(--dark);}</style>
+<a href="../index.html" rel="home"> <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 429.7 128.2" style="enable-background:new 0 0 429.7 128.2;" xml:space="preserve" width="200" height="60" aria-labelledby="uniqueTitleID uniqueDescID"><title id="uniqueTitleID">TextExpander - Unlock Your Productivity</title> <desc id="uniqueDescID">Instantly insert snippets of text from a repository of emails, boilerplate and other content, as you type &ndash; using a quick search or abbreviation. Works with Mac, Windows, Chrome, iPhone, and iPad.</desc><g> <path class="st0" d="M36.8,128.2c-8.9,0-16-1.9-21.1-5.6c-5.4-4-7.9-10.2-7.5-18.5c0.1-1.5,0.3-3.2,0.6-5.1 c0.3-1.9,0.7-3.7,1.1-5.4l7.8-33.1H2.9c-0.9,0-1.7-0.4-2.3-1.1s-0.7-1.6-0.5-2.5l5-20.8C5.4,34.9,6.6,34,7.9,34h15.7l5-21.9 c0.2-1,0.9-1.8,1.9-2.1l29.6-9.9c1-0.3,2.1-0.1,2.9,0.6c0.8,0.7,1.1,1.8,0.9,2.8L43.1,92.3c-0.1,0.7-0.3,1.4-0.3,2.2 c-0.1,0.8-0.2,1.5-0.2,2c-0.1,1,0,2.8,0.8,3.4c1.1,0.7,2.7,1.1,4.9,1.1c1.2,0,2.4-0.1,3.6-0.3c1.4-0.2,2.5-0.5,3.5-0.7 c1-0.2,2,0.1,2.7,0.8c0.7,0.7,1,1.7,0.8,2.7l-4.7,20.3c-0.2,0.9-0.8,1.7-1.7,2c-1.9,0.8-3.5,1.1-6.7,1.7 C42.7,128,39.6,128.2,36.8,128.2z M6.6,54.8h14.9c0.9,0,1.7,0.4,2.3,1.1s0.8,1.6,0.5,2.5l-8.7,36.7c-0.4,1.6-0.8,3.2-1,4.9 c-0.3,1.7-0.4,3.2-0.5,4.5c-0.4,6.3,1.3,10.7,5.1,13.5c4.1,3,10,4.5,17.7,4.5c2.5,0,5.2-0.2,8-0.7c1.9-0.3,3.1-0.5,4.1-0.8 l3.3-14.4c-1.3,0.2-2.6,0.3-3.9,0.3c-3.4,0-6.1-0.7-8.1-2.1c-2.5-1.6-3.6-4.5-3.4-8.5c0-0.7,0.1-1.5,0.2-2.4 c0.1-0.9,0.3-1.8,0.4-2.7L57.1,7.3L34,15l-5.2,22.5c-0.3,1.3-1.5,2.2-2.8,2.2H10.2L6.6,54.8z"></path> </g> <g> <path class="st0" d="M59.1,60.7c-0.5,0-1.1-0.2-1.5-0.6C57,59.6,56.8,58.8,57,58l5.2-22.5c0.1-0.6,0.5-1.1,1.1-1.4 c0.6-0.3,1.2-0.3,1.8-0.1l28.3,11.3c0.8,0.3,1.4,1.2,1.4,2.1s-0.6,1.7-1.5,2L59.8,60.6C59.6,60.6,59.3,60.7,59.1,60.7z"></path> </g> <g> <path class="st1" d="M426.7,39.7c-1.7,0-3.1-1.4-3.1-3.1c0-1.7,1.4-3.1,3.1-3.1c1.7,0,3,1.4,3,3.1 C429.7,38.4,428.3,39.7,426.7,39.7z M426.7,34.2c-1.3,0-2.4,1.1-2.4,2.5s1,2.5,2.4,2.5c1.3,0,2.4-1.1,2.4-2.5S428,34.2,426.7,34.2z M427.3,38.4c-0.1-0.2-0.2-0.3-0.3-0.6c-0.3-0.6-0.4-0.8-0.6-0.8c0,0-0.1,0-0.1,0v1.4h-0.7v-3.4h1.3c0.6,0,1,0.4,1,1 c0,0.5-0.3,0.9-0.8,0.9c0.1,0.1,0.1,0.1,0.1,0.2c0.2,0.2,0.8,1.3,0.8,1.3L427.3,38.4L427.3,38.4z M426.9,35.5c-0.1,0-0.2,0-0.4,0 h-0.2v0.9h0.2c0.3,0,0.4,0,0.5-0.1c0.1-0.1,0.1-0.2,0.1-0.3C427.1,35.7,427.1,35.6,426.9,35.5z"></path> </g> <path class="st1" d="M117.9,56.3c0-0.3,0.1-1,0.2-1.5l3.8-17.2h-4.4l0.8-3.6h4.4l1.2-5.7l4.4-1.5l-1.6,7.2h5.4l-0.8,3.6H126 l-3.6,16.3c-0.1,0.3-0.1,0.7-0.1,1.1c0,1.6,0.9,2.5,2.6,2.5c1,0,2-0.4,2.5-0.9l-0.9,4c-0.4,0.3-1.3,0.5-2.6,0.5 C120.2,61.1,117.9,59.6,117.9,56.3z"></path> <path class="st1" d="M185.6,56.3c0-0.3,0.1-1,0.2-1.5l3.8-17.2h-4.4L186,34h4.4l1.3-5.7l4.4-1.5l-1.6,7.2h5.4l-0.8,3.6h-5.4 L190,53.9c-0.1,0.3-0.1,0.7-0.1,1.1c0,1.6,0.9,2.5,2.6,2.5c1,0,2-0.4,2.5-0.9l-0.9,4c-0.4,0.3-1.3,0.5-2.6,0.5 C187.9,61.1,185.6,59.6,185.6,56.3z"></path> <path class="st1" d="M131.6,49.4c0-8.8,6.5-16,14.9-16c6.9,0,11.4,4.8,11.4,11.5c0,1.3-0.3,2.9-0.4,3.7h-21.6c0,0.2-0.1,0.9-0.1,1.3 c0,4.1,3,7.9,9,7.9c2.6,0,5.5-0.9,7.6-2.6l1.4,2.8c-2.4,1.9-5.9,3.1-9.2,3.1C136.4,61.1,131.6,56.5,131.6,49.4z M154,45.6 c0.1-0.2,0.1-0.8,0.1-1c0-4.4-2.8-7.8-8-7.8c-4.9,0-9,4.1-9.8,8.8H154z"></path> <path class="st1" d="M174.6,60.5L169,49.6l-10.3,10.8h-4.9l13.1-13.6L160.2,34h4.5l5.1,10.1l9.6-10.1h4.9l-12.5,12.9l7.2,13.6H174.6 z"></path> <g> <g> <path class="st1" d="M213.1,61.1c-8.2,0-13.3-4.5-13.3-11.8c0-8.9,6.6-15.9,15.1-15.9c7,0,11.7,4.7,11.7,11.7c0,1.4-0.3,3.1-0.5,4 l-0.1,0.2h-20c0,0,0,0.1,0,0.1c0,0.2,0,0.4,0,0.5c0,2.9,2.7,6,7.6,6c2.4,0,5.1-0.8,6.8-2.1l0.3-0.2l2,4.4l-0.2,0.1 C219.9,60,216.4,61.1,213.1,61.1z M206.6,44.9h14.3c0-0.2,0-0.4,0-0.5c0-3.5-2.6-5.8-6.5-5.8C210.2,38.6,207.3,41.8,206.6,44.9z"></path> </g> <g> <path class="st1" d="M249.4,60.5h-6.7l-0.1-0.2l-4.4-9.2l-8.7,9.3h-7.2L235,46.9l-6.2-12.8h6.7l4.1,8.6l7.9-8.6h7.3L242.7,47 L249.4,60.5z"></path> </g> <g> <path class="st1" d="M256,70.3h-6.2l8-36.3h6.2l-0.6,2.7c2.2-2.3,4.7-3.4,7.7-3.4c6.2,0,10.2,4.3,10.2,11 c0,8.2-5.2,16.7-13.9,16.7c-3.5,0-6.6-1.4-8.4-4L256,70.3z M260,52.3c1.2,2,3.7,3.3,6.5,3.3c4.1,0,8.3-3.8,8.3-10.1 c0-3.9-2.5-6.6-6.1-6.6c-2.4,0-4.8,1.3-6.6,3.5L260,52.3z"></path> </g> <g> <path class="st1" d="M293.7,61.1c-6.3,0-10.2-4.2-10.2-10.9c0-8.2,5.2-16.8,13.9-16.8c3.5,0,6.6,1.5,8.4,4l0.7-3.3h6.2l-5.9,26.4 h-6.2l0.6-2.8C299.2,60,296.6,61.1,293.7,61.1z M298.3,38.9c-4.1,0-8.3,3.8-8.3,10.1c0,4,2.4,6.5,6.1,6.5c2.4,0,4.9-1.3,6.5-3.5 l2.2-9.9C303.5,40.2,301,38.9,298.3,38.9z"></path> </g> <g> <path class="st1" d="M335.9,60.5h-6.2l3.7-16.8c0.1-0.4,0.2-0.9,0.2-1.3c0-3.2-3.1-3.4-4.1-3.4c-3.1,0-5.6,1.8-7.2,3.4l-4,18.2 h-6.2l5.9-26.4h6.2l-0.7,3c2.8-2.5,5.5-3.7,8.4-3.7c5.1,0,8.2,2.6,8.2,6.8c0,0.5-0.2,1.7-0.3,2.2L335.9,60.5z"></path> </g> <g> <path class="st1" d="M352.3,61.1c-6.3,0-10.2-4.2-10.2-10.9c0-8.2,5.2-16.8,13.9-16.8c3.5,0,6.6,1.5,8.4,4l2.4-10.7l6.7-2.4 l-8,36.3h-6.2l0.6-2.8C357.8,60,355.3,61.1,352.3,61.1z M356.9,38.9c-4.1,0-8.3,3.8-8.3,10.1c0,4,2.4,6.5,6.1,6.5 c2.4,0,4.9-1.3,6.5-3.5l2.2-9.9C362.1,40.2,359.7,38.9,356.9,38.9z"></path> </g> <g> <path class="st1" d="M385.8,61.1c-8.2,0-13.3-4.5-13.3-11.8c0-8.9,6.6-15.9,15.1-15.9c7,0,11.7,4.7,11.7,11.7c0,1.3-0.3,3.1-0.5,4 l-0.1,0.2h-20c0,0,0,0.1,0,0.1c0,0.2,0,0.4,0,0.5c0,3,2.6,6,7.6,6c2.4,0,5.1-0.8,6.8-2.1l0.3-0.2l2,4.4l-0.2,0.1 C392.6,60,389.2,61.1,385.8,61.1z M379.3,44.9h14.3c0-0.2,0-0.4,0-0.5c0-3.5-2.6-5.8-6.5-5.8C383,38.6,380.1,41.8,379.3,44.9z"></path> </g> <g> <path class="st1" d="M404.7,60.5h-6.2l5.9-26.4h6.2l-0.7,3c2.5-2.5,5.2-3.6,8.9-3.6h0.3l-1.4,6.2l-0.3-0.1 c-0.4-0.1-1.3-0.3-2.2-0.3c-2.8,0-5.3,1.8-6.6,3.4L404.7,60.5z"></path> </g> </g> </svg> </a> </span>
+</div>
+<nav id="site-navigation" class="main-navigation"> <button class="menu-toggle" aria-controls="primary-menu" aria-label="Menu" aria-expanded="false"><i id="menu-toggle-icon" class="far fa-bars"></i></button><div class="menu-header-primary-container"><ul id="header" class="menu">
+<li id="menu-item-23052" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23052"><a href="../business.html">For Business</a></li>
+<li id="menu-item-23053" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23053"><a href="../individual.html">For Individuals</a></li>
+<li id="menu-item-23058" class="unclickable menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-23058">
+<a href="mac.html#">Why TextExpander?</a><ul class="sub-menu">
+<li id="menu-item-23060" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23060"><a href="../features.html">Features</a></li>
+<li id="menu-item-23066" class="unclickable menu-item menu-item-type-custom menu-item-object-custom menu-item-23066"><a href="mac.html#">Solutions for</a></li>
+<li id="menu-item-23059" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23059"><a href="../solutions/customer-support.html">Customer Support</a></li>
+<li id="menu-item-23061" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23061"><a href="../solutions/sales.html">Sales</a></li>
+<li id="menu-item-23062" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23062"><a href="../solutions/recruiting.html">Recruiting</a></li>
+<li id="menu-item-23063" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23063"><a href="../solutions/software-development.html">Software Development</a></li>
+<li id="menu-item-23065" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23065"><a href="../solutions/it-support.html">IT Support</a></li>
+<li id="menu-item-23064" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23064"><a href="../solutions/legal.html">Legal</a></li>
+</ul>
+</li>
+<li id="menu-item-31168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31168"><a href="../pricing/index.html">Pricing</a></li>
+<li id="menu-item-23056" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-23056">
+<a href="../category/textexpander-tips.html">Learn</a><ul class="sub-menu">
+<li id="menu-item-31498" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-31498"><a href="../category/textexpander-tips.html">Learning Center</a></li>
+<li id="menu-item-31497" class="menu-item menu-item-type-post_type menu-item-object-learning_center menu-item-31497"><a href="../entry/how-do-i-choose-an-abbreviation-for-my-snippet/index.html">TextExpander 101</a></li>
+<li id="menu-item-31495" class="menu-item menu-item-type-post_type menu-item-object-learning_center menu-item-31495"><a href="../help/desktop/start.html">Getting Started With TextExpander</a></li>
+<li id="menu-item-31496" class="menu-item menu-item-type-post_type menu-item-object-learning_center menu-item-31496"><a href="../index.html@p=27985.html">Getting Started For Admins</a></li>
+<li id="menu-item-31494" class="menu-item menu-item-type-post_type menu-item-object-learning_center menu-item-31494"><a href="../../www.textexpander.com/learn/troubleshooting.html">Troubleshooting</a></li>
+</ul>
+</li>
+<li id="menu-item-23057" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-23057"><a href="../blog/index.html">Blog</a></li>
+<li id="menu-item-23074" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23074"><a href="https://auth.textexpander.com/sign-up">Get Started</a></li>
+</ul></div></nav>
+</div></header><div id="content" class="site-content">
+<div class="entry-content m-0">
+<div class="full-width pt-4"><div class="container"><div class="row d-md-flex d-block align-items-center text-left pb-4"><div class="col-md-12"><h3 class="d-md-flex d-block align-items-center m-0">
+<span class="align-middle d-block d-md-inline-block mb-3 mr-3 mb-md-0">Release Notes</span><div class="mr-3 btn btn-sm btn-secondary-dark mb-3 mb-md-0">Mac</div>
+<a href="windows.html" class="mr-3 btn btn-sm btn-secondary-light mb-3 mb-md-0" alt="TextExpander forWindows release notes">Windows</a><a href="server.html" class="mr-3 btn btn-sm btn-secondary-light mb-3 mb-md-0" alt="TextExpander forServer release notes">Server</a><a href="chrome.html" class="mr-3 btn btn-sm btn-secondary-light mb-3 mb-md-0" alt="TextExpander forChrome release notes">Chrome</a>
+</h3></div></div></div></div>
+<div class="full-width pb-5 pt-4"><div class="container"><div class="row"><div class="col-md-12">
+<h1 class="mt-0 mb-4">TextExpander for Mac</h1>
+<div class="carousel slide" id="versionRelease7" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">7</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease7"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton7" data-target="#versionRelease7"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew7" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 21, 2022</p>
+<ul>
+<li>Adds tutorial tips to main window with helpful TextExpander resources</li>
+<li>Adds Dutch language localization</li>
+<li>Includes improvements such as faster start up time, additions to the context menu, and various bug fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 14, 2021</p>
+<ul>
+<li>Adds &ldquo;Expand Immediately&rdquo; to complement the &ldquo;Keep Delimiter&rdquo; and &ldquo;Abandon Delimiter&rdquo; snippet expansion override options</li>
+<li>Various fixes and improvements, notably:</li>
+<li>Fixes text appearance in the UI</li>
+<li>Fixes signing in via SSO when TextExpander isn&rsquo;t already running</li>
+<li>Fixes some memory leaks</li>
+<li>Fixes various crashes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.0.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 9, 2021</p>
+<ul><li>Fixes other possible crash on startup</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.0.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 17, 2021</p>
+<ul><li>Fixes possible crash on startup</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 12, 2021</p>
+<ul>
+<li>Updates and unifies the user experience</li>
+<li>Improves main window search</li>
+<li>Improves performance and responsiveness</li>
+<li>Improves conflict management</li>
+<li>Broadens accessibility</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes7" class="carousel-item mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">March 21, 2022</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Shows helpful tips in main window when nothing else is displayed [TEC-2053], [TEC-2054], [TEC-2055], [TEC-2056]</li>
+<li>Adds Dutch Localization</li>
+<li>Fixes display of milliseconds with date macros [TEC-1950]</li>
+<li>Fixes various crashes [TEC-2033]</li>
+<li>Fixes inconsistent firing of keyboard shortcuts [TEC-1918], [TEC-2025]</li>
+<li>Fixes crash in popup editor dialog [TEC-2037]</li>
+<li>Fixes duplication of Snippet Groups with Overridden Abbreviation Prefixes [TEC-733]</li>
+<li>Fixes crash in standalone snippet editor [TEC-2050]</li>
+<li>Fixes delete via context menu when a Snippet &amp; Snippet Group are selected [TEC-2042]</li>
+<li>Fixes crashes when unsupported modifiers are used when clicking on menu items and buttons [TEC-2025], [TEC-2039]</li>
+<li>Adds &ldquo;Resolve Abbreviation Conflicts&rdquo; to Context Menu [TEC-1936]</li>
+<li>Fixes appearance of read-only snippet groups when dragging a snippet over them [TEC-2009]</li>
+<li>Shows &ldquo;Loading&hellip;&rdquo; instead of &ldquo;Signing In&hellip;&rdquo; when launching TextExpander and the user is already signed in [TEC-2000]</li>
+<li>Improves start-up time</li>
+<li>Adds (Read Only) to the header of read-only snippets [TEC-1903]</li>
+<li>Stops adding focus rectangle when clicking on headers [TEC-1938]</li>
+<li>More consistent behavior when creating new snippets [TEC-1366]</li>
+<li>More consistent behavior when creating new snippet groups</li>
+<li>Fixes closing Snippet Group settings after opening them via the context menu [TEC-2062]</li>
+<li>Fixes expansion in browser address bars, including Safari Technology Preview, Brave &amp; Edge [TEC-2029], [TEC-849]</li>
+<li>Fixes crash when displaying reminder notification [TEC-2026]</li>
+<li>Disables appropriate menu items when the main window is not visible [TEC-1685], [TEC-2034]</li>
+<li>Fixes handling of suggestion application exclusions [TEC-970]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">December 14, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Distinguishes disabled buttons from other UI elements [TEC-1455]</li>
+<li>Fixes various crashes in Quick Actions, Inline Search, and the</li>
+<li>Improves performance when viewing large script snippets [TEC-1917]</li>
+<li>Disables other UI elements while a modal is open [TEC-1907]</li>
+<li>Closes standalone editor editor when a modal is opened [TEC-1907]</li>
+<li>Keeps snippet group visible in list during editing [TEC-1722]</li>
+<li>Keep selection visible after closing search [TEC-1778]</li>
+<li>Focus snippet editor after cancelling a macro dialog [TEC-1676]</li>
+<li>Improves expansion reliability (AppNap)</li>
+<li>Improves appearance of Preferences List [TEC-1941]</li>
+<li>Fixes crash when retrieving applications list [TEC-1926]</li>
+<li>Closes Group Settings, Rejected Edits and Suggestions when Escape is</li>
+<li>Fixes automatic scrolling of Snippet Group Categories [TEC-1984]</li>
+<li>Adds Expand Immediately to Snippets, alongside Keep Delimiter</li>
+<li>Fixes UI text appearance [TEC-1946]</li>
+<li>Fixes Memory Leak [TEC-1952]</li>
+<li>Always open standalone editor Windows when creating or editing</li>
+<li>Fixes SSO sign-in when TextExpander isn&rsquo;t already running [TEC-350]</li>
+<li>Closes Preview, Duplicate, Move etc. on the Snippet Detail Pane when</li>
+<li>Hides the Group Detail toolbar from screen readers [TEC-1916]</li>
+<li>Fixes announcements of toolbars in screen readers [TEC-1916]</li>
+<li>Fixes Edit Last Expanded Snippet in QUick Actions [TEC-1999]</li>
+<li>Updates localizations</li>
+<li>Fixes Font appearance when printing snippets [TEC-1946]</li>
+<li>Fixes Font appearance in Japanese [TEC-1946]</li>
+<li>Fixes Font appearance with bold text [TEC-1946]</li>
+<li>Fixes crashes introduced by 7.1&rsquo;s logging changes [TEC-2003]</li>
+<li>Fixes signing in at launch via SSO [TEC-350]</li>
+<li>Fixes appearance of symbols in fonts [TEC-1946], [TEC-2005]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.0.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">November 9, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul><li>Fixes other possible crash on startup [TEC-1958]</li></ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7.0.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 17, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul><li>Fixes possible crash on startup</li></ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">7</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 12, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Updates and unifies the user experience</li>
+<li>Improves main window search</li>
+<li>Improves performance and responsiveness</li>
+<li>Improves conflict management</li>
+<li>Broadens accessibility</li>
+<li>Other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel slide" id="versionRelease6" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">6</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease6"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton6" data-target="#versionRelease6"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew6" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 29, 2021</p>
+<ul>
+<li>Fixes VoiceOver access to main window</li>
+<li>Resolves possible crash on launch when local storage closes unexpectedly</li>
+<li>Resolves possible crash submitting stats when local storage closes unexpectedly</li>
+<li>Improves error message for failed sign in</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 20, 2021</p>
+<ul>
+<li>Fixes expand and match styling with fill-ins</li>
+<li>Fixes moving multiple snippets via context menu</li>
+<li>Fixes duplication of snippets in a read-only group</li>
+<li>Improves inline search performance</li>
+<li>Removes possible stale search results from inline search</li>
+<li>Improves display of outage banners</li>
+<li>Fixes &ldquo;clear cache&rdquo; loop at startup</li>
+<li>Fixes possible permanent &ldquo;Unsaved Snippets&rdquo; dialog upon quit</li>
+<li>Fixes keyboard freeze when using hot key to enable/disable expansion</li>
+<li>Other fixes and various performance improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 11, 2021</p>
+<ul><li>Resolves potential crash at startup when older data format is present</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 9, 2021</p>
+<ul>
+<li>Right-click menu bar item for My Snippets hierarchical menu</li>
+<li>Resolves a number of issues with hotkeys</li>
+<li>Adds Paste &amp; Match to the snippet editor</li>
+<li>Supports using Command-Return to expand Fill-In window</li>
+<li>Numerous fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 17, 2020</p>
+<ul>
+<li>Improves speed of fill-in expansions</li>
+<li>Fixes possible crash at launch affecting some users</li>
+<li>Various other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 15, 2020</p>
+<ul>
+<li>Updates UI appearance for Big Sur</li>
+<li>Adds Apple Silicon / M1 support (universal binary)</li>
+<li>Adds Quick Actions</li>
+<li>Allows inline search when abbreviation expansion is disabled</li>
+<li>Improves display of suggestions</li>
+<li>Improves display and resolution of editing conflicts</li>
+<li>Improves snippet editor</li>
+<li>Various bug fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 18, 2020</p>
+<ul>
+<li>Resolves menu bar responsiveness following launch</li>
+<li>Improves appearance of table borders</li>
+<li>Improves expansion in Google Chrome Omnibox and Missive</li>
+<li>Fixes Snippet Group becoming untitled, read-only during high server load</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 18, 2020</p>
+<ul>
+<li>Restores localization of snippet editor</li>
+<li>Other helpful fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 14, 2020</p>
+<ul>
+<li>Resolves several issues related to macro interpretation when expanding</li>
+<li>Allows some additional macros to be returned by scripts</li>
+<li>Improves behavior of some fill-in scenarios</li>
+<li>Drops list items entirely when surrounded with optional section macros</li>
+<li>Avoids expanding or operating in Red Sweater&rsquo;s Black Ink crossword puzzle application</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">July 30, 2019</p>
+<ul>
+<li>Improves snippet editor:</li>
+<li>Double-click to edit date and time math macros</li>
+<li>Replaces selected text with inserted macros</li>
+<li>Fixes case where fill-in name reverts to default</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 28, 2019</p>
+<ul>
+<li>Drag and drop to re-order items in popup fill-ins</li>
+<li>Fixes rich text expansion into Missive, FileMaker Pro</li>
+<li>Fixes several snippet editor issues</li>
+<li>Adds support for table borders</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 5, 2019</p>
+<ul>
+<li>New editor with visual access to:</li>
+<li>Dates</li>
+<li>Times</li>
+<li>Date math</li>
+<li>Fill-ins</li>
+<li>Keys</li>
+<li>Cursor positioning</li>
+<li>Clipboard</li>
+<li>Insert / nest other snippets</li>
+<li>Improves snippet preview</li>
+<li>Highlights syntax for JavaScript</li>
+<li>Adds notarization for increased security</li>
+<li>Other fixes and improvements</li>
+<li>Requires macOS 10.12 (Sierra) or later</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.8</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 28, 2018</p>
+<ul>
+<li>Supports Mojave dark mode</li>
+<li>Fixes expansion in recent Chrome version address bar</li>
+<li>Resolves &ldquo;pasteboard delay&rdquo; errors</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.7</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 25, 2018</p>
+<ul>
+<li>Resolves case where last snippet is pasted instead of restored clipboard</li>
+<li>Adds option to include betas when checking for updates</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.6</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 5, 2018</p>
+<ul>
+<li>Allows Check for Update&hellip; when signed out</li>
+<li>Retains local settings during SSO sign in when possible</li>
+<li>Reduces frequency of secure input notifications</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 15, 2018</p>
+<ul>
+<li>Improves &ldquo;Restore clipboard&rdquo; reliability</li>
+<li>Resolves expansion issues in Microsoft OneNote</li>
+<li>Adds Single Sign-On (SSO) for organizations</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 7, 2017</p>
+<ul><li>Resolves possible crash when pasting into Snippet Editor</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 13, 2017</p>
+<ul>
+<li>Updates Secure Input messaging</li>
+<li>Improves selection highlighting in dark mode</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 22, 2017</p>
+<ul>
+<li>Adds &lsquo;expand string&rsquo; scripting command (e.g. tell application &ldquo;TextExpander&rdquo; to expand string &ldquo;ddate :flag-us:&rdquo;)</li>
+<li>Improves Snippet Group prefix UI</li>
+<li>Prepares for High Sierra (macOS 10.13)</li>
+<li>Resolves excess conflicting snippet groups</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 19, 2017</p>
+<ul>
+<li>Fixes snippet expansion in the Slack app</li>
+<li>Minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 28, 2017</p>
+<ul>
+<li>Adds support for Snippet Group prefixes and Group prefix overrides</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.7</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 26, 2017</p>
+<ul>
+<li>Improves connection reliability</li>
+<li>Fixes unwanted leading line break when expanding some formatted snippets</li>
+<li>Retains animation of GIFs when added via drag and drop</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.6</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 14, 2017</p>
+<ul>
+<li>Retains selection when applying formatting in snippet editor</li>
+<li>Resolves import hang introduced in 6.1.5</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 3, 2017</p>
+<ul>
+<li>Improves handling of settings and backups from older versions</li>
+<li>Synchronizes additional preferences with TextExpander for Windows</li>
+<li>Removes macOS Sierra&rsquo;s &ldquo;Show Tab Bar&rdquo; entry from View menu</li>
+<li>Adds VoiceOver label for Touch Bar buttons</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 13, 2017</p>
+<ul>
+<li>Resolves issue with font names which contain special characters</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 10, 2017</p>
+<ul>
+<li>Adds Touch Bar support</li>
+<li>Improves VoiceOver access in Snippet Editor</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 17, 2016</p>
+<ul>
+<li>Replaces Add Predefined Group with Add Public Group</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 26, 2016</p>
+<ul>
+<li>Resolves issues with use on Yosemite (macOS 10.10)</li>
+<li>Fixes potential crash with localized sync notifications</li>
+<li>Displays License Agreement for localized versions</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 11, 2016</p>
+<ul>
+<li>Adds dictation support for fill-in fields</li>
+<li>Adds preview button to snippet editor</li>
+<li>Adds Portuguese support</li>
+<li>Improves drag &amp; drop support for snippet editor</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.9</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 12, 2016</p>
+<ul>
+<li>Increases size of Snippet Group notes field, and allows copy &amp; paste when read-only</li>
+<li>Fixes expansion of image-only snippets, including in Microsoft Office apps</li>
+<li>Fixes to prepare for macOS Sierra</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.8</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">July 28, 2016</p>
+<ul>
+<li>Improves import; adds support for multi-line comma-separated value (CSV) files</li>
+<li>Resolves case where switching snippets could discard edits</li>
+<li>Resolves case where returning online doesn&rsquo;t receive updates</li>
+<li>Resolves case where changing snippet type on other device isn&rsquo;t reflected locally</li>
+<li>Syncs changes to default sound</li>
+<li>Fixes leading and trailing spaces for formatted text expansion</li>
+<li>Fixes background drawing for Drop / Keep Suggestion</li>
+<li>Improves snippet editor</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.7</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 28, 2016</p>
+<ul>
+<li>Resolves issue where snippet can fail to appear in editor when selected</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.6</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 9, 2016</p>
+<ul>
+<li>Adds quicker way to respond to snippet suggestion notifications</li>
+<li>Displays all available fonts in snippet editor</li>
+<li>Improves color picker, including custom color selection</li>
+<li>Adds Bulleted List and Numbered List to insert (&gt;_) menu</li>
+<li>Adds Table to insert (&gt;_) menu</li>
+<li>Improves expansion of formatted snippets in Thunderbird</li>
+<li>Improves expansion reliability in El Capitan Save panels and System Preferences text fields</li>
+<li>Notifies when new Snippet Groups are added by others</li>
+<li>Removes formatting when pasting text into plain text snippets</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 11, 2016</p>
+<ul>
+<li>Improves Snippet Editor</li>
+<li>Fixes popup menus on Force Touch machines</li>
+<li>Restores Print Group and Print All Groups</li>
+<li>Allows Quit when sign in panel is displayed</li>
+<li>Resolves French localization issues</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 26, 2016</p>
+<ul>
+<li>Improves tab navigation of interface</li>
+<li>Resolves failure to save Formatted Text, Pictures snippets from Edit Last Expanded Snippet</li>
+<li>Fixes crash on launch while offline</li>
+<li>Fixes crash related to localizations in German, Spanish, Italian, and Japanese</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 18, 2016</p>
+<ul>
+<li>Resolves issue with extra spacing when expanding in Gmail while using Chrome</li>
+<li>Restores copy/paste support to Create New Snippet / Edit Last Expanded Snippet</li>
+<li>Adds sign in/out to Account preferences</li>
+<li>Resolves display issue with Set Delimiters&hellip; pane</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 4, 2016</p>
+<ul>
+<li>Integrated TextExpander account and Apps</li>
+<li>Use current snippets on all your devices</li>
+<li>Share snippets easily with coworkers and friends</li>
+<li>Set editing permissions for shared snippets</li>
+<li>Set up an Organization to easily manage sharing across your team</li>
+<li>Automatically join an Organization using your company email address</li>
+<li>Automatically share company snippets with anyone who joins your Organization</li>
+<li>New Windows app (currently in beta)</li>
+<li>Beautiful new app look and feel</li>
+<li>New snippet editing toolbar</li>
+<li>New app icon</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes6" class="carousel-item mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">June 29, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes VoiceOver access to main window</li>
+<li>Resolves possible crash on launch when local storage closes unexpectedly</li>
+<li>Resolves possible crash submitting stats when local storage closes unexpectedly</li>
+<li>Improves error message for failed sign in</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">April 20, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes expand and match styling with fill-ins [TEC-1357]</li>
+<li>Fixes moving multiple snippets via context menu [TEC-1218]</li>
+<li>Fixes duplication of snippets in a read-only group [TEC-1126]</li>
+<li>Allows toggling snippet preview via the keyboard shortcut in the standalone editor</li>
+<li>Improves inline search performance [TEC-1082]</li>
+<li>Removes possible stale search results from inline search [TEC-1405]</li>
+<li>Improves display of outage banners [TEC-1394]</li>
+<li>Fixes &ldquo;clear cache&rdquo; loop at startup [TEC-1371]</li>
+<li>Fixes possible permanent &ldquo;Unsaved Snippets&rdquo; dialog upon quit [TEC-1339]</li>
+<li>Fixes keyboard freeze when using hot key to enable/disable expansion [TEC-1356]</li>
+<li>Fixes duplication of snippets in a read-only group [TEC-1126]</li>
+<li>Fixes Paste &amp; Match Style pasting twice when using the keyboard shortcut [TEC-1331]</li>
+<li>Fixes expansion of Javascript snippets with a bad adjustedDate</li>
+<li>Fixes crash on startup experienced by some users [TEC-1371]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 11, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul><li>Resolves crash at startup when RTF-formatted snippet is present [TEC-1327]</li></ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 9, 2021</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes use of VoiceOver to activate the menu bar [TEC-1209]</li>
+<li>Fixes expansion of snippets with delimiter overrides [TEC-1220]</li>
+<li>Only shows &ldquo;TextExpander is Offline&rdquo; banner during an outage [TEC-77]</li>
+<li>Shows if TextExpander is connected in Account tab</li>
+<li>Validates that JavaScript snippets set an actual date to adjustedDate</li>
+<li>Only consider current line when using inline search [TEC-1178]</li>
+<li>Fixes crash when clicking on Open TextExpander immediately after opening Quick Actions [TEC-1223]</li>
+<li>Clarifies error message when attempting to expand shell script snippets lacking a shabang (#!) [TEC-1241]</li>
+<li>Fixes Fill-In expansion failures experienced by some users [TEC-907]</li>
+<li>Fixes expansion following previously cancelled expansion [TEC-1231]</li>
+<li>Fixes crash experienced by some users [TEC-1232]</li>
+<li>Fixes expansion of &ldquo;side effect only&rdquo; AppleScript snippets [TEC-1204]</li>
+<li>Fixes font list across Sign Out / Sign In [TEC-1205]</li>
+<li>Fixes use of filltop with Fill-Ins [TEC-1227]</li>
+<li>Uses Display Fonts in Fill-In window [TEC-1200]</li>
+<li>Fixes shrinking of Fill-In windows [TEC-1214]</li>
+<li>Removes autocorrect from Insert Snippet modal [TEC-365]</li>
+<li>Removes autocorrect from abbreviation prefix field [TEC-1239]</li>
+<li>Fixes appearance of larger font sizes in drop down [TEC-1175]</li>
+<li>Ensures keystrokes are directed to inline search after hotkey</li>
+<li>Fixes use of Esc to close Quick Actions</li>
+<li>Fixes deletion of Snippet Groups via keyboard shortcut</li>
+<li>Fixes crash when typing quickly after signing out</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">December 17, 2020</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves speed of fill-in expansions [TEC-1194]</li>
+<li>Fixes possible crash at launch affecting some users [TEC-1196]</li>
+<li>Fixes odd behavior when double-clicking on status icon [TEC-1189]</li>
+<li>Improves inline search appearance when there are no results</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.8</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">December 15, 2020</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Updates UI appearance for Big Sur</li>
+<li>Adds Quick Actions</li>
+<li>Allows inline search when abbreviation expansion is disabled</li>
+<li>Improves display of suggestions</li>
+<li>Improves display and resolution of editing conflicts</li>
+<li>Improves snippet editor</li>
+<li>Improves presentation of font-less expansion in snippet editor [TEC-295], [TEC-296]</li>
+<li>Various bug fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 18, 2020</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves appearance of table borders [TEC-330]</li>
+<li>Improves expansion in Google Chrome Omnibox and Missive [TEC-366, TEC-748]</li>
+<li>Fixes Snippet Group becoming untitled, read-only during high server load [TEC-752, TEC-785]</li>
+<li>Resolves menu bar responsiveness following launch [TEC-637]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">March 18, 2020</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Restores localization of snippet editor</li>
+<li>Immediately updates expansion when case sensitivity is changed [TEC-297]</li>
+<li>Fixes adapt to case when a Snippet Group prefix is used [TEC-320]</li>
+<li>Stops unnecessarily bolding text pasted into snippet editor from Google Docs [TEC-625]</li>
+<li>Restores pasteboard on Tab [TEC-699]</li>
+<li>Colors adjacent optional sections differently [TEC-144]</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">January 14, 2020</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds launch avoidance logic, scanning application exception</li>
+<li>Allows position cursor macro to be emitted from scripts [TEC-345]</li>
+<li>Allows scripts to return %key macros [TEC-274]</li>
+<li>Avoids expanding or operating in Red Sweater&rsquo;s Black Ink crossword puzzle application</li>
+<li>Drops formatted list items entirely when surrounded with optional section macros</li>
+<li>Fixes logic error that could lead to a proliferation of keep/abandon delimiter macros at the end of snippets [TEC-152]</li>
+<li>Includes trailing % for %key: macros in scripts [TEC-590]</li>
+<li>Maintains cursor positioning keystroke count when there are multiple delimiter overrides [TEC-326]</li>
+<li>Makes default fill-in name a placeholder rather than using it as text [TEC-522]</li>
+<li>Retains line breaks after optional fillins that are not included when they are on the same line as non-optional content [TEC-406]</li>
+<li>Suppresses &ldquo;linebreaks&rdquo; in formatted text such as list items [TEC-406]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">July 30, 2019</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves snippet editor:</li>
+<li>Double-click to edit date and time math macros [317]</li>
+<li>Replaces selected text with inserted macros [257]</li>
+<li>Fixes case where fill-in name reverts to default [301]</li>
+<li>Disallows multiple line defaults for single-line fill-ins [255]</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 28, 2019</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Drag and drop to re-order items in popup fill-ins</li>
+<li>Fixes rich text expansion into Missive, FileMaker Pro</li>
+<li>Fixes modal OK button coloring [SNIP-223]</li>
+<li>Fixes deleting macros within fill-ins [SNIP-249]</li>
+<li>Adds support for table borders [SNIP-142]</li>
+<li>Improves cancel behavior for fill-in modals [SNIP-222]</li>
+<li>Adds support for Unicode date macros [SNIP-205]</li>
+<li>Ignores leading extra optional-end macro [TEC-2]</li>
+<li>Doesn&rsquo;t show &lsquo;null&rsquo; in onboarding when contact is unavailable [SNIP-234]</li>
+<li>Fixes case where first line can be replaced by last line when expanding in Office applications [TEC-11]</li>
+<li>Resolves crash when repeatedly duplicating snippets [TEMAC-1823]</li>
+<li>Fixes popular crashes from HockeyApp</li>
+<li>Randomizes interval for sending statistics to server</li>
+<li>Updates server retry logic introducing random interval</li>
+<li>Handles system default font [TEC-283]</li>
+<li>Adds padding on left of popup option [TEC-277]</li>
+<li>Improves dark mode in fill-in popup [TEC-278]</li>
+<li>Prohibits snippet macro without abbreviation [TEC-268]</li>
+<li>Resolves issue where unedited fill-ins could be inserted</li>
+<li>Code snippets use correct %filltop macro</li>
+<li>Resolves case where text styling in fill-in % macros could disrupt parsing</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">March 5, 2019</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>New editor with visual access to:</li>
+<li>Dates</li>
+<li>Times</li>
+<li>Date math</li>
+<li>Fill-ins</li>
+<li>Keys</li>
+<li>Cursor positioning</li>
+<li>Clipboard</li>
+<li>Insert / nest other snippets</li>
+<li>Date math can be applied to multiple units [1664, 1781]</li>
+<li>Date math is cumulative [1664, 1781]</li>
+<li>Adds Snippet Group prefixes to abbreviations in snippet reminder notifications [1757]</li>
+<li>Maintains slider position between snippet list and settings across launches [1515]</li>
+<li>Fill-ins with &ldquo;Show at Top&rdquo; set include optional sections at top [1212]</li>
+<li>Adds syntax highlighting for JavaScript and AppleScript snippets</li>
+<li>Respects font size in Google Docs [1607]</li>
+<li>Improves expansion when clipboard contains data from a Microsoft application [1729]</li>
+<li>Adjust timeout on editor idle state</li>
+<li>Improves font size handling in Google Docs [1660]</li>
+<li>Requires macOS 10.12 (Sierra) or later</li>
+<li>Improves snippet preview</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.8</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">November 28, 2018</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Supports Mojave dark mode</li>
+<li>Fixes expansion in Chrome v69+ omnibar [1768]</li>
+<li>Improves pasteboard delay handling [1729]</li>
+<li>Simplifies outline category drawing [1777]</li>
+<li>Removes horizontal elasticity from snippets list [1779]</li>
+<li>Removes secure input / loginwindow notification on wake [1780]</li>
+<li>Fixes typos in sync warnings</li>
+<li>Other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.7</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">August 25, 2018</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Resolves case where last snippet is pasted instead of restored clipboard [1733]</li>
+<li>Does not trigger JavaScript debugging windows in Safari [1751]</li>
+<li>Adds option to include betas when checking for updates</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.6</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">June 5, 2018</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Allows Check for Update&hellip; when signed out [1748]</li>
+<li>Retains local settings during SSO sign in when possible</li>
+<li>Reduces frequency of secure input notifications [1746]</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 15, 2018</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves &ldquo;Restore clipboard&rdquo; reliability (avoids expansion to clipboard content instead of snippet)</li>
+<li>Resolves expansion issues in Microsoft OneNote</li>
+<li>Adds Single Sign-On (SSO) for organizations</li>
+<li>Works around delays when duplicating pastboard [1729]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">November 7, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul><li>Resolves possible crash when pasting into Snippet Editor [1710]</li></ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 13, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Eliminates delete as default option for delete confirmation</li>
+<li>Fixes Snippet Group name drawing in dark mode [1608]</li>
+<li>Improves inline / menu search result selection highlighting in dark mode [1608]</li>
+<li>Resolves performance issue with very large single line snippets [1701]</li>
+<li>Updates Secure Input messaging</li>
+<li>Use command-delete to delete without confirmation</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">August 22, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds &lsquo;expand string&rsquo; scripting command (e.g. tell application &ldquo;TextExpander&rdquo; to expand string &ldquo;ddate :flag-us:&rdquo;)</li>
+<li>Improves spacing for Snippet Group prefix and Group prefix override [1651]</li>
+<li>Prepares for High Sierra (macOS 10.13)</li>
+<li>Resolves excess conflicting snippet groups [1673]</li>
+<li>Resolves potential data loss when server is slow to respond [1681]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 19, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes snippet expansion in the Slack app [1659]</li>
+<li>Partially fixes issue with Unicode separator characters [1663]</li>
+<li>Resolves issues with sending previous days&rsquo; statistics to server</li>
+<li>Sends request version with sign in page</li>
+<li>Sends snippet changed notification when removing Snippet Group prefix override [1654]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">March 28, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds support for Snippet Group prefixes and Group prefix overrides [811, 1645]</li>
+<li>Aligns baselines of Snippet Group settings [1644]</li>
+<li>Fixes blank statistics graph when TextExpander is in folder named with spaces [1642]</li>
+<li>Fixes case where suggestions perform poorly after pasting large body of text [1648]</li>
+<li>Resolves toolbar button flash during sign in and sync [1621]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.7</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 26, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves connection reliability</li>
+<li>Fixes unwanted leading linebreak when expanding some formatted snippets [1554]</li>
+<li>Retains animation of GIF&rsquo;s when added via drag and drop [1627]</li>
+<li>Allows delimiter macros to be added to script snippets [1423]</li>
+<li>Other minor fixes</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.6</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 14, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Retains selection when applying formatting in snippet editor [SNIP-128]</li>
+<li>Resolves import hang introduced in 6.1.5 [TEMAC-1628]</li>
+<li>Resolves issue where last ping time is undefined resulting in log entries of &ldquo;last ping: NaN&rdquo;</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 3, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds support for importing TextExpander version 5 settings and backup files [1564]</li>
+<li>Synchronizes additional preferences with TextExpander for Windows (playing sound at expansion, run scripts snippets, default format and abbreviation mode, and update checking)</li>
+<li>Removes macOS Sierra&rsquo;s &ldquo;Show Tab Bar&rdquo; entry from View menu [1618]</li>
+<li>Offers to check for software updates if not recently checked after a crash [1595]</li>
+<li>Adds VoiceOver label for Touch Bar buttons [1620]</li>
+<li>Resolves case where some script snippets could execute if Run script snippets was off [1616, 1617]</li>
+<li>Other minor fixes</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">January 13, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Resolves issue where snippet can fail to appear in editor when selected [1507]</li>
+<li>Fixes crash which could occur when waking computer from sleep</li>
+<li>Other minor fixes</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">January 10, 2017</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes issue where edits to a snippet could be applied to a different snippet [1587, 1461]</li>
+<li>Adds support for Touch Bar</li>
+<li>Adds support for expanding snippets by typing with the macOS Sierra Dwell Control keyboard</li>
+<li>Improves expansion of formatted snippets into Firefox [1596]</li>
+<li>Adds warning before Sign Out if there are local changes not yet uploaded to TextExpander.com [1594]</li>
+<li>Reconnects to server on wake from sleep in cases where that wasn&rsquo;t happening [1611]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">November 17, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Ensures sign in window is presented on main thread</li>
+<li>Replaces Add Predefined Group with Add Public Group [1592]</li>
+<li>Resolves potential crash when previewing nil content</li>
+<li>Resolves potential hang using bold or italic in abbreviation or label [1593]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 26, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Resolves issues with use on Yosemite (macOS 10.10) [1580, 1583]</li>
+<li>Fixes potential crash with localized sync notifications</li>
+<li>Displays License Agreement for localized versions [1239]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 11, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds button to access user account in Account preferences [1551]</li>
+<li>Adds dictation support to fill-in fields [1167]</li>
+<li>Adds Portuguese localization</li>
+<li>Adds preview button to snippet editor [1503]</li>
+<li>Avoids fatal save error when stored token is invalidated by server [1526]</li>
+<li>Avoids suggesting snippets when not signed in</li>
+<li>Ensures status during sign in stays &ldquo;Signing in&rdquo;</li>
+<li>Fixes localizations of &ldquo;Include in Inline Search&rdquo; [1142]</li>
+<li>Handles HTML tags properly in fill-in defaults [1543]</li>
+<li>Improves drag &amp; drop support for snippet editor [1360]</li>
+<li>Improves loading speed of Snippet Editor</li>
+<li>Restores Bold and Italic menu commands for Snippet Editor [1397]</li>
+<li>Shows user&rsquo;s email in Account preferences [1518]</li>
+<li>Updates from &ldquo;Download&rdquo; to &ldquo;Add&rdquo; for Snippet Groups [1532]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.9</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">September 12, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Increases size of Snippet Group notes field, and allows copy &amp; paste when read-only</li>
+<li>Fixes expansion of image-only snippets, including in Microsoft Office apps [1533]</li>
+<li>Fixes to prepare for macOS Sierra [1548]</li>
+<li>Prevents crash if insertion text is invalid [1250]</li>
+<li>Updates Sparkle framework from 1.12 to 1.14</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.8</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">July 28, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves import; adds support for multi-line CSV [1527]</li>
+<li>Resolves case where switching snippets could discard edits [1525]</li>
+<li>Resolves case where coming back online doesn&rsquo;t receive interim updates [1524]</li>
+<li>Resolves case where changing snippet type on other device isn&rsquo;t reflected locally [1497]</li>
+<li>Syncs changes to default sound [1519]</li>
+<li>Fixes leading and trailing spaces for formatted text expansion [1514]</li>
+<li>Fixes background drawing for Drop / Keep Suggestion [1519]</li>
+<li>Improves snippet editor</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.7</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">June 28, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Resolves issue where snippet can fail to appear in editor when selected [1507]</li>
+<li>Improves handling of slow authentication</li>
+<li>Resolves incorrect &ldquo;Your subscription is suspended. Expansion is disabled. Click to resolve.&rdquo; slideover</li>
+<li>Resolves some assertion and exception issues</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.6</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">June 9, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Always use Gregorian calendar when uploading statistics [1493]</li>
+<li>Corrects window title sometimes incorrectly displaying &ldquo;offline&rdquo;</li>
+<li>Displays process ID which enabled Secure Event Input if application name cannot be determined</li>
+<li>Displays label in outline when snippet content is empty [1362]</li>
+<li>Disables more menu items when not signed in [1426]</li>
+<li>Fixes arrow navigation for large search results [1495]</li>
+<li>Fixes bottom padding of snippet editor [1491]</li>
+<li>Fixes default snippet line height [1496]</li>
+<li>Fixes menu bar display anomalies after signing out [1478]</li>
+<li>Handles sign out command properly during sign in [1475]</li>
+<li>Improves expansion reliability in Postbox by slightly delaying expansion [1473]</li>
+<li>Improves handling of added snippet groups in tutorial [1115]</li>
+<li>Improves handling of Sign out while not yet finished signing in [1475]</li>
+<li>Keeps focus on snippet list when snippet is selected [1474]</li>
+<li>Matches label before content in Inline Search and Search Snippets [1313]</li>
+<li>No longer changes Enable Expansion preference when connecting to server [1484]</li>
+<li>Restores editor support for default font preferences [1485]</li>
+<li>Send Command+V to frontmost process if it looks like ViewBridgeAuxiliary is echoing keystrokes [1232]</li>
+<li>Stops inserting raw HTML into plain text snippets [1476]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 11, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves Snippet Editor:</li>
+<li>Improves image import</li>
+<li>Resolves case where fill-in editor could dismiss slowly [1457]</li>
+<li>Resolves issue with URL field</li>
+<li>Restores Print Group and Print All Groups [1444]</li>
+<li>Adds Learn More link for sign in problems [1458]</li>
+<li>Retains uncommitted content changes when creating new snippet [1411]</li>
+<li>Allows Quit when sign in panel is displayed [1333]</li>
+<li>Shows logging from Snippet Editor in Console</li>
+<li>Slideover banner and status in Account prefs reflect account state [1467]</li>
+<li>Disables Add Snippet Group from File when signed out</li>
+<li>Supports Google Chrome version 50&rsquo;s URL bar</li>
+<li>Resolves French localization issues</li>
+<li>Other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">April 26, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes insets for updated editor</li>
+<li>Cannot tab to Snippet Group selection in Create New Snippet from Helper</li>
+<li>Edit Last Expanded Snippet changes formatting</li>
+<li>Cannot Tab out of snippet editor to other main window areas</li>
+<li>Some changes made to snippets via AppleScript do not trigger sync or even save of the Snippet Group</li>
+<li>French term for &lsquo;Formatted Text, Images&rsquo; needs a change</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6.0.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">April 18, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Resolves issue with extra spacing when expanding in Gmail while using Chrome</li>
+<li>Restores copy/paste support to Create New Snippet / Edit Last Expanded Snippet</li>
+<li>Adds sign in/out to Account preferences</li>
+<li>Resolves display issue with Set Delimiters&hellip; pane</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">6</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">April 4, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Re-editing existing fill-ins does not work on 10.10.5</li>
+<li>Server Status message appears after wake from sleep</li>
+<li>Outline draws as if it is narrow after New Snippet created</li>
+<li>Undefined nested snippets after a defined nested snippet incorrectly take the expansion of the defined snippet</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel slide" id="versionRelease5" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">5</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease5"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton5" data-target="#versionRelease5"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew5" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 16, 2016</p>
+<ul><li>Resolves security issue with software updater</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 4, 2015</p>
+<ul>
+<li>Further improvements to expansion in save dialogs on El Capitan</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 7, 2015</p>
+<ul>
+<li>Addresses El Capitan related crash</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 1, 2015</p>
+<ul>
+<li>Fixes issue with expansion in save dialogs on El Capitan</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">July 22, 2015</p>
+<ul>
+<li>Suggested snippets exclude most single dictionary words</li>
+<li>Adds new notification preference for snippet suggestions</li>
+<li>Fixes secure input notifications for Chrome</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.0.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 5, 2015</p>
+<ul><li>Fixes and improvements</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 27, 2015</p>
+<ul>
+<li>Suggests snippets from phrases you habitually type</li>
+<li>Reminds you of missed opportunities to use your abbreviations</li>
+<li>Customize snippet file location</li>
+<li>Sync via iCloud Drive or any sync folder</li>
+<li>Simplify expansion of lengthy fill-ins and scripts by setting single-line and popup fields to &ldquo;Show at top&rdquo; of expanding window</li>
+<li>Search and expand snippets, abbreviations, and suggestions inline as you type</li>
+<li>Preview expanded snippet</li>
+<li>Refreshed statistics display, including new &ldquo;Top snippets used in last month&rdquo;</li>
+<li>Supports JavaScript snippets that also operate on iOS, or JavaScript for Automation on Mac only</li>
+<li>Updated for Mac OS X 10.10 Yosemite (required)</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes5" class="carousel-item mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">February 16, 2016</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Updates Sparkle appcast URL to https</li>
+<li>Updates Sparkle framework to latest release</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">November 4, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Does not present Secure Event Input warning for apps excluded from expansion [1274]</li>
+<li>Further improvements to expansion in save dialogs on El Capitan [1283]</li>
+<li>Resolves issue which can result in absurd statistics</li>
+<li>Resolves some obscure crashes reported via HockeyApp</li>
+<li>Updates Chrome&rsquo;s uni-bar Accessibility identifier</li>
+<li>Updates pasteboard type ignore list for Office 2016</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 7, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Makes button to continue using current version perform Skip This Version</li>
+<li>Makes snippet column accessible in conflict popover [1243]</li>
+<li>Updates HockeySDK to version 3.2</li>
+<li>Works around El Capitan bug [22792342] which can cause a crash</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">September 1, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes issue with expansion in save dialogs on El Capitan</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">July 22, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Suggested snippets exclude most single dictionary words</li>
+<li>Adds new notification preference for snippet suggestions</li>
+<li>Fixes secure input notifications for Chrome</li>
+<li>Adds Korean support for Create Snippet from Selection&hellip; [1182]</li>
+<li>Correctly rejects suggestions containing Tab or Return [1176]</li>
+<li>Creates new Snippet Group if all Groups are deleted [1109]</li>
+<li>Fixes issue with Snippet Group level app exclusion [1175]</li>
+<li>Improves French and German localizations [1190]</li>
+<li>Opens links in fill-in windows in default web browser [1119]</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5.0.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">June 5, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Accounts for Dock and menu bar when sizing store window [1141]</li>
+<li>Adds AppleScriptable setting to toggle secure input notification [1147]</li>
+<li>Avoids converting script-like content to script example [1114]</li>
+<li>Avoids secure input notification when current focus is a secure text field [1161]</li>
+<li>Fixes activation via specific preferences keys</li>
+<li>Fixes Filter placeholder for Japanese, Russian [1043]</li>
+<li>Fixes Insert -&gt; Fill-ins -&gt; Show at Top for localized versions [1138]</li>
+<li>Fixes localized pricing [1152]</li>
+<li>Fixes potential hang on launch</li>
+<li>Fixes some crashing bugs reported by users via HockeyApp (thank you!)</li>
+<li>Improves message when notifying that a pending snippet has been typed in full</li>
+<li>Restores font size preferences properly [1151]</li>
+<li>Saves sort order when changed [1132]</li>
+<li>Selects next pending suggestion after dropping one</li>
+<li>Sends basic auth, if available on Keychain, with initial request when updating Snippet Groups [1132]</li>
+<li>Strips newline from JavaScript for Automation (JSA) results [1150]</li>
+<li>Restores sort order properly [1153]</li>
+<li>Updates DevMateKit to version 1.1.3</li>
+<li>Updates menu item to View Registration after URL-based licensure [1168]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 27, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Suggests snippets from phrases you habitually type</li>
+<li>Reminds you of missed opportunities to use your abbreviations</li>
+<li>Supports JavaScript snippets that also operate on iOS, or use JavaScript for Automation on Mac</li>
+<li>Customize snippet file location, allowing you to sync via iCloud Drive or any sync folder</li>
+<li>Preview expanded snippet</li>
+<li>Refreshed statistics display and new &ldquo;Top snippets used in last month&rdquo; display option</li>
+<li>New %filltop% macro makes single-line fields and popups appear at the top of the fill-ins window</li>
+<li>Search and expand snippets, abbreviations, and suggestions inline as you type</li>
+<li>Updated for Mac OS X 10.10 Yosemite (required)</li>
+<li>Notification Center notification when Secure Input is enabled</li>
+<li>Date/time adjustments apply to all embedded snippets in an expansion [368]</li>
+<li>Adds modification date to AppleScript properties of snippet</li>
+<li>Application exclusion settings now store bundle identifier as well as application name. Should improve detection of Java Runtime Environment apps and some other unusual situations.</li>
+<li>Improved Dark Mode appearance of status menu item</li>
+<li>Date math now propagates to and from embedded snippets [368]</li>
+<li>Groups with expansion disabled appear disabled in Snippet Group list [1060]</li>
+<li>Updates Suggest Matching Abbreviation to Inline Search to match new functionality</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel slide" id="versionRelease4" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">4</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease4"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton4" data-target="#versionRelease4"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew4" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.6</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 31, 2015</p>
+<ul>
+<li>Adds Run script snippets (AppleScript, shell scripts) option in Expansion preferences</li>
+<li>Minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 6, 2015</p>
+<ul>
+<li>Adds Russian localization</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 14, 2014</p>
+<ul>
+<li>Adds support for dark mode on Yosemite</li>
+<li>Fixes 12-hour date formats issue when 24-hour time is set</li>
+<li>Resolves case where TextExpander Helper doesn&rsquo;t appear in the Accessibility list</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 8, 2014</p>
+<ul>
+<li>Fixes to prepare for upcoming releases of OS X</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">July 8, 2014</p>
+<ul>
+<li>Resolves long delay before expansion on Mavericks when TextExpander is hidden</li>
+<li>Resolves issue with fill-ins losing user settings</li>
+<li>Fixes crash when Add Group from URL fails</li>
+<li>Fixes crash when repeatedly deleting snippets</li>
+<li>Displays statistics properly</li>
+<li>No longer shows error message when enabling Dropbox sync</li>
+<li>Fixes failure to copy and paste snippets in the snippets list</li>
+<li>No longer shows warning when deleting a blank snippet</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 28, 2014</p>
+<ul><li>Fixes hang when launching with no TextExpander settings</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 27, 2014</p>
+<ul>
+<li>Improves performance when searching</li>
+<li>Resolves issue with non-PNG image links disappearing</li>
+<li>Improves cursor positioning accuracy</li>
+<li>Fixes case where Return no longer works as a delimiter</li>
+<li>Resolves issue with expansion in Slack (by waiting for shift key to be released)</li>
+<li>Fixes auto-capitalization error involving accented characters</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.2.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 14, 2014</p>
+<ul>
+<li>Resolves excessive CPU use which occurred on some systems after several expansions</li>
+<li>Resolves a timing issue (race condition) in 4.2 which can cause crashes upon expansion on certain systems</li>
+<li>Pre-fills URL field if Add Group from URL is selected with a URL on the pasteboard</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 5, 2013</p>
+<ul>
+<li>Improves expansion in Google Documents in Safari</li>
+<li>Improves interaction with Fast User Switching</li>
+<li>Improves handling of accented letters in Search Snippets and Suggest Matching Abbreviation</li>
+<li>Presents currently-running apps first when choosing app-specific expansion</li>
+<li>Displays URL or file path of external Snippet Groups when selected</li>
+<li>Fixes tabbing in fill-in windows without text fields</li>
+<li>Works around Mavericks issue which allows Smart Quotes despite our setting to the contrary</li>
+<li>Numerous additional fixes and enhancements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 25, 2013</p>
+<ul>
+<li>Prepares for Mavericks (OS X 10.9), including issues with the new Security &amp; Privacy settings</li>
+<li>Adds Emoji snippet group</li>
+<li>Offers to convert existing snippets when changing default snippet type</li>
+<li>Allows typing Command+Return to complete the fill-in window</li>
+<li>Improves performance with snippets containing multiple embedded images</li>
+<li>Makes Suggest Matching Abbreviation more forgiving of spaces before invocation, and allows multiple words to narrow the search</li>
+<li>Allows capitalization correction in applications such as Mellel</li>
+<li>Includes paragraph style information with HTML data for snippets that contain line breaks, and AppleScript-able setting to control this behavior</li>
+<li>Fixes case where Romaji input method with Dvorak key layout resulted in no expansion</li>
+<li>Updates the automatic update system to fix some crashes while updating or checking for updates</li>
+<li>Allows capitalization correction in "AXScrollArea", which allows it to function in applications which don&rsquo;t fully implement the Accessibility Protocol</li>
+<li>Slightly delays appearance of fill-in window to fix cases where snippet abbreviation was not fully erased</li>
+<li>Improves detection of focus switch (eg. Spotlight search hotkey) and reduce Accessibility Protocol and bundle information calls to focused applications</li>
+<li>Fixes issue with erasing Suggested snippet abbreviations in sandboxed Save panels</li>
+<li>Allows CPU to idle 30 seconds after an expansion or capitalization correction</li>
+<li>Fixes issue where capitalization correction state was sometimes incorrect after a %key: snippet</li>
+<li>Fixes possible crash when placing a %key:% macro in an optional %fillpart:% that was not included</li>
+<li>Caches results of embedded snippets so that embedded script snippets execute only once per expansion. Adds AppleScript-able setting to avoid this if desired.</li>
+<li>Adds notification which results in expanding properly in Fantastical 1.3.8 and later</li>
+<li>Makes delimiters panel appear on Preferences window, and allows dragging multiple delimiters at one time</li>
+<li>Makes Hide Dock icon confirmation alert appear on Preferences window</li>
+<li>Improves appearance of an optional text fill-in with no name and only a single-line of text</li>
+<li>Provides notification on OS X 10.8 and later if a user-prompted Backup is successful</li>
+<li>Automatically adds Backup Now and Restore controls to toolbar when relaunching after hiding the Dock icon</li>
+<li>Offers to open Backup Preferences if no backup files are found when trying to Restore</li>
+<li>Script snippets that don&rsquo;t compile now expand to an error message instead of just empty text</li>
+<li>Restores Content Type of Shell Script and AppleScript snippets reporting their type as &ldquo;Plain Text&rdquo; after Dropbox Sync with TEtouch 2.0 and 2.0.1</li>
+<li>Fixes issue which prevented setting a snippet&rsquo;s type to Shell Script and AppleScript via AppleScript</li>
+<li>Fixes issue with settings not being saved when Duplicating items via the context menu in the snippets list</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.1.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 25, 2013</p>
+<ul>
+<li>Adds Emoji snippet group</li>
+<li>Prepares for Mavericks</li>
+<li>Expands properly in Fantastical 1.3.8 and later</li>
+<li>Offers to convert existing snippets when changing default snippet type</li>
+<li>Improves performance with snippets containing multiple embedded images</li>
+<li>Makes Suggest Matching Abbreviation more forgiving of spaces before and while narrowing the search</li>
+<li>Allows capitalization correction in specific types of applications, such as Mellel</li>
+<li>Includes paragraph style information with HTML data for snippets which contain line breaks</li>
+<li>Expands properly when using a Romaji input method with Dvorak key layout</li>
+<li>Many other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 18, 2012</p>
+<ul>
+<li>Fix potential ordering issue with snippets containing %key:tab%</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 11, 2012</p>
+<ul>
+<li>Supports Cut, Copy and Paste to manipulate snippets in the outline</li>
+<li>Adds popover to resolve snippet abbreviation conflicts</li>
+<li>Duplicate snippets are drawn with blue abbreviation (vs. orange for conflicts)</li>
+<li>Adds &ldquo;expand abbreviation &lsquo;<abbreviation>&rsquo;&rdquo; syntax to AppleScript expand command</abbreviation>
+</li>
+<li>Restores support for %j day-of-year macro</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 14, 2012</p>
+<ul>
+<li>Fixes issue with TextExpander icon appearing twice in the Dock on restart</li>
+<li>Applies per-application restrictions when expanding snippets within the fill-in window</li>
+<li>Adds &ldquo;expand&rdquo; command to AppleScript vocabulary, allowing scripts to trigger expansion of a snippet</li>
+<li>Other minor fixes and improvements</li>
+<li>Don&rsquo;t confirm Delete of an empty snippet</li>
+<li>Fixes an issue where &lsquo;%%&rsquo; did not get mapped to &lsquo;%&rsquo;</li>
+<li>Fixes a crash where snippets marked as formatted but not containing any formatted text data could cause snippets to disappear at launch</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 10, 2012</p>
+<ul>
+<li>Avoids expanding &ldquo;extra&rdquo; line breaks when optional parts of a fill-in are not checked</li>
+<li>Restores ability to click to expand snippets found by Suggest Matching Abbreviation</li>
+<li>Fixes expansion of formatted snippets containing keypresses into Mail messages</li>
+<li>Other minor fixes and improvements</li>
+<li>Fixes issue when %key:return% or %key:enter% appear at the end of a snippet</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 7, 2012</p>
+<ul>
+<li>Restores transparency to menu bar icon</li>
+<li>Makes checkbox label clickable for optional section fill-ins</li>
+<li>Equality abbreviations in Symbol group now end with == (e.g. &gt;==, &lt;==)</li>
+<li>Updates Japanese and Italian help</li>
+<li>Many other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 21, 2012</p>
+<ul>
+<li>Adds new fill-in types:</li>
+<li>Multiple line text fields</li>
+<li>Popup menus</li>
+<li>Optional text sections</li>
+<li>Supports default values for text and popup fill-ins</li>
+<li>Edit fill-ins and options with popup interface</li>
+<li>Expand snippets while using fill-ins</li>
+<li>Switch apps while using fill-ins</li>
+<li>Improves statistics with graphical display</li>
+<li>Introduces hands-on tutorial for new users</li>
+<li>Adds support for table expansion</li>
+<li>Adds contextual menus to snippet editor and snippet list</li>
+<li>Adds appearance preference to show main window at launch</li>
+<li>Updates appearance for Lion and Mountain Lion</li>
+<li>Adds support for high-resolution Retina displays</li>
+<li>Adds French and German autocorrect groups</li>
+<li>Many other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes4" class="carousel-item mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.6</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">March 31, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds overlay to update window when presenting a paid upgrade</li>
+<li>Expands &lsquo;My Snippets&rsquo; group at initial launch</li>
+<li>Localizes Clear button in purchase dialog [1033]</li>
+<li>Pauses before and after paste in Evernote to improve expansion [1019]</li>
+<li>Updates Accessibility label for Google Chrome unibar</li>
+<li>Updates DevMateKit to version 1.1</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">January 6, 2015</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds Russian localization</li>
+<li>Fixes case where optional content height can become zero, making it uneditable [1005]</li>
+<li>Fixes localization of toolbar labels in Preferences</li>
+<li>Improves fix for crash when editing fill-ins using popovers [1003]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 14, 2014</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds support for dark mode on Yosemite</li>
+<li>Connects Snippet Group contextual menu&rsquo;s save item to correct action when running in French [969]</li>
+<li>Fixes 12-hour date formats so that they function even when 24-hour time is set [999]</li>
+<li>Fixes crash when accessing non-retained array in specific circumstance</li>
+<li>Fixes crash when deleting Snippet Group via AppleScript</li>
+<li>Fixes minor memory leaks</li>
+<li>Fixes non-Retina appearance of the &lsquo;modern&rsquo; status item icons in the prefs popup menu</li>
+<li>Fixes potential crash accessing or editing a snippet as it is being deleted</li>
+<li>Fixes potential crash when editing fill-ins using popovers [1003]</li>
+<li>Fixes potential crash when providing promised snippet pasteboard data at terminate</li>
+<li>Moves TextExpander Helper app from Contents/Resources to Contents/Helpers for proper signing</li>
+<li>Resolves potential hang if the TextExpander Helper fails during suggesting or searching</li>
+<li>Resolves issue with expansion in ClarifyIt (and other apps which behave similarly)</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">September 8, 2014</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes to prepare for upcoming releases of OS X</li>
+<li>Other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">July 8, 2014</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes a variety of problems while editing snippets, including a frequent failure to save changes made to fill-in fields</li>
+<li>Fixes crashes that could occur while searching for snippets</li>
+<li>Clears search mode completely when creating new snippets or performing certain other actions</li>
+<li>Fixes problem with Bubble sound preference in non-English systems</li>
+<li>Provides correct VoiceOver descriptions of items in the snippet and Snippet Group list</li>
+<li>Other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 28, 2014</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul><li>Fixes hang when launching with no TextExpander settings</li></ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">May 27, 2014</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Improves performance when searching</li>
+<li>Resolves issue with non-PNG image links disappearing</li>
+<li>Improves cursor positioning accuracy</li>
+<li>Fixes case where Return no longer works as a delimiter</li>
+<li>Supports snippet creation hotkeys in applications where expansion is disabled</li>
+<li>Resolves issue with expansion in Slack (by waiting for shift key to be released)</li>
+<li>Fixes auto-capitalization error involving accented characters</li>
+<li>Improves abbreviation replacement in Mail&rsquo;s address fields</li>
+<li>Maintains snippet sort setting</li>
+<li>Allows typing to select snippets in the list</li>
+<li>Allows all Snippet Groups to be expanded or collapsed by option-clicking one Group open or closed</li>
+<li>Other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.2.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">January 14, 2014</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Resolves excessive CPU use which occurred on some systems after several expansions</li>
+<li>Resolves a timing issue (race condition) in 4.2 which can cause crashes upon expansion on certain systems</li>
+<li>Pre-fills URL field if Add Group from URL is selected with a URL on the pasteboard</li>
+<li>Adds prompting to increase 5 second script snippet timeout on 10.8+</li>
+<li>Allows setting script snippet timeout via AppleScript</li>
+<li>Offers to change Shell Script snippets lacking task specifier (#!) to Plain Text on 10.8+</li>
+<li>Fixes crash that could occur if snippet content computation exceeded five second limit</li>
+<li>Fixes automatic sentence capitalization that did not occur after pressing Return to move from a single-line text field to a multi-line text area</li>
+<li>Requires only the first word of snippet content to be lowercase for Adapt to Case of Abbreviation [280]</li>
+<li>Allows one non-letter character at the beginning of the abbreviation to still work with Adapt to Case of Abbreviation [158]</li>
+<li>Restores date macro evaluation to snippets embedded within script snippets [881]</li>
+<li>Fixes problem where @ symbol after a % was incorrectly interpreted as a date/time adjustment macro [878]</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">December 5, 2013</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes problem introduced in 4.1/4.1.1 with non-capitalizable abbreviations such as &ldquo;.dl&rdquo; being treated as capitalized for &ldquo;Adapt to Case&rdquo; snippets [851]</li>
+<li>Restores initial keyboard focus in fill-in window without text fields lost in 4.1 [850]</li>
+<li>Changes abbreviation replacement in some web browser &ldquo;unibars&rdquo; to reduce problems where part of the snippet abbreviation is not removed</li>
+<li>Improves interaction with Fast User Switching, especially when Dropbox Sync is being used [352]</li>
+<li>Fixes long-standing bug which could change the plain version of a &ldquo;Formatted text, pictures&rdquo; snippet to some other snippet&rsquo;s text</li>
+<li>Repairs snippets with mis-matched plain/formatted content (creates &ldquo;RepairedSnippets_[datestamp]&rdquo; file in [home] / Application Support / TextExpander)</li>
+<li>Defaults to automatic Backup being enabled</li>
+<li>Presents currently-running apps first when choosing application-specific expansion (hold down Option when opening window to include menu bar accessory-type applications)</li>
+<li>Displays URL or file path of external Snippet Groups when selected</li>
+<li>Improves handling of accented letters in Search Snippets and Suggest Matching Abbreviation, and multi-word searches now find all words in any order [785, 612]</li>
+<li>Works around Mavericks issue which allows Smart Quotes despite our setting to the contrary</li>
+<li>Changes date math scanning to allow the &ndash; in &ldquo;%@+1D-&rdquo; to be output.</li>
+<li>Allows embedding snippets within embedded script snippets</li>
+<li>Provides non-embedded AppleScript snippets the actual entered/triggering abbreviation in the on textexpander(abrv) handler</li>
+<li>Allows script snippets to return %|, %, and %key: macros</li>
+<li>Improves handling of and notification about script snippets that take longer than 5 seconds to complete</li>
+<li>Restores pasteboard immediately if any Command+keystroke is received after an expansion (before Restore clipboard delay)</li>
+<li>Improves expansion in Google Documents in Safari [866]</li>
+<li>Adds &ldquo;Open TextExpander&rdquo; button to Edit Last Snippet window to allow editing the snippet in the main TextExpander window</li>
+<li>Cancels any open fill-in window if Create Snippet or Edit Last Expanded Snippet window opens</li>
+<li>Displays snippet formatting in fill-in window when &ldquo;Include HTML data&rdquo; is not enabled</li>
+<li>Changes Secure Input presentation in the status menu to clarify that the other application is enabling it</li>
+<li>Avoids accessing certain types of slow or unstable pasteboard data for Restore clipboard according to a new AppleScript-able setting</li>
+<li>Stops Mavericks from logging &ldquo;Using your own bundle identifier [&hellip;] does not make sense and will not work.&rdquo; message at launch</li>
+<li>Fixes instability that sometimes resulted from timeouts when determining the text focus</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">September 25, 2013</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Prepares for Mavericks (OS X 10.9), including issues with the new Security &amp; Privacy settings</li>
+<li>Adds Emoji snippet group</li>
+<li>Offers to convert existing snippets when changing default snippet type</li>
+<li>Allows typing Command+Return to complete the fill-in window</li>
+<li>Improves performance with snippets containing multiple embedded images</li>
+<li>Makes Suggest Matching Abbreviation more forgiving of spaces before invocation, and allows multiple words to narrow the search</li>
+<li>Allows capitalization correction in applications such as Mellel</li>
+<li>Includes paragraph style information with HTML data for snippets that contain line breaks, and AppleScript-able setting to control this behavior</li>
+<li>Fixes case where Romaji input method with Dvorak key layout resulted in no expansion</li>
+<li>Updates the automatic update system to fix some crashes while updating or checking for updates</li>
+<li>Allows capitalization correction in &ldquo;AXScrollArea&rdquo;, which allows it to function in applications which don&rsquo;t fully implement the Accessibility Protocol</li>
+<li>Slightly delays appearance of fill-in window to fix cases where snippet abbreviation was not fully erased</li>
+<li>Improves detection of focus switch (eg. Spotlight search hotkey) and reduce Accessibility Protocol and bundle information calls to focused applications</li>
+<li>Fixes issue with erasing Suggested snippet abbreviations in sandboxed Save panels</li>
+<li>Allows CPU to idle 30 seconds after an expansion or capitalization correction</li>
+<li>Fixes issue where capitalization correction state was sometimes incorrect after a %key: snippet</li>
+<li>Fixes possible crash when placing a %key:% macro in an optional %fillpart:% that was not included</li>
+<li>Caches results of embedded snippets so that embedded script snippets execute only once per expansion. Adds AppleScript-able setting to avoid this if desired.</li>
+<li>Adds notification which results in expanding properly in Fantastical 1.3.8 and later</li>
+<li>Makes delimiters panel appear on Preferences window, and allows dragging multiple delimiters at one time</li>
+<li>Makes Hide Dock icon confirmation alert appear on Preferences window</li>
+<li>Improves appearance of an optional text fill-in with no name and only a single-line of text</li>
+<li>Provides notification on OS X 10.8 and later if a user-prompted Backup is successful</li>
+<li>Automatically adds Backup Now and Restore controls to toolbar when relaunching after hiding the Dock icon</li>
+<li>Offers to open Backup Preferences if no backup files are found when trying to Restore</li>
+<li>Script snippets that don&rsquo;t compile now expand to an error message instead of just empty text</li>
+<li>Restores Content Type of Shell Script and AppleScript snippets reporting their type as &ldquo;Plain Text&rdquo; after Dropbox Sync with TEtouch 2.0 and 2.0.1</li>
+<li>Fixes issue which prevented setting a snippet&rsquo;s type to Shell Script and AppleScript via AppleScript</li>
+<li>Fixes issue with settings not being saved when Duplicating items via the context menu in the snippets list</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.1.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">September 25, 2013</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds Emoji snippet group</li>
+<li>Prepares for Mavericks</li>
+<li>Expands properly in Fantastical 1.3.8 and later</li>
+<li>Offers to convert existing snippets when changing default snippet type</li>
+<li>Improves performance with snippets containing multiple embedded images</li>
+<li>Makes Suggest Matching Abbreviation more forgiving of spaces before and while narrowing the search</li>
+<li>Allows capitalization correction in specific types of applications, such as Mellel</li>
+<li>Includes paragraph style information with HTML data for snippets which contain line breaks</li>
+<li>Expands properly when using a Romaji input method with Dvorak key layout</li>
+<li>Many other fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.5</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">December 18, 2012</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fix potential ordering issue with snippets containing %key:tab% by adding slight delays around Command+V keystroke generation</li>
+<li>A snippet matching the search term with content and label no longer appears twice in Search Snippets or Suggest Matching Abbreviation</li>
+<li>Fix crash with a single-line shell script snippet containing the hashbang, eg. #!/bin/bash -c &ldquo;echo &lsquo;one-liner'&rdquo;</li>
+<li>Snippet conflict status was not always updated correctly after certain operations in 4.0.4.</li>
+<li>Other minor fixes and improvements</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">December 11, 2012</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds popover to resolve snippet abbreviation conflicts</li>
+<li>Duplicate snippets are drawn with blue abbreviation (vs. orange for conflicts)</li>
+<li>Supports Cut, Copy and Paste to manipulate snippets in the outline, including in the contextual menu</li>
+<li>Change the &ldquo;Purchase / Update&hellip;&rdquo; menu item to &ldquo;Review Registration&hellip;&rdquo; if already registered</li>
+<li>Adds &ldquo;expand abbreviation &lsquo;&rsquo;&rdquo; syntax to AppleScript expand command</li>
+<li>Updates approach to fixing TextExpander icon appearing twice in the Dock upon restart</li>
+<li>Attempts to fix an issue where expanding a snippet abbreviation into the OmniFocus Quick Entry window could sometimes send the first backspace keystroke to the previously active application</li>
+<li>Fixes crash when expanding a snippet containing invalid %key% macro, invalid %fill&hellip; macros, or ending with an invalid date math macro</li>
+<li>Restores support for %j day-of-year macro</li>
+<li>Fixes crash when attempting to Copy a snippet in the snippets and Snippet Groups list</li>
+<li>Fixes crash when manipulating Snippet Group expansion sound if overall expansion sound preference had never been changed/set</li>
+<li>Fixes issue where using &ldquo;Create New Snippet&rdquo; from the TextExpander menu item, setting an abbreviation, then clicking &ldquo;Open TextExpander&rdquo; could result in a new snippet which might not expand until TextExpander is restarted</li>
+<li>Pre-fill name and email address into crash report window when available</li>
+<li>Fixes problem where application checked by using &ldquo;Other&hellip;&rdquo; in &ldquo;Only These Applications&hellip;&rdquo; or &ldquo;All Applications, Except&hellip;&rdquo; window would be lost if the app check list was edited later</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.3</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">November 14, 2012</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Fixes issue with TextExpander icon appearing twice in the Dock on restart</li>
+<li>Adds &ldquo;expand&rdquo; command to TextExpander&rsquo;s AppleScript vocabulary, allowing scripts to trigger expansion of a snippet</li>
+<li>Adds Bit Stadium&rsquo;s Hockey Crash Reporting library to help us capture any crashes</li>
+<li>Fixes issue resulting from expansion of a snippet containing only &ldquo;%@&rdquo;</li>
+<li>Applies per-application restrictions when expanding snippets within the fill-in window</li>
+<li>Fixes issue where Fill-in and keystroke snippets could sometimes include HTML data when they should not have, or sometimes had the wrong type of HTML data. This should fix font size problems with those types of snippets in Gmail and some other situations.</li>
+<li>Clears the search Filter when completing Instant Add in main window so that newly created snippet is visible/editable</li>
+<li>Don&rsquo;t confirm Delete of an empty snippet</li>
+<li>Fixes an issue where &lsquo;%%&rsquo; did not get mapped to &lsquo;%&rsquo;</li>
+<li>Fixes a crash where snippets marked as formatted but not containing any formatted text data could cause snippets to disappear at launch</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.2</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">October 10, 2012</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Avoids expanding what seems like an &ldquo;extra&rdquo; line break when optional parts of a fill-in snippet are not checked</li>
+<li>Avoids &ldquo;extra&rdquo; line break after Return and Enter key presses</li>
+<li>Adds AppleScript-able settings to override the prior two changes</li>
+<li>Restores ability to click to expand snippets found by Suggest Matching Abbreviation</li>
+<li>Snippets exactly matching an abbreviation typed in Suggest Matching Abbreviation or Search Snippets now appear first in results lists</li>
+<li>Fixes expansion of formatted snippets containing keypresses into Mail messages (or other places where HTML clipboard data would be used)</li>
+<li>Moves fill-in window forward so it appears in front of the OmniFocus Quick Entry window.</li>
+<li>Adds tooltip containing entire snippet content to Search Snippets results. (Also added to Suggest Matching Abbreviation results, but not visible unless mouse is clicked and held in that window.)</li>
+<li>Fixes issue where a snippet abbreviation typed immediately after clicking OK or Cancel in a fill-in window would not trigger expansion</li>
+<li>Fixes issue where a number of menu items which operate on snippets and Snippet Groups remained enabled after TextExpander&rsquo;s main window was closed</li>
+<li>Fixes issue with fill-in field editing popover window sometimes not matching text selection in the snippet, especially when triple-clicking to select text</li>
+<li>Fixes issue when %key:return% or %key:enter% appear at the end of a snippet</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4.0.1</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">August 7, 2012</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Restores transparency to menu bar icon</li>
+<li>Makes checkbox label clickable for optional section fill-ins</li>
+<li>Equality abbreviations in Symbol group now end with == (e.g. &gt;==, &lt;==)</li>
+<li>Updates Japanese and Italian help</li>
+<li>Fixes crash when mixing standard and Unicode date formats in same snippet</li>
+<li>Fixes issue where %key%s in unchecked optional sections caused expansion failure</li>
+<li>Forces short year and expands per-day width in Statistics graph</li>
+<li>Recalculates caches when deleting a snippet so that conflict resolutions update properly</li>
+<li>Fixes some French typos</li>
+<li>Fixes toggling of &ldquo;expansion enabled&rdquo; setting via AppleScript</li>
+<li>Fixes crash when using empty string for blank popup fields</li>
+</ul></div>
+</div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">4</h2></div>
+<div class="col-md-9 col-lg-10">
+<p class="small">June 21, 2012</p>
+<div class="mt-1 list-style-checks ul-children-no-space"><ul>
+<li>Adds new fill-in types:</li>
+<li>Multiple line text fields</li>
+<li>Popup menus</li>
+<li>Optional text sections</li>
+<li>Supports default values for text and popup fill-ins</li>
+<li>Edit fill-ins and options with popup interface</li>
+<li>Expand snippets while using fill-ins</li>
+<li>Switch apps while using fill-ins</li>
+<li>Improves statistics with graphical display</li>
+<li>Introduces hands-on tutorial for new users</li>
+<li>Adds contextual menu to snippet list</li>
+<li>Supports tables and lists in formatted text snippets</li>
+<li>Adds appearance preference to show main window at launch</li>
+<li>Updates appearance for Lion and Mountain Lion</li>
+<li>Adds French and German autocorrect Snippet Groups</li>
+<li>Improves contrast/readability of abbreviation in snippet list</li>
+<li>Uses fewer unique pasteboards when restoring clipboard content</li>
+<li>Toolbar help icon provides access to help menu items</li>
+<li>Adds help icon to toolbar when help menu is not visible</li>
+<li>Adds logging popup to toolbar when logging is enabled</li>
+<li>Makes it possible to change snippet type via AppleScript</li>
+<li>Allows tab keystroke to transit password fields without stalling</li>
+<li>Removes MobileMe synchronization, as MobileMe is discontinued</li>
+<li>Removes Always use Clipboard preference, as it no longer applies</li>
+<li>Respects default abbreviation mode when importing SpellCatcher files</li>
+<li>Adds AppleScript-able setting to avoid querying input method for keyboard layout</li>
+<li>Adds AppleScript-able setting to also tap keyUp events</li>
+</ul></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="carousel slide" id="versionRelease3" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">3</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease3"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton3" data-target="#versionRelease3"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew3" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.4.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 9, 2012</p>
+<ul>
+<li>Fixes Sort by Content</li>
+<li>Fixes issue with embedded AppleScript snippets that don&rsquo;t return strings</li>
+<li>Adds &ldquo;restore clipboard regardless&rdquo; property to AppleScript for TextMate 1.5.10 users</li>
+<li>Other fixes and improvements to memory use</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.4.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 28, 2012</p>
+<ul>
+<li>Signed with Gatekeeper-friendly Developer ID from Apple</li>
+<li>Improves expansion reliability, especially in iWork applications</li>
+<li>Solves many cases of transposed letters</li>
+<li>Adds Sort by Most Used</li>
+<li>Adds &ldquo;last used time&rdquo; and &ldquo;use count&rdquo; properties to AppleScript support</li>
+<li>Better respects hide setting when TextExpander is a Login Item</li>
+<li>Several minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 29, 2011</p>
+<ul>
+<li>Adds &ldquo;Sharing Snippet Groups with Your Team&rdquo; help section</li>
+<li>Adds Tweet My Stats button to the Statistics window</li>
+<li>Supports selecting local Dropbox folder for Dropbox 1.2 and later</li>
+<li>Allows selecting &ldquo;Other&hellip;&rdquo; application when specifying applications</li>
+<li>Improves double-click behavior for .textexpander files</li>
+<li>Adds QuickLook support for .textexpander files</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.3.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 18, 2011</p>
+<ul>
+<li>Fixes issue with updating snippets and settings via Dropbox</li>
+<li>Nested plain text snippets now take formatting from the snippet in which they are nested</li>
+<li>Fixes various interface display issues</li>
+<li>Suppresses expansion when using input methods which combine keystrokes</li>
+<li>Fixes font sizing issue when key presses are used</li>
+<li>Improved handling when Dropbox folder is not in Home folder</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.3.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 20, 2011</p>
+<ul>
+<li>Fixed font size mismatch in Mail</li>
+<li>Fixed issue with formatted text fill-ins</li>
+<li>Fixed issue with disabled expansion after using Mission Control</li>
+<li>Fixed issue expanding in some file dialogs (e.g. Preview, TextEdit)</li>
+<li>Added additional logging to help diagnose outstanding issues</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.3.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 9, 2011</p>
+<ul>
+<li>Fixes delimiter handling in Safari 5.1 on Lion and Snow Leopard</li>
+<li>Fixes key press handling in Safari 5.1 on Lion and Snow Leopard</li>
+<li>Fixes cursor handling in Safari 5.1 on Lion and Snow Leopard</li>
+<li>Retains proper font size when expanding into Microsoft Word</li>
+<li>Other minor fixes and improvements</li>
+<li>Note: Expanding into password fields on Safari 5.1 does not function properly</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.3.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 13, 2011</p>
+<ul><li>Fixed problem with Dock hiding in Mac App Store version</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 20, 2011</p>
+<ul>
+<li>Introduces AppleScript support</li>
+<li>Adds Backup Now, Restore, and Logging as customizable toolbar items</li>
+<li>Adds support for guillemets &laquo;&raquo; as delimiter characters</li>
+<li>Allows keypress macros (tab, return, esc, enter) to be nested in fill-in snippets</li>
+<li>Automatic capitalization at sentence start now works with contractions of &ldquo;I&rdquo; (I&rsquo;m, I&rsquo;ll, I&rsquo;d, etc.)</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.2.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 22, 2011</p>
+<ul>
+<li>New and improved HTML &amp; CSS snippet group</li>
+<li>Adds display font setting for plain text snippets</li>
+<li>Adds default font setting for formatted text snippets</li>
+<li>Makes secure input warning less intrusive and less frequent</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.2.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 3, 2011</p>
+<ul>
+<li>Adds Spanish localization</li>
+<li>Adds option to eliminate double caps at the start of words</li>
+<li>Adds warning info when secure event input is enabled</li>
+<li>Improves compatibility with VoiceOver</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.2.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 14, 2010</p>
+<ul>
+<li>Improves automatic capitalization</li>
+<li>Adds options for as few as 5 backup files</li>
+<li>Improved handling of Dropbox syncing</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.2.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">November 20, 2010</p>
+<ul>
+<li>Adds &ldquo;Launch at Login&rdquo; to Appearance preferences</li>
+<li>Adds new welcome window</li>
+<li>Submitted to Mac App Store, not released</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 26, 2010</p>
+<ul>
+<li>Adds backup and restore</li>
+<li>Adds preference for automatic backup</li>
+<li>Adds keyboard shortcuts to expand top search results</li>
+<li>Fixes some problems with establishing Dropbox sync</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.1.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 26, 2010</p>
+<ul>
+<li>Fixed problem with starting to expand after login</li>
+<li>Fixed problem locating Dropbox folder in some cases</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.1.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 11, 2010</p>
+<ul>
+<li>Fixed Adapt to Case when selected as default case sensitivity</li>
+<li>Fixed potential crash on quit</li>
+<li>Fixed at least one instance of disappearing snippets</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 2, 2010</p>
+<ul>
+<li>Added hotkeys to activate TextExpander and to open the Search Snippets function</li>
+<li>Allows hiding Dock icon without showing TextExpander in the menu bar</li>
+<li>Improved search by highlighting matched text and searching snippet label text</li>
+<li>Supports typing by mouse with Keyboard Viewer or Virtual Keyboard</li>
+<li>Improved cursor position handling in Google Chrome and Firefox</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.0.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 7, 2010</p>
+<ul>
+<li>Fixes crash when &ldquo;Expand abbreviations&rdquo; is set to &ldquo;at delimiter (keep delimiter)&rdquo;</li>
+<li>Stops passing along up and down arrows when used to navigate suggestions</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.0.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 4, 2010</p>
+<ul>
+<li>Improved performance</li>
+<li>Supports Unicode line endings for import</li>
+<li>Switched to FastSpring for in-product purchases</li>
+<li>Fixes hang in FileMaker Pro modal dialogs</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.0.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 14, 2010</p>
+<ul>
+<li>Expands properly in other applications&rsquo; quick entry windows and Spotlight</li>
+<li>Improved performance</li>
+<li>Capitalization options can exclude applications</li>
+<li>Fixes double expansion in LaunchBar</li>
+<li>&ldquo;Suggest Abbreviations&rdquo; Snippet Group preference functions properly</li>
+<li>No longer attempts to expand in VMWare Fusion</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3.0.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 18, 2010</p>
+<ul>
+<li>Fill-in window now supports Cut, Copy, Paste, and Select All keyboard equivalents</li>
+<li>Formatted snippets can now be created using the quick entry window</li>
+<li>Dates can now be used in snippets with fill-ins</li>
+<li>Key presses can now be used in snippets with nested snippets and dates</li>
+<li>Check Updates interval is retained and respected</li>
+<li>Fixed menu performance problem with large Snippet Groups</li>
+<li>Fixed hang within TextExpander when &ldquo;Capitalize new sentences&rdquo; is on</li>
+<li>Fixed problem with drag-and-drop reordering of snippets</li>
+<li>Fixed occasional problem with Dropbox setting in Sync preferences</li>
+<li>Fixed occasional problem with unwanted selection when positioning cursor</li>
+<li>Fixed upgrade reminder; added 30 day delay</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 10, 2010</p>
+<ul>
+<li>Converted from preference pane to application</li>
+<li>Specify multiple blank fields in snippets for variable content to be filled in manually</li>
+<li>Search snippets from the menu bar</li>
+<li>Insert Tab and Return in snippets</li>
+<li>Create new snippets quickly via hotkey</li>
+<li>Edit the last-expanded snippet via hotkey</li>
+<li>Built-in support for synchronization via Dropbox</li>
+<li>Correct double caps; ensure initial caps at the beginning of a sentence</li>
+<li>Automatic updates within the application (Sparkle)</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes3" class="carousel-item mb-4">
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+<style>#detailedNotesButton3, #detailedNotes3 {display:none;}</style>
+</div>
+</div>
+</div>
+<div class="carousel slide" id="versionRelease2" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">2</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease2"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton2" data-target="#versionRelease2"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew2" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.8.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 18, 2009</p>
+<ul>
+<li>Fixes cursor position at beginning of snippet</li>
+<li>Snippets respect sort order for drag and drop</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.8</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 3, 2009</p>
+<ul>
+<li>Use rich text snippets in web apps (for example, signatures in Gmail)</li>
+<li>Revised purchase reminder alert</li>
+<li>Make a selection using % in conjunction with %&rsquo; cursor positioning</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.7.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 21, 2009</p>
+<ul>
+<li>Imports Spell Catcher shorthand files (exported in XML format)</li>
+<li>Supports plain text snippets nested in AppleScript and shell script snippets</li>
+<li>Fixed some problems with Mobile Me synchronization</li>
+<li>Fixed split view slider in Snippets tab for Snow Leopard</li>
+<li>Fixed memory leak / performance problem with large clipboards</li>
+<li>Fixed cursor positioning at end of snippet (%&lt;, %&gt;, %/, %v)</li>
+<li>Fixed problem when Key Repeat Delay is set to None</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.7</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 24, 2009</p>
+<ul>
+<li>Share snippet groups with TextExpander for iPhone and iPad for the iPhone, to be released August 26</li>
+<li>Fixes occasional stalling under Snow Leopard</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.6.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">July 15, 2009</p>
+<ul>
+<li>Added Sort by Label</li>
+<li>Fixed dead key handling (e.g., use &auml; or Polyphonic Greek characters as abbreviations)</li>
+<li>Made improvements in preparation for Snow Leopard</li>
+<li>Minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.6.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 20, 2009</p>
+<ul>
+<li>Improved menu performance on Leopard (10.5)</li>
+<li>Reduced memory usage on Leopard</li>
+<li>Fixed rich text import</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.6.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 26, 2009</p>
+<ul><li>Fix problem with Adapt to Case</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.6</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 25, 2009</p>
+<ul>
+<li>Per-group expansion options for greater flexibility:</li>
+<li>Expand after whitespace (default)</li>
+<li>Expand after anything but letters &amp; numbers</li>
+<li>Expand after any character</li>
+<li>Setting for clipboard restore delay</li>
+<li>WPM setting for more accurate statistics</li>
+<li>Fixes problem where formatted text was pasted for some plain text snippets</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.5.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 18, 2009</p>
+<ul>
+<li>Shell script snippets, which expand to the result of the script</li>
+<li>Respects default formatting when creating snippets from clipboard or selection</li>
+<li>Fixed problem with updating URL Snippet Groups</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.5.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 28, 2009</p>
+<ul>
+<li>AppleScript results are pasted in plain text so that they adopt the current formatting</li>
+<li>Nested AppleScript snippets now function properly</li>
+<li>Snippet list retains outline expansion and selection better (no more collapsing unexpectedly)</li>
+<li>Fixed hanging problem when used with PopChar X</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 29, 2008</p>
+<ul>
+<li>Date math (add or subtract years, months, days, hours, minutes, seconds from current time)</li>
+<li>Internet productivity Group (shorten URLs, etc.)</li>
+<li>Symbols Group (command, option, copyright, trademark, Euro, Pound, etc.)</li>
+<li>Fixed %- and %+ to abandon or keep delimiter on a per-snippet basis</li>
+<li>Other fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.4.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 14, 2008</p>
+<ul><li>Fix problem with &ldquo;ignore case&rdquo; setting for abbreviations</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 12, 2008</p>
+<ul>
+<li>Menu bar icon responds instantly regardless of snippet count</li>
+<li>Menu bar menu is navigable by keyboard</li>
+<li>Snippet groups show contents in add Snippet submenu of snippet editor</li>
+<li>Fixed memory leak which could lead to poor performance</li>
+<li>Fixed potential system hang if key is pressed while viewing menu bar menu</li>
+<li>Fixed broken link for predefined Autocorrect Snippet Group</li>
+<li>Fixed &ldquo;Play sound&rdquo; checkbox target area</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">July 23, 2008</p>
+<ul>
+<li>Added &ldquo;Accented Words&rdquo; snippet group</li>
+<li>Expands to fit wider System Preferences window on Leopard</li>
+<li>Fixed filtering of abbreviations and snippets</li>
+<li>Fixed some case-sensitivity problems on Tiger</li>
+<li>Other minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 20, 2008</p>
+<ul>
+<li>Adds predefined Snippet Group for CSS (Cascading Style Sheets)</li>
+<li>Limits &ldquo;Adapt to Case&rdquo; to lowercase snippets</li>
+<li>Limits &ldquo;Adapt to Case&rdquo; to abbreviations with two or more characters</li>
+<li>Disables expansion when shift-space is typed</li>
+<li>Works properly with MacSpeech Dictate</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.1.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 29, 2008</p>
+<ul>
+<li>Fixes post-expansion cursor positioning</li>
+<li>Handles delimiters using the shift key properly</li>
+<li>Supports fully empty snippet list</li>
+<li>Minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">April 22, 2008</p>
+<ul>
+<li>Improves performance and reliability for fast typists</li>
+<li>Remembers open Snippet Groups in Preference pane</li>
+<li>Preserves format when creating snippets from selection or Clipboard</li>
+<li>Allows single character abbreviations</li>
+<li>Fixes problem expanding when there are multiple nested snippets</li>
+<li>Minor fixes and improvements</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.0.5</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">February 5, 2008</p>
+<ul>
+<li>Fixed registration</li>
+<li>Fixed Dvorak layout (both Dvorak and Dvorak-QWERTY work properly)</li>
+<li>Fixed double launch on upgrade</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.0.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 10, 2008</p>
+<ul>
+<li>Fixed problem with Dvorak-Qwerty keyboard layout</li>
+<li>Fixed problem with snppet type failing to apply</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.0.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 25, 2007</p>
+<ul>
+<li>Leopard compatible</li>
+<li>Respects default snippet type setting</li>
+<li>Fixed potential problem with specifying delimiters</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2.0.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 17, 2007</p>
+<ul>
+<li>Abandon delimiter is fixed</li>
+<li>Cursor positioning (left, right, up, down) is fixed</li>
+<li>Works properly with non-US keyboards and layouts</li>
+<li>Problems updating from older versions are fixed</li>
+<li>Scroll performance with large numbers of snippets is fixed</li>
+<li>Excluding Microsoft Word is fixed</li>
+<li>Import handles snippet labels properly</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 16, 2007</p>
+<ul>
+<li>Snippet groups</li>
+<li>Add snippet groups from external files</li>
+<li>Add snippet groups from URLs (including password-protected URLs with Keychain support)</li>
+<li>Synchronize snippet groups using MobileMe Synchronization</li>
+<li>Print snippets</li>
+<li>Hotkeys to enable / disable and to create snippets from selection or clipboard</li>
+<li>Enable or disable Snippet Groups on a per-application basis</li>
+<li>AppleScript snippets, which expand to the result of the script</li>
+<li>More options for sounds</li>
+<li>Sound settings on a per-group basis</li>
+<li>Update snippet groups from URLs and external files at regular intervals</li>
+<li>Improved performance with large numbers of snippets</li>
+<li>User interface improvements</li>
+<li>Additional improvements too numerous to mention</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes2" class="carousel-item mb-4">
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+<style>#detailedNotesButton2, #detailedNotes2 {display:none;}</style>
+</div>
+</div>
+</div>
+<div class="carousel slide" id="versionRelease1" data-ride="carousel">
+<div class="d-flex align-items-center mb-4">
+<h2 class="display-3 m-0 mr-4">1</h2>
+<div class="btn-tab-group mb-4 carousel-indicators mx-0 justify-content-start align-items-end w-100">
+<div class="btn-tab active" data-slide-to="0" data-target="#versionRelease1"> What's New</div>
+<div class="btn-tab" data-slide-to="1" id="detailedNotesButton1" data-target="#versionRelease1"> Detailed Release Notes</div>
+</div>
+</div>
+<div class="carousel-inner">
+<div id="whatsNew1" class="carousel-item active mb-4">
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.4.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">September 5, 2006</p>
+<ul>
+<li>Abbreviations with characters requiring the Option key are fixed</li>
+<li>Named delimiters (space, tab, return, esc) appear in other languages</li>
+<li>Other minor fixes</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.4</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 15, 2006</p>
+<ul>
+<li>User-specified delimiters (&ldquo;Set Delimiters&hellip;&rdquo; button in Preferences tab)</li>
+<li>Import comma- and tab-delimited text, RTF, and RTFD files</li>
+<li>Choose TextExpander or Textpander style menu bar icon in Preferences</li>
+<li>Sort snippets by date created (helps when locating import Snippet Groups)</li>
+<li>Sort snippets by date modified (helps when tracking recent changes)</li>
+<li>Mac OS X 10.4 required</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.3.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">June 6, 2006</p>
+<ul>
+<li>Dramatically improved performance for large snippet libraries</li>
+<li>Option to insert snippets using cross-platform compatible image format (PNG)</li>
+<li>Fixed crashing bug when using date / time in formatted text</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.3</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">May 23, 2006</p>
+<ul>
+<li>Refer to other snippets as variables via &ldquo;%snippet:[abbreviation]%&rdquo; &hellip;</li>
+<li>You can now create snippets directly from selected text by means of the TextExpander Service.</li>
+<li>TextExpander&rsquo;s preference pane can now be resized vertically.</li>
+<li>Abbreviations can now be corrected during typing with the backspace key.</li>
+<li>Fixed a bug where TextExpander did not insert snippets correctly while a hybrid keyboard layout (e.g., Dvorak Querty) was active.</li>
+<li>Added initial Japanese localization by Akira Ikeda.</li>
+<li>Available Languages: English, French, German, Japanese.</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.4.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">March 6, 2006</p>
+<ul><li>Fixes problem saving when &ldquo;Use additional snippets&rdquo; is checked</li></ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.2.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">January 19, 2006</p>
+<ul>
+<li>Both Textpander&rsquo;s preference pane and the background process are universal binaries now. This means that Textpander runs natively on both PowerPC and Intel-based Macs.</li>
+<li>Available Languages: English, French, German.</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.2.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">December 9, 2005</p>
+<ul>
+<li>The snippets list now supports copy &amp; paste. In addition to the obvious purpose of duplicating snippets (which was already possible by doing an [option]-drag, by the way), you can also create new snippets by pasting text to the snippets list. Moreover, copying from the snippets list populates your clipboard with a list of the selected snippets and their respective abbreviations. Paste that into a text file and apply your formatting to create a snippets cheat sheet.</li>
+<li>Textpander now works with iTerm.</li>
+<li>Available Languages: English, French, German.</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.2</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">October 28, 2005</p>
+<ul>
+<li>Fixed a bug in Textpander&rsquo;s external snippets parser. This will solve most problems experienced by users who have imported or subscribed to their TypeIt4Me snippets. (You don&rsquo;t have to re-import those. Textpander fixes corrupted snippets automatically.)</li>
+<li>You can now add a clipboard placeholder (%clipboard) to have Textpander insert the current clipboard content into a snippet on expansion. (Only the clipboard&rsquo;s plain text representation is used here.)</li>
+<li>Textpander can now import or subscribe to &ldquo;nlang&rdquo; files from Nisus Writer.</li>
+<li>Textpander Help should now work on Mac OS X 10.3.9.</li>
+<li>Added a French localization by Herv&eacute; Roth.</li>
+<li>Available Languages: English, French, German.</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1.1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 29, 2005</p>
+<ul>
+<li>If you have configured Textpander to &ldquo;Expand automatically when&hellip; a delimiter character has been typed after an abbreviation&rdquo;, you can now choose whether the delimiter character that triggered the expansion should vanish on expansion (&ldquo;keep delimiter&rdquo;/&rdquo;abandon delimiter&rdquo;). To override this setting for a specific snippet, add a &ldquo;Keep delimiter&rdquo; specifier (&ldquo;%+&rdquo;, without the surrounding quotation marks) or an &ldquo;Abandon delimiter&rdquo; specifier (&ldquo;%-&ldquo;) to the very end of your snippet.</li>
+<li>You can now use your own local snippets collection and subscribe to a remote snippets file at the same time.</li>
+<li>Improved Textpander&rsquo;s compatibility with the Terminal and other applications that don&rsquo;t behave like standard OS X text editors.</li>
+<li>Available Languages: English, German.</li>
+</ul>
+</div></div>
+</div>
+<div class="row pb-4">
+<div class="col-md-3 col-lg-2"><h2 class="m-0">1</h2></div>
+<div class="col-md-9 col-lg-10"><div class="mt-1 list-style-checks ul-children-no-space">
+<p class="small">August 22, 2005</p>
+<ul>
+<li>Initial release.</li>
+<li>Available Languages: English, German.</li>
+</ul>
+</div></div>
+</div>
+</div>
+<div id="detailedNotes1" class="carousel-item mb-4">
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+<style>#detailedNotesButton1, #detailedNotes1 {display:none;}</style>
+</div>
+</div>
+</div>
+</div></div></div></div>  <script>jQuery( document ).ready(function($) {
+	$('.carousel').carousel({
+		interval: 2000000000,
+		interval: false,
+		touch: false,
+		keyboard: false,
+		ride: false
+	})
+});</script> </div> <style>.ul-children-no-space ul {
+margin-bottom: 0!important;
+}</style>
+</div>
+<div class="pre-footer text-center text-white pb-4 pt-4">
+<h2 class="text-white">Take TextExpander for a test-drive</h2> <a href="https://auth.textexpander.com/sign-up" class="btn-te-cta btn  btn-primary btn-lg rounded-pill">Try It For FREE</a><script>function updateRedemptionCode(code) {
+				if(code != '') {
+					var newUrl = 'https://auth.textexpander.com/sign-up?code='+code;
+
+					var links = document.getElementsByClassName('btn-te-cta');
+					for (var i = 0; i < links.length; i++) {
+						links.item(i).href = newUrl;
+					}
+				} 
+			}</script> <p><small>No credit card required</small></p>
+</div>
+<div class="footer full-width text-white pb-4 pt-4 text-left" id="teWebFooter"><div class="container">
+<div class="row pb-4 pt-4 social-icons"><div class="col-12"> <a href="https://www.twitter.com/textexpander" title="follow TextExpander on Twitter"><i class="fa-3x fab fa-twitter pr-3"></i></a> <a href="https://www.facebook.com/textexpander" title="follow TextExpander on Facebook"><i class="fa-3x fab fa-facebook-f pr-3"></i></a> <a href="https://www.linkedin.com/company/textexpander" title="follow TextExpander on LinkedIn"><i class="fa-3x fab fa-linkedin-in pr-3"></i></a> <a href="https://www.youtube.com/TextExpanderApp" title="follow TextExpander on YouTube"><i class="fa-3x fab fa-youtube pr-3 pt-1"></i></a> <a href="https://www.instagram.com/TextExpander" title="follow TextExpander on Instagram"><i class="fa-3x fab fa-instagram pr-3"></i></a>
+</div></div>
+<div class="row pb-4 pt-4 footer-menu">
+<div class="col-sm-3">
+<div class="text-uppercase text-white-50 small"><strong>TextExpander</strong></div>
+<div class="menu-footer-textexpander-menu-container"><ul id="footer-textexpander" class="menu">
+<li id="menu-item-16288" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16288"><a href="https://auth.textexpander.com/sign-up">Start Free Trial</a></li>
+<li id="menu-item-31499" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-31499"><a href="../pricing/index.html">Pricing</a></li>
+<li id="menu-item-21774" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-21774"><a href="../download/index.html">Download</a></li>
+<li id="menu-item-16286" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16286"><a href="../../www.textexpander.com/features.html">Features</a></li>
+<li id="menu-item-16287" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16287"><a href="../../auth.textexpander.com/sign-in.html">Sign In</a></li>
+</ul></div>
+</div>
+<div class="col-sm-3">
+<div class="text-uppercase text-white-50 small"><strong>Learn</strong></div>
+<div class="menu-footer-support-menu-container"><ul id="footer-support" class="menu">
+<li id="menu-item-28789" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-28789"><a href="../category/textexpander-tips.html">Learning Center</a></li>
+<li id="menu-item-64969" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-64969"><a href="../webinar.html">Webinars</a></li>
+<li id="menu-item-61999" class="menu-item menu-item-type-post_type menu-item-object-learning_center menu-item-61999"><a href="../entry/how-do-i-choose-an-abbreviation-for-my-snippet/index.html">Getting Started</a></li>
+<li id="menu-item-61998" class="menu-item menu-item-type-post_type menu-item-object-learning_center menu-item-61998"><a href="../../www.textexpander.com/learn/troubleshooting.html">Troubleshooting</a></li>
+<li id="menu-item-61996" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-61996"><a href="../publicgroups.html">Public Groups</a></li>
+<li id="menu-item-61997" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-61997"><a href="../index.html@p=226.html">Contact Us</a></li>
+</ul></div>
+</div>
+<div class="col-sm-3">
+<div class="text-uppercase text-white-50 small"><strong>Blog</strong></div>
+<div class="menu-footer-blog-menu-container"><ul id="footer-blog" class="menu">
+<li id="menu-item-16467" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-16467"><a href="../blog/index.html">Blog Home</a></li>
+<li id="menu-item-16296" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16296"><a href="../category/profession/sales/page/1.html">Sales</a></li>
+<li id="menu-item-16295" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16295"><a href="../category/profession/recruitment/page/1.html">Recruitment</a></li>
+<li id="menu-item-16297" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16297"><a href="../category/profession/customer-support/page/1.html">Customer Support</a></li>
+<li id="menu-item-16298" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16298"><a href="../category/profession/development/page/1.html">Development</a></li>
+<li id="menu-item-16294" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-16294"><a href="../category/maximizing-productivity/explore-textexpander/page/1.html">Tips</a></li>
+</ul></div>
+</div>
+<div class="col-sm-3">
+<div class="text-uppercase text-white-50 small"><strong>Company</strong></div>
+<div class="menu-footer-company-menu-container"><ul id="footer-smile" class="menu">
+<li id="menu-item-16299" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16299"><a href="../about.html">About TextExpander</a></li>
+<li id="menu-item-16301" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16301"><a href="../partners/requirements.html">Partner with TextExpander</a></li>
+<li id="menu-item-16300" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-16300"><a href="../jobs.html">Jobs</a></li>
+<li id="menu-item-35474" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-35474"><a href="../press.html">Press</a></li>
+</ul></div>
+</div>
+</div>
+<div class="row"><div class="col-sm-12 footer-submenu">
+<p class="mb-0 text-white"><small>&copy; 2022  SmileOnMyMac, LLC dba TextExpander. TextExpander is a registered trademark.</small></p>
+<div class="menu-footer-policy-menu-container"><ul id="footer-policy" class="menu">
+<li id="menu-item-16324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-privacy-policy menu-item-16324"><a href="../privacy/index.html">Privacy</a></li>
+<li id="menu-item-16323" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-16323"><a href="../index.html@p=107.html">Policies</a></li>
+<li id="menu-item-29111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-29111"><a href="../index.html@p=26020.html">Security</a></li>
+</ul></div>
+</div></div>
+</div></div>  <script type="text/javascript">(function(d,s,i,r) {
+if (d.getElementById(i)){return;}
+var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/20520796.js';
+e.parentNode.insertBefore(n, e);
+})(document,"script","hs-analytics",300000);</script>  <script type="text/javascript" id="clicktrack-adrotate-js-extra">var click_object = {"ajax_url":"https:\/\/textexpander.com\/wp-admin\/admin-ajax.php"};</script> <script defer src="../wp-content/cache/autoptimize/js/autoptimize_3ee50f122371ff16586f09571a226ae3.js"></script>
+</div>
+</body>
+</html>
+<!-- Parsed with iubenda experimental class in 0.0149 sec. -->

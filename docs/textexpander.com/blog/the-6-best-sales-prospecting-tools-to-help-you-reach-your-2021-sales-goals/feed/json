@@ -1,0 +1,16 @@
+{
+    "author": {
+        "url": "https://twitter.com/TextExpander",
+        "avatar": "https://textexpander.com/static/images/feed-icon.png",
+        "name": "TextExpander"
+    },
+    "icon": "https://textexpander.com/static/images/feed-icon.png",
+    "favicon": "https://textexpander.com/static/images/feed-favicon.png",
+    "version": "https://jsonfeed.org/version/1.1",
+    "user_comment": "This feed allows you to read the posts from this site in any feed reader that supports the JSON Feed format. To add this feed to your reader, copy the following URL -- https://textexpander.com/blog/the-6-best-sales-prospecting-tools-to-help-you-reach-your-2021-sales-goals/feed/json -- and add it your reader.",
+    "home_page_url": "https://textexpander.com/blog/the-6-best-sales-prospecting-tools-to-help-you-reach-your-2021-sales-goals",
+    "feed_url": "https://textexpander.com/blog/the-6-best-sales-prospecting-tools-to-help-you-reach-your-2021-sales-goals/feed/json",
+    "language": "en-US",
+    "title": "Comments on: The 6 Best Sales Prospecting Tools to Help You Reach Your 2021 Sales Goals",
+    "description": "Communicate Smarter"
+}
