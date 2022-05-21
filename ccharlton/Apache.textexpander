@@ -1,0 +1,530 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>groupInfo</key>
+	<dict>
+		<key>expandAfterMode</key>
+		<integer>1</integer>
+		<key>groupName</key>
+		<string>Apache</string>
+	</dict>
+	<key>snippetsTE2</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:vhost:site</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2013-07-16T22:45:15Z</date>
+			<key>label</key>
+			<string>Enable or Disable site (Apache vhost/domain)</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T02:48:03Z</date>
+			<key>plainText</key>
+			<string>%fillpopup:name=Enable or Disable:default=a2ensite:a2dissite% %filltext:name=Domain VHOST file%</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>461A7F53-C599-4696-AD2D-3DD556A8323D</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:conf:deflate</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T05:45:29Z</date>
+			<key>label</key>
+			<string>Apache mod_deflate compression config</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T05:57:22Z</date>
+			<key>plainText</key>
+			<string>#
+# mod_deflate configuration
+#
+LoadModule deflate_module modules/mod_deflate.so
+&lt;IfModule mod_deflate.c&gt;
+        AddOutputFilterByType DEFLATE text/*
+        AddOutputFilterByType DEFLATE text/plain
+        AddOutputFilterByType DEFLATE text/html
+        AddOutputFilterByType DEFLATE text/xml
+        AddOutputFilterByType DEFLATE text/css
+        AddOutputFilterByType DEFLATE application/xml
+        AddOutputFilterByType DEFLATE application/xhtml+xml
+        AddOutputFilterByType DEFLATE application/rss+xml
+        AddOutputFilterByType DEFLATE application/javascript
+        AddOutputFilterByType DEFLATE application/x-javascript
+        DeflateCompressionLevel 9
+        BrowserMatch ^Mozilla/4 gzip-only-text/html
+        BrowserMatch ^Mozilla/4\.0[678] no-gzip
+        BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+        #DeflateFilterNote Input instream
+        #DeflateFilterNote Output outstream
+        #DeflateFilterNote Ratio ratio
+        #CustomLog /path/to/vhost/logs/deflate_log deflate
+        #LogFormat '"%r" %{outstream}n/%{instream}n (%{ratio}n%%)' deflate
+&lt;/IfModule&gt;
+
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C3DFA0D2-FC4E-404E-A897-36EABE90AF98</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:modules:compiled</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T05:32:49Z</date>
+			<key>label</key>
+			<string>List compiled Apache modules</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T03:03:47Z</date>
+			<key>plainText</key>
+			<string>apache2 -l</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C1CF80BA-ABA5-43DB-92A3-0984AE692490</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:settings</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T05:30:38Z</date>
+			<key>label</key>
+			<string>Show Apache settings</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T05:30:48Z</date>
+			<key>plainText</key>
+			<string>/usr/sbin/apache2 -V</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>18F53E20-40D8-43A5-9F4D-DCC5802FD6B5</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:processes</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T05:28:30Z</date>
+			<key>label</key>
+			<string>Show Apache processes</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T05:28:51Z</date>
+			<key>plainText</key>
+			<string>ps -ef | grep apache</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C3950D75-DB1C-4A34-B553-694DCA6B80B5</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:modules:enable</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T05:08:19Z</date>
+			<key>label</key>
+			<string>Enable an Apache module</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T05:08:43Z</date>
+			<key>plainText</key>
+			<string>sudo a2enmod %fill:module%</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>6958D8A2-3049-4E62-BD4C-DD35DDFB6C5C</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:modules:list</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T05:07:52Z</date>
+			<key>label</key>
+			<string>List loaded Apache modules</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T03:03:51Z</date>
+			<key>plainText</key>
+			<string>apache2 -l</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>F275A226-A087-478F-8CF6-B6E373F28BDE</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:conf:security</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T04:05:15Z</date>
+			<key>label</key>
+			<string>Apache security.conf (template)</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T04:05:44Z</date>
+			<key>plainText</key>
+			<string>ServerSignature Off
+ServerTokens Prod
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>A1A45DA1-8689-4225-9AE1-54AA44DB3E7A</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:config:test</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T03:01:07Z</date>
+			<key>label</key>
+			<string>Test Apache config</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T03:07:50Z</date>
+			<key>plainText</key>
+			<string>/etc/init.d/apache2 configtest</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>4DA4B1B0-DF16-43C4-8ACB-B9DB5FFD2497</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:reload</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:59:34Z</date>
+			<key>label</key>
+			<string>Reload Apache config</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T03:07:38Z</date>
+			<key>plainText</key>
+			<string>/etc/init.d/apache2 reload</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>B3497534-DF06-479E-9DAC-00399FF0F37B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:httpd:reload</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:58:35Z</date>
+			<key>label</key>
+			<string>Reload Apache httpd config (without restart)</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T03:07:35Z</date>
+			<key>plainText</key>
+			<string>/etc/init.d/httpd reload</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>702CFC2E-DFB6-4ECC-9A5C-8E27CC58E3CB</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:vhost:template</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:55:09Z</date>
+			<key>label</key>
+			<string>Apache VHost (template)</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T02:58:16Z</date>
+			<key>plainText</key>
+			<string>&lt;VirtualHost *:80&gt;
+   ServerAdmin webmaster@localhost
+   ServerName %fill:domain%
+   ServerAlias www.%fill:domain%
+   DocumentRoot /var/www/%fill:domain%/htdocs
+
+   &lt;Directory /var/www/html&gt;
+       &lt;LimitExcept GET POST&gt;
+          Order allow,deny
+       &lt;/LimitExcept&gt;
+   &lt;/Directory&gt;
+
+   # log files for this domain
+   CustomLog /var/log/apache2/%fill:domain%-access.log combined
+   ErrprLog /var/log/apache2/%fill:domain%-error.log
+
+   # Deflate (compression)
+   AddOutputFilterByType DEFLATE text/plain
+   AddOutputFilterByType DEFLATE text/html
+   AddOutputFilterByType DEFLATE text/xml
+   AddOutputFilterByType DEFLATE text/css
+   AddOutputFilterByType DEFLATE application/xml
+   AddOutputFilterByType DEFLATE application/xhtml+xml
+   AddOutputFilterByType DEFLATE application/rss+xml
+   AddOutputFilterByType DEFLATE application/javascript
+   AddOutputFilterByType DEFLATE application/x-javascript
+   DeflateCompressionLevel 9
+   BrowserMatch ^Mozilla/4 gzip-only-text/html
+   BrowserMatch ^Mozilla/4\.0[678] no-gzip
+   BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+   # Tracking compression
+   #DeflateFilterNote Input instream
+   #DeflateFilterNote Output outstream
+   #DeflateFilterNote Ratio ratio
+   #LogFormat '"%r" %{outstream}n/%{instream}n (%{ratio}n%%)' deflate
+&lt;/VirtualHost&gt;
+
+# SSL config
+&lt;VirtualHost *:443&gt;
+  ServerAdmin webmaster@localhost
+  ServerName %fill:domain%
+  ServerAlias www.%fill:domain%
+  DocumentRoot /var/www/%fill:domain%/htdocs
+  
+  # Logs
+  CustomLog /var/log/apache/www.foo.com-access.log combined
+  ErrorLog /var/log/apache/www.foo.com-error.log
+
+  # Basic SSL configuration
+  SSLEngine on
+  SSLProtocol all -SSLv2
+  SSLCipherSuite HIGH:MEDIUM:!aNULL:!MD5
+  SSLCertificateFile "/var/www/%fill:domain%/ssl/server.crt"
+  SSLCertificateKeyFile "/var/www/%fill:domain%/ssl/server.key"
+&lt;/VirtualHost&gt;</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>0AD5D31F-97AF-44B8-89F9-29D12ECAE590</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:status</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:53:27Z</date>
+			<key>label</key>
+			<string>Get Apache status</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T02:50:19Z</date>
+			<key>plainText</key>
+			<string>apachectl %fillpart:name=Full output%full%fillpartend%status</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>8F0D4FE7-A7CF-4C24-B992-841738D53438</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:reboot</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:50:56Z</date>
+			<key>label</key>
+			<string>Restart Apache now!</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T03:03:38Z</date>
+			<key>plainText</key>
+			<string>apachectl restart</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>CAA374A7-FCD8-43CE-ABF6-A7554EC7645E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:stop</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:50:28Z</date>
+			<key>label</key>
+			<string>Stop Apache</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T02:50:38Z</date>
+			<key>plainText</key>
+			<string>apachectl stop</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>2007A414-E9D3-4644-B2E9-7F36C4EF0457</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:start</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:49:55Z</date>
+			<key>label</key>
+			<string>Start Apache</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T02:49:55Z</date>
+			<key>plainText</key>
+			<string>apachectl start</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>7C8E236D-C340-405B-A9EF-3D256AA4EE99</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:restart</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-03-16T02:48:14Z</date>
+			<key>label</key>
+			<string>Restart Apache gracefully</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T02:49:25Z</date>
+			<key>plainText</key>
+			<string>apachectl graceful</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>904F14A5-CDF7-44F1-8A0C-F58413A018F2</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:bench</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-02-29T07:40:21Z</date>
+			<key>label</key>
+			<string>Apache Benchmark a domain or URL</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T05:16:22Z</date>
+			<key>plainText</key>
+			<string>ab -n %fill:100requests% -c %fill:10concurrency% %fill:URL%/</string>
+			<key>snippetType</key>
+			<integer>3</integer>
+			<key>uuidString</key>
+			<string>DA381D6C-D5C4-407D-8F27-B1384A12BDCC</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>httpd:version</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-02-29T07:20:56Z</date>
+			<key>label</key>
+			<string>Get Apache (httpd) version (alternate)</string>
+			<key>modificationDate</key>
+			<date>2012-02-29T07:20:56Z</date>
+			<key>plainText</key>
+			<string>httpd -v</string>
+			<key>snippetType</key>
+			<integer>3</integer>
+			<key>uuidString</key>
+			<string>AEFE515F-3930-4300-8E96-9B4C8953BBDB</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:version</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-02-29T07:20:18Z</date>
+			<key>label</key>
+			<string>Get Apache version</string>
+			<key>modificationDate</key>
+			<date>2012-02-29T07:20:18Z</date>
+			<key>plainText</key>
+			<string>apache2ctl -v</string>
+			<key>snippetType</key>
+			<integer>3</integer>
+			<key>uuidString</key>
+			<string>F4F56384-B4DC-4A3C-9BC7-C4AC8E18C34E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:httpd:start</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2012-02-29T05:19:14Z</date>
+			<key>label</key>
+			<string>Start Apache httpd</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T02:47:58Z</date>
+			<key>plainText</key>
+			<string>/etc/init.d/httpd start</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>B8BE3AD5-483E-4B6D-B91B-527E2A0015B1</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:httpd:stop</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2012-02-29T05:18:59Z</date>
+			<key>label</key>
+			<string>Stop Apache httpd</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T02:48:03Z</date>
+			<key>plainText</key>
+			<string>/etc/init.d/httpd stop</string>
+			<key>snippetType</key>
+			<integer>3</integer>
+			<key>uuidString</key>
+			<string>EBE2A1B6-3341-4C58-9C93-1E526CC269AF</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:httpd:restart</string>
+			<key>abbreviationMode</key>
+			<integer>1</integer>
+			<key>creationDate</key>
+			<date>2012-02-29T04:24:51Z</date>
+			<key>label</key>
+			<string>Restart Apache httpd</string>
+			<key>modificationDate</key>
+			<date>2012-03-16T02:48:07Z</date>
+			<key>plainText</key>
+			<string>/etc/init.d/httpd restart</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>6BD1B73B-CB9E-414F-9166-61F4411B97B7</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>apache:list</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2015-07-06T02:45:45Z</date>
+			<key>label</key>
+			<string>List all virtual hosts</string>
+			<key>modificationDate</key>
+			<date>2015-07-06T02:46:43Z</date>
+			<key>plainText</key>
+			<string>apache2ctl -S</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>5A641A1F-4885-485E-B739-894B212396A7</string>
+		</dict>
+	</array>
+</dict>
+</plist>
