@@ -1,0 +1,894 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>groupInfo</key>
+	<dict>
+		<key>expandAfterMode</key>
+		<integer>0</integer>
+		<key>groupName</key>
+		<string>JavaScript</string>
+	</dict>
+	<key>snippetsTE2</key>
+	<array>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsextend</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2014-02-12T18:47:51Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2014-02-12T18:47:55Z</date>
+			<key>plainText</key>
+			<string>function extend(destination, source) {
+    var toString = Object.prototype.toString,
+        objTest = toString.call({});
+    for (var property in source) {
+        if (source[property] &amp;&amp; objTest == toString.call(source[property])) {
+            destination[property] = destination[property] || {};
+            extend(destination[property], source[property]);
+        } else {
+            destination[property] = source[property];
+        }
+    }
+    return destination;
+};</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>8A7EA0E5-1144-4CC7-8440-9D7868953840</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jspreventhover</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-12-02T18:21:14Z</date>
+			<key>label</key>
+			<string>Prevent Hover On Scroll</string>
+			<key>modificationDate</key>
+			<date>2013-12-02T18:21:37Z</date>
+			<key>plainText</key>
+			<string>var body = document.body,
+    scrollTimer;
+
+window.addEventListener('scroll', function() {
+  clearTimeout(scrollTimer);
+  if(!body.classList.contains('disable-hover')) {
+    body.classList.add('disable-hover');
+  }
+  
+  scrollTimer = setTimeout(function(){
+    body.classList.remove('disable-hover');
+  }, 500);
+}, false);
+
+/*
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+*/</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>D13D46F5-313F-4284-B790-5FA1CB8F3686</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsaddcssrule</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-09-12T21:29:31Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2013-09-12T21:30:32Z</date>
+			<key>plainText</key>
+			<string>function addCssRule(sheet, selector, rules, index) {
+  if(sheet.insertRule) {
+    sheet.insertRule(selector + "{" + rules + "}", index);
+  }
+  else {
+    sheet.addRule(selector, rules, index);
+  }
+}
+
+// addCssRule(document.styleSheets[0], '', '');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>E4D8D038-5DC6-45EB-A52C-AC926FD3214F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsevtdel</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-09-12T21:19:49Z</date>
+			<key>label</key>
+			<string>Event Delegation</string>
+			<key>modificationDate</key>
+			<date>2013-09-12T21:20:10Z</date>
+			<key>plainText</key>
+			<string>el.addEventListener("click",function(e) {
+  if(e.target &amp;&amp; e.target.nodeName == "%|") {
+    // ...
+  }
+});</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>E86E58EF-2226-420E-8DE8-FD41A549E024</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsajaxcache</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-08-09T17:29:20Z</date>
+			<key>label</key>
+			<string>jQuery Ajax Cache</string>
+			<key>modificationDate</key>
+			<date>2013-11-14T22:06:03Z</date>
+			<key>plainText</key>
+			<string>var ajaxCache = {};
+
+$('#ajaxForm').on('submit', function(e) {
+  var key = $('#field').val(); // get a key to store/cache for lookup
+
+  if ( !ajaxCache[key] ) {
+    ajaxCache[key] = $.ajax({
+      url: 'http://',
+      dataType: 'jsonp',
+      data: {},
+      timeout: 15000
+    });
+  }
+  ajaxCache[key].done().fail().always();
+
+  e.preventDefault();
+});</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>86EF88FB-1AF0-4A89-86B0-AB9BCD74C03F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,keycheck</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-08-09T17:09:36Z</date>
+			<key>label</key>
+			<string>Key Check</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:49:00Z</date>
+			<key>plainText</key>
+			<string>if("%filltext:name=Feature%" in navigator) {
+    %|
+}
+</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>555CAB89-4565-4FB7-9D17-0DA205E282BE</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jstypeof</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-06-27T22:00:34Z</date>
+			<key>label</key>
+			<string>typeOf</string>
+			<key>modificationDate</key>
+			<date>2013-06-27T22:00:45Z</date>
+			<key>plainText</key>
+			<string>function typeOf(value) {
+    var s = typeof value;
+    if (s === 'object') {
+        if (value) {
+            if (value instanceof Array) {
+                s = 'array';
+            }
+        } else {
+            s = 'null';
+        }
+    }
+    return s;
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>36543182-D0A5-4CD7-93DA-528E03CC325A</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsrect</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-05-14T16:41:00Z</date>
+			<key>label</key>
+			<string>Get el bounding rect</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:49:46Z</date>
+			<key>plainText</key>
+			<string>var %filltext:name=elRect% = document.querySelector('%|').getBoundingClientRect();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>650178F4-D28D-464B-B388-65834F6A4BCB</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jshintrc</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-05-10T17:29:41Z</date>
+			<key>label</key>
+			<string>JSHint Config File</string>
+			<key>modificationDate</key>
+			<date>2013-05-10T17:30:34Z</date>
+			<key>plainText</key>
+			<string>{
+  // JSHint Default Configuration File (as on JSHint website)
+  // See http://jshint.com/docs/ for more details
+
+  "maxerr"        : 50,       // {int} Maximum error before stopping
+
+  // Enforcing
+  "bitwise"       : true,     // true: Prohibit bitwise operators (&amp;, |, ^, etc.)
+  "camelcase"     : false,    // true: Identifiers must be in camelCase
+  "curly"         : true,     // true: Require {} for every new block or scope
+  "eqeqeq"        : true,     // true: Require triple equals (===) for comparison
+  "forin"         : true,     // true: Require filtering for..in loops with obj.hasOwnProperty()
+  "immed"         : false,    // true: Require immediate invocations to be wrapped in parens e.g. `(function () { } ());`
+  "indent"        : 4,        // {int} Number of spaces to use for indentation
+  "latedef"       : false,    // true: Require variables/functions to be defined before being used
+  "newcap"        : false,    // true: Require capitalization of all constructor functions e.g. `new F()`
+  "noarg"         : true,     // true: Prohibit use of `arguments.caller` and `arguments.callee`
+  "noempty"       : true,     // true: Prohibit use of empty blocks
+  "nonew"         : false,    // true: Prohibit use of constructors for side-effects (without assignment)
+  "plusplus"      : false,    // true: Prohibit use of `++` &amp; `--`
+  "quotmark"      : false,    // Quotation mark consistency:
+                              //   false    : do nothing (default)
+                              //   true     : ensure whatever is used is consistent
+                              //   "single" : require single quotes
+                              //   "double" : require double quotes
+  "undef"         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
+  "unused"        : true,     // true: Require all defined variables be used
+  "strict"        : true,     // true: Requires all functions run in ES5 Strict Mode
+  "trailing"      : false,    // true: Prohibit trailing whitespaces
+  "maxparams"     : false,    // {int} Max number of formal params allowed per function
+  "maxdepth"      : false,    // {int} Max depth of nested blocks (within functions)
+  "maxstatements" : false,    // {int} Max number statements per function
+  "maxcomplexity" : false,    // {int} Max cyclomatic complexity per function
+  "maxlen"        : false,    // {int} Max number of characters per line
+
+  // Relaxing
+  "asi"           : false,     // true: Tolerate Automatic Semicolon Insertion (no semicolons)
+  "boss"          : false,     // true: Tolerate assignments where comparisons would be expected
+  "debug"         : false,     // true: Allow debugger statements e.g. browser breakpoints.
+  "eqnull"        : false,     // true: Tolerate use of `== null`
+  "es5"           : false,     // true: Allow ES5 syntax (ex: getters and setters)
+  "esnext"        : false,     // true: Allow ES.next (ES6) syntax (ex: `const`)
+  "moz"           : false,     // true: Allow Mozilla specific syntax (extends and overrides esnext features)
+                               // (ex: `for each`, multiple try/catch, function expression…)
+  "evil"          : false,     // true: Tolerate use of `eval` and `new Function()`
+  "expr"          : false,     // true: Tolerate `ExpressionStatement` as Programs
+  "funcscope"     : false,     // true: Tolerate defining variables inside control statements"
+  "globalstrict"  : false,     // true: Allow global "use strict" (also enables 'strict')
+  "iterator"      : false,     // true: Tolerate using the `__iterator__` property
+  "lastsemic"     : false,     // true: Tolerate omitting a semicolon for the last statement of a 1-line block
+  "laxbreak"      : false,     // true: Tolerate possibly unsafe line breakings
+  "laxcomma"      : false,     // true: Tolerate comma-first style coding
+  "loopfunc"      : false,     // true: Tolerate functions being defined in loops
+  "multistr"      : false,     // true: Tolerate multi-line strings
+  "proto"         : false,     // true: Tolerate using the `__proto__` property
+  "scripturl"     : false,     // true: Tolerate script-targeted URLs
+  "smarttabs"     : false,     // true: Tolerate mixed tabs/spaces when used for alignment
+  "shadow"        : false,     // true: Allows re-define variables later in code e.g. `var x=1; x=2;`
+  "sub"           : false,     // true: Tolerate using `[]` notation when it can still be expressed in dot notation
+  "supernew"      : false,     // true: Tolerate `new function () { ... };` and `new Object;`
+  "validthis"     : false,     // true: Tolerate using this in a non-constructor function
+
+  // Environments
+  "browser"       : true,     // Web Browser (window, document, etc)
+  "couch"         : false,    // CouchDB
+  "devel"         : true,     // Development/debugging (alert, confirm, etc)
+  "dojo"          : false,    // Dojo Toolkit
+  "jquery"        : false,    // jQuery
+  "mootools"      : false,    // MooTools
+  "node"          : false,    // Node.js
+  "nonstandard"   : false,    // Widely adopted globals (escape, unescape, etc)
+  "prototypejs"   : false,    // Prototype and Scriptaculous
+  "rhino"         : false,    // Rhino
+  "worker"        : false,    // Web Workers
+  "wsh"           : false,    // Windows Scripting Host
+  "yui"           : false,    // Yahoo User Interface
+
+  // Legacy
+  "nomen"         : false,    // true: Prohibit dangling `_` in variables
+  "onevar"        : false,    // true: Allow only one `var` statement per function
+  "passfail"      : false,    // true: Stop on first error
+  "white"         : false,    // true: Check against strict whitespace and indentation rules
+
+  // Custom Globals
+  "predef"        : [ ]       // additional predefined global variables
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>2059833F-B82E-4828-9D14-306E79D8FA5F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsdelete</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:45:25Z</date>
+			<key>label</key>
+			<string>Remove Elem</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:50:16Z</date>
+			<key>plainText</key>
+			<string>document.querySelector('%filltext:name=elem%').parentNode.removeChild(document.querySelector('%filltext:name=elem%'))</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>1FF05B09-932D-4BB5-A37E-03D6F52D7B0B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsafter</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:44:58Z</date>
+			<key>label</key>
+			<string>Add After Elem</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:50:25Z</date>
+			<key>plainText</key>
+			<string>document.querySelector('%|').insertAdjacentHTML('afterend', '&lt;div&gt;&lt;/div&gt;')</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>031A3C35-B1E7-4734-9CEB-43A5700898DC</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsbefore</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:44:23Z</date>
+			<key>label</key>
+			<string>Add Before Elem</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:50:46Z</date>
+			<key>plainText</key>
+			<string>document.querySelector('%|').insertAdjacentHTML('beforebegin', '&lt;div&gt;&lt;/div&gt;')</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>D6C8711B-C193-46B5-A4C7-62F14676F713</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsprepend</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:43:54Z</date>
+			<key>label</key>
+			<string>Prepend Elem</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:50:55Z</date>
+			<key>plainText</key>
+			<string>document.querySelector('%|').insertAdjacentHTML('afterbegin', '&lt;div&gt;&lt;/div&gt;')</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C4578DE8-08B4-4BF0-86D1-509F9DAC00EB</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsappend</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:43:27Z</date>
+			<key>label</key>
+			<string>Append Elem</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:51:02Z</date>
+			<key>plainText</key>
+			<string>document.querySelector('%|').insertAdjacentHTML('beforeend', '&lt;div&gt;&lt;/div&gt;')</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>4B609346-453F-4480-9DD9-C503EC1DEC0F</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jstoggleclass</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:43:00Z</date>
+			<key>label</key>
+			<string>Toggle Class</string>
+			<key>modificationDate</key>
+			<date>2013-04-28T19:43:00Z</date>
+			<key>plainText</key>
+			<string>function toggleClass(elem, className) {
+  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+  if (hasClass(elem, className)) {
+    while (newClass.indexOf(' ' + className + ' ') &gt;= 0 ) {
+      newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+    }
+    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+  } else {
+    elem.className += ' ' + className;
+  }
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>492435ED-180D-4374-8266-8DEE4C3FE191</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsnext</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:37:29Z</date>
+			<key>label</key>
+			<string>Next Sibling</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:52:16Z</date>
+			<key>plainText</key>
+			<string>var next = document.querySelector('%|').nextSibling;
+while( next.nodeType &gt; 1 ) next = next.nextSibling</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>74B6898E-F3C4-48E4-A41E-6A54B524DAB9</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsparent</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:37:04Z</date>
+			<key>label</key>
+			<string>Parent Node</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:52:26Z</date>
+			<key>plainText</key>
+			<string>document.querySelector('%|').parentNode</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>C6751016-D563-4F84-B38B-9C3BDF6626ED</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsidelem</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:36:01Z</date>
+			<key>label</key>
+			<string>getElementById</string>
+			<key>modificationDate</key>
+			<date>2013-04-28T19:36:01Z</date>
+			<key>plainText</key>
+			<string>document.getElementById('%|');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>36BEEB70-1394-47D5-832B-DCA6E90E229B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,jsquery</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-28T19:35:33Z</date>
+			<key>label</key>
+			<string>querySelectorAll</string>
+			<key>modificationDate</key>
+			<date>2013-04-28T19:46:26Z</date>
+			<key>plainText</key>
+			<string>document.querySelectorAll('%|');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>58BA30D4-582C-47EE-9254-7C55B7AC8B39</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string></string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-04-27T06:54:02Z</date>
+			<key>label</key>
+			<string>Remove Hover Styles on iOS</string>
+			<key>modificationDate</key>
+			<date>2013-04-27T06:54:09Z</date>
+			<key>plainText</key>
+			<string>if ('createTouch' in document)
+{
+    try
+    {
+        var ignore = /:hover/;
+        for (var i=0; i&lt;document.styleSheets.length; i++)
+        {
+            var sheet = document.styleSheets[i];
+            for (var j=sheet.cssRules.length-1; j&gt;=0; j--)
+            {
+                var rule = sheet.cssRules[j];
+                if (rule.type === CSSRule.STYLE_RULE &amp;&amp; ignore.test(rule.selectorText))
+                {
+                    sheet.deleteRule(j);
+                }
+            }
+        }
+    }
+    catch(e){}
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>FA1CA9E7-5BAF-4178-8BC9-D2F125C0897E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,congroup</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T21:00:02Z</date>
+			<key>label</key>
+			<string>console.group()</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:46Z</date>
+			<key>plainText</key>
+			<string>console.group('%|');
+// ...
+console.groupEnd();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>080EA584-C95E-437E-A83B-76B752F64A2A</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,contime</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:58:53Z</date>
+			<key>label</key>
+			<string>console.time()</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:42Z</date>
+			<key>plainText</key>
+			<string>console.time('%filltext:name=label%');
+// … %|
+console.timeEnd('%filltext:name=label%');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>D002082B-7286-47C5-809D-3B466D5FA086</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,conassert</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:58:31Z</date>
+			<key>label</key>
+			<string>console.assert()</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:31Z</date>
+			<key>plainText</key>
+			<string>console.assert(condition, '');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>82698DED-95EB-4D72-A760-DB16D7269610</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,conerror</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:57:40Z</date>
+			<key>label</key>
+			<string>console.error()</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:27Z</date>
+			<key>plainText</key>
+			<string>console.error('%|');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>E8A1FA7F-03CA-4A48-BD2A-87DE80869253</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,conwarn</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:57:22Z</date>
+			<key>label</key>
+			<string>console.warn()</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:23Z</date>
+			<key>plainText</key>
+			<string>console.warn('%|');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>DD4C2A22-D5DD-4336-80BF-4101B6552405</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,Oconlog</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:56:51Z</date>
+			<key>label</key>
+			<string>console.log() JS object</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:19Z</date>
+			<key>plainText</key>
+			<string>console.log('%O', %|);</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>2DA72793-3FB1-4C81-834F-E739117D1E11</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,oconlog</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:56:06Z</date>
+			<key>label</key>
+			<string>console.log() DOM element</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:14Z</date>
+			<key>plainText</key>
+			<string>console.log('%o', %|);</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>06FC6112-906D-4B9A-8D7E-688A3EA04E6E</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,cconlog</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:55:30Z</date>
+			<key>label</key>
+			<string>console.log() Styled</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:10Z</date>
+			<key>plainText</key>
+			<string>console.log('%c%|', 'color: blue;');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>AECD1D5C-4895-4D9B-AE38-CCB27FE713E8</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,conlog</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-03-30T20:55:06Z</date>
+			<key>label</key>
+			<string>console.log()</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:20:00Z</date>
+			<key>plainText</key>
+			<string>console.log('%|');</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>A72DBF08-9D2D-403C-B788-55E6E9A21107</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,eprevent</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-02-19T15:31:39Z</date>
+			<key>label</key>
+			<string>PreventDefault</string>
+			<key>modificationDate</key>
+			<date>2013-02-19T15:31:51Z</date>
+			<key>plainText</key>
+			<string>e.preventDefault();</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>9522592E-04B9-4C4B-B6E9-0C0979535323</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,objtemplate</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-02-19T15:30:32Z</date>
+			<key>label</key>
+			<string>Object Template</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:53:40Z</date>
+			<key>plainText</key>
+			<string>var obj = {
+  init: function( config ) {
+    this.config = config;
+
+    this.cache();
+    this.bindEvents();
+
+    //...
+  },
+
+  cache: function() {
+    // this.container = $('div');
+  },
+
+  bindEvents: function() {
+    // on click/change/etc methods
+  }
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>4F7B1F54-75C4-4BE7-A0F7-430B4C444EF8</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,usestrict</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-02-10T23:28:24Z</date>
+			<key>label</key>
+			<string>Use Strict</string>
+			<key>modificationDate</key>
+			<date>2013-09-06T17:19:49Z</date>
+			<key>plainText</key>
+			<string>'use strict';</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>56215D41-1E2B-4693-B235-5DB4656AE3A3</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,docready</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2010-06-10T03:55:51Z</date>
+			<key>label</key>
+			<string></string>
+			<key>modificationDate</key>
+			<date>2010-06-10T03:56:15Z</date>
+			<key>plainText</key>
+			<string>$(document).ready(function(){
+	%|
+});</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>344F334A-135A-4CFC-A599-6DB8486C23CE</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,siaf</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2012-04-29T20:24:58Z</date>
+			<key>label</key>
+			<string>selfInvokingFunction</string>
+			<key>modificationDate</key>
+			<date>2013-10-09T16:26:12Z</date>
+			<key>plainText</key>
+			<string>(function() {
+  
+}());</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>A890DC7E-FA65-4203-8E0B-13FF4293B5CB</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,es6objtemplate</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2013-02-19T15:30:32Z</date>
+			<key>label</key>
+			<string>Object Template ES6</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T21:55:20Z</date>
+			<key>plainText</key>
+			<string>var %| = {
+  init() {
+    this.cache();
+    this.bindEvents();
+  }
+
+  cache() {
+    
+  }
+
+  bindEvents() {
+    
+  }
+}</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>7F3B2AEB-D3A0-4585-BBD5-3F3036D8A09B</string>
+		</dict>
+		<dict>
+			<key>abbreviation</key>
+			<string>,tmto</string>
+			<key>abbreviationMode</key>
+			<integer>0</integer>
+			<key>creationDate</key>
+			<date>2016-06-28T22:04:03Z</date>
+			<key>label</key>
+			<string>TweenMax.to</string>
+			<key>modificationDate</key>
+			<date>2016-06-28T22:05:15Z</date>
+			<key>plainText</key>
+			<string>TweenMax.to(%filltext:name=el%, %filltext:name=time:default=0.2%, {
+  %|
+});</string>
+			<key>snippetType</key>
+			<integer>0</integer>
+			<key>uuidString</key>
+			<string>AA8DEA64-216E-4C51-AF54-E1102A30B778</string>
+		</dict>
+	</array>
+</dict>
+</plist>
