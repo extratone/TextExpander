@@ -1,0 +1,1505 @@
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* We cannot have a single element for virtual scrolling, because Chrome
+   limits CSS Grid to 1000 rows, see: https://crbug.com/688640
+*/
+
+/* this holds the scrollbar */
+.virtualList.outer {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.virtualList.outer:focus {
+  box-shadow: var(--clear-focus-style);
+  outline: var(--focus-alt-style);
+  outline-offset: var(--focus-outline-offset);
+  z-index: calc(1 + var(--resizer-z-index));
+}
+
+.virtualList.inner {
+/* The sizing of this will need to cater for row-gap if there is any */
+  height: calc(var(--items-count, 0) * var(--virtualized-list-row-height));
+  position: relative;
+}
+
+/* The actual list, notably this only contains materialized rows */
+.virtualList.inner ul {
+  position: absolute;
+  /* If you add a row gap, you'll need to change this */
+  top: calc(var(--materialized-start-index) * var(--virtualized-list-row-height));
+  margin: 0;
+  left: 0px;
+  right: 0px;
+  padding: 0;
+  display: grid;
+  grid-auto-rows: var(--virtualized-list-row-height);
+}
+
+.virtualList.inner ul:focus {
+  box-shadow: var(--clear-focus-style);
+}
+
+.virtualList.inner li {
+  list-style: none;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/*
+Note: Inline search is used by the Inline Search Entry and the Quick Actions Entry. Both use cases have different space requirements. This CSS relies on some CSS variables being set in main. You can find those in inlineVariables.css - for the inline search and quickActionsInlineSearchAndVariables - for Quick Actions.
+
+The a varaible file should be imported by the component rendering the inline search.
+*/
+
+:root {
+  --height-of-nine-results: 277px;
+  --section-padding: var(--cushion-small);
+  --virtualized-list-row-height: var(--list-item-height);
+
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+}
+
+main:not(.search-main) {
+  background-color: var(--white);
+}
+
+.search-main {
+  background-color: var(--lightest-gray);
+}
+
+.search-main svg {
+  height: var(--icon-size);
+}
+
+/* | Search box | */
+
+.search-main > .inline-search-header {
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+
+  padding: var(--inline-search-header-padding);
+}
+
+.search-main > .inline-search-header > * {
+  padding: 0px;
+}
+
+.search-main > .inline-search-header > *:not(:last-child){
+  margin-right: var(--inline-search-header-padding);
+}
+
+.search-main > .inline-search-header > input[type=search].needle {
+  flex-grow: 1;
+
+  padding: 0px;
+  appearance: none;
+  border: none;
+  font-size: var(--x-large-font-size);
+  background-color: transparent;
+}
+
+.search-main > .inline-search-header > input[type=search].needle:focus {
+  box-shadow: none !important;
+}
+
+.search-main button.clear-search {
+  --clear-size: var(--icon-size);
+}
+
+svg.search {
+  color: var(--medium-gray);
+}
+
+button.search-secondary,
+button.search-secondary:focus,
+button.search-secondary:active {
+  background-color: transparent;
+  border: none;
+  color: var(--darker-gray);
+  box-shadow: none;
+}
+
+button.search.secondary:disabled {
+  color: var(--light-gray);
+}
+
+/* Spinner */
+
+.search-main > span:nth-child(2) {
+  margin: auto;
+}
+
+/* | List | */
+
+.search-main > .virtualList {
+  flex-grow: 1;
+  flex-shrink: 1;
+  padding: var(--section-padding);
+}
+
+.search-main > .virtualList.outer > .virtualList.inner > ul {
+  gap: var(--list-row-gap);
+}
+
+.list-item.result > button {
+  display: flex;
+  align-items: center;
+}
+
+.list-item.result > button > *:not(:last-child) {
+  margin-right: var(--label-gap);
+}
+
+.list-item.result > button:hover {
+  background-color: var(--lighter-gray);
+}
+
+.list-item.result > button[aria-selected="true"] {
+  background-color: var(--focus-background-color) !important;
+  color: var(--focus-color) !important;
+  box-shadow: none !important;
+}
+
+
+.list-item.result > button > span {
+  flex-grow: 1;
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/*
+A home for shared list styling, both layout and appearance related.
+
+Virtualized list layout shared across section layout is in sectionLayout.css
+*/
+
+/* Non virtualized lists use list */
+ul.list,
+ol.list {
+    display: grid;
+    row-gap: var(--list-row-gap);
+}
+
+li.list-item,
+.faux-list-item {
+  display: grid; /* fixes content to width of list container to help with overflow */
+
+  /* Focus styling is passed down in variables. There are cases like drag and drop where things need to look focused. The variables make sure that look is consistent. */
+  --focus-background-color: var(--orange);
+  --focus-color: var(--always-white);
+}
+
+.list-item.primary,
+.faux-list-item-primary {
+  --selected-background-color: var(--white);
+  --selected-color: var(--darker-gray);
+}
+
+.list-item.secondary,
+.faux-list-item-secondary {
+  --selected-background-color: var(--lighter-gray);
+  --selected-color: var(--darker-gray);
+}
+
+.list-item.secondary.with-icon {
+  --focus-background-color: var(--lighter-gray);
+  --focus-color: var(--darker-gray);
+}
+
+.list-item,
+.faux-list-item {
+    border-radius: var(--border-radius);
+    height: var(--list-item-height);
+}
+
+.list-item > button[aria-selected=true],
+.faux-list-item[aria-selected=true] {
+    background-color: var(--selected-background-color, var(--white));
+    color: var(--selected-color);
+}
+
+/* | List children | */
+
+.list-item > button,
+.faux-list-item {
+  padding: var(--list-item-padding);
+  width: unset;
+  text-align: left;
+  align-items: center;
+  display: flex;
+  border-style: none;
+  background-color: unset;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Lists that track selection with aria-selected should have their background color considered when focused and selected.
+Lists that don't track selection with aria-selected should imlpement their own focus styling with the focus variables provided by the .list-item classes */
+
+.list-item > button[aria-selected="true"]:focus,
+.faux-list-item[aria-selected=true]:focus {
+  box-shadow: var(--clear-focus-style);
+  background-color: var(--focus-background-color);
+  color: var(--focus-color);
+}
+
+.list-item > button > span,
+.faux-list-item > span {
+  flex-grow: 1;
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* | List item with icon | */
+
+.list-item.with-icon > button > span {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.list-item.with-icon > button svg {
+    height: var(--small-icon-size);
+    margin-right: var(--cushion-smallest);
+    width: var(--small-icon-list-width);
+}
+
+/* Restore focus ring as the user can tab through these without selecting one */
+li.list-item.with-icon > button:focus {
+  box-shadow: var(--focus-style);
+}
+
+/* When active turn the list-item orange and remove the box-shadow */
+li.list-item.with-icon > button:active,
+li.list-item.with-icon > button:focus:active {
+  background-color: var(--focus-background-color);
+  color: var(--focus-color);
+}
+
+.react-contexify{position:fixed;opacity:0;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;background-color:#fff;box-sizing:border-box;box-shadow:0 10px 20px rgba(0,0,0,.3),0 0 0 1px #eee;padding:5px 0;min-width:180px}.react-contexify .react-contexify__submenu{position:absolute;top:0;pointer-events:none;transition:opacity .275s}.react-contexify__submenu-arrow{font-size:12px;position:absolute;right:10px;line-height:22px}.react-contexify__separator{float:left;width:100%;height:1px;cursor:default;margin:4px 0;background-color:rgba(0,0,0,.2)}.react-contexify__item{cursor:pointer;position:relative}.react-contexify__item:not(.react-contexify__item--disabled):hover>.react-contexify__item__content{color:#fff;background-color:#4393e6}.react-contexify__item:not(.react-contexify__item--disabled):hover>.react-contexify__submenu{pointer-events:auto;opacity:1}.react-contexify__item--disabled{cursor:default;opacity:.5}.react-contexify__item__content{padding:6px 12px;display:-ms-flexbox;display:flex;text-align:left;white-space:nowrap;color:#333;position:relative}.react-contexify__item__icon{font-size:20px;margin-right:5px;font-style:normal}.react-contexify__theme--dark{padding:6px 0;box-shadow:0 2px 15px rgba(0,0,0,.4),0 0 0 1px #222}.react-contexify__theme--dark,.react-contexify__theme--dark .react-contexify__submenu{background-color:rgba(40,40,40,.98)}.react-contexify__theme--dark .react-contexify__separator{background-color:#eee}.react-contexify__theme--dark .react-contexify__item__content{color:#fff}.react-contexify__theme--dark .react-contexify__item__icon{margin-right:8px;width:12px;text-align:center}.react-contexify__theme--light{padding:6px 0;box-shadow:0 2px 15px rgba(0,0,0,.2),0 0 0 1px #eee}.react-contexify__theme--light .react-contexify__separator{background-color:#eee}.react-contexify__theme--light .react-contexify__item:not(.react-contexify__item--disabled):hover>.react-contexify__item__content{color:#4393e6;background-color:#e0eefd}.react-contexify__theme--light .react-contexify__item__content{color:#666}.react-contexify__theme--light .react-contexify__item__icon{margin-right:8px;width:12px;text-align:center}@keyframes react-contexify__popIn{0%{transform:scale(0)}to{transform:scale(1)}}@keyframes react-contexify__popOut{0%{transform:scale(1)}to{transform:scale(0)}}.react-contexify__will-enter--pop{animation:react-contexify__popIn .3s cubic-bezier(.51,.92,.24,1.2)}.react-contexify__will-leave--pop{animation:react-contexify__popOut .3s cubic-bezier(.51,.92,.24,1.2)}@keyframes react-contexify__zoomIn{0%{opacity:0;transform:scale3d(.3,.3,.3)}50%{opacity:1}}@keyframes react-contexify__zoomOut{0%{opacity:1}50%{opacity:0;transform:scale3d(.3,.3,.3)}to{opacity:0}}.react-contexify__will-enter--zoom{transform-origin:top left;animation:react-contexify__zoomIn .4s}.react-contexify__will-leave--zoom{animation:react-contexify__zoomOut .4s}@keyframes react-contexify__fadeIn{0%{opacity:0}to{opacity:1}}@keyframes react-contexify__fadeOut{0%{opacity:1}to{opacity:0}}.react-contexify__will-enter--fade{animation:react-contexify__fadeIn .3s ease}.react-contexify__will-leave--fade{animation:react-contexify__fadeOut .3s ease}@keyframes react-contexify__flipInX{0%{transform:perspective(400px) rotateX(90deg);animation-timing-function:ease-in}40%{transform:perspective(400px) rotateX(-20deg);animation-timing-function:ease-in}60%{transform:perspective(400px) rotateX(10deg)}80%{transform:perspective(400px) rotateX(-5deg)}to{transform:perspective(400px)}}@keyframes react-contexify__flipOutX{0%{transform:perspective(400px)}30%{transform:perspective(400px) rotateX(-20deg);opacity:1}to{transform:perspective(400px) rotateX(90deg);opacity:0}}.react-contexify__will-enter--flip{animation:react-contexify__flipInX .65s}.react-contexify__will-enter--flip,.react-contexify__will-leave--flip{-webkit-backface-visibility:visible!important;backface-visibility:visible!important}.react-contexify__will-leave--flip{animation:react-contexify__flipOutX .65s}
+.shadow {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9999999999;
+}
+
+.modal {
+  position: relative;
+  width: 80vw;
+  height: 80vh;
+  margin: 10vh 10vw;
+  background-color: var(--search-result-bkg-color);
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.modalHeader {
+  color: var(--text-color);
+}
+
+.modalTitle {
+  padding-left: 40px;
+  display: inline-block;
+  width: calc(100% - 110px);
+  padding-top: 10px;
+  padding-bottom: 15px;
+  vertical-align: middle;
+  font-size: 25px;
+  font-weight: bolder;
+  user-select: none;
+  cursor: default;
+}
+
+.closeBtn {
+  color: var(--text-color);
+  background: unset;
+  border: unset;
+  padding: 2px 15px;
+  font-size: 45px;
+  cursor: pointer;
+  line-height: 50px;
+  vertical-align: middle;
+}
+
+.closeBtn:hover {
+  opacity: 0.7;
+}
+
+.modalBody {
+  height: calc(100% - 85px);
+  border-top: 1px solid var(--border-color);
+  padding-top: 10px;
+  padding-bottom: 20px;
+}
+
+.list {
+  max-height: 100%;
+  padding-left: 40px;
+  padding-right: 40px;
+  overflow: auto;
+}
+
+.groupName, .groupCategory {
+  text-decoration: none;
+  color: var(--text-color);
+  padding: 0.33em;
+  display: flex;
+  align-items: baseline;
+  outline: none;
+}
+
+.groupName {
+  cursor: pointer;
+}
+
+.groupName:hover {
+  background-color: var(--search-result-hover-background-color);
+  opacity: 0.7;
+}
+
+.groupCategory {
+  opacity: 0.5;
+  font-weight: bolder;
+}
+
+.groupCategory {
+  margin-left: 0.33em;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  border-bottom: 1px solid var(--text-color);
+}
+
+.groupCategoryName {
+  position: relative;
+  color: var(--text-color);
+  left: -0.33em;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.expansion-blocked-buttons > *:not(:last-child) {
+    margin-right: var(--gap);
+}
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* The row styling and padding is shared between these layouts
+--section-padding variable allows children to get at the padding for their layout without guessing at what it might be */
+.divided-section {
+    display: flex;
+    flex-direction: column;
+    padding: var(--gap);
+    overflow-y: auto;
+    --section-padding: var(--gap);
+}
+
+.section-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* | Header | */
+
+header.simple-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    --item-padding: var(--cushion-smallest);
+    --icon-size: var(--medium-icon-size);
+  }
+
+  header.simple-header > h2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  header.simple-header > *:not(:last-child) {
+    margin-right: var(--gap);
+}
+
+header.simple-header:first-child > h2 {
+    font-size: var(--large-font-size);
+    /* Line height changes between browsers. */
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* This must be the same height as the h2 height so that the baseline aligns across headers. */
+header.simple-header > input[type="search"] {
+    height: 23px;
+}
+
+header.simple-header > h2 > b {
+    margin-right: var(--cushion-smallest);
+}
+
+header.simple-header > div.toolbar {
+    align-self: center;
+}
+
+header.simple-header > div.toolbar > button {
+    margin-top: calc(var(--item-padding) * -1);
+    margin-bottom: calc(var(--item-padding) * -1);
+}
+
+/* The divider in the section spans the entire section. This is done with a negative margin to move it to the left and by extending the width of divider by 100% + 2x the padding of the section. A bottom margin is applied to every child so rows are evenly spaced. This allows us to let the parent element handle spacing the content rather than the individual rows. */
+
+.divided-section  > *:not(:last-child):not(dialog):not(.backdrop):not(.section-content),
+.divided-section > .section-content > *:not(:last-child):not(.backdrop):not(dialog) {
+    margin-bottom: var(--section-padding);
+}
+
+/* Divider spans entire section
+Virtual lists are long enough to scroll. They should also span the entire section so the space on either side of the list is inside the scroll.  */
+
+.divided-section > hr,
+.divided-section > .virtualList.outer,
+.divided-section > .section-content,
+.divided-section > .section-content > hr {
+    margin-left: calc(var(--section-padding) * -1);
+    margin-right: calc(var(--section-padding) * -1);
+    width: calc(100% + (var(--section-padding) * 2));
+}
+
+.divided-section > .virtualList.outer,
+.divided-section > .section-content {
+    padding: var(--section-padding);
+    margin-bottom: calc(var(--section-padding) * -1);
+}
+
+/* Eat the padding above if the element before is a divider,
+put it inside the section-content */
+.divided-section > hr + .section-content,
+/* Also do it for virtualized lists. Drag additions sometimes change the order so its not always after the divider */
+.divided-section > .virtualList.outer {
+    margin-top: calc(var(--section-padding) * -1);
+}
+
+/* | Virtualized list | */
+
+.divided-section {
+    --virtualized-list-row-height: var(--list-item-height);
+}
+
+.divided-section .virtualList.outer {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.divided-section .virtualList.outer > .virtualList.inner > ul {
+    gap: var(--list-row-gap);
+}
+
+/* | Footer | */
+
+footer {
+    padding: var(--cushion-smallest) var(--gap) var(--cushion-smallest) var(--gap);
+    margin-bottom: calc(var(--gap) * -1);
+    margin-left: calc(var(--gap) * -1);
+    margin-right: calc(var(--gap) * -1);
+}
+
+/*
+Copyright (c) 2021-2022 SmileOnMyMac, LLC dba Smile. All rights reserved
+
+To support dark and light mode all colors are defined using a CSS variable in this
+document. Depending on the prefers color scheme media query result the 'dark' or
+'light' value for a given variable name is used.
+
+DON'T THE COLOR YOU ARE LOOKING FOR?
+If you do not see what you need talk with Grey and Roger before adding new colors.
+
+*/
+
+:root {
+    --darkest-gray: #374254;
+    --always-darkest-gray: #071224;
+    --darker-gray: #475264;
+    --always-darker-gray: #475264;
+    --dark-gray: #677284;
+    --medium-dark-gray: #DDDedf;
+    --always-medium-dark-gray: #DDDedf;
+
+    --medium-gray: #cfd1d5;
+    --light-gray: #E0E1E2;
+    --lighter-gray: #EFF1F2;
+    --always-lighter-gray: #EFF1F2;
+    --lightest-gray: #F7F9FA;
+
+    --light-orange: #FCE4C7;
+    --orange: #F79927;
+    --dark-orange: #F68009;
+    --darker-orange: #C97D20;
+
+    --always-white: #FFFFFF;
+    --white: #FFFFFF;
+
+    --teal: #46BFBF;
+    --alt-teal: #5370c7dd;
+    --light-teal: #D0EFEF;
+
+    --light-success: #D7F6CD;
+    --success: #46A12B;
+
+    --light-error: #FED1D1;
+    --error: #E65353;
+    --dark-error: #B34040;
+
+    --skin-tone-1: #FFB8B8;
+    --skin-tone-2: #A0616A;
+
+    --select-arrow: url(../static/media/caret-down-solid-light.16347d74f6219d76cbbb62d1705a28b2.svg);
+    --select-arrow-disabled: url(../static/media/caret-down-solid-light-disabled.be5fb8404051146c30f1c22fea1dd6c0.svg);
+    --select-sort-arrow: url(../static/media/sort-solid-light.559f9c7510ab233f41cc65c52baf7243.svg);
+    --select-sort-arrow-disabled: url(../static/media/sort-solid-light-disabled.d1027e04261deedc2e47e46ab226b0c1.svg);
+    --times: url(../static/media/times-light.f0c8118294b01d735dd4205449483e33.svg);
+    --triangle-pattern: url(../static/media/triangle-pattern-light.2fcef61f3eb49746e8bb724a908911d5.svg);
+}
+
+/*
+Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved
+
+Shared CSS variables include any non color variables used by core. They are based on the principles outlined here:
+https://xd.adobe.com/view/5130da69-4bf7-4a80-a46e-9c53b4d9f80c-0463/screen/ba80f35e-a4a7-49da-ad8b-f0a98e6c1bf4?hints=off
+
+For styles that need a platform specific override the variable here will be assigned the same variable name with the prefix 'platform' along with a fallback variable that is the default. When using these variables in code ALWAYS use the general variable like --border-radius instead of the one with the platform prefix.
+--border-radius: var(--platform-border-radius, 5px);
+*/
+
+/* Font sizes in the style guide converted to rem based on the standard browser default font size of 16px. This allows users to scale the font from there based on their preferences.
+The conversions to normal, small and large are based on Apple's MacOS HIG- https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/typography/
+*/
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../static/media/OpenSans-VariableFont_wdth,wght.ce19db64f4f6f35487da806285f4fbed.ttf);
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../static/media/OpenSans-Italic-VariableFont_wdth,wght.78a971af783c87a72ef86761b8f890d1.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Thin.f9e069c0d896d75d0668177cc11e8fac.otf) format('opentype');
+  font-weight: thin;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Light.de57c7a86c7d8a789420a4480480675f.otf) format('opentype');
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Regular.30ac0ac10cb239a9c3b9d77633c92ecb.otf) format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Bold.221b8841f39846cb981042e9fca8738c.otf) format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Noto Sans Symbols";
+  src: url(../static/media/NotoSansSymbols-VariableFont_wght.a3673c36fd508eb07a468674f4f2c5a1.ttf);
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: "Noto Sans Math";
+  src: url(../static/media/NotoSansMath-Regular.ddddab39e3d33d50e3d9294f78e66ab6.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Noto Sans Symbols 2";
+  src: url(../static/media/NotoSansSymbols2-Regular.eadb2274fabbe38453262fd9056ec8c6.ttf);
+  font-weight: normal;
+}
+
+:root {
+      --x-large-font-size: 1.5rem; /* 24px */
+      --large-font-size: 1.063rem; /* 17px */
+      --medium-font-size: 1rem; /* 16px */
+      --normal-font-size: .875rem; /* 14px */
+      --small-font-size: 0.75rem; /* 12px */
+      --x-small-font-size: 0.75rem; /* 12px */
+      --font-family: "Open Sans", "Noto Sans Symbols", "Noto Sans Symbols 2", "Noto Sans Math", "Noto Sans JP", Verdana, sans-serif;
+
+      --logo-size-max: 250px;
+      --x-small-icon-size: 0.625rem; /* 10px */
+      --small-icon-size: 1rem;
+      --small-icon-list-width: 1.25rem; /* 20px Assumes that the largest icon in the list-item with-icon is 20px. Used to peg the width of all icons in the list at that width so the text in each list item aligns to the left. */
+      --medium-icon-size: 1.125rem; /* 20px */
+      --large-icon-size: 1.563rem; /* 25px */
+      --user-avatar-height: 3.3rem;
+
+      --cushion-smallest: 0.313rem; /* 5px */
+      --cushion-small: 0.625rem; /* 10px */
+      --cushion-medium: 0.938rem; /* 15px */
+      --cushion-large: 1.25rem;  /* 20px */
+      --cushion-x-large: 1.563rem; /* 25px */
+
+      --border-radius: var(--platform-border-radius, 5px);
+      /* Windows uses a different border radius for containers like dialogs.
+      https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry */
+      --top-level-container-border-radius: var(--platform-top-level-container-border-radius, var(--border-radius));
+      --border-width: 1px;
+      /* Ensures half circle border radius with max font size + vertical cushion */
+      --border-radius-alt: calc((var(--cushion-x-large) * 2) + var(--large-font-size));
+
+      --gap: 0.625rem;  /* 10px */
+      --label-gap: 0.188rem; /* label should be closer when the input is under it */
+      --list-row-gap: 4px;
+
+      --list-item-padding: 0.188rem var(--cushion-smallest); /* 3px 5px */
+      --list-item-height: 1.563rem; /* 25px */
+      --abbreviation-padding: 0.063rem 0.438rem; /* 1px 7px */
+      --input-padding-vertical: var(--cushion-smallest);
+      --input-padding-horizontal: var(--cushion-small);
+
+      /* If focus hangs outside a section / next to a resizer its high zindex will make it appear over the focus ring. You can +1 to the z-index used for the resizer when the item is focused so the ring appears  */
+      --resizer-z-index: 500;
+      --focus-width: 2px;
+      --focus-style: 0 0 0px var(--focus-width) var(--orange); /* Standard box shadow focus ring. Doesn't change dimensions of element and uses border-radius */
+      --focus-style-dark-error: 0 0 0px var(--focus-width) var(--dark-error);
+      --focus-style-darker-orange: 0 0 0px var(--focus-width) var(--darker-orange);
+      --focus-alt-style: var(--focus-width) solid var(--orange); /* Safari only renders focus ring on some elements when it an outline. Also good for lists where box shadow can be cut off and inset box shadow is rendered under scrolling content. For lists use with offset */
+      --focus-outline-offset: calc(var(--focus-width) * -1);
+      --focus-inset-style: inset 0 0 0px var(--focus-width) var(--orange); /* Also box shadow but displays inside the content instead of outside. Good if overflow is hidden or focusing something without a margin */
+      /* */
+      --clear-focus-style: none !important;
+
+      --modal-top: var(--platform-modal-top, unset);
+  }
+
+/*
+Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved
+The style guide is for blanket styles to be applied globally to core.
+
+You can find CSS variables in the variables folder.
+
+https://xd.adobe.com/view/5130da69-4bf7-4a80-a46e-9c53b4d9f80c-0463/screen/ba80f35e-a4a7-49da-ad8b-f0a98e6c1bf4?hints=off
+*/
+
+* {
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+input, textarea, .slate-editor, .slate-editor * {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+}
+
+/*
+The below focus styling should work with
+*:focus:not(input[type=checkbox]
+
+Safari supports complex and compound selectors with not:. Chrome isn't quite there. In the chrome browser this appears to be handled but not in the app.
+Hopefully when update this can be simplified to the above code. This bug applies to all complex and compound selectors used with :not().
+https://stackoverflow.com/questions/35993727/not-selector-not-behaving-the-same-between-safari-and-chrome-firefox
+*/
+
+*:focus:not(input),
+input[type="button"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="range"]:focus,
+input[type="reset"]:focus,
+input[type="url"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="submit"]:focus,
+input[type="search"]:focus
+ {
+    box-shadow: var(--focus-style);
+    outline: none;
+}
+
+/* Safari won't render the focus ring unless it is a solid outline on the checkbox. It does not like the box-shadow. Chrome needs the offset. */
+input[type=checkbox]:focus,
+input[type="radio"]:focus {
+    outline: var(--focus-alt-style);
+    outline-offset: 0px;
+}
+
+body {
+    margin: 0px;
+    font-family: var(--font-family);
+    color: var(--darker-gray);
+    font-size: var(--normal-font-size);
+    background-color: var(--white);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+* {
+  font-family: inherit;
+  color: inherit;
+}
+
+  h1,
+  h2,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-weight: normal;
+      margin: 0px;
+  }
+
+  p {
+      margin: 0px;
+  }
+
+  /* We mostly use anchors in lists so the default style for them is setup to reflect that. */
+  a,
+  a:visited,
+  a:hover {
+      color: var(--darker-gray);
+      text-decoration: none;
+      cursor: default;
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: var(--input-padding-vertical) var(--cushion-x-large) var(--input-padding-vertical) var(--cushion-small);
+    margin: 0px; /* Safari adds a margin by default */
+    border: var(--border-width) solid var(--light-gray);
+    border-radius: var(--border-radius);
+    color: var(--darker-gray);
+    font-size: var(--normal-font-size);
+    background-color: var(--white);
+    background-image: var(--select-arrow);
+    background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+  /* icon size, then gradient */
+    background-size: .65em auto, 100%;
+  }
+
+  select.sort {
+    background-image: var(--select-sort-arrow);
+  }
+
+  /*
+  Lists with style set to none aren't seen by Safari as lists, adding a zero width character as content ::before fixes this. List bullets are disabled by default because we primarily use lists without bullets and to ensure all lists get the pseudo element if their style is set to none.
+  Position absolute on the pseudo element ensures it doesn't act like a child of the list item's parent
+    https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+    https://css-tricks.com/a-little-reminder-that-pseudo-elements-are-children-kinda/
+  */
+  ul, ol {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  ul li::before,
+  ol li::before {
+    content: "\200B";
+    position: absolute;
+  }
+
+  input,
+  textarea {
+    font-size: inherit;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    margin: 0px;
+    padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  }
+
+  input:not([type=search]),
+  textarea {
+      border-color: var(--light-gray);
+      border-style: solid;
+      border-width: var(--border-width);
+  }
+
+  textarea {
+      resize: none;
+      font-family:  var(--font-family);
+  }
+
+  input[type="radio"] {
+      margin: 0;
+  }
+
+  input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0px var(--input-padding-horizontal);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+button.clear-search {
+  color: var(--dark-gray);
+  --offset-to-input: calc(var(--cushion-small) * 1.5);
+  background-color: var(--white);
+  margin-left: calc((var(--clear-size, 1em) + var(--offset-to-input)) * -1);
+  width: var(--icon-size); /* so it is animatable */
+  overflow: hidden; /* so it is animatable */
+  padding: 0px;
+  border: 0px;
+  align-self: center;
+  align-content: center;
+  display: flex;
+}
+
+button.clear-search:focus {
+  box-shadow: var(--clear-focus-style);
+}
+
+button.clear-search > svg {
+    height: var(--clear-size, 1em);
+    width: var(--clear-size, 1em);
+  }
+
+  select:disabled {
+    background-image: var(--select-arrow-disabled);
+  }
+
+  select.sort:disabled {
+    background-image: var(--select-sort-arrow-disabled);
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    -webkit-text-fill-color: var(--dark-gray);
+    opacity: .7;
+    background-color: var(--lighter-gray);
+    color: var(--dark-gray);
+  }
+
+  ::placeholder {
+      /* color: var(--medium-gray); */
+      color: var(--always-medium-dark-gray);
+  }
+
+  .sneaky[type=file],
+  .sneaky[type=checkbox] {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute !important;
+      white-space: nowrap;
+      width: 1px;
+  }
+
+  .sneaky[type=file] + label,
+  .sneaky[type=checkbox] + label {
+      border-radius: var(--border-radius);
+  }
+
+  .sneaky[type=file]:focus + label,
+  .sneaky[type=checkbox]:focus + label {
+    box-shadow: var(--focus-style);
+  }
+
+
+kbd {
+    font-family: var(--font-family);
+}
+
+mark {
+  background-color: var(--orange);
+  color: var(--always-white);
+  /* So narrow characters like l are readable */
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/* Base element created in entry. */
+#core-ui {
+    display: flex;
+    background-color: var(--lighter-gray);
+    width: 100vw;
+    height: 100vh;
+}
+
+  /* | Divider | */
+
+  hr { /* Horizontal content divider */
+      border-width: 0;
+      border-top: 1px solid var(--light-gray);
+      width: 100%;
+      margin: 0px;
+  }
+  hr.vertical {
+      border-top: unset;
+      border-left: 1px solid var(--light-gray);
+      width: unset;
+  }
+
+  /* | Url | */
+  a.link,
+  a.link-within > .link {
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: inherit;
+  }
+
+a.link-within:focus {
+  box-shadow: var(--clear-focus-style);
+}
+
+a.link-within:focus > .link {
+  box-shadow: var(--focus-style);
+}
+
+  /*| List | */
+
+
+  /* toolbar menu */
+
+div.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.toolbar > button:not(:last-child) {
+    margin-right: var(--cushion-smallest);
+}
+
+div.toolbar > button {
+    background-color: transparent;
+    border-style: none;
+}
+
+div.toolbar > button {
+    padding: var(--item-padding, var(--cushion-smallest));
+    display: flex;
+    border-radius: var(--border-radius);
+}
+
+div.toolbar.primary > button:hover {
+    background-color: var(--lighter-gray);
+}
+
+div.toolbar.primary > button:active {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+div.toolbar > button:disabled,
+div.toobar > button:disabled:hover {
+    background-color: unset;
+    color: var(--medium-gray);
+}
+
+div.toolbar > button > svg {
+    height: var(--icon-size, var(--medium-icon-size));
+    min-width: var(--icon-size, var(--medium-icon-size));
+}
+
+  /* | Form elements | */
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldset > *:not(:last-child) {
+    margin-bottom: var(--gap);
+}
+
+/*  grids the scroll cause inputs to disappear in Catalina, so put the scroll part in a container */
+.fieldset-list-container {
+  max-height: 15rem;
+  overflow-y: auto;
+  border: var(--border-width) solid var(--lighter-gray);
+  border-radius: var(--border-radius);
+  padding: var(--cushion-small);
+}
+
+ul.fieldset-list {
+    display: grid;
+    grid-gap: var(--cushion-small);
+
+}
+
+.legend {
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+}
+
+  small.primary {
+    background-color: var(--lighter-gray);
+    padding: var(--cushion-smallest) var(--cushion-small);
+    border-radius: var(--border-radius);
+   }
+
+  /* | Labels | */
+
+  /* 1. Labels that are the parent of an element */
+  .label-for-checkbox,
+  .label-for-radio {
+    display: grid;
+    grid-gap: var(--label-gap);
+    align-items: baseline;
+    grid-template-columns: min-content auto;
+    overflow-wrap: break-word;
+  }
+
+  .label-for-radio > input {
+      align-self: center;
+  }
+
+  .label-for-checkbox > small {
+    grid-column: 2;
+    font-size: var(--small-font-size);
+    max-width: fit-content;
+   }
+
+  .label-for-select {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: calc(var(--label-gap) * -1);
+    align-items: baseline;
+    overflow-wrap: break-word;
+  }
+
+  .label-for-select > select {
+    margin-left: var(--label-gap);
+    margin-top: var(--label-gap);
+  }
+
+  /* 2. Labels in grid who are siblings of the element they label */
+/* Align-items: baseline isnt supported as part of the grid spec. It works but has unintented results. In most cases that means it is better to not use grid when the label and its element aren't in the same grid quadrant. If they must be these classes match the white space around the element so the label's baseline aligns. */
+
+.grid-align-labels > label {
+  padding: calc(var(--input-padding-vertical) + var(--border-width)) 0px;
+}
+
+  /* | Buttons | */
+
+  button {
+      width: max-content;
+      font-size: var(--normal-font-size);
+      border-radius: var(--border-radius);
+      border-width: 1px;
+      border-style: solid;
+      padding: var(--cushion-smallest) var(--cushion-medium);
+      color: inherit; /* inherit document color so it doesn't default to black */
+      margin: 0px; /* safari adds some margin */
+  }
+
+  button.primary {
+      background-color: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+  }
+
+  button.secondary {
+      background-color: var(--white);
+      color: var(--darker-gray);
+      border-color: var(--darker-gray);
+  }
+
+  button.primary:active,
+  button.secondary:active {
+      background-color: var(--dark-gray);
+      color: var(--white);
+      border-color: var(--dark-gray);
+  }
+
+  button.primary:disabled,
+  button.primary:disabled:hover {
+      background-color: var(--medium-gray);
+      border-color: var(--medium-gray);
+  }
+
+  button.secondary:disabled,
+  button.secondary:disabled:hover {
+    background-color: var(--lighter-gray);
+    border-color: var(--lighter-gray);
+    color: var(--medium-gray);
+}
+
+  button.img-first {
+      display: flex;
+      align-items: center;
+  }
+
+  button.img-first > svg {
+    height: var(--normal-font-size);
+    margin-right: var(--cushion-smallest);
+}
+
+.tooltip {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius-alt);
+}
+
+.tooltip > svg {
+    width: var(--small-icon-size);
+}
+
+  /* | Bars, banners, blurbs | */
+
+  .status-blurb {
+      font-size: var(--normal-font-size);
+      border-radius: var(--border-radius);
+      padding: var(--cushion-medium) var(--cushion-large);
+  }
+
+  strong.normal {
+      font-weight: normal;
+  }
+
+  .status-blurb.success {
+      background-color: var(--light-success);
+      color: var(--success);
+  }
+
+  .status-blurb.orange {
+      background-color: var(--light-orange);
+      color: var(--dark-orange);
+  }
+
+  .status-blurb.error {
+      background-color: var(--light-error);
+      color: var(--error);
+  }
+
+  /* | Alert colors | */
+
+  .default {
+    --background-color: var(--light-gray);
+    --color: var(--darker-gray);
+  }
+
+  .error {
+    --background-color: var(--error);
+    --color: var(--always-white);
+  }
+
+  .orange {
+    --background-color: var(--orange);
+    --color: var(--always-white);
+  }
+
+  /* | Modal Dialog | */
+
+  dialog {
+    /* we are using position fixed because windows requires the fixed polyfill fix.
+    https://github.com/GoogleChrome/dialog-polyfill#stacking-context
+     */
+      position: fixed;
+      top: var(--modal-top);
+      left: 0;
+      right: 0;
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+      width: fit-content;
+      max-width: min(calc(100% - (2 * var(--cushion-small))), 75ch);
+      margin: auto;
+
+      background:var(--white);
+      border-color: var(--darker-gray);
+      border-radius: var(--top-level-container-border-radius);
+      border-width: 1px;
+      color: var(--darker-gray);
+
+      padding: var(--cushion-small) 0px;
+
+      display: grid;
+      gap: var(--gap)
+  }
+
+  dialog.fixed-width {
+      /* falls back to max height so it can't outgrow window */
+      width: 350px;
+  }
+
+  dialog.default-layout {
+      grid-template-columns: var(--cushion-smallest) 1fr auto auto var(--cushion-smallest);
+      grid-auto-rows: min-content;
+  }
+
+  dialog.default-layout:not(.consistently-space-labels) label {
+      /* tighten space below labels so it is clear what they are associated with */
+      margin-bottom: calc((var(--gap) - var(--label-gap)) * -1);
+  }
+
+    dialog:not([open]) {
+      display: none;
+    }
+
+    dialog + .backdrop {
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    ._dialog_overlay {
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+  /* The divider in the section spans the entire section
+  All other content sits in the middle row. This allows us to let the parent element handle the spacing the content rather than the individual rows.
+
+  Assumes that the last two buttons are accept or cancel. */
+
+  dialog  > * {
+      grid-column: 2/5;
+  }
+
+  dialog .secondary:nth-last-child(2), /* cancel */
+  dialog .primary:nth-last-child(2) /* accept */
+  {
+      grid-column: 3;
+  }
+
+  dialog .secondary:nth-last-child(1), /* cancel */
+  dialog .primary:nth-last-child(1) /* accept */
+  {
+      grid-column: 4;
+  }
+
+
+  dialog  > hr  {
+      grid-column: 1/-1;
+  }
+
+  dialog > h2:first-child {
+      font-size: var(--large-font-size);
+  }
+
+  /* | Abbreviation bubble | */
+
+
+abbr {
+    border-radius: var(--border-radius-alt);
+    padding: var(--abbreviation-padding);
+    background-color: var(--always-medium-dark-gray);
+    color: var(--always-darker-gray);
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+abbr.conflict {
+    color: var(--always-white);
+    background-color: var(--always-darkest-gray);
+}
+
+abbr.duplicate {
+    color: var(--always-white);
+    background-color: var(--teal);
+}
+
+  /* | Footer | */
+
+  footer.primary {
+        background-color: var(--lighter-gray);
+  }
+
+  /* | Logo | */
+
+  .logo.default {
+      --logo-color: var(--orange);
+      --logo-text-color: var(--dark-gray);
+  }
+
+  /* | Accessibility | */
+
+  .screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+ /* | Workarounds for webkit specific CSS issues | */
+
+
+/* 
+https://github.com/philipwalton/flexbugs#flexbug-1
+
+This issue causes the minimum size of items in a flex container not to be honored. The result looks like all the elements overlapping like cards in a deck when the container's height is less than its contents. The CSS below fixes the issue. These selectors *shouldn't* effect elements not set to display: flex and the specificity of this is such that overriding it is easy for any flex elements that need different values for shring and basis.
+*/
+ * {
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+/*
+Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved
+
+To support dark and light mode all colors are defined using a CSS variable in this
+document. Depending on the prefers color scheme media query result the 'dark' or
+'light' value for a given variable name is used.
+
+DON'T THE COLOR YOU ARE LOOKING FOR?
+If you do not see what you need talk with Grey and Roger before adding new colors.
+
+*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --darkest-gray: #071224;
+    --always-darkest-gray: #071224;
+    --darker-gray: #F7F9FA;
+    --always-darker-gray: #475264;
+    --dark-gray: #EFF1F2;
+    --medium-dark-gray: #495466;
+    --always-medium-dark-gray: #DDDedf;
+
+    --medium-gray: #8594AB ;
+    --light-gray: #475264;
+    --lighter-gray: #374254;
+    --always-lighter-gray: #CBD0D9;
+    --lightest-gray: #677284;
+
+    --orange: #F79927;
+    --light-orange: #FCE4C7;
+    --dark-orange: #F68009;
+    --darker-orange: #C97D20;
+
+    --always-white: #FFFFFF;
+    --white: #677284;
+
+    --teal: #46BFBF;
+    --alt-teal: #5370c7dd;
+    --light-teal: #D0EFEF;
+
+    --light-success: #46A12B;
+    --success: #D7F6CD;
+
+    --light-error: #FED1D1;
+    --dark-error: #B34040;
+    --error: #E65353;
+
+    --select-arrow: url(../static/media/caret-down-solid-dark.f18b450317f5fe4f71e6c5711e2c62b4.svg);
+    --select-arrow-disabled: url(../static/media/caret-down-solid-dark-disabled.7152cfd0cdf73fc789a1b4c654edc22a.svg);
+    --select-sort-arrow: url(../static/media/sort-solid-dark.c498ab8c1a4a5b113622db05ffc271d2.svg);
+    --select-sort-arrow-disabled: url(../static/media/sort-solid-dark-disabled.4fad765443da411705ffa4dc84f569d5.svg);
+    --times: url(../static/media/times-dark.a3650ef67d37d1566b4fe2c1c2c6e071.svg);
+    --triangle-pattern: url(../static/media/triangle-pattern-dark.86075faa740f7a15a8e44f9b4f90e5c4.svg);
+
+  }
+}
+
+/* Copyright (c) 2021, 2022 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+:root {
+    --inline-search-header-padding: var(--cushion-medium);
+    --icon-size: var(--large-icon-size);
+    --quick-action-toolbar-padding: var(--cushion-large);
+    --height-before-search-results: 171px;
+}
+
+.quick-action-toolbar[role=toolbar] {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  
+  .quick-action-toolbar[role=toolbar] > button {
+    padding-top: var(--quick-action-toolbar-padding);
+    padding-bottom: var(--quick-action-toolbar-padding);
+    display:flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-direction: column;
+    align-items: center;
+    width: unset;
+    border-radius: unset;
+  
+    background-color: var(--light-gray);
+  }
+  
+  .quick-action-toolbar[role=toolbar] > button:hover,
+  .quick-action-toolbar[role=toolbar] > button:active {
+    background-color: var(--darker-gray);
+    color: var(--light-gray);
+  }
+  
+  .quick-action-toolbar[role=toolbar] > button:disabled {
+    background-color: var(--medium-gray);
+    color: var(--darker-gray);
+  }
+  
+  .quick-action-toolbar[role=toolbar] > button > *:first-child:not(:last-child) {
+    margin-bottom: var(--cushion-smallest)
+  }
+  
+  .quick-action-toolbar[role=toolbar] > button > span {
+    overflow-wrap: anywhere;
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+  
+  /* overrides style guide */
+  .quick-action-toolbar[role=toolbar] > button {
+    margin: 0px !important;
+  }
+
+/*# sourceMappingURL=quickActionsEntry.8e0f22799a9c3c296e64.css.map*/

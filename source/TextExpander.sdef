@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dictionary SYSTEM "file://localhost/System/Library/DTDs/sdef.dtd">
+<dictionary title="TextExpander Terminology">
+	<suite name="Standard Suite" code="????" description="Common classes and commands for all applications.">
+
+		<enumeration name="printing error handling" code="enum">
+			<enumerator name="standard" code="lwst" description="Standard PostScript error handling">
+				<cocoa boolean-value="NO"/>
+			</enumerator>
+			<enumerator name="detailed" code="lwdt" description="print a detailed report of PostScript errors">
+				<cocoa boolean-value="YES"/>
+			</enumerator>
+		</enumeration>
+
+		<record-type name="print settings" code="pset">
+			<property name="copies" code="lwcp" type="integer" description="the number of copies of a document to be printed">
+				<cocoa key="NSCopies"/>
+			</property>
+			<property name="collating" code="lwcl" type="boolean" description="Should printed copies be collated?">
+				<cocoa key="NSMustCollate"/>
+			</property>
+			<property name="starting page" code="lwfp" type="integer" description="the first page of the document to be printed">
+				<cocoa key="NSFirstPage"/>
+			</property>
+			<property name="ending page" code="lwlp" type="integer" description="the last page of the document to be printed">
+				<cocoa key="NSLastPage"/>
+			</property>
+			<property name="pages across" code="lwla" type="integer" description="number of logical pages laid across a physical page">
+				<cocoa key="NSPagesAcross"/>
+			</property>
+			<property name="pages down" code="lwld" type="integer" description="number of logical pages laid out down a physical page">
+				<cocoa key="NSPagesDown"/>
+			</property>
+			<property name="requested print time" code="lwqt" type="date" description="the time at which the desktop printer should print the document">
+				<cocoa key="NSPrintTime"/>
+			</property>
+			<property name="error handling" code="lweh" type="printing error handling" description="how errors are handled">
+				<cocoa key="NSDetailedErrorReporting"/>
+			</property>
+			<property name="fax number" code="faxn" type="text" description="for fax number">
+				<cocoa key="NSFaxNumber"/>
+			</property>
+			<property name="target printer" code="trpr" type="text" description="for target printer">
+				<cocoa key="NSPrinterName"/>
+			</property>
+		</record-type>
+<!--
+		<command name="print" code="aevtpdoc" description="Print a document.">
+			<direct-parameter description="The file(s), document(s), or window(s) to be printed.">
+				<type type="file" list="yes"/>
+				<type type="specifier"/>
+			</direct-parameter>
+			<parameter name="with properties" code="prdt" type="print settings" optional="yes" description="The print settings to use.">
+				<cocoa key="PrintSettings"/>
+			</parameter>
+			<parameter name="print dialog" code="pdlg" type="boolean" optional="yes" description="Should the application show the print dialog?">
+				<cocoa key="ShowPrintDialog"/>
+			</parameter>
+		</command>
+-->
+		<command name="save" code="coresave" description="Save an object.">
+			<direct-parameter type="specifier" description="the object to save, usually a group"/>
+			<parameter name="in" code="kfil" type="file" optional="yes" description="The file in which to save the object.">
+				<cocoa key="File"/>
+			</parameter>
+		</command>
+		
+        <command name="quit" code="aevtquit" description="Quit the application.">
+			<cocoa class="NSQuitCommand"/>
+		</command>
+
+		<command name="count" code="corecnte" description="Return the number of elements of a particular class within an object.">
+			<cocoa class="NSCountCommand"/>
+			<direct-parameter type="specifier" description="The objects to be counted."/>
+			<parameter name="each" code="kocl" type="type" optional="yes" description="The class of objects to be counted." hidden="yes">
+				<cocoa key="ObjectClass"/>
+			</parameter>
+			<result type="integer" description="The count."/>
+		</command>
+
+		<command name="delete" code="coredelo" description="Delete an object.">
+			<cocoa class="NSDeleteCommand"/>
+			<direct-parameter type="specifier" description="The object(s) to delete."/>
+		</command>
+
+		<command name="duplicate" code="coreclon" description="Copy an object.">
+			<cocoa class="NSCloneCommand"/>
+			<direct-parameter type="specifier" description="The object(s) to copy."/>
+			<parameter name="to" code="insh" type="location specifier" description="The location for the new copy or copies." optional="yes">
+				<cocoa key="ToLocation"/>
+			</parameter>
+			<parameter name="with properties" code="prdt" type="record" description="Properties to set in the new copy or copies right away." optional="yes">
+				<cocoa key="WithProperties"/>
+			</parameter>
+			<result type="specifier" description="The new object."/>
+		</command>
+
+		<command name="exists" code="coredoex" description="Verify that an object exists.">
+			<cocoa class="NSExistsCommand"/>
+			<direct-parameter type="any" description="The object(s) to check."/>
+			<result type="boolean" description="Did the object(s) exist?"/>
+		</command>
+
+		<command name="make" code="corecrel" description="Create a new object.">
+			<cocoa class="NSCreateCommand"/>
+			<parameter name="new" code="kocl" type="type" description="The class of the new object.">
+				<cocoa key="ObjectClass"/>
+			</parameter>
+			<parameter name="at" code="insh" type="location specifier" optional="yes" description="The location at which to insert the object.">
+				<cocoa key="Location"/>
+			</parameter>
+			<parameter name="with data" code="data" type="any" optional="yes" description="The initial contents of the object.">
+				<cocoa key="ObjectData"/>
+			</parameter>
+			<parameter name="with properties" code="prdt" type="record" optional="yes" description="The initial values for properties of the object.">
+				<cocoa key="KeyDictionary"/>
+			</parameter>
+			<result type="specifier" description="The new object."/>
+		</command>
+
+		<command name="move" code="coremove" description="Move an object to a new location.">
+			<cocoa class="NSMoveCommand"/>
+			<direct-parameter type="specifier" description="The object(s) to move."/>
+			<parameter name="to" code="insh" type="location specifier" description="The new location for the object(s).">
+				<cocoa key="ToLocation"/>
+			</parameter>
+		</command>
+
+		<class name="application" code="capp" description="The application's top-level scripting object.">
+			<cocoa class="NSApplication"/>
+			<property name="name" code="pnam" type="text" access="r" description="The name of the application."/>
+			<property name="frontmost" code="pisf" type="boolean" access="r" description="Is this the active application?">
+				<cocoa key="isActive"/>
+			</property>
+			<property name="version" code="vers" type="text" access="r" description="The version number of the application."/>
+			<element type="window" access="r">
+				<cocoa key="orderedWindows"/>
+			</element>
+<!--			<responds-to command="print">
+				<cocoa method="handlePrintScriptCommand:"/>
+			</responds-to>
+-->
+		</class>
+
+		<class name="window" code="cwin" description="A window.">
+			<cocoa class="NSWindow"/>
+			<property name="name" code="pnam" type="text" access="r" description="The title of the window.">
+				<cocoa key="title"/>
+			</property>
+			<property name="id" code="ID  " type="integer" access="r" description="The unique identifier of the window.">
+				<cocoa key="uniqueID"/>
+			</property>
+			<property name="index" code="pidx" type="integer" description="The index of the window, ordered front to back.">
+				<cocoa key="orderedIndex"/>
+			</property>
+			<property name="bounds" code="pbnd" type="rectangle" description="The bounding rectangle of the window.">
+				<cocoa key="boundsAsQDRect"/>
+			</property>
+			<property name="closeable" code="hclb" type="boolean" access="r" description="Does the window have a close button?">
+				<cocoa key="hasCloseBox"/>
+			</property>
+			<property name="miniaturizable" code="ismn" type="boolean" access="r" description="Does the window have a minimize button?">
+				<cocoa key="isMiniaturizable"/>
+			</property>
+			<property name="miniaturized" code="pmnd" type="boolean" description="Is the window minimized right now?">
+				<cocoa key="isMiniaturized"/>
+			</property>
+			<property name="resizable" code="prsz" type="boolean" access="r" description="Can the window be resized?">
+				<cocoa key="isResizable"/>
+			</property>
+			<property name="visible" code="pvis" type="boolean" description="Is the window visible right now?">
+				<cocoa key="isVisible"/>
+			</property>
+			<property name="zoomable" code="iszm" type="boolean" access="r" description="Does the window have a zoom button?">
+				<cocoa key="isZoomable"/>
+			</property>
+			<property name="zoomed" code="pzum" type="boolean" description="Is the window zoomed right now?">
+				<cocoa key="isZoomed"/>
+			</property>
+			<responds-to command="close">
+				<cocoa method="handleCloseScriptCommand:"/>
+			</responds-to>
+		</class>
+	</suite>
+
+	<suite name="Text Suite" code="????" description="Common text classes for all applications.">
+	
+		<value-type name="RGB color" code="cRGB">
+			<cocoa class="NSColor"/>
+		</value-type>
+
+		<class name="rich text" plural="rich text" code="ctxt" description="Rich (styled) text.">
+			<cocoa class="NSTextStorage"/>
+			<type type="text"/>
+			<property name="color" code="colr" type="RGB color" description="The color of the text's first character.">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" type="text" description="The name of the font of the text's first character.">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" type="integer" description="The size in points of the text's first character.">
+				<cocoa key="fontSize"/>
+			</property>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+		</class>
+
+		<class name="character" code="cha " description="One of some text's characters.">
+			<cocoa class="NSTextStorage"/>
+			<type type="text"/>
+			<property name="color" code="colr" type="RGB color" description="Its color.">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" type="text" description="The name of its font.">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" type="integer" description="Its size, in points.">
+				<cocoa key="fontSize"/>
+			</property>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+		</class>
+
+		<class name="paragraph" code="cpar" description="One of some text's paragraphs.">
+			<cocoa class="NSTextStorage"/>
+			<type type="text"/>
+			<property name="color" code="colr" type="RGB color" description="The color of the paragraph's first character.">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" type="text" description="The name of the font of the paragraph's first character.">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" type="integer" description="The size in points of the paragraph's first character.">
+				<cocoa key="fontSize"/>
+			</property>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+		</class>
+
+		<class name="word" code="cwor" description="One of some text's words.">
+			<cocoa class="NSTextStorage"/>
+			<type type="text"/>
+			<property name="color" code="colr" type="RGB color" description="The color of the word's first character.">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" type="text" description="The name of the font of the word's first character.">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" type="integer" description="The size in points of the word's first character.">
+				<cocoa key="fontSize"/>
+			</property>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+		</class>
+
+		<class name="attribute run" code="catr" description="A chunk of text that all has the same attributes.">
+			<cocoa class="NSTextStorage"/>
+			<type type="text"/>
+			<property name="color" code="colr" type="RGB color" description="Its color.">
+				<cocoa key="foregroundColor"/>
+			</property>
+			<property name="font" code="font" type="text" description="The name of its font.">
+				<cocoa key="fontName"/>
+			</property>
+			<property name="size" code="ptsz" type="integer" description="Its size, in points.">
+				<cocoa key="fontSize"/>
+			</property>
+			<element type="character"/>
+			<element type="paragraph"/>
+			<element type="word"/>
+			<element type="attribute run"/>
+			<element type="attachment"/>
+		</class>
+
+		<class name="attachment" code="atts" inherits="rich text" description="A file embedded in text. This is just for use when embedding a file using the make command.">
+			<cocoa class="NSAttachmentTextStorage"/>
+			<property name="file name" code="atfn" type="text" description="The path to the embedded file.">
+				<cocoa key="filename"/>
+			</property>
+		</class>
+	</suite>
+
+
+	<suite name="TextExpander Suite" code="TEXE" description="TextExpander classes and commands">
+
+<!--
+		<command name="expand" code="TEXEEXPS" description="Expand snippet as if its abbreviation had been typed, specify either the snippet or its effective abbreviation.">
+			<cocoa class="NSScriptCommand"/>
+			<parameter name="abbreviation" code="TABR" type="text" optional="yes" description="The abbreviation to expand.">
+				<cocoa key="TheAbbreviation"/>
+			</parameter>
+			<result type="boolean" description="Did a snippet expand?"/>
+		</command>
+
+        <command name="expand string" code="TEXEEXPT" description="Expand abbreviations which appear in the string.">
+            <cocoa class="NSScriptCommand"/>
+            <result type="text" description="String with abbreviations expanded."/>
+            <direct-parameter type="text" description="The string to expand."/>
+        </command>
+-->
+
+		<enumeration name="suppress double cap" code="SDCP">
+			<enumerator name="no correction" code="SDnc" description="Do not correct double capitals.">
+				<cocoa integer-value="0"/>
+			</enumerator>
+			<enumerator name="at sentence start" code="SDss" description="Correct double capitals at sentence start.">
+				<cocoa integer-value="1"/>
+			</enumerator>
+			<enumerator name="at word start" code="SDws" description="Correct double capitals on every word.">
+				<cocoa integer-value="2"/>
+			</enumerator>
+		</enumeration>
+		
+		<record-type  name="fonts in points URLs" code="TEfu">
+			<property name="bundleID" code="TEbi" type="text" description="Web browser application identification" />
+			<property name="fetchScript" code="TEas" type="text" description="AppleScript to fetch URL from browser" />
+			<property name="matchURL" code="TEmu" type="text" description="Starting part of URL to match against" />
+		</record-type>
+
+		<class name="application" code="capp" description="The application's top-level scripting object.">
+			<cocoa class="SMTCApplication"/>
+			<property name="expansion enabled" code="APea" type="boolean" description="Is text expansion enabled?" access="r">
+				<cocoa key="expansionEnabled"/>
+			</property>
+			<property name="sample font for RTF" code="APsf" type="boolean" description="Helps expand and match use the correct font when using RTF">
+				<cocoa key="sampleFontInRTFApp"/>
+			</property>
+			<property name="expand using RTF bundles" code="APrt" description="Bundle IDs of applications to Paste only RTF (instead of the usual HTML) for formatted text and pictures snippets">
+				<type type="text" list="yes"/>
+				<cocoa key="pasteRTFBundleIDs"/>
+			</property>
+			<property name="avoid sampling bundles" code="APas" description="Bundle IDs of applications to avoid sampling current font size for formatted text and pictures snippets">
+				<type type="text" list="yes"/>
+				<cocoa key="avoidSamplingBundleIDs"/>
+			</property>
+			<property name="use points for font size" code="APfu" description="Bundle IDs of applications where formatted text snippets should use pt instead of px for font sizing">
+				<type type="text" list="yes"/>
+				<cocoa key="fontsUsePointsBundleIDs"/>
+			</property>
+			<property name="URLs for point font sizes" code="APwu" description="Info about web browsers and URLs where formatted text snippets should use pt instead of px for font sizing">
+				<type type="fonts in points URLs" list="yes"/>
+				<cocoa key="pointsURLInfos"/>
+			</property>
+			<property name="restore pasteboard" code="APrp" type="boolean" description="Restore previous pasteboard contents after Pasting">
+				<cocoa key="restorePasteboard"/>
+			</property>
+			<property name="restore clipboard regardless" code="APrn" type="boolean" description="Restore a clipboard that does not match expected?">
+				<cocoa key="restoreNonTransientPasteboard"/>
+			</property>
+			<property name="tap key up events" code="APku" type="boolean" description="Tap key up as well as key down events">
+				<cocoa key="alsoTapKeyUp"/>
+			</property>
+			<property name="avoid querying keyboard layout" code="APaq" type="boolean" description="Avoid querying input method for keyboard layout information">
+				<cocoa key="avoidQueryingKeyboardLayout"/>
+			</property>
+			<property name="always pause before Pasting" code="APap" type="boolean" description="Pause briefly before Pasting, regardless of the application">
+				<cocoa key="alwaysPauseBeforePaste"/>
+			</property>
+			<property name="pause before Pasting time" code="APbp" type="real" description="Seconds to pause before Pasting (when pause applies)">
+				<cocoa key="pboardPauseTime"/>
+			</property>
+			<property name="pause after Pasting time" code="APpp" type="real" description="Seconds to pause after before Pasting (when pause applies)">
+				<cocoa key="pastePauseTime"/>
+			</property>
+			<property name="pause before Pasting bundles" code="APpb" description="Bundle IDs of applications to pause before Pasting in">
+				<type type="text" list="yes"/>
+				<cocoa key="pauseBeforePasteBundleIDs"/>
+			</property>
+			<property name="pause after Pasting bundles" code="APpa" description="Bundle IDs of applications to pause after Pasting in">
+				<type type="text" list="yes"/>
+				<cocoa key="pauseAfterPasteBundleIDs"/>
+			</property>
+			<property name="pasteboard data types to avoid accessing" code="APat" description="Avoid saving and restoring certain pasteboard data types to avoid delays and instability">
+				<type type="text" list="yes"/>
+				<cocoa key="avoidCopyingPasteboardTypes"/>
+			</property>
+			<property name="unibar bundle_role_identifier triplets" code="APub" description="Triplets describing bundle ID, AXRole, and AXIdentifier where Shift-Left-Arrow works better to replace abbreviation characters than Backspace">
+                <type type="text" list="yes"/>
+				<cocoa key="SLAReplacementTriplets"/>
+			</property>
+			<property name="avoid expansion bundle prefixes" code="APab" description="Bundle ID (or prefixes) of applications to avoid expanding in">
+				<type type="text" list="yes"/>
+				<cocoa key="avoidBundleIDPrefixes"/>
+			</property>
+			<property name="ignore clicks in bundles" code="APic" description="Bundle IDs of applications to allow clicks in without resetting typing log (eg. virtual keyboards)">
+				<type type="text" list="yes"/>
+				<cocoa key="clickIgnoreBundleIDs"/>
+			</property>
+			<property name="non expanding language codes" code="APnl" description="Two-letter language codes where expansion is disabled">
+				<type type="text" list="yes"/>
+				<cocoa key="nonLoggedLanguages"/>
+			</property>
+            <property name="notify on Secure Input" code="APsi" type="boolean" description="Show user notification when secure input is engaged outside of a secure text field">
+                <cocoa key="notifySecureInput"/>
+            </property>
+<!--
+            <property name="expand with repeated keys" code="APer" type="boolean" description="Expand when keys are held down to repeat letters">
+                <cocoa key="expandWithRepeatedKeys"/>
+            </property>
+            <property name="allowed computation time" code="APcc" type="real" description="Seconds before snippet content computation times out">
+                <cocoa key="computationTimeOut"/>
+            </property>
+            <property name="additional contraction characters" code="APac" type="text" description="Punctuation characters in addition to apostrophe and right single quotation mark treated as letters by capitalization correction">
+                <cocoa key="additionalContractionCharacters"/>
+            </property>
+            <property name="adjust linebreaks after empty optional parts" code="APao" type="boolean" description="Remove extra linebreak after an optional section if it is not included">
+                <cocoa key="adjustOptionalFillLinebreak"/>
+            </property>
+            <property name="adjust linebreaks after linebreak keystrokes" code="APak" type="boolean" description="Remove extra linebreak after a Return or Enter keystroke">
+                <cocoa key="adjustKeystrokeLinebreak"/>
+            </property>
+            <property name="allow zero width space" code="APzw" type="boolean" description="Allow zero width space characters to be expanded">
+                <cocoa key="allowZeroWidthSpace"/>
+            </property>
+            <property name="preview executes scripts" code="APps" type="boolean" description="Preview the results of script snippets">
+                <cocoa key="previewExecutesScripts"/>
+            </property>
+            <property name="generate suggested snippets" code="APgs" type="boolean" description="Suggest snippets based on analyzing typed text">
+                <cocoa key="generateSuggestedSnippets"/>
+            </property>
+            <property name="notify when suggesting" code="APns" type="boolean" description="Notify when a new suggested snippet is created">
+                <cocoa key="notifySuggestions"/>
+            </property>
+            <property name="avoid suggesting in bundles" code="APsb" description="Do not suggest snippets based on typing within applications with these bundle IDs">
+                <type type="text" list="yes"/>
+                <cocoa key="suggestIgnoreBundleIDs"/>
+            </property>
+            <property name="tutor Typed Snippets" code="APtt" type="boolean" description="Remind user to use abbreviations when snippet expansions are typed">
+                <cocoa key="tutorTypedSnippets"/>
+            </property>
+            <property name="capitalize new sentences" code="APcs" type="boolean" description="Automatically capitalize the first word of a new sentence.">
+                <cocoa key="capitalizeSentences"/>
+            </property>
+            <property name="suppress double capitals" code="APcd" type="suppress double cap" description="Correct two capital letters at the start of a word to just one.">
+                <cocoa key="suppressDoubleCaps"/>
+            </property>
+
+-->
+			<responds-to command="quit">
+				<cocoa method="handleQuitScriptCommand:"/>
+			</responds-to>
+<!--
+            <responds-to command="expand">
+				<cocoa method="handleExpandScriptCommand:"/>
+			</responds-to>
+            <responds-to command="expand string">
+                <cocoa method="handleExpandStringScriptCommand:"/>
+            </responds-to>
+-->
+		</class>
+
+		<enumeration name="expand after mode" code="GEAM">
+			<enumerator name="after whitespace" code="GEws" description="After whitespace.">
+				<cocoa integer-value="0"/>
+			</enumerator>
+			<enumerator name="after non alphanumeric" code="GEna" description="After non-alphanumeric.">
+				<cocoa integer-value="1"/>
+			</enumerator>
+			<enumerator name="any character" code="GEac" description="After any character.">
+				<cocoa integer-value="2"/>
+			</enumerator>
+		</enumeration>
+
+		<enumeration name="abbreviation mode" code="SABM">
+			<enumerator name="case sensitive" code="SAcs" description="Case sensitive.">
+				<cocoa integer-value="0"/>
+			</enumerator>
+			<enumerator name="ignore case" code="SAic" description="Case is ignored.">
+				<cocoa integer-value="1"/>
+			</enumerator>
+			<enumerator name="match case" code="SAmc" description="Case is matched.">
+				<cocoa integer-value="2"/>
+			</enumerator>
+		</enumeration>
+
+		<enumeration name="content type" code="SCTP">
+			<enumerator name="plain_text" code="STpt" description="Plain text.">
+				<cocoa integer-value="0"/>
+			</enumerator>
+			<enumerator name="rich_text" code="STrt" description="Deprecated.">
+				<cocoa integer-value="1"/>
+			</enumerator>
+			<enumerator name="apple_script" code="STas" description="AppleScript.">
+				<cocoa integer-value="2"/>
+			</enumerator>
+			<enumerator name="shell_script" code="STss" description="shell script.">
+				<cocoa integer-value="3"/>
+			</enumerator>
+			<enumerator name="JavaScript" code="STjs" description="JavaScript.">
+				<cocoa integer-value="4"/>
+			</enumerator>
+			<enumerator name="html_text" code="STht" description="Rich text.">
+				<cocoa integer-value="5"/>
+			</enumerator>
+			<enumerator name="plain_JSON" code="STpJ" description="Plain JSON.">
+				<cocoa integer-value="6"/>
+			</enumerator>
+			<enumerator name="formatted_JSON" code="STfJ" description="Formatted JSON.">
+				<cocoa integer-value="7"/>
+			</enumerator>
+		</enumeration>
+
+	</suite>
+
+</dictionary>

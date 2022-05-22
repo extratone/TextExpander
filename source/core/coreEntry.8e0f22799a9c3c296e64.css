@@ -1,0 +1,3382 @@
+
+.login-main {
+  display: flex;
+  background-color: var(--lighter-gray);
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.login-content {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+
+  background-color: var(--white);
+  width: unset;
+  height: unset;
+  /* width: min(40ch, 100vw); -- as of 7.0 windows can't do min/max */
+  max-width: 40ch;
+  width: 100vw;
+  margin: var(--cushion-x-large) auto auto auto;
+  --padding: var(--cushion-large);
+  /* If the last item is the SSO button really the second to last item would need to not have a gap because the SSO button is displayed outside the main. So, just apply the gap to the bottom of all the main children and adjust the padding of main to assume the last item has gap */
+  padding-top: var(--padding);
+  padding-right: var(--padding);
+  padding-bottom: calc(var(--padding) - var(--gap));
+  padding-left: var(--padding);
+  border-radius: var(--border-radius);
+}
+
+/* | Layout children | */
+.login-content > *,
+.login-content > form > *:not(:last-child) {
+  margin-bottom: var(--gap);
+}
+
+.login-content > .logo {
+  max-width: var(--logo-size-max);
+  margin-bottom: calc(var(--gap) * 2);
+}
+
+.login-content > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.sso-sign-in-button {
+  position: absolute;
+  top: calc(100% + var(--gap));
+}
+
+.login-content > .loading-account {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+}
+
+.login-content > .loading-account > p:not(:first-child) {
+  margin-top: var(--gap);
+}
+
+/* | Change layout with signin | */
+
+.login-content.signing-in > *:not(.loading-account):not(svg),
+.login-content.signing-out > *:not(.loading-account):not(svg),
+.login-content.not-ready-for-interaction.signed-in > *:not(.loading-account):not(svg),
+.login-content.not-ready-for-interaction.not-loaded > *:not(.loading-account):not(svg) {
+  visibility: hidden;
+}
+
+.login-content.login-content.not-ready-for-interaction:not('not-loaded'):not(.connecting):not(.signing-in):not(.signed-in) > .loading-account {
+  display: none;
+}
+
+/* | Style children | */
+
+.login-content > form > button {
+  width: unset;
+  padding-top: var(--cushion-small);
+  padding-bottom: var(--cushion-small);
+}
+
+.sso-sign-in-button {
+  background-color: transparent;
+  color: var(--darker-gray);
+  border: var(--border-width) solid var(--darker-gray);
+  border-radius: var(--border-radius);
+  padding: var(--cushion-smallest) var(--cushion-medium);
+}
+
+/* Style login message */
+
+.login-message {
+  padding: var(--cushion-small);
+  background-color: var(--background-color);
+  color: var(--color);
+  border-radius: var(--border-radius);
+
+  display: grid;
+  grid-template-columns: min-content auto;
+  gap: var(--gap);
+  --content-gap: var(--gap);
+  align-items: center;
+}
+
+.login-message * {
+  color: var(--color);
+}
+
+.login-message svg {
+  height: var(--small-icon-size);
+  color: var(--color);
+}
+
+.login-message a:hover,
+.login-message a:active {
+  color: var(--color);
+}
+
+.login-message > :not(svg) {
+  grid-column: 2;
+}
+
+.login-message ul {
+  list-style: unset;
+}
+
+.login-sign-up,
+.login-sign-up:hover {
+    color: var(--white);
+    background-color: var(--darker-gray);
+    border-color: var(--darker-gray);
+    font-size: var(--normal-font-size);
+    border-radius: var(--border-radius);
+    border-width: 1px;
+    border-style: solid;
+    padding: var(--cushion-smallest) var(--cushion-medium);
+    padding-top: var(--cushion-small);
+    padding-bottom: var(--cushion-small);
+    width: 100%;
+    text-align: center;
+}
+
+.login-sign-up:active {
+  background-color: var(--dark-gray);
+  border-color: var(--dark-gray);
+}
+
+/* | pasword failed | */
+
+.password-failed > ul {
+  list-style: unset;
+  padding-left: var(--cushion-large);
+  padding-right: var(--cushion-small);
+}
+
+.password-failed a {
+  font-weight: 600;
+  color: inherit;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.suggestion-item {
+  /* left padding added to children so if they wrap their padding matches */
+  padding: var(--gap) var(--gap) var(--gap) 0px; 
+  border: var(--border-width) solid var(--light-gray);
+  border-radius: var(--border-radius);
+}
+
+.suggestion-item > * {
+  margin-left: var(--gap);
+}
+
+.suggestion-item > *:not(:last-child):not(.content-toolbar):not(button) {
+  margin-bottom: var(--gap);
+}
+
+.suggestion-item > .faux-slate-editor,
+.suggestion-item > .content-toolbar {
+  width: calc(100% - var(--gap));
+}
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* We cannot have a single element for virtual scrolling, because Chrome
+   limits CSS Grid to 1000 rows, see: https://crbug.com/688640
+*/
+
+/* this holds the scrollbar */
+.virtualList.outer {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+.virtualList.outer:focus {
+  box-shadow: var(--clear-focus-style);
+  outline: var(--focus-alt-style);
+  outline-offset: var(--focus-outline-offset);
+  z-index: calc(1 + var(--resizer-z-index));
+}
+
+.virtualList.inner {
+/* The sizing of this will need to cater for row-gap if there is any */
+  height: calc(var(--items-count, 0) * var(--virtualized-list-row-height));
+  position: relative;
+}
+
+/* The actual list, notably this only contains materialized rows */
+.virtualList.inner ul {
+  position: absolute;
+  /* If you add a row gap, you'll need to change this */
+  top: calc(var(--materialized-start-index) * var(--virtualized-list-row-height));
+  margin: 0;
+  left: 0px;
+  right: 0px;
+  padding: 0;
+  display: grid;
+  grid-auto-rows: var(--virtualized-list-row-height);
+}
+
+.virtualList.inner ul:focus {
+  box-shadow: var(--clear-focus-style);
+}
+
+.virtualList.inner li {
+  list-style: none;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+label.sort {
+    margin-left: calc(var(--cushion-smallest) * -1);
+    margin-bottom: calc(var(--cushion-smallest) * -1);
+}
+
+label.sort > * {
+  margin-left: var(--cushion-smallest);
+  margin-bottom: var(--cushion-smallest);
+}
+
+/* | Virtualized snippet list | */
+
+.divided-section.snippet-list > .virtualList.outer {
+    margin-bottom: 0px !important;
+    padding: var(--section-padding);
+}
+
+.snippet.list-item {
+    align-items: center;
+    display: flex;
+    padding: var(--list-item-padding);
+    overflow: hidden;
+}
+
+.snippet.list-item > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.snippet.list-item abbr {
+    margin-left: var(--label-gap);
+    max-width: 70%;
+}
+
+.virtualList:focus-within .snippet.list-item[aria-selected="true"] {
+  box-shadow: var(--clear-focus-style);
+  background-color: var(--focus-background-color);
+  color: var(--focus-color);
+}
+
+.snippet.list-item[aria-selected="true"] {
+    background-color: var(--selected-background-color, var(--white));
+    color: var(--selected-color);
+}
+
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/*
+A home for shared list styling, both layout and appearance related.
+
+Virtualized list layout shared across section layout is in sectionLayout.css
+*/
+
+/* Non virtualized lists use list */
+ul.list,
+ol.list {
+    display: grid;
+    row-gap: var(--list-row-gap);
+}
+
+li.list-item,
+.faux-list-item {
+  display: grid; /* fixes content to width of list container to help with overflow */
+
+  /* Focus styling is passed down in variables. There are cases like drag and drop where things need to look focused. The variables make sure that look is consistent. */
+  --focus-background-color: var(--orange);
+  --focus-color: var(--always-white);
+}
+
+.list-item.primary,
+.faux-list-item-primary {
+  --selected-background-color: var(--white);
+  --selected-color: var(--darker-gray);
+}
+
+.list-item.secondary,
+.faux-list-item-secondary {
+  --selected-background-color: var(--lighter-gray);
+  --selected-color: var(--darker-gray);
+}
+
+.list-item.secondary.with-icon {
+  --focus-background-color: var(--lighter-gray);
+  --focus-color: var(--darker-gray);
+}
+
+.list-item,
+.faux-list-item {
+    border-radius: var(--border-radius);
+    height: var(--list-item-height);
+}
+
+.list-item > button[aria-selected=true],
+.faux-list-item[aria-selected=true] {
+    background-color: var(--selected-background-color, var(--white));
+    color: var(--selected-color);
+}
+
+/* | List children | */
+
+.list-item > button,
+.faux-list-item {
+  padding: var(--list-item-padding);
+  width: unset;
+  text-align: left;
+  align-items: center;
+  display: flex;
+  border-style: none;
+  background-color: unset;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+/* Lists that track selection with aria-selected should have their background color considered when focused and selected.
+Lists that don't track selection with aria-selected should imlpement their own focus styling with the focus variables provided by the .list-item classes */
+
+.list-item > button[aria-selected="true"]:focus,
+.faux-list-item[aria-selected=true]:focus {
+  box-shadow: var(--clear-focus-style);
+  background-color: var(--focus-background-color);
+  color: var(--focus-color);
+}
+
+.list-item > button > span,
+.faux-list-item > span {
+  flex-grow: 1;
+  flex-shrink: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* | List item with icon | */
+
+.list-item.with-icon > button > span {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.list-item.with-icon > button svg {
+    height: var(--small-icon-size);
+    margin-right: var(--cushion-smallest);
+    width: var(--small-icon-list-width);
+}
+
+/* Restore focus ring as the user can tab through these without selecting one */
+li.list-item.with-icon > button:focus {
+  box-shadow: var(--focus-style);
+}
+
+/* When active turn the list-item orange and remove the box-shadow */
+li.list-item.with-icon > button:active,
+li.list-item.with-icon > button:focus:active {
+  background-color: var(--focus-background-color);
+  color: var(--focus-color);
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.drag-over.can-drop {
+  background-color: var(--focus-background-color) !important;
+  color: var(--focus-color) !important;
+}
+
+.drag-over:not(.can-drop) {
+  box-shadow: 0 0 0px var(--focus-width) var(--error);
+}
+
+svg.drop-prohibited {
+  position: relative;
+  left: -50%;
+  color: var(--error);
+  background-color:var(--white);
+  z-index: 9999999;
+  border-radius: var(--border-radius-alt);
+}
+
+.drag-layer {
+  position: fixed;
+  pointer-events: none;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+}
+
+.drag-layer > .list {
+  max-width: calc(var(--layout-column-max-width) / 2);
+}
+
+.drag-layer.gradient > .list {
+  max-height: 150px;
+  overflow: hidden;
+  -webkit-mask: linear-gradient(var(--white), transparent);
+  mask: linear-gradient(var(--white), transparent);
+}
+
+.list-item.drag {
+  background-color: var(--focus-background-color) !important;
+  color: var(--focus-color) !important;
+}
+
+.drag-layer .count {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  padding: 0px var(--cushion-smallest);
+  background-color: var(--error);
+  color: var(--always-white);
+  border-radius: var(--border-radius-alt);
+  font-weight: bold;
+}
+
+.list-item > .drag-source {
+  opacity: 50%;
+  /* gray color from primary/sec. list item
+  needs important to override the list's natural styling during drag */
+  background-color: var(--selected-background-color) !important;
+  color: var(--selected-color) !important;
+}
+
+.list-item > .drag-source abbr {
+    /*needs important to override the list's natural styling during drag */
+  box-shadow: none !important;
+}
+
+
+.snippet-list-footer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.snippet-list-footer > *:first-child {
+  flex-grow: 1;
+  margin-right: var(--cushion-smallest);
+}
+
+.snippet-list-footer > * {
+  white-space: wrap;
+  max-width: 100%;
+}
+
+.node:active, .selected-node:active, .node-with-background-image:active, .selected-node-with-background-image:active {
+    background-color: white;
+  }
+
+  /* Everyne one has shares a border radius */
+  .node,
+  .selected-node,
+  .unknown-node,
+  .selected-unknown-node,
+  .node-with-background-image,
+  .selected-node-with-background-image {
+    margin-left: 2px;
+    margin-right: 2px;
+    border-radius: var(--border-radius-alt);
+  }
+
+  /* All non background image share padding */
+  .node,
+  .selected-node,
+  .unknown-node,
+  .selected-unknown-node {
+    padding: 1px var(--cushion-smallest);
+  }
+  
+  /* All share border color */ 
+  .node,
+  .node-with-background-image,
+  .unknown-node { 
+    box-shadow: 0 0 0px 1px var(--node-color, black);
+  }
+
+  /* All selected share border color */
+  .selected-node,
+  .selected-unknown-node,
+  .selected-node-with-background-image {
+    box-shadow: var(--focus-style);
+  }
+  
+  .node-with-background-image,
+  .selected-node-with-background-image {
+    padding: 1px var(--cushion-smallest) 1px var(--cushion-large);
+    background-size: var(--x-small-icon-size);
+    background-position: left calc(var(--x-small-icon-size) / 2) center;
+    background-repeat: no-repeat;
+  }
+
+  .node-with-background-image.start,
+  .selected-node-with-background-image.start {
+    border-top-right-radius: unset;
+    border-bottom-right-radius: unset;
+  }
+
+  .node.end,
+  .selected-node.end {
+    border-top-left-radius: unset;
+    border-bottom-left-radius: unset;
+  }
+  
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved*/
+
+.fillin-editor {
+    color: black; /* Doesn't support dark mode, otherwise inherits dialog color which does. Can't apply to reg. editor because that can support different color fonts */
+}
+
+/* | Date time math | */
+
+.date-time-math-label {
+    /* the content of the label changes for plural or singular entries. This makes the modal window change sizes. Pegging the width of the label wraps it to the next line rather than changing the modal's width. */
+    width: 300px;
+}
+
+.date-time-math-input {
+    margin: var(--cushion-small);
+}
+
+/* | Fillins | */
+
+.single-line-editor-child > .slate-editor {
+    height: 2.5rem;
+}
+
+.double-line-editor-child > .slate-editor {
+    height: 4.2rem;
+}
+
+/* | Popup fillin| */
+
+.popup-fillin-scroll-container {
+    max-height: calc((var(--normal-font-size) + (var(--cushion-smallest) * 2)) * 10);
+    overflow-y: auto;
+
+    --extra-drop-space: 15px;
+}
+
+.popup-fillin-scroll-container:not([data-rbd-scroll-container-context-id]) .popup-option:focus { /* attribute exists when drag is happening*/
+    box-shadow: var(--clear-focus-style);
+    border: var(--focus-alt-style);
+}
+
+.popup-fillin-scroll-container .popup-option { /* more specific b/c react dnd makes the entire option a grab hand */
+    cursor: unset;
+}
+
+.popup-option {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-gap: var(--cushion-smallest);
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding: var(--cushion-smallest);
+    border: solid transparent 2px;
+    background-color: var(--white);
+}
+
+.popup-option > .slate-editor {
+    background-color: white; /* no var because doesn't do darkmode */
+}
+
+.popup-option > svg {
+    height: var(--medium-icon-size);
+    cursor: webkit grab;
+    cursor: grab;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.display-fonts {
+    --editor-font-family: Arial;
+    --editor-font-size: 14px;
+    --editor-font-color: black;
+    font-family: var(--editor-font-family, Arial);
+    font-size: var(--editor-font-size, 14px) ;
+    color: var(--editor-font-color, black);
+ }
+
+ .display-fonts a,
+ .display-fonts a:visited {
+  color: var(--alt-teal);
+  font-size: var(--editor-font-size);
+  font-family: var(--editor-font-family);
+}
+
+.display-fonts a:hover {
+    color: var(--alt-teal);
+    text-decoration: underline;
+}
+
+.editor-overrides {
+    /* Must be unitless to work with all font sizes */
+    line-height: 1.6;
+}
+
+.editor-overrides ul { /* otherwise list overlaps with editor's padding */
+    list-style: disc inside;
+}
+.editor-overrides ol { /* otherwise list overlaps with editor's padding */
+   list-style: decimal inside;
+}
+
+.editor-overrides table,
+.editor-overrides th,
+.editor-overrides td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    min-width: 50px;
+    min-height: 50px;
+} 
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* | section layout | */
+/* Layout belonging to the editor section stays separate from the styling of the individual editor components */
+
+.divided-section.editor-section > .section-content > label:not(:last-child):not(.content-toolbar-container) {
+    margin-bottom: var(--label-gap);
+}
+
+/* In safari the _dialog_overlay appears last in the editor section content giving the actual last item a bottom margin. So, just give everyone a bottom margin and take it out of the section-content element */
+.divided-section.editor-section > .section-content > *:not(dialog):not(.backdrop):not(._dialog_overlay) {
+  margin-bottom: var(--section-padding)
+}
+
+.divided-section.editor-section > .section-content {
+  padding-bottom: 0px;
+}
+
+.divided-section.editor-section > .section-content > .content-toolbar-container {
+    margin-bottom: 0px !important;
+}
+
+.editor-section > .section-content > .slate-editor {
+    flex-grow: 1;
+    flex-shrink: 1;
+    min-height: 8rem;
+}
+
+/* Use flex to put abbreviation select and input on same line */
+.divided-section.editor-section > .section-content > .fieldset[aria-labelledby=editor-abbreviation-fieldset] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: calc(var(--gap) * -1);
+}
+
+.divided-section.editor-section > .section-content > .fieldset[aria-labelledby=editor-abbreviation-fieldset] > * {
+    margin-left: var(--gap);
+    margin-bottom: unset;
+}
+
+/* h2 should look like a label */
+.divided-section.editor-section > .section-content > .fieldset[aria-labelledby=editor-abbreviation-fieldset] > h2 {
+    flex-basis: 100%;
+    flex-grow: 4;
+}
+/* Abbreviation and label being on same line mean both are 'last' no margin needed */
+.divided-section.editor-section > .section-content > .fieldset[aria-labelledby=editor-abbreviation-fieldset] > input {
+    flex-basis: 33%;
+    flex-grow: 0;
+    flex-shrink: 2;
+    margin-top: var(--label-gap);
+    max-width: calc(12ch + (var(--padding-horizontal) *2));
+}
+
+.divided-section.editor-section > .section-content > .fieldset[aria-labelledby=editor-abbreviation-fieldset] > select {
+    flex-grow: 1;
+    margin-top: var(--label-gap);
+}
+
+ .slate-editor,
+ .faux-slate-editor {
+     border: var(--border-width) solid var(--light-gray);
+    border-top: none;
+     border-bottom-left-radius: var(--border-radius);
+     border-bottom-right-radius: var(--border-radius);
+     overflow: auto;
+    padding: var(--cushion-small);
+    background-color: white; /* deliberately not the variable because it doesn't change in darkmode */
+ }
+
+ .faux-slate-editor {
+     border-top-left-radius: unset;
+     border-top-right-radius: unset;
+ }
+
+.popup-fillin-scroll-container .slate-editor {
+    border-radius: var(--border-radius);
+    border: var(--border-width) solid var(--light-gray);
+}
+
+ .slate-editor:focus {
+    border-radius: var(--border-radius);
+ }
+
+
+ .slate-editor.disabled {
+     background-color: var(--always-lighter-gray);
+ }
+
+ .slate-editor pre {
+     margin: 0px;
+ }
+
+ #editor-abbreviation-fieldset {
+     font-weight: normal;
+ }
+ /* Content Toolbar */
+
+ /* Formatted toolbar uses nested toolbars to group like buttons and cause a logical break in content
+  */
+
+div.toolbar.content-toolbar-container {
+    display: flex;
+    flex-direction: column;
+    border: var(--border-width) solid var(--light-gray);
+    border-bottom: none;
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+}
+
+.content-toolbar.macro > .dropdown > button,
+.content-toolbar.formatted > .formatted-chunk:not(.fonts) > button {
+    min-width: 1.5rem;
+    justify-content: center;
+}
+
+/* If the macro toolbar isn't in the toolbar container it needs a border all the way around because it isn't getting part of the border from the container */
+*:not(.content-toolbar-container) > .macro {
+    border: var(--border-width) solid var(--light-gray);
+}
+
+.content-toolbar-container > .content-toolbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content-toolbar.macro > *:not(:last-child),
+.formatted-chunk > *:not(:last-child) {
+    margin-right: var(--cushion-smallest);
+}
+
+.content-toolbar .dropdown > button,
+.content-toolbar > .formatted-chunk > button,
+.content-toolbar > .formatted-chunk > label { /* file input */
+    display: flex;
+    padding: var(--cushion-smallest);
+    --button-padding: var(--cushion-smallest);
+}
+
+.content-toolbar > .formatted-chunk > button.underline {
+    /* Underline's icon's underline should appear below the baseline of the U. Font awesome handles this, we just need to change the padding so it can dip below the the 'baseline' */
+    --underline-offset: .063rem;
+    padding-top: calc(var(--cushion-smallest) + var(--underline-offset));
+    padding-bottom: calc(var(--cushion-smallest) - var(--underline-offset));
+}
+
+.content-toolbar > .formatted-chunk > label { /* file input */
+    align-items: center;
+}
+
+.content-toolbar svg {
+    height: var(--small-icon-size);
+}
+
+/* | Macro toolbar | */
+
+.content-toolbar.macro {
+    padding: var(--cushion-smallest);
+    background-color: var(--lighter-gray);
+    border-top-left-radius: var(--border-radius);
+    border-top-right-radius: var(--border-radius);
+    border-bottom: var(--border-width) solid var(--light-gray);
+}
+
+.content-toolbar.macro .dropdown > button,
+.content-toolbar.macro > button,
+.content-toolbar.macro .dropdown > label { /* file input */
+    border-style: none;
+    background-color: var(--lighter-gray);
+    color: var(--darker-gray);
+}
+
+.content-toolbar.macro .dropdown >  button:hover,
+.content-toolbar.macro >  button:hover,
+.content-toolbar.macro .dropdown > label:hover { /* file input */
+    background-color: var(--white);
+}
+
+.content-toolbar.macro .dropdown >  button:disabled,
+.content-toolbar.macro >  button:disabled,
+.content-toolbar.macro .dropdown >  button:hover:disabled,
+.content-toolbar.macro >  button:hover:disabled,
+.content-toolbar.macro .dropdown >  button.selected:disabled {
+    color: var(--medium-gray);
+    background-color: unset;
+}
+
+.content-toolbar.macro .dropdown >  button:active,
+.content-toolbar.macro >  button:active,
+.content-toolbar.macro .dropdown >  button.selected,
+.content-toolbar.macro .dropdown.expanded > button,
+.content-toolbar.macro label:active {  /* file input */
+    background-color: var(--darker-gray);
+    color: var(--white);
+}
+
+/* Mini toolbar used in fillin dialogs */
+
+.content-toolbar.mini {
+    margin-bottom: calc(var(--gap) * -1);
+}
+
+#popup-menu-dialog ~ .content-toolbar.mini,
+#popup-menu-dialog ~ .fillin-editor {
+    border-radius: var(--border-radius);
+}
+
+
+/* | Formatted toolbar | */
+
+.content-toolbar.formatted {
+    background-color: var(--white);
+    border-bottom: var(--border-width) solid var(--light-gray);
+}
+.content-toolbar.formatted > *:last-child {
+    flex-grow: 1;
+    border-top: var(--border-width) solid var(--light-gray);
+    margin-top: calc(var(--border-width) * -1);
+}
+
+.formatted-chunk {
+    padding: var(--cushion-smallest) 0px var(--cushion-smallest) var(--cushion-smallest);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.formatted-chunk.fonts > .dropdown:nth-child(1) > button {
+    width: calc(8.668rem + (var(--cushion-smallest) * 6)); /* ensures button size won't change between content changes */
+}
+
+.formatted-chunk.fonts > .dropdown:nth-child(3) > button   {
+    width: 3rem; /* ensures button size won't change between content changes */
+}
+
+.formatted-chunk > hr {
+    margin-top: calc(var(--cushion-smallest) * -1);
+    margin-bottom: calc(var(--cushion-smallest) * -1);
+}
+
+.formatted-chunk:not(.fonts) > hr {
+    margin-top: calc(var(--cushion-smallest) * -1);
+    margin-bottom: calc((var(--cushion-smallest) + var(--border-width)) * -1);
+}
+
+.content-toolbar .formatted-chunk button.color-swatch {
+    --color-swatch-border-size: calc(var(--border-width) * 4);
+    width: 2.813rem; /* ensures button size won't change between content changes */
+    padding-bottom: calc(var(--button-padding) - var(--color-swatch-border-size));
+ }
+
+.formatted-chunk .dropdown > button,
+.formatted-chunk > button,
+.formatted-chunk > label { /* file input */
+    border-style: none;
+    background-color: var(--white);
+    color: var(--darker-gray);
+}
+
+.formatted-chunk .dropdown > button:hover,
+.formatted-chunk > button:hover,
+.formatted-chunk > label:hover { /* file input */
+    background-color: var(--lighter-gray);
+}
+
+.formatted-chunk .dropdown > button:disabled,
+.formatted-chunk  > button:disabled,
+.formatted-chunk  > [type=file]:disabled + label,
+.formatted-chunk > button.selected:disabled,
+.formatted-chunk .dropdown > button:hover:disabled,
+.formatted-chunk > button:hover:disabled,
+.formatted-chunk > label:hover:disabled {
+    color: var(--medium-gray);
+    background-color: unset;
+}
+
+.formatted-chunk > button:active,
+.formatted-chunk > button.selected,
+.formatted-chunk > .dropdown.expanded > button,
+.formatted-chunk > .dropdown > button:active,
+.formatted-chunk > label:active {  /* file input */
+    background-color: var(--darker-gray);
+    color: var(--white);
+}
+/* Content toolbar items */
+/* Dropdown */
+.dropdown {
+    position:relative;
+    display: flex;
+}
+.dropdown > button {
+    justify-content: space-between;
+}
+.dropdown > button > span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.dropdown > ul {
+    display: none;
+    position: absolute;
+    top: calc(100% + var(--cushion-smallest));
+    margin: 0;
+    /*There is a bug in firefox and safari that cause the scroll bar to overlap content. Padding on the right side is used for the scroll bar, if that isn’t wide enough it takes the space from the content.
+    https://bugzilla.mozilla.org/show_bug.cgi?id=764076
+    I couldn't find the radar for it is safari but it is discussed in the mozilla ticket.
+    */
+    padding: var(--cushion-smallest)  15px var(--cushion-smallest) var(--cushion-smallest);
+    background-color: var(--white);
+    list-style: none;
+    border: var(--border-width) solid var(--medium-gray);
+    border-radius: var(--border-radius);
+    overflow-y: auto;
+    max-height: calc(100vh - var(--distance-from-top-of-viewport, 0));
+    z-index: 1;
+}
+
+/* Push dropdown content to the left if it is on the end of the toolbar row so that when the editor is very narrow the dropdown content is visible */
+.formatted-chunk > .dropdown:nth-last-child(2) > ul,
+.formatted-chunk > .dropdown:nth-last-child(4) > ul,
+.macro:not(.mini) > .dropdown:last-child > ul {
+    right: 0;
+}
+
+.content-toolbar.mini > .dropdown > ul {
+    max-height: calc(1em * 10.5);
+}
+.dropdown > ul > li {
+    display: flex;
+    max-width: 25ch;
+}
+.dropdown > ul > li > hr {
+    margin: var(--cushion-smallest) 0px;
+ }
+.dropdown > ul > li > button,
+.dropdown > ul > li > label {
+    width: unset;
+    border: none;
+    border-radius: var(--border-radius);
+    background-color: inherit;
+    padding: var(--cushion-smallest);
+    color: var(--darker-gray);
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+.dropdown > ul > li > button.active
+.dropdown > ul > li > label:active {
+    background-color: var(--lighter-gray);
+}
+.dropdown > ul > li > button:hover,
+.dropdown > ul > li > label:hover {
+    background-color: var(--lighter-gray);
+}
+.dropdown > ul > li svg {
+    margin-right: var(--cushion-smallest);
+    width: var(--small-icon-size);
+}
+.dropdown.expanded > ul {
+    display:grid;
+}
+/* dropdown button for color picker */
+button.color-swatch > svg:nth-child(1) {
+    flex-grow: 1;
+}
+svg.color-swatch {
+    --content-toolbar-selected-color: transparent;
+    height: calc(var(--small-icon-size) + var(--color-swatch-border-size));
+    border-bottom: var(--color-swatch-border-size) solid var(--content-toolbar-selected-color);
+}
+.dropdown > .color-grid {
+    --color-grid-svg-size: 0.625rem; /* if grid size changes so does this */
+    grid-auto-rows: 1rem;
+    grid-template-columns: repeat(8, 1rem);
+    grid-gap: var(--cushion-smallest);
+}
+/* button items in color grid */
+.dropdown > .color-grid > li > label {
+    --swatch: black;
+    --swatch-border-color: var(--white);
+    background-color: var(--content-toolbar-swatch);
+    border: var(--swatch-border-color) solid var(--border-width);
+    border-radius: var(--border-radius);
+    padding: 0px;
+    justify-content: center;
+}
+.dropdown > .color-grid > li > label:hover {
+    background-color: var(--content-toolbar-swatch);
+}
+/* Adds dot to selected color grid item. Filter makes dot
+black or white - the reverse of the color  */
+.dropdown > .color-grid > li > input:checked + label:not(.match):after {
+    content: "";
+    background-color: var(--content-toolbar-swatch);
+    border-radius: var(--border-radius-alt);
+    align-self: center;
+    position: absolute;
+    width: .375rem;
+    height: .375rem;
+    filter: grayscale(100%) contrast(100) invert(1);
+}
+/* bolt in color grid */
+.dropdown > .color-grid > li > label > svg {
+    width: var(--color-grid-svg-size);
+    height: unset;
+    margin: 0px;
+}
+
+
+  /* Abbreviation Conflicts and duplicate toolbar buttons  */
+
+div.toolbar button.abbreviation {
+    background-color: var(--background-color);
+    color: var(--color);
+    border-color: var(--color);
+}
+
+div.toolbar button.abbreviation:hover {
+    background-color: var(--hover-color);
+    color: var(--background-color);
+    border-color: var(--background-color);
+}
+
+div.toolbar button.abbreviation:active,
+div.toolbar button.abbreviation:active:hover {
+    background-color: var(--color);
+    color: var(--background-color);
+    border-color: var(--background-color);
+}
+
+div.toolbar button.abbreviation.conflict{
+    --color: var(--white);
+    --background-color: var(--orange);
+    --hover-color: var(--light-orange)
+}
+
+/* | Footer | */
+
+footer.editor-footer {
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+footer.editor-footer > *:not(:last-child) {
+  margin-right: var(--gap);
+}
+
+footer.editor-footer > button.push-right {
+  margin-left: auto;
+}
+
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.snippet-preview-section > .section-content {
+  background-color: var(--lighter-gray);
+}
+
+.snippet-preview-section article {
+  word-break: break-all;
+  width: unset !important;
+  margin: 0px !important;
+  border-radius: var(--border-radius);
+  
+  display: block;
+  padding: var(--cushion-small);
+  background-color: var(--always-white);
+  overflow: auto;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* | Table | */
+
+section.abbreviation-conflict-section {
+    --table-padding: var(--cushion-smallest);
+    --stripe-width: 5px;
+    --conflict-resolution-options-row-width: calc(4.4rem + (var(--table-padding) * 2));
+    --abbreviation-row-width: 300px;
+}
+
+table.abbreviation-conflict-table {
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+/* | Border and border radius on table | */
+
+table.abbreviation-conflict-table tr:not(.conflict-header) th:not(.stripe),
+table.abbreviation-conflict-table tr:not(.conflict-header) td:not(.stripe) {
+    border-right: var(--border-width) solid var(--light-gray);
+    border-bottom: var(--border-width) solid var(--light-gray);
+  }
+
+  table.abbreviation-conflict-table tr.row-header > *:not(.stripe),
+  table.abbreviation-conflict-table tr.row-header.basis > .stripe {
+     border-top: var(--border-width) solid var(--light-gray);
+  }
+
+table.abbreviation-conflict-table tr.basis > th.stripe,
+table.abbreviation-conflict-table tr.basis > td.stripe {
+    border-left: var(--border-width) solid var(--light-gray);
+    border-bottom: var(--border-width) solid var(--light-gray);
+
+}
+  /* top-left border-radius */
+  table.abbreviation-conflict-table tr.row-header th:first-child {
+    border-top-left-radius: var(--border-radius);
+  }
+
+  /* top-right border-radius */
+  table.abbreviation-conflict-table tr.row-header th:last-child {
+    border-top-right-radius: var(--border-radius);
+  }
+
+  /* bottom-left border-radius */
+  table.abbreviation-conflict-table tr td:first-child {
+    border-bottom-left-radius: var(--border-radius);
+  }
+
+  /* bottom-right border-radius */
+  table.abbreviation-conflict-table tr td:last-child {
+    border-bottom-right-radius: var(--border-radius);
+  }
+
+  /* | Table column widths | */
+
+table.abbreviation-conflict-table tr > *:first-child {
+    width: var(--stripe-width);
+    min-width: var(--stripe-width);
+    max-width: var(--stripe-width);
+}
+
+table.abbreviation-conflict-table tr > *:nth-child(2),
+    table.abbreviation-conflict-table tr > *:nth-child(4) {
+    --taken-width: calc(var(--conflict-resolution-options-row-width) + var(--stripe-width) + var(--abbreviation-row-width) + (var(--table-padding) * 2));
+    width: calc((100% - var(--taken-width)) / 2);
+    overflow: hidden;
+}
+
+table.abbreviation-conflict-table tr > *:nth-child(3) {
+    max-width: var(--abbreviation-row-width);
+    overflow: hidden;
+}
+
+table.abbreviation-conflict-table tr > *:last-child {
+    min-width: var(--conflict-resolution-options-row-width);
+}
+
+/* | Tabular header | */
+
+table.abbreviation-conflict-table th,
+table.abbreviation-conflict-table td {
+    text-align: left;
+    padding: var(--table-padding);
+    vertical-align: baseline;
+}
+
+table.abbreviation-conflict-table td.abbreviation-actions {
+    vertical-align: middle;
+}
+
+table.abbreviation-conflict-table tr.conflict-header > th:not(.stripe) {
+    padding: var(--cushion-medium) var(--cushion-small) var(--cushion-small) 0px;
+}
+
+table.abbreviation-conflict-table tr.conflict-header .alignment-container > *:not(:last-child) {
+    margin-right: var(--cushion-smallest);
+}
+
+table.abbreviation-conflict-table tr.conflict-header .alignment-container > span {
+    max-width: calc(100% - (var(--small-icon-size) + var(--cushion-smallest)))
+}
+/* Table rows */
+
+table.abbreviation-conflict-table tr.conflict-content {
+    background-color: var(--lightest-gray);
+  }
+
+/* | tabular data | */
+
+table.abbreviation-conflict-table td.abbreviation {
+  padding-right: calc(var(--table-padding)/2);
+  padding-bottom: calc(var(--table-padding)/2);
+  padding-top: calc(var(--table-padding)/2);
+}
+
+table.abbreviation-conflict-table td.abbreviation > * {
+    margin-right: calc(var(--table-padding)/2);
+    margin-bottom: calc(var(--table-padding)/2);
+    margin-top: calc(var(--table-padding)/2);
+}
+
+/* | Table row/header stripe | */
+
+table.abbreviation-conflict-table .stripe {
+    padding: 0px;
+}
+
+table.abbreviation-conflict-table .stripe.error {
+    background-color: var(--error);
+}
+
+table.abbreviation-conflict-table .stripe.orange {
+    background-color: var(--orange);
+}
+
+table.abbreviation-conflict-table .stripe.success {
+    background-color: var(--success);
+}
+
+/* | table children | */
+
+.abbreviation-conflict-section input.abbreviation[type=text] {
+    width: 12ch;
+}
+
+table.abbreviation-conflict-table tr > th > div ,
+table.abbreviation-conflict-table tr > td > div {
+display: grid;
+}
+
+table.abbreviation-conflict-table tr > th > span,
+table.abbreviation-conflict-table tr > td > span,
+table.abbreviation-conflict-table tr > td > div> span {
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+}
+
+table.abbreviation-conflict-table tr.conflict-header > th > div > span {
+  overflow-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+}
+
+table.abbreviation-conflict-table tr.basis > * > div > span {
+    -webkit-line-clamp: 3;
+}
+
+/* | Table buttons | */
+
+table.abbreviation-conflict-table svg {
+    height: var(--small-icon-size);
+    min-width: var(--small-icon-size);
+}
+
+table.abbreviation-conflict-table  div.alignment-container {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+
+table.abbreviation-conflict-table button.toggle,
+table.abbreviation-conflict-table button.action {
+    border: none;
+    background-color: transparent;
+    color: var(--darker-gray);
+    display: flex;
+    align-items: center;
+}
+
+table.abbreviation-conflict-table button.action {
+    --button-padding: var(--cushion-smallest);
+    margin-top: calc(var(--button-padding) * -1);
+    margin-bottom: calc(var(--button-padding) * -1);
+    padding: calc(var(--button-padding) / 2);
+}
+
+table.abbreviation-conflict-table button.toggle {
+    align-self: center;
+    padding: 0px;
+}
+
+table.abbreviation-conflict-table button.action:active {
+    background-color: var(--darker-gray);
+    color: var(--white);
+}
+
+.abbreviation-conflict-section p.status-blurb {
+    padding: 0px;
+}
+
+.abbreviation-conflict-section p.status-blurb > a {
+    color: unset;
+}
+
+/* | table tooltips | */
+
+table.abbreviation-conflict-table a.tooltip {
+  display: inline-flex;
+  margin-left: var(--label-gap);
+  vertical-align: middle;
+  margin-bottom: 2px;
+}
+
+
+
+.fieldset-list.content {
+    grid-template-columns: repeat(auto-fit, minmax(calc(35ch + .8rem), 1fr));
+}
+
+
+.fieldset-list.no-content {
+    grid-gap: var(--cushion-smallest);
+}
+
+li.app-exclusion {
+    padding: var(--cushion-smallest);
+    background-color: var(--lightest-gray);
+    border-radius: var(--border-radius);
+}
+
+li.app-exclusion-item > label {
+    display: flex;
+    align-items: baseline;
+    flex-wrap: nowrap;
+}
+
+li.app-exclusion-item > label > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 2;
+}
+
+li.app-exclusion-item > label > * {
+    margin-right: var(--label-gap);
+}
+
+li.app-exclusion-item > label > img { 
+    height: var(--small-icon-size);
+    margin: 0px var(--cushion-smallest);
+    align-self: center;
+}
+
+.fetchApps {
+  /* Use the large cushion so that it is obvious that there is other
+     form elements, etc. that can be interacted with */
+  scroll-margin: var(--cushion-large);
+  /* below is backwards compatibility for older safari */
+  scroll-snap-margin: var(--cushion-large);
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/*
+This pane keeps its groups of content side by side until there isn't enough space. Then it pops each group to its own row. To do that we've got to account for the space between each group and the space between the the content and the edge of the pane.
+To do this the right padding is reset to 0px.
+Then, make the right margin on each of the content's children in the section what the padding would have been on the section.
+There is a variable in the section layout css that defines padding so that it future me will remember the pane depends on knowing the padding for the layout.
+*/
+
+/* | Section Layout | */
+
+section.group-detail > div.section-content {
+  margin-bottom: 0px;
+}
+
+section.group-detail > div.section-content > div.group-grid {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(10, [col-start] min-content [col-end]);
+  column-gap: var(--gap);
+}
+
+section.group-detail > div.section-content> div.group-grid  > label {
+    grid-column: 1;
+    text-align: right;
+}
+
+section.group-detail > div.section-content> div.group-grid  > *:not(label) {
+    grid-column: 2;
+    align-self: start;
+}
+
+section.group-detail > div.section-content> div.group-grid  > *:not(:last-child) {
+  margin-bottom: var(--section-padding);
+}
+
+section.group-detail > div.section-content> div.group-grid  > div.abbreviation-prefix-group {
+    padding-bottom: var(--section-padding);
+}
+
+
+/* | Group content groups | */
+
+.group-detail-abbreviation {
+    width: 10ch;
+}
+
+section.group-detail textarea {
+    overflow: auto;
+}
+
+.abbreviation-prefix-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    margin-top: calc(var(--gap) * -1);
+    margin-right: calc(var(--gap) * -1);
+    margin-bottom: calc(var(--gap) * -1);
+}
+
+.abbreviation-prefix-group > * {
+    margin-top: var(--gap);
+    margin-right: var(--gap);
+}
+
+.abbreviation-prefix-group > input[type="checkbox"] {
+    margin-right: var(--label-gap);
+}
+
+.abbreviation-prefix-group > a {
+    align-self: center;
+}
+
+/* Copyright (c) 2018 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.suggested-snippet-alert {
+  background-color: #46BFBF40;
+    border: 1px solid #46BFBF;
+    color: var(--text-color);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.resolutionOptions {
+  margin-top: 5px;
+}
+
+.resolutionOptions label {
+  font-weight: inherit;
+}
+
+.resolutionOptions ul {
+  list-style: none;
+}
+
+.alert-danger {
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.discard-change-radio {
+  margin: 5px 0px;
+}
+
+.resolution-options-list {
+  margin-bottom: 5px;
+}
+
+.resolution-options-list > li > label {
+  display: flex;
+  align-items: center;
+}
+
+.resolution-options-list > li > label > select {
+  margin-left: 5px;
+}
+
+.resolution-button {
+  padding: 0px 10px;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: var(--border-radius);
+    border-style: solid;
+    border-width: 1px;
+    background-color: var(--preference-item-color-enabled);
+    border-color: var(--list-abbreviation-conflict);
+    color: var(--text-color);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.resolution-button:disabled {
+  background-color: var(--disabled-bkg-color);
+  border-color: var(--border-color);
+}
+
+.resolutionOptions .radio-adjacent-to-select,
+.resolution-options-list > li > label > input {
+  margin-top: 0;
+}
+
+.resolutionOptions select {
+  display: inline-block;
+  width: auto;
+  padding-right: 24px;
+}
+
+option.newGroup {
+  font-style: italic;
+}
+
+/* Copyright (c) 2022 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.tips-section {
+  overflow: auto;
+}
+
+@media (min-width: 766px) {
+  .tips-section {
+    display: grid;
+    grid-template-columns: 11fr 9fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 'first second'
+    'first third';
+    --gap: var(--cushion-medium);
+    padding: var(--gap);
+    column-gap: var(--gap);
+    row-gap: var(--cushion-small);
+  }
+
+  .tips-section > article:first-child {
+   grid-area: first;
+  }
+
+  .tips-section > article:nth-child(2) {
+    grid-area: second;
+  }
+
+  .tips-section > article:nth-child(3) {
+    grid-area: third;
+  }
+}
+
+@media (max-width: 765px) {
+  .tips-section {
+    display: flex;
+    flex-direction: column;
+    --gap: var(--cushion-medium);
+    padding: var(--gap);
+  }
+
+  .tips-section > *:not(:last-child) {
+    margin-bottom: var(--cushion-small);
+  }
+
+  article.welcome-message {
+    border-right: none !important;
+    margin: calc(var(--gap) * -1) calc(var(--gap) * -1) 0px calc(var(--gap) * -1) !important;
+  }
+  article.hint-message {
+    height: 250px !important;
+  }
+}
+
+/* Welcome message */
+
+article.welcome-message {
+  background-image: var(--triangle-pattern);
+  background-size: cover;
+  border-right: 1px solid var(--light-gray);
+  margin: calc(var(--gap) * -1) 0px calc(var(--gap) * -1) calc(var(--gap) * -1);
+  padding: var(--cushion-medium);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+article.welcome-message h2 {
+  margin-bottom: var(--cushion-medium);
+}
+
+/* hint message */
+
+article.hint-message {
+  min-height: 200px;
+}
+
+article.hint-message > a {
+  display: grid;
+  grid-template-rows: 1fr min-content auto auto;
+  grid-template-areas: 'x' 'icon' 'title' 'content';
+
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: var(--border-radius);
+  border: var(--border-width) solid var(--light-gray);
+}
+
+article.hint-message svg:first-child {
+  grid-column: 1/-1;
+  grid-row: 1/-1;
+}
+
+article.hint-message svg:nth-child(2) {
+  height: var(--large-icon-size);
+  grid-area: icon;
+  margin-left: var(--cushion-medium);
+  margin-bottom: var(--cushion-small);
+  color: var(--teal);
+  background-color: var(--white); /* so images with transparency get the right color but don't show stuff behind them */
+}
+
+article.hint-message h3,
+article.hint-message p {
+  background-color: var(--white);
+  width: fit-content;
+  border-radius: var(--border-radius);
+  padding: 0px var(--cushion-smallest);
+}
+
+article.hint-message h3 {
+  grid-area: title;
+
+  margin-left: var(--cushion-medium);
+  font-weight: bold;
+}
+
+article.hint-message p {
+  grid-area: content;
+
+  margin-left: var(--cushion-medium);
+  margin-bottom: var(--cushion-medium);
+  font-size: var(--medium-font-size);
+
+  display: flex;
+  align-items: center;
+}
+
+article.hint-message p > svg {
+  height: var(--small-icon-size);
+  margin-left: var(--cushion-smallest);
+}
+
+/* Respond to hints being clicked */
+article.hint-message > a:active {
+  border-color: var(--orange);
+}
+
+article.colorize-svgs-when-active > a:active > svg {
+  --dark-gray: var(--orange);
+  --darkest-gray: var(--orange);
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* this holds the scrollbar */
+.tree.outer {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+section.group-list {
+    background-color: var(--lighter-gray);
+}
+
+div.toolbar.group {
+    visibility: visible;
+    transition-property: margin-left, visibility;
+    transition-delay: 5ms, 0ms;
+    transition-duration: 200ms, 0ms;
+    transition-timing-function: linear, none;
+}
+
+div.toolbar.group > button {
+    overflow: hidden;
+    width: calc(var(--icon-size) + (var(--item-padding) * 2));
+    transition-property: width, padding;
+    transition-delay:  5ms, 7ms;
+    transition-duration: 200ms, 200ms;
+    transition-timing-function:  linear;
+}
+
+div.toolbar.group.hide-toolbar {
+    margin-left: calc(-1 *var(--gap));
+    visibility: hidden;
+    transition-timing-function: linear, none;
+    transition-delay: 0ms, 200ms;
+}
+
+div.toolbar.group.hide-toolbar > button {
+  width: 0px;
+  padding: 0px;
+  transition-timing-function: linear, linear; /* making it go away */
+  transition-delay: 200ms 0ms;
+}
+
+section.group-list button.clear-search.hide {
+  width: 0px;
+  margin-left: 0px;
+  visibility: hidden;
+  overflow: hidden;
+  transition-property: width, margin-left, visibility;
+  transition-delay:  0ms, 0ms, 0ms;
+  transition-timing-function:  none, none, none;
+}
+
+section.group-list button.clear-search {
+  transition-property: margin-left, width;
+  transition-delay:  500ms, 500ms, 500ms;
+  transition-timing-function: none, none, none;
+  margin-right: 0px !important;
+}
+
+input[type=search] {
+    border-color: var(--white);
+    min-width: 10px;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-self: stretch;
+    max-width: 100%;
+    flex-basis: 100%;
+}
+
+/* | Add public group and add group buttons */
+
+button.group-list {
+    border-style: none;
+    background-color: unset;
+    color: var(--darker-gray);
+    padding: var(--cushion-smallest);
+    display: flex;
+}
+
+button.group-list:hover {
+    background-color: var(--white);
+}
+
+button.group-list:active {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+button.group-list > svg {
+    height: var(--medium-icon-size);
+    min-width: var(--medium-icon-size);
+}
+
+button.group-list:disabled {
+    color: var(--medium-gray);
+    background-color: unset;
+}
+
+  /* Group tree */
+
+.group-list .section-content {
+    padding: 0px !important;
+}
+
+.group-list .section-content > .outer:focus {
+  box-shadow: var(--clear-focus-style);
+  outline: var(--focus-alt-style);
+  outline-offset: var(--focus-outline-offset);
+  z-index: calc(1 + var(--resizer-z-index));
+}
+
+.group-list .section-content > .outer > ul {
+    display: grid;
+    padding: var(--section-padding)
+}
+
+/* | Category list item | */
+
+/* The category list item is parent to the category and the cat's groups. The category button 'becomes' the list item in this instance. So, much of the default list item styling is passed down to button.category like the padding and focus styling that the list item would have. */
+
+.list-item.category {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    flex-wrap: wrap;
+    height: unset;
+    --arrow-size: var(--small-icon-size);
+    --space-between-cat-and-arrow: var(--label-gap);
+    --indent-from-category: calc(var(--arrow-size) + var(--space-between-cat-and-arrow));
+}
+
+.list-item.category:not(:first-child) {
+    margin-top: var(--list-row-gap);
+}
+
+.list-item.category:focus-within {
+    box-shadow: var(--clear-focus-style) !important;
+}
+
+.list-item.category > button + button.group-list {
+    margin-left: var(--space-between-cat-and-arrow);
+}
+
+.list-item.category svg,
+.list-item.group svg { /* Match all icons to arrow size, if not defined use small icon size */
+    height: var(--arrow-size, var(--small-icon-size));
+    min-width: var(--arrow-size, var(--small-icon-size));
+}
+
+.list-item.category > button.category {
+    height: var(--list-item-height);
+    font-size: var(--medium-font-size);
+}
+
+.list-item.category > button.category:focus {
+    box-shadow: var(--focus-style) !important;
+}
+
+.list-item.category > button.category > span {
+    margin-left: var(--label-gap);
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.list-item.category > ul {
+    grid-column: 1/-1;
+}
+
+.list-item.category > ul > .group.list-item > button {
+    margin-left: var(--indent-from-category);
+}
+
+.list-item.category > ul > .group.list-item:first-child {
+    margin-top: var(--list-row-gap);
+}
+
+/* All snippet groups fake list item */
+
+/* When searching groups there are no categories so the list is flat. When that happens the top level list needs a gap */
+.faux-list-item.group + ul {
+    gap: var(--list-row-gap);
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+[data-dragging-resizer=true] *:not(.resizer) {
+  pointer-events: none;
+}
+
+.resizer {
+    z-index: 500;
+    width: 8px;
+    margin-right: -7px;
+    cursor: col-resize;
+    justify-self: end;
+    border: none;
+  }
+  
+  .resizer:hover:after,
+  .resizer:focus:after,
+  .resizer:focus-within:after,
+  .resizer.resizer-dragging:after { /* needed on hover and drag*/
+    background-color: var(--orange);
+    box-shadow: 0 0 0 var(--border-width)  var(--orange);
+    background-color: var(--orange);
+  }
+
+  .resizer:after {
+    content: "";
+    width: var(--border-width);
+    margin-right: 7px;
+    background-color: var(--light-gray);
+    transition: background-color .15s .15s,box-shadow .15s .15s;
+    display: block;
+    height: 100%;
+  }
+
+  .resizer:focus {
+    outline: none;
+  }
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/*
+NOTE: CSS Variables can't currently be used in the @media line of the queries.
+
+https://stackoverflow.com/questions/40722882/css-native-variables-not-working-in-media-queries
+https://drafts.csswg.org/css-env-1/
+
+*/
+
+:root {
+    --main-window-primary-pane-width: 250fr; /* 250px; */
+    --main-window-supplementary-pane-width: 250fr; /* 250px; */
+    --main-window-secondary-pane-width: 570fr; /* 570px; */
+    --layout-column-min-width: 175px;
+    --layout-column-max-width: 600px;
+    --layout-secondary-min-width: 325px;
+    --display-mode:two-beside;
+}
+
+main {
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--lighter-gray);
+    border-top: var(--border-width) solid var(--lighter-gray);
+}
+
+main section:nth-child(n + 2) { /* supplementary and secondary component */
+    background-color: var(--white);
+}
+
+    main > section:nth-child(1) { /* Primary component */
+        grid-area: primary;
+    }
+
+    main > .resizer:nth-child(2) { /* Primary resizer */
+        grid-column: 1;
+        grid-row: 1/-1
+    }
+
+    main > nav { /* Primary detail */
+        grid-area: primary-detail;
+    }
+
+    main > section:nth-child(3):not(.span-secondary-and-supplementary), /* supplementary component */
+    main > .resizer:nth-child(4) { /* supplementary resizer */
+        grid-area: supplementary;
+    }
+
+    main > section:nth-child(5) { /* secondary component */
+        grid-area: secondary;
+    }
+
+    main > section:nth-child(3).span-secondary-and-supplementary {
+       grid-area: supplementary / supplementary / supplementary / secondary;
+    }
+
+    main {
+        grid-template-columns:
+        var(--main-window-primary-pane-width)
+        var(--main-window-supplementary-pane-width)
+        var(--main-window-secondary-pane-width);
+        grid-template-rows: 1fr min-content;
+        grid-template-areas:
+            'primary supplementary secondary'
+            'primary-detail supplementary secondary';
+    }
+
+.profile-alert-list {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  margin-right: calc(var(--gap) * -1);
+  padding-right: var(--gap);
+}
+
+.profile-alert-list > * {
+  margin-top: var(--focus-width);
+  margin-right: var(--focus-width);
+  margin-left: var(--focus-width);
+}
+
+.profile-alert-list > *:not(:last-child) {
+  margin-bottom: var(--gap);
+}
+
+/* | Alert layout | */
+
+.alert-list-item > button {
+  width: 100%;
+}
+
+.alert-list-item > button > p.alert-content {
+  display: grid;
+  grid-template-columns: min-content auto;
+  grid-template-areas: 'icon content';
+  gap: var(--cushion-small);
+  --content-gap: var(--cushion-smallest);
+}
+
+.alert-list-item > button > p.alert-content > svg {
+  grid-area: icon;
+  align-self: center;
+}
+
+.alert-list-item > button > p.alert-content > span {
+  grid-area: content;
+  justify-self: start;
+}
+
+.alert-list-item > button > p.alert-content > p:only-of-type {
+  grid-row: 1/-1;
+}
+
+/* | Shared content layout | */
+
+/* | Child styles | */
+
+.alert-list-item p.alert-content > span {
+  flex-grow: 1;
+  flex-shrink: 1;
+  overflow-wrap: anywhere;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.alert-list-item small {
+  font-weight: lighter;
+}
+
+.alert-list-item svg {
+  height: var(--small-icon-size);
+}
+
+.alert-list-item button {
+  background-color: var(--background-color);
+  border: none;
+  color: var(--color);
+  text-align: left;
+
+  padding: var(--cushion-small);
+  border-radius: var(--top-level-container-border-radius);
+}
+
+.alert-list-item button:active {
+  background-color: var(--dark-gray);
+  color: var(--white);
+}
+
+.alert-list-item.error button:focus {
+  box-shadow: var(--focus-style-dark-error);
+}
+
+.alert-list-item.orange button:focus {
+  box-shadow: var(--focus-style-darker-orange);
+
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* | Profile menu layout | */
+
+.profile-menu {
+    display: grid;
+    grid-template-rows: 1fr auto;
+    max-height: 90vh;
+    margin: 0px var(--gap) var(--gap) var(--gap);
+    background-color: transparent;
+}
+
+.profile-menu > .profile-alert-list {
+    overflow-y: auto;
+}
+
+.profile-menu > .profile-alert-list > *:last-child {
+    margin-bottom: var(--gap);
+}
+
+/* | Changes in response to profile button expanded state | */
+
+.profile-button {
+    border-radius: var(--top-level-container-border-radius);
+    overflow: hidden;
+    z-index: 2;
+}
+
+.profile-button ~ ul {
+    display: none !important;
+    background-color:var(--white);
+}
+
+.profile-button[aria-expanded=true] {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.profile-button[aria-expanded=true]:focus,
+.profile-button:active {
+    box-shadow: var(--focus-style);
+}
+
+.profile-button[aria-expanded=true] ~ ul {
+    display: grid !important;
+    padding: var(--cushion-smallest);
+    border-bottom-left-radius: var(--top-level-container-border-radius);
+    border-bottom-right-radius: var(--top-level-container-border-radius);
+}
+
+/* | Profile button | */
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    width: unset;
+    margin: 0px;
+    padding: 0px var(--cushion-small) 0px 0px;
+    border: none;
+    text-align: unset;
+    background-color: var(--white);
+    color: var(--darker-gray);
+}
+
+.profile-button > *:not(:last-child) {
+    margin-right: var(--gap);
+}
+
+.profile-button > svg,
+.profile-button > img {
+    height: var(--user-avatar-height);
+    border-top-left-radius: var(--border-radius);
+}
+
+.profile-button > svg {
+    padding: var(--cushion-small);
+}
+
+.profile-button > p {
+    display: grid;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+.profile-button span.large {
+    font-size: var(--large-font-size);
+}
+
+.profile-button > p > span {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* | Profile menu list items | */
+
+ul.profile > li.list-item.with-icon > button  {
+    padding-left: var(--cushion-large);
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+.main-window-panel {
+    display:grid;
+}
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+/* The row styling and padding is shared between these layouts
+--section-padding variable allows children to get at the padding for their layout without guessing at what it might be */
+.divided-section {
+    display: flex;
+    flex-direction: column;
+    padding: var(--gap);
+    overflow-y: auto;
+    --section-padding: var(--gap);
+}
+
+.section-content {
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+/* | Header | */
+
+header.simple-header {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    --item-padding: var(--cushion-smallest);
+    --icon-size: var(--medium-icon-size);
+  }
+
+  header.simple-header > h2 {
+    flex-grow: 1;
+    flex-shrink: 1;
+  }
+
+  header.simple-header > *:not(:last-child) {
+    margin-right: var(--gap);
+}
+
+header.simple-header:first-child > h2 {
+    font-size: var(--large-font-size);
+    /* Line height changes between browsers. */
+    line-height: 1.4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* This must be the same height as the h2 height so that the baseline aligns across headers. */
+header.simple-header > input[type="search"] {
+    height: 23px;
+}
+
+header.simple-header > h2 > b {
+    margin-right: var(--cushion-smallest);
+}
+
+header.simple-header > div.toolbar {
+    align-self: center;
+}
+
+header.simple-header > div.toolbar > button {
+    margin-top: calc(var(--item-padding) * -1);
+    margin-bottom: calc(var(--item-padding) * -1);
+}
+
+/* The divider in the section spans the entire section. This is done with a negative margin to move it to the left and by extending the width of divider by 100% + 2x the padding of the section. A bottom margin is applied to every child so rows are evenly spaced. This allows us to let the parent element handle spacing the content rather than the individual rows. */
+
+.divided-section  > *:not(:last-child):not(dialog):not(.backdrop):not(.section-content),
+.divided-section > .section-content > *:not(:last-child):not(.backdrop):not(dialog) {
+    margin-bottom: var(--section-padding);
+}
+
+/* Divider spans entire section
+Virtual lists are long enough to scroll. They should also span the entire section so the space on either side of the list is inside the scroll.  */
+
+.divided-section > hr,
+.divided-section > .virtualList.outer,
+.divided-section > .section-content,
+.divided-section > .section-content > hr {
+    margin-left: calc(var(--section-padding) * -1);
+    margin-right: calc(var(--section-padding) * -1);
+    width: calc(100% + (var(--section-padding) * 2));
+}
+
+.divided-section > .virtualList.outer,
+.divided-section > .section-content {
+    padding: var(--section-padding);
+    margin-bottom: calc(var(--section-padding) * -1);
+}
+
+/* Eat the padding above if the element before is a divider,
+put it inside the section-content */
+.divided-section > hr + .section-content,
+/* Also do it for virtualized lists. Drag additions sometimes change the order so its not always after the divider */
+.divided-section > .virtualList.outer {
+    margin-top: calc(var(--section-padding) * -1);
+}
+
+/* | Virtualized list | */
+
+.divided-section {
+    --virtualized-list-row-height: var(--list-item-height);
+}
+
+.divided-section .virtualList.outer {
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.divided-section .virtualList.outer > .virtualList.inner > ul {
+    gap: var(--list-row-gap);
+}
+
+/* | Footer | */
+
+footer {
+    padding: var(--cushion-smallest) var(--gap) var(--cushion-smallest) var(--gap);
+    margin-bottom: calc(var(--gap) * -1);
+    margin-left: calc(var(--gap) * -1);
+    margin-right: calc(var(--gap) * -1);
+}
+
+/*
+Copyright (c) 2021-2022 SmileOnMyMac, LLC dba Smile. All rights reserved
+
+To support dark and light mode all colors are defined using a CSS variable in this
+document. Depending on the prefers color scheme media query result the 'dark' or
+'light' value for a given variable name is used.
+
+DON'T THE COLOR YOU ARE LOOKING FOR?
+If you do not see what you need talk with Grey and Roger before adding new colors.
+
+*/
+
+:root {
+    --darkest-gray: #374254;
+    --always-darkest-gray: #071224;
+    --darker-gray: #475264;
+    --always-darker-gray: #475264;
+    --dark-gray: #677284;
+    --medium-dark-gray: #DDDedf;
+    --always-medium-dark-gray: #DDDedf;
+
+    --medium-gray: #cfd1d5;
+    --light-gray: #E0E1E2;
+    --lighter-gray: #EFF1F2;
+    --always-lighter-gray: #EFF1F2;
+    --lightest-gray: #F7F9FA;
+
+    --light-orange: #FCE4C7;
+    --orange: #F79927;
+    --dark-orange: #F68009;
+    --darker-orange: #C97D20;
+
+    --always-white: #FFFFFF;
+    --white: #FFFFFF;
+
+    --teal: #46BFBF;
+    --alt-teal: #5370c7dd;
+    --light-teal: #D0EFEF;
+
+    --light-success: #D7F6CD;
+    --success: #46A12B;
+
+    --light-error: #FED1D1;
+    --error: #E65353;
+    --dark-error: #B34040;
+
+    --skin-tone-1: #FFB8B8;
+    --skin-tone-2: #A0616A;
+
+    --select-arrow: url(../static/media/caret-down-solid-light.16347d74f6219d76cbbb62d1705a28b2.svg);
+    --select-arrow-disabled: url(../static/media/caret-down-solid-light-disabled.be5fb8404051146c30f1c22fea1dd6c0.svg);
+    --select-sort-arrow: url(../static/media/sort-solid-light.559f9c7510ab233f41cc65c52baf7243.svg);
+    --select-sort-arrow-disabled: url(../static/media/sort-solid-light-disabled.d1027e04261deedc2e47e46ab226b0c1.svg);
+    --times: url(../static/media/times-light.f0c8118294b01d735dd4205449483e33.svg);
+    --triangle-pattern: url(../static/media/triangle-pattern-light.2fcef61f3eb49746e8bb724a908911d5.svg);
+}
+
+/*
+Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved
+
+Shared CSS variables include any non color variables used by core. They are based on the principles outlined here:
+https://xd.adobe.com/view/5130da69-4bf7-4a80-a46e-9c53b4d9f80c-0463/screen/ba80f35e-a4a7-49da-ad8b-f0a98e6c1bf4?hints=off
+
+For styles that need a platform specific override the variable here will be assigned the same variable name with the prefix 'platform' along with a fallback variable that is the default. When using these variables in code ALWAYS use the general variable like --border-radius instead of the one with the platform prefix.
+--border-radius: var(--platform-border-radius, 5px);
+*/
+
+/* Font sizes in the style guide converted to rem based on the standard browser default font size of 16px. This allows users to scale the font from there based on their preferences.
+The conversions to normal, small and large are based on Apple's MacOS HIG- https://developer.apple.com/design/human-interface-guidelines/macos/visual-design/typography/
+*/
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../static/media/OpenSans-VariableFont_wdth,wght.ce19db64f4f6f35487da806285f4fbed.ttf);
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url(../static/media/OpenSans-Italic-VariableFont_wdth,wght.78a971af783c87a72ef86761b8f890d1.ttf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Thin.f9e069c0d896d75d0668177cc11e8fac.otf) format('opentype');
+  font-weight: thin;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Light.de57c7a86c7d8a789420a4480480675f.otf) format('opentype');
+  font-weight: light;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Regular.30ac0ac10cb239a9c3b9d77633c92ecb.otf) format('opentype');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: "Noto Sans JP";
+  src: url(../static/media/NotoSansJP-Bold.221b8841f39846cb981042e9fca8738c.otf) format('opentype');
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "Noto Sans Symbols";
+  src: url(../static/media/NotoSansSymbols-VariableFont_wght.a3673c36fd508eb07a468674f4f2c5a1.ttf);
+  font-weight: 100 800;
+}
+
+@font-face {
+  font-family: "Noto Sans Math";
+  src: url(../static/media/NotoSansMath-Regular.ddddab39e3d33d50e3d9294f78e66ab6.ttf);
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Noto Sans Symbols 2";
+  src: url(../static/media/NotoSansSymbols2-Regular.eadb2274fabbe38453262fd9056ec8c6.ttf);
+  font-weight: normal;
+}
+
+:root {
+      --x-large-font-size: 1.5rem; /* 24px */
+      --large-font-size: 1.063rem; /* 17px */
+      --medium-font-size: 1rem; /* 16px */
+      --normal-font-size: .875rem; /* 14px */
+      --small-font-size: 0.75rem; /* 12px */
+      --x-small-font-size: 0.75rem; /* 12px */
+      --font-family: "Open Sans", "Noto Sans Symbols", "Noto Sans Symbols 2", "Noto Sans Math", "Noto Sans JP", Verdana, sans-serif;
+
+      --logo-size-max: 250px;
+      --x-small-icon-size: 0.625rem; /* 10px */
+      --small-icon-size: 1rem;
+      --small-icon-list-width: 1.25rem; /* 20px Assumes that the largest icon in the list-item with-icon is 20px. Used to peg the width of all icons in the list at that width so the text in each list item aligns to the left. */
+      --medium-icon-size: 1.125rem; /* 20px */
+      --large-icon-size: 1.563rem; /* 25px */
+      --user-avatar-height: 3.3rem;
+
+      --cushion-smallest: 0.313rem; /* 5px */
+      --cushion-small: 0.625rem; /* 10px */
+      --cushion-medium: 0.938rem; /* 15px */
+      --cushion-large: 1.25rem;  /* 20px */
+      --cushion-x-large: 1.563rem; /* 25px */
+
+      --border-radius: var(--platform-border-radius, 5px);
+      /* Windows uses a different border radius for containers like dialogs.
+      https://docs.microsoft.com/en-us/windows/apps/design/signature-experiences/geometry */
+      --top-level-container-border-radius: var(--platform-top-level-container-border-radius, var(--border-radius));
+      --border-width: 1px;
+      /* Ensures half circle border radius with max font size + vertical cushion */
+      --border-radius-alt: calc((var(--cushion-x-large) * 2) + var(--large-font-size));
+
+      --gap: 0.625rem;  /* 10px */
+      --label-gap: 0.188rem; /* label should be closer when the input is under it */
+      --list-row-gap: 4px;
+
+      --list-item-padding: 0.188rem var(--cushion-smallest); /* 3px 5px */
+      --list-item-height: 1.563rem; /* 25px */
+      --abbreviation-padding: 0.063rem 0.438rem; /* 1px 7px */
+      --input-padding-vertical: var(--cushion-smallest);
+      --input-padding-horizontal: var(--cushion-small);
+
+      /* If focus hangs outside a section / next to a resizer its high zindex will make it appear over the focus ring. You can +1 to the z-index used for the resizer when the item is focused so the ring appears  */
+      --resizer-z-index: 500;
+      --focus-width: 2px;
+      --focus-style: 0 0 0px var(--focus-width) var(--orange); /* Standard box shadow focus ring. Doesn't change dimensions of element and uses border-radius */
+      --focus-style-dark-error: 0 0 0px var(--focus-width) var(--dark-error);
+      --focus-style-darker-orange: 0 0 0px var(--focus-width) var(--darker-orange);
+      --focus-alt-style: var(--focus-width) solid var(--orange); /* Safari only renders focus ring on some elements when it an outline. Also good for lists where box shadow can be cut off and inset box shadow is rendered under scrolling content. For lists use with offset */
+      --focus-outline-offset: calc(var(--focus-width) * -1);
+      --focus-inset-style: inset 0 0 0px var(--focus-width) var(--orange); /* Also box shadow but displays inside the content instead of outside. Good if overflow is hidden or focusing something without a margin */
+      /* */
+      --clear-focus-style: none !important;
+
+      --modal-top: var(--platform-modal-top, unset);
+  }
+
+/*
+Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved
+The style guide is for blanket styles to be applied globally to core.
+
+You can find CSS variables in the variables folder.
+
+https://xd.adobe.com/view/5130da69-4bf7-4a80-a46e-9c53b4d9f80c-0463/screen/ba80f35e-a4a7-49da-ad8b-f0a98e6c1bf4?hints=off
+*/
+
+* {
+    box-sizing: border-box;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+input, textarea, .slate-editor, .slate-editor * {
+    user-select: text;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+}
+
+/*
+The below focus styling should work with
+*:focus:not(input[type=checkbox]
+
+Safari supports complex and compound selectors with not:. Chrome isn't quite there. In the chrome browser this appears to be handled but not in the app.
+Hopefully when update this can be simplified to the above code. This bug applies to all complex and compound selectors used with :not().
+https://stackoverflow.com/questions/35993727/not-selector-not-behaving-the-same-between-safari-and-chrome-firefox
+*/
+
+*:focus:not(input),
+input[type="button"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="password"]:focus,
+input[type="range"]:focus,
+input[type="reset"]:focus,
+input[type="url"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="submit"]:focus,
+input[type="search"]:focus
+ {
+    box-shadow: var(--focus-style);
+    outline: none;
+}
+
+/* Safari won't render the focus ring unless it is a solid outline on the checkbox. It does not like the box-shadow. Chrome needs the offset. */
+input[type=checkbox]:focus,
+input[type="radio"]:focus {
+    outline: var(--focus-alt-style);
+    outline-offset: 0px;
+}
+
+body {
+    margin: 0px;
+    font-family: var(--font-family);
+    color: var(--darker-gray);
+    font-size: var(--normal-font-size);
+    background-color: var(--white);
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+* {
+  font-family: inherit;
+  color: inherit;
+}
+
+  h1,
+  h2,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+      font-weight: normal;
+      margin: 0px;
+  }
+
+  p {
+      margin: 0px;
+  }
+
+  /* We mostly use anchors in lists so the default style for them is setup to reflect that. */
+  a,
+  a:visited,
+  a:hover {
+      color: var(--darker-gray);
+      text-decoration: none;
+      cursor: default;
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    padding: var(--input-padding-vertical) var(--cushion-x-large) var(--input-padding-vertical) var(--cushion-small);
+    margin: 0px; /* Safari adds a margin by default */
+    border: var(--border-width) solid var(--light-gray);
+    border-radius: var(--border-radius);
+    color: var(--darker-gray);
+    font-size: var(--normal-font-size);
+    background-color: var(--white);
+    background-image: var(--select-arrow);
+    background-repeat: no-repeat, repeat;
+  /* arrow icon position (1em from the right, 50% vertical) , then gradient position*/
+    background-position: right .7em top 50%, 0 0;
+  /* icon size, then gradient */
+    background-size: .65em auto, 100%;
+  }
+
+  select.sort {
+    background-image: var(--select-sort-arrow);
+  }
+
+  /*
+  Lists with style set to none aren't seen by Safari as lists, adding a zero width character as content ::before fixes this. List bullets are disabled by default because we primarily use lists without bullets and to ensure all lists get the pseudo element if their style is set to none.
+  Position absolute on the pseudo element ensures it doesn't act like a child of the list item's parent
+    https://developer.mozilla.org/en-US/docs/Web/CSS/list-style
+    https://css-tricks.com/a-little-reminder-that-pseudo-elements-are-children-kinda/
+  */
+  ul, ol {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  ul li::before,
+  ol li::before {
+    content: "\200B";
+    position: absolute;
+  }
+
+  input,
+  textarea {
+    font-size: inherit;
+    background-color: var(--white);
+    border-radius: var(--border-radius);
+    margin: 0px;
+    padding: var(--input-padding-vertical) var(--input-padding-horizontal);
+  }
+
+  input:not([type=search]),
+  textarea {
+      border-color: var(--light-gray);
+      border-style: solid;
+      border-width: var(--border-width);
+  }
+
+  textarea {
+      resize: none;
+      font-family:  var(--font-family);
+  }
+
+  input[type="radio"] {
+      margin: 0;
+  }
+
+  input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    padding: 0px var(--input-padding-horizontal);
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+button.clear-search {
+  color: var(--dark-gray);
+  --offset-to-input: calc(var(--cushion-small) * 1.5);
+  background-color: var(--white);
+  margin-left: calc((var(--clear-size, 1em) + var(--offset-to-input)) * -1);
+  width: var(--icon-size); /* so it is animatable */
+  overflow: hidden; /* so it is animatable */
+  padding: 0px;
+  border: 0px;
+  align-self: center;
+  align-content: center;
+  display: flex;
+}
+
+button.clear-search:focus {
+  box-shadow: var(--clear-focus-style);
+}
+
+button.clear-search > svg {
+    height: var(--clear-size, 1em);
+    width: var(--clear-size, 1em);
+  }
+
+  select:disabled {
+    background-image: var(--select-arrow-disabled);
+  }
+
+  select.sort:disabled {
+    background-image: var(--select-sort-arrow-disabled);
+  }
+
+  input:disabled,
+  textarea:disabled,
+  select:disabled {
+    -webkit-text-fill-color: var(--dark-gray);
+    opacity: .7;
+    background-color: var(--lighter-gray);
+    color: var(--dark-gray);
+  }
+
+  ::placeholder {
+      /* color: var(--medium-gray); */
+      color: var(--always-medium-dark-gray);
+  }
+
+  .sneaky[type=file],
+  .sneaky[type=checkbox] {
+      border: 0;
+      clip: rect(0, 0, 0, 0);
+      height: 1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute !important;
+      white-space: nowrap;
+      width: 1px;
+  }
+
+  .sneaky[type=file] + label,
+  .sneaky[type=checkbox] + label {
+      border-radius: var(--border-radius);
+  }
+
+  .sneaky[type=file]:focus + label,
+  .sneaky[type=checkbox]:focus + label {
+    box-shadow: var(--focus-style);
+  }
+
+
+kbd {
+    font-family: var(--font-family);
+}
+
+mark {
+  background-color: var(--orange);
+  color: var(--always-white);
+  /* So narrow characters like l are readable */
+  padding-left: 1px;
+  padding-right: 1px;
+}
+
+/* Base element created in entry. */
+#core-ui {
+    display: flex;
+    background-color: var(--lighter-gray);
+    width: 100vw;
+    height: 100vh;
+}
+
+  /* | Divider | */
+
+  hr { /* Horizontal content divider */
+      border-width: 0;
+      border-top: 1px solid var(--light-gray);
+      width: 100%;
+      margin: 0px;
+  }
+  hr.vertical {
+      border-top: unset;
+      border-left: 1px solid var(--light-gray);
+      width: unset;
+  }
+
+  /* | Url | */
+  a.link,
+  a.link-within > .link {
+      text-decoration: underline;
+      cursor: pointer;
+      font-size: inherit;
+  }
+
+a.link-within:focus {
+  box-shadow: var(--clear-focus-style);
+}
+
+a.link-within:focus > .link {
+  box-shadow: var(--focus-style);
+}
+
+  /*| List | */
+
+
+  /* toolbar menu */
+
+div.toolbar {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+div.toolbar > button:not(:last-child) {
+    margin-right: var(--cushion-smallest);
+}
+
+div.toolbar > button {
+    background-color: transparent;
+    border-style: none;
+}
+
+div.toolbar > button {
+    padding: var(--item-padding, var(--cushion-smallest));
+    display: flex;
+    border-radius: var(--border-radius);
+}
+
+div.toolbar.primary > button:hover {
+    background-color: var(--lighter-gray);
+}
+
+div.toolbar.primary > button:active {
+    background-color: var(--orange);
+    color: var(--white);
+}
+
+div.toolbar > button:disabled,
+div.toobar > button:disabled:hover {
+    background-color: unset;
+    color: var(--medium-gray);
+}
+
+div.toolbar > button > svg {
+    height: var(--icon-size, var(--medium-icon-size));
+    min-width: var(--icon-size, var(--medium-icon-size));
+}
+
+  /* | Form elements | */
+
+.fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.fieldset > *:not(:last-child) {
+    margin-bottom: var(--gap);
+}
+
+/*  grids the scroll cause inputs to disappear in Catalina, so put the scroll part in a container */
+.fieldset-list-container {
+  max-height: 15rem;
+  overflow-y: auto;
+  border: var(--border-width) solid var(--lighter-gray);
+  border-radius: var(--border-radius);
+  padding: var(--cushion-small);
+}
+
+ul.fieldset-list {
+    display: grid;
+    grid-gap: var(--cushion-small);
+
+}
+
+.legend {
+    font-size: var(--normal-font-size);
+    font-weight: 600;
+}
+
+  small.primary {
+    background-color: var(--lighter-gray);
+    padding: var(--cushion-smallest) var(--cushion-small);
+    border-radius: var(--border-radius);
+   }
+
+  /* | Labels | */
+
+  /* 1. Labels that are the parent of an element */
+  .label-for-checkbox,
+  .label-for-radio {
+    display: grid;
+    grid-gap: var(--label-gap);
+    align-items: baseline;
+    grid-template-columns: min-content auto;
+    overflow-wrap: break-word;
+  }
+
+  .label-for-radio > input {
+      align-self: center;
+  }
+
+  .label-for-checkbox > small {
+    grid-column: 2;
+    font-size: var(--small-font-size);
+    max-width: fit-content;
+   }
+
+  .label-for-select {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: calc(var(--label-gap) * -1);
+    align-items: baseline;
+    overflow-wrap: break-word;
+  }
+
+  .label-for-select > select {
+    margin-left: var(--label-gap);
+    margin-top: var(--label-gap);
+  }
+
+  /* 2. Labels in grid who are siblings of the element they label */
+/* Align-items: baseline isnt supported as part of the grid spec. It works but has unintented results. In most cases that means it is better to not use grid when the label and its element aren't in the same grid quadrant. If they must be these classes match the white space around the element so the label's baseline aligns. */
+
+.grid-align-labels > label {
+  padding: calc(var(--input-padding-vertical) + var(--border-width)) 0px;
+}
+
+  /* | Buttons | */
+
+  button {
+      width: max-content;
+      font-size: var(--normal-font-size);
+      border-radius: var(--border-radius);
+      border-width: 1px;
+      border-style: solid;
+      padding: var(--cushion-smallest) var(--cushion-medium);
+      color: inherit; /* inherit document color so it doesn't default to black */
+      margin: 0px; /* safari adds some margin */
+  }
+
+  button.primary {
+      background-color: var(--orange);
+      color: var(--white);
+      border-color: var(--orange);
+  }
+
+  button.secondary {
+      background-color: var(--white);
+      color: var(--darker-gray);
+      border-color: var(--darker-gray);
+  }
+
+  button.primary:active,
+  button.secondary:active {
+      background-color: var(--dark-gray);
+      color: var(--white);
+      border-color: var(--dark-gray);
+  }
+
+  button.primary:disabled,
+  button.primary:disabled:hover {
+      background-color: var(--medium-gray);
+      border-color: var(--medium-gray);
+  }
+
+  button.secondary:disabled,
+  button.secondary:disabled:hover {
+    background-color: var(--lighter-gray);
+    border-color: var(--lighter-gray);
+    color: var(--medium-gray);
+}
+
+  button.img-first {
+      display: flex;
+      align-items: center;
+  }
+
+  button.img-first > svg {
+    height: var(--normal-font-size);
+    margin-right: var(--cushion-smallest);
+}
+
+.tooltip {
+    display: flex;
+    align-items: center;
+    border-radius: var(--border-radius-alt);
+}
+
+.tooltip > svg {
+    width: var(--small-icon-size);
+}
+
+  /* | Bars, banners, blurbs | */
+
+  .status-blurb {
+      font-size: var(--normal-font-size);
+      border-radius: var(--border-radius);
+      padding: var(--cushion-medium) var(--cushion-large);
+  }
+
+  strong.normal {
+      font-weight: normal;
+  }
+
+  .status-blurb.success {
+      background-color: var(--light-success);
+      color: var(--success);
+  }
+
+  .status-blurb.orange {
+      background-color: var(--light-orange);
+      color: var(--dark-orange);
+  }
+
+  .status-blurb.error {
+      background-color: var(--light-error);
+      color: var(--error);
+  }
+
+  /* | Alert colors | */
+
+  .default {
+    --background-color: var(--light-gray);
+    --color: var(--darker-gray);
+  }
+
+  .error {
+    --background-color: var(--error);
+    --color: var(--always-white);
+  }
+
+  .orange {
+    --background-color: var(--orange);
+    --color: var(--always-white);
+  }
+
+  /* | Modal Dialog | */
+
+  dialog {
+    /* we are using position fixed because windows requires the fixed polyfill fix.
+    https://github.com/GoogleChrome/dialog-polyfill#stacking-context
+     */
+      position: fixed;
+      top: var(--modal-top);
+      left: 0;
+      right: 0;
+      width: -moz-fit-content;
+      width: -webkit-fit-content;
+      width: fit-content;
+      max-width: min(calc(100% - (2 * var(--cushion-small))), 75ch);
+      margin: auto;
+
+      background:var(--white);
+      border-color: var(--darker-gray);
+      border-radius: var(--top-level-container-border-radius);
+      border-width: 1px;
+      color: var(--darker-gray);
+
+      padding: var(--cushion-small) 0px;
+
+      display: grid;
+      gap: var(--gap)
+  }
+
+  dialog.fixed-width {
+      /* falls back to max height so it can't outgrow window */
+      width: 350px;
+  }
+
+  dialog.default-layout {
+      grid-template-columns: var(--cushion-smallest) 1fr auto auto var(--cushion-smallest);
+      grid-auto-rows: min-content;
+  }
+
+  dialog.default-layout:not(.consistently-space-labels) label {
+      /* tighten space below labels so it is clear what they are associated with */
+      margin-bottom: calc((var(--gap) - var(--label-gap)) * -1);
+  }
+
+    dialog:not([open]) {
+      display: none;
+    }
+
+    dialog + .backdrop {
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+      background: rgba(0,0,0,0.4);
+    }
+
+    dialog::backdrop {
+        background: rgba(0, 0, 0, 0.4);
+    }
+
+    ._dialog_overlay {
+      position: fixed;
+      top: 0; right: 0; bottom: 0; left: 0;
+    }
+
+  /* The divider in the section spans the entire section
+  All other content sits in the middle row. This allows us to let the parent element handle the spacing the content rather than the individual rows.
+
+  Assumes that the last two buttons are accept or cancel. */
+
+  dialog  > * {
+      grid-column: 2/5;
+  }
+
+  dialog .secondary:nth-last-child(2), /* cancel */
+  dialog .primary:nth-last-child(2) /* accept */
+  {
+      grid-column: 3;
+  }
+
+  dialog .secondary:nth-last-child(1), /* cancel */
+  dialog .primary:nth-last-child(1) /* accept */
+  {
+      grid-column: 4;
+  }
+
+
+  dialog  > hr  {
+      grid-column: 1/-1;
+  }
+
+  dialog > h2:first-child {
+      font-size: var(--large-font-size);
+  }
+
+  /* | Abbreviation bubble | */
+
+
+abbr {
+    border-radius: var(--border-radius-alt);
+    padding: var(--abbreviation-padding);
+    background-color: var(--always-medium-dark-gray);
+    color: var(--always-darker-gray);
+    text-decoration: none;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+abbr.conflict {
+    color: var(--always-white);
+    background-color: var(--always-darkest-gray);
+}
+
+abbr.duplicate {
+    color: var(--always-white);
+    background-color: var(--teal);
+}
+
+  /* | Footer | */
+
+  footer.primary {
+        background-color: var(--lighter-gray);
+  }
+
+  /* | Logo | */
+
+  .logo.default {
+      --logo-color: var(--orange);
+      --logo-text-color: var(--dark-gray);
+  }
+
+  /* | Accessibility | */
+
+  .screen-reader-text {
+	border: 0;
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(50%);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute !important;
+	width: 1px;
+	word-wrap: normal !important;
+}
+
+/* Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved */
+
+ /* | Workarounds for webkit specific CSS issues | */
+
+
+/* 
+https://github.com/philipwalton/flexbugs#flexbug-1
+
+This issue causes the minimum size of items in a flex container not to be honored. The result looks like all the elements overlapping like cards in a deck when the container's height is less than its contents. The CSS below fixes the issue. These selectors *shouldn't* effect elements not set to display: flex and the specificity of this is such that overriding it is easy for any flex elements that need different values for shring and basis.
+*/
+ * {
+    flex-shrink: 0;
+    flex-basis: auto;
+}
+/*
+Copyright (c) 2021 SmileOnMyMac, LLC dba Smile. All rights reserved
+
+To support dark and light mode all colors are defined using a CSS variable in this
+document. Depending on the prefers color scheme media query result the 'dark' or
+'light' value for a given variable name is used.
+
+DON'T THE COLOR YOU ARE LOOKING FOR?
+If you do not see what you need talk with Grey and Roger before adding new colors.
+
+*/
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --darkest-gray: #071224;
+    --always-darkest-gray: #071224;
+    --darker-gray: #F7F9FA;
+    --always-darker-gray: #475264;
+    --dark-gray: #EFF1F2;
+    --medium-dark-gray: #495466;
+    --always-medium-dark-gray: #DDDedf;
+
+    --medium-gray: #8594AB ;
+    --light-gray: #475264;
+    --lighter-gray: #374254;
+    --always-lighter-gray: #CBD0D9;
+    --lightest-gray: #677284;
+
+    --orange: #F79927;
+    --light-orange: #FCE4C7;
+    --dark-orange: #F68009;
+    --darker-orange: #C97D20;
+
+    --always-white: #FFFFFF;
+    --white: #677284;
+
+    --teal: #46BFBF;
+    --alt-teal: #5370c7dd;
+    --light-teal: #D0EFEF;
+
+    --light-success: #46A12B;
+    --success: #D7F6CD;
+
+    --light-error: #FED1D1;
+    --dark-error: #B34040;
+    --error: #E65353;
+
+    --select-arrow: url(../static/media/caret-down-solid-dark.f18b450317f5fe4f71e6c5711e2c62b4.svg);
+    --select-arrow-disabled: url(../static/media/caret-down-solid-dark-disabled.7152cfd0cdf73fc789a1b4c654edc22a.svg);
+    --select-sort-arrow: url(../static/media/sort-solid-dark.c498ab8c1a4a5b113622db05ffc271d2.svg);
+    --select-sort-arrow-disabled: url(../static/media/sort-solid-dark-disabled.4fad765443da411705ffa4dc84f569d5.svg);
+    --times: url(../static/media/times-dark.a3650ef67d37d1566b4fe2c1c2c6e071.svg);
+    --triangle-pattern: url(../static/media/triangle-pattern-dark.86075faa740f7a15a8e44f9b4f90e5c4.svg);
+
+  }
+}
+
+
+/*# sourceMappingURL=coreEntry.8e0f22799a9c3c296e64.css.map*/
