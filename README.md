@@ -37,3 +37,5 @@ A snippet group for fucked text.
 -   [Everywhere](https://raindrop.io/davidblue/social-directory-21059174)…
 
 ![TextExpander](https://user-images.githubusercontent.com/43663476/142075017-26a1c2cc-024c-43c7-8c4d-19b9e749f6a7.png)
+
+https://github.com/extratone/TextExpander/issues/
