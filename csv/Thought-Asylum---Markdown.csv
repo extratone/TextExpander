@@ -1,0 +1,69 @@
+﻿"lib_ta_markdown","//Build a table using function 
+function generateMarkdownTable(p_intRows, p_intColumns, p_strPopulation, p_strLeft, p_strRight)
+{
+    var strLine = """";
+    var strBreak = """";
+
+    //Build a line
+    for (intCounter = 0; intCounter < p_intColumns; intCounter++){
+        strLine += ""|"" + p_strPopulation;
+        strBreak += ""|"" + p_strLeft + ""---"" + p_strRight;
+    }
+
+    //For neatness let's add end markers on
+    strLine += ""|"";
+    strBreak += ""|"";
+
+    //Initialise the output with the header rows
+    var strOutput = strLine + ""\n"" + strBreak + ""\n"";
+
+    //Add the data rows
+    for (intCounter = 1; intCounter < p_intRows; intCounter++){ 
+        strOutput += strLine + ""\n"";
+    }
+
+    return strOutput;
+}
+","* Library - Markdown Functions"
+"mdbold","**BoldText**","Markdown - Bold"
+"mdcbbold","**%clipboard**","Markdown - Bold (Clipboard)"
+"mdcbcode","	%clipboard","Markdown - Code Block (Clipboard)"
+"mdcbimage","![ImageAltText](%clipboard)","Markdown - Image (Clipboard)"
+"mdcbinline","`%clipboard`","Markdown - Inline Code (Clipboard)"
+"mdcbitalic","*%clipboard*","Markdown - Italic (Clipboard)"
+"mdcburl","[TextOfLink](%clipboard)","Markdown - URL (Clipboard)"
+"mdcode","	CodeBlock","Markdown - Code Block"
+"mdimage","![ImageAltText](ImageURL)","Markdown - Image"
+"mdinline","`CodeGoesHere`","Markdown - Inline Code"
+"mditalic","*ItalicText*","Markdown - Italic"
+"mdtable+","%snippet:lib_ta_markdown%
+generateMarkdownTable(%filltext:name=Number of Rows:default=3%, %filltext:name=Number of Columns:default=2%,""foobar"","""","""");
+// %filltop%
+
+
+","Markdown - Table (Populated)"
+"mdtable-","%snippet:lib_ta_markdown%
+generateMarkdownTable(%filltext:name=Number of Rows:default=3%, %filltext:name=Number of Columns:default=2%,"""","""","""");
+// %filltop%
+
+
+","Markdown - Table (Unpopulated)"
+"mdtablec+","%snippet:lib_ta_markdown%
+generateMarkdownTable(%filltext:name=Number of Rows:default=3%, %filltext:name=Number of Columns:default=2%,""foobar"","":"","":"");
+// %filltop%
+
+
+","Markdown - Table (Centre & Populated)"
+"mdtablec-","%snippet:lib_ta_markdown%
+generateMarkdownTable(%filltext:name=Number of Rows:default=3%, %filltext:name=Number of Columns:default=2%,"""","":"","":"");
+// %filltop%
+
+
+","Markdown - Table (Centre & Unpopulated)"
+"mdtabler+","%snippet:lib_ta_markdown%
+generateMarkdownTable(%filltext:name=Number of Rows:default=3%, %filltext:name=Number of Columns:default=2%,""foobar"","""","":"");
+// %filltop%
+
+
+","Markdown - Table (Right & Populated)"
+"mdurl","[TextOfLink](URLOfLink)","Markdown - URL"

@@ -1,0 +1,41 @@
+﻿"","tell application ""Safari""
+	
+	activate
+	
+	open location ""https://davidblue.wtf/styleguide""
+	
+end tell","At the end of the god damned day."
+"Really struck me","tell application ""Safari""
+	
+	activate
+	
+	open location ""https://davidblue.wtf/styleguide""
+	
+end tell","Really Struck Me ⇨ Styleguide Penance"
+"Trump","Tump","Trump ⇨ Tump"
+"When it's all said and done","tell application ""Safari""
+	
+	activate
+	
+	open location ""https://davidblue.wtf/styleguide""
+	
+end tell","All said and done ⇨ Styleguide Penance"
+"a far cry","a long distance","a long distance"
+"at this point in time","presently","presently"
+"beg to differ","disagree","disagree"
+"bump in the road","setback","setback"
+"docsdrop","https://raindrop.io/davidblue/documentation-14989755","URL to my Documentation Raindrop Collection."
+"in a nutshell","in short","in short"
+"in this day and age","at the present time","at the present time"
+"it’s only a matter of time","eventually","eventually"
+"keep an eye on","monitor","monitor"
+"kiss and make up","reconcile","reconcile"
+"last but not least","finally","finally"
+"needless to say","of course","of course"
+"neither here nor there","not important","not important"
+"on cloud nine","elated","elated"
+"plain as day","obvious","obvious"
+"throw in the towel","give up","give up"
+"time and time again","repeatedly","repeatedly"
+"tip of the iceberg","small, more noticeable part of the problem","small, more noticeable part of the problem"
+"when push comes to shove","when needed","when needed"

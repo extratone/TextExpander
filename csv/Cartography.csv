@@ -1,0 +1,65 @@
+﻿"burr","38.899249,-92.464634","Lat, Long of the Big Burr Oak Tree."
+"leaflet","```leaflet
+id: %d%m%Y-%H%M%S
+height: 750px
+lat: 38.899249
+long: -92.464634
+minZoom: 1
+maxZoom: 19
+defaultZoom: 13
+unit: feet
+scale: 1
+marker: default, 38.899249, -92.464634,
+darkMode: true
+```","Obsidian Leaflet defaults."
+"sgps","use framework ""CoreLocation""
+use framework ""Foundation""
+use scripting additions
+
+property this : a reference to the current application
+property nil : a reference to missing value
+
+property CLLocationManager : a reference to CLLocationManager of this
+property kCLLocationAccuracyThreeKilometers : a reference to 3000.0
+property running : false
+property result : missing value -- Lat./long. or error description
+property number : 0 -- Error code
+property seconds : 10 -- Maximum time to allow script to run
+
+# Handlers & Script Objects
+to getLocation()
+    set locationManager to CLLocationManager's new()
+    locationManager's setDelegate:me
+    locationManager's setDesiredAccuracy:kCLLocationAccuracyThreeKilometers
+    
+    set my running to true
+    set started to current date
+    locationManager's startUpdatingLocation()
+    
+    repeat while my running
+        delay 0.5
+        if (current date) - started > my seconds then exit repeat
+    end repeat
+end getLocation
+
+on locationManager:locationManager didUpdateLocations:locations
+    local locationManager, locations
+    locationManager's stopUpdatingLocation()
+    set my running to false
+    set location to item 1 of locations
+    set coordinates to location's coordinate
+    set latitude to coordinates's latitude as text
+    set longitude to coordinates's longitude as text
+    set my result to latitude & "", "" & longitude
+end locationManager:didUpdateLocations:
+
+on locationManager:locationManager didFailWithError:err
+    local locationManager, err
+    set my result to ""Error: "" & (err's localizedDescription() as text)
+    set my running to false
+end locationManager:didFailWithError:
+
+# Implementation
+my performSelectorOnMainThread:""getLocation"" withObject:nil waitUntilDone:true
+return my result",""
+"xguru","guru://nav?start=38.938798,-92.595868&via=%pasteboard&finish=38.613967,-92.227154&mode=auto&start_navigation=false","Construct a Guru Maps route URL scheme."

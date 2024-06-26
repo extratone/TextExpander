@@ -1,0 +1,80 @@
+﻿",editorconfig","# editorconfig.org
+root = true
+
+[*]
+indent_style = space
+indent_size = 2
+end_of_line = lf
+charset = utf-8
+trim_trailing_whitespace = true
+insert_final_newline = true",".editorconfig"
+",ethip","#!/bin/sh
+/bin/echo -n `ipconfig getifaddr en4`","Ethernet IP"
+",gitc","[%fillpopup:name=type:default=Feature:Update:Fix:Docs:Style:Refactor:Test:Chore:RELEASE%] %filltext:name=subject%
+
+%fillarea:name=body%
+
+%fillpart:name=GitHub Issue:default=no%GitHub-Issue: %filltext:name=Github Issue%%fillpartend%
+%fillpart:name=Ticket:default=no%Tickets: %filltext:name=Ticket ID%%fillpartend%
+%fillpart:name=Additional Notes:default=no%See-Also: %filltext:name=See Also Notes%%fillpartend%
+%fillpart:name=Fixes:default=no%Fixes: %filltext:name=Tickets Fixed%%fillpartend%
+%fillpart:name=Resolves:default=no%Resolves: %filltext:name=Tickets Resolved%%fillpartend%
+%fillpart:name=Closes:default=no%Closes: %filltext:name=Tickets Closed%%fillpartend%
+","Git Commit Template"
+",hta-hotlinking","RewriteEngine On
+#Replace ?mysite\.com/ with your blog url
+RewriteCond %{HTTP_REFERER} !^http://(.+\.)?mysite\.com/ [NC]
+RewriteCond %{HTTP_REFERER} !^$
+#Replace /images/nohotlink.jpg with your ""don't hotlink"" image url
+RewriteRule .*\.(jpe?g|gif|bmp|png)$ /images/nohotlink.jpg [L]",".htaccess - Prevent hotlinking"
+",hta-socialredirect","<IfModule mod_alias.c>
+	Redirect permanent /@  https://twitter.com/:you
+	Redirect permanent /~  https://github.com/:you
+	Redirect permanent /+  https://plus.google.com/:you
+	Redirect permanent /f  https://facebook.com/:you
+	Redirect permanent /in https://linkedin.com/in/:you
+</IfModule>","Apache Social Redirects"
+",httpdre","/etc/init.d/httpd reload",""
+",myip","#!/bin/sh
+/bin/echo -n `curl http://api.externalip.net/ip/`","Ext IP"
+",refreshhosts","dscacheutil -flushcache; sudo killall -HUP mDNSResponder","Refresh Hosts"
+",showhidden","defaults write com.apple.Finder AppleShowAllFiles YES","Show Mac OS X Hidden Files"
+",simplehtaccess","RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^([^/]+)/$ $1.html 
+
+# Forces a trailing slash to be added
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(\.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]","Simple Rewrite"
+",wifiip","#!/bin/sh
+/bin/echo -n `ipconfig getifaddr en1`","Wifi IP"
+"bitcoin","#!/bin/sh
+open /System/Library/Image\ Capture/Devices/VirtualScanner.app/Contents/Resources/simpledoc.pdf",""
+"ddate","%B %e, %Y",""
+"elink","tell application ""Mail""
+		set _msg to item 1 of (get selection)
+		set _messageURL to ""message://%3c"" & _msg's message id & ""%3e""
+		set _msgSubject to subject of _msg
+		set _from to sender of _msg
+		set _name to extract name from _from
+		set the clipboard to (""["" & _msgSubject & ""]("" & _messageURL & "")"" & "" from "" & _name as string)
+end tell",""
+"extensions","#!/bin/sh
+/System/Library/Frameworks/CoreServices.framework/Frameworks/LaunchServices.framework/Support/lsregister -kill -r -domain local -domain system -domain user","Reset Safari Extensions register."
+"fdate","%Y-%m-%d","Finder Friendly Date"
+"fscreen","#!/bin/sh
+defaults write com.apple.screencapture type %fillpopup:name=Format:png:default=jpg:PDF:gif:tiff:heic%;killall SystemUIServer","Change Mac system screenshot file format."
+"ftdate","%Y-%m-%d %H:%M:%S","Full Date + Time"
+"history","#!/bin/sh
+cat /usr/share/calendar/calendar.history",""
+"lsrscan","#!/bin/sh
+/System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/Support/lsregister -gc -R -v -apps u","Get LaunchServices to check registered apps."
+"paths","#!/bin/sh
+sudo micro /etc/paths",""
+"reboot","#!/bin/sh
+sudo shutdown -r now",""
+"sh","#!/bin/bash",""
+"ttime","%1I:%M %p",""

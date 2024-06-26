@@ -1,0 +1,19 @@
+﻿"airnav","https://www.airnav.com/airport/%filltext:name=ICAO:width=4%","Construct an AirNav airport information page URL by ICAO."
+"avshare","https://app.textexpander.com/public/c5feb65737639a9c13d184dcf6d983ab","Share the public URL to this Snippet Group. :)"
+"ifvmap","https://ifvarb.com/liveflightmap.php?callsign=%filltext:name=Callsign:width=6:default=FDXV%&apikey=c57949-5f6fd2-b8ae49-f88722-e0211b","Construct a IFVARB Live Flight Map URL."
+"liveatc","https://www.liveatc.net/search/?icao=%filltext:name=ICAO:width=4%","Construct a LiveATC.net URL by ICAO."
+"skyvector","https://skyvector.com/airport/%filltext:name=IATA:width=3%","Construct a SkyVector airport URL by IATA (3 characters) code."
+"tz","#! /bin/bash
+
+/* 
+Enter a time using 24H. 1:30pm is 13:30
+*/
+ENTERTIME=""%filltext:name=Hour:width=2%:%filltext:name=Minute:width=2%""
+
+timezones=( ""America/Los_Angeles"" ""America/Chicago"" ""Europe/Dublin"" )
+
+for zone in ${timezones[@]}
+do
+        TZ=$zone date -jf ""%H:%M %z"" ""$ENTERTIME $(date ""+%z"")"" ""+%H:%M %Z"";
+done","Convert time in multiple timezones."
+"vpl","http://skyvector.com/?fpl=%pasteboard","Construct a SkyVector flight plan URL from a series of waypoints on the system clipboard."

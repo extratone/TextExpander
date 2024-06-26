@@ -1,0 +1,18 @@
+﻿"if ","if %| then","if then"
+"if-","if %| then
+
+end if","if block"
+"p=","property %fill:Variable%: %fill:Value%
+","property"
+"repeat ","repeat %|
+
+end repeat","repeat"
+"s=","set %fill:Variable% to %fill:Value%
+","set variable"
+"tell ","tell application ""%|""","tell app"
+"tell-","tell application ""%|"" to
+
+end tell","tell block"
+"~tid","set {astid, AppleScript's text item delimiters} to {AppleScript's text item delimiters, ""%|""}
+
+set AppleScript's text item delimiters to astid","AS Text Item Delimiter"

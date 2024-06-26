@@ -1,0 +1,4 @@
+﻿"mv","find . -name ""*.%filltext:name=extension:width=10%"" -exec mv ""{}"" /%filltext:name=extension:width=10% \;",""
+"tll","<<list-links ""[tag[%filltext:name=Tag:width=14%]sort[title]]"">>","Create a TiddlyWiki macro call to index a tag of your choosing."
+"wayback","#!/bin/zsh
+wayback_machine_downloader %pasteboard","Initiate the Wayback Machine Downloader command line tool on the url in the system clipboard."

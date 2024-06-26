@@ -1,0 +1,4 @@
+﻿"ptjs2js","var strOutput = TextExpander.pasteboardText;
+strOutput = strOutput.replace(RegExp('TextExpander.appendOutput\\(""', 'g'), '');
+strOutput = strOutput.replace(RegExp('\\\\n""\\);', 'g'), '');
+","Remove TextExpander JavaScript Addition from Plain Text [Clipboard]"

@@ -1,0 +1,54 @@
+﻿"!imp","!important","!important"
+"~csstrans","-webkit-transition:%fill:type% %fill:seconds%s ease-in-out;
+-moz-transition:%fill:type% %fill:seconds%s ease-in-out;
+-o-transition:%fill:type% %fill:seconds%s ease-in-out;
+transition:%fill:type% %fill:seconds%s ease-in-out;","CSS Transition"
+"~nth","nth-of-type(%|)","nth-of-type"
+"~rgba","rgba(%fill:r%, %fill:g%, %fill:b%, %fill:float%)","RGBA"
+"~roundall","-moz-border-radius: %fill:Amount%px;
+-webkit-border-radius: %fill:Amount%px;
+border-radius: %fill:Amount%px;","Rounded Corners"
+"~roundbl","-moz-border-radius-bottomleft:%fill:Amount%px;
+-webkit-border-bottom-left-radius:%fill:Amount%px;
+border-radius-bottomleft: %fill:Amount%px;","Round bottom left"
+"~roundbr","-moz-border-radius-bottomright:%fill:Amount%px;
+-webkit-border-bottom-right-radius:%fill:Amount%px;
+border-radius-bottomright: %fill:Amount%px;","Round bottom right"
+"~roundtl","-moz-border-radius-topleft:%fill:Amount%px;
+-webkit-border-top-left-radius:%fill:Amount%px;
+border-radius-topleft: %fill:Amount%px;","Round top left"
+"~roundtr","-moz-border-radius-topright:%fill:Amount%px;
+-webkit-border-top-right-radius:%fill:Amount%px;
+border-radius-topright: %fill:Amount%px;","Round top right"
+"~scroll","  ::-webkit-scrollbar {
+      width: 8px;
+  }
+
+  ::-webkit-scrollbar:horizontal {
+      display: none;
+  }
+
+  ::-webkit-scrollbar-track {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      border-width: 21px 0;
+      margin-left: -50px;
+  }
+
+  ::-webkit-scrollbar-track:disabled {
+      display: none;
+  }
+
+  ::-webkit-scrollbar-thumb {
+      border-width: 19px 0;
+      min-height: 40px;
+      opacity: 0.6;
+      background:#666;
+      -moz-border-radius: 8px;
+      -webkit-border-radius: 8px;
+      border-radius: 8px;
+  }
+",""
+"~shadow","-webkit-box-shadow: %fill:x%px %fill:y%px %fill:blur%px %fill:color% %fill:inset%;
+-moz-box-shadow: %fill:x%px %fill:y%px %fill:blur%px %fill:color% %fill:inset%;
+box-shadow: %fill:x%px %fill:y%px %fill:blur%px %fill:color% %fill:inset%;","CSS Box Shadow"

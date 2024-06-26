@@ -1,0 +1,253 @@
+﻿"dowdmy","%snippet:lib_ta_dates%
+
+GetWeekDayUK(""%filltext:name=Convert Date (dd/mm/yyyy)%"");
+
+%filltop%
+","Day of Week from Date - (dd/mm/yyyy) (JavaScript)"
+"dowmdy","%snippet:lib_ta_dates%
+
+GetWeekDay(""%filltext:name=Convert Date (mm/dd/yyyy)%"");
+
+%filltop%
+","Day of Week from Date - (mm/dd/yyyy) (JavaScript)"
+"dowuk","%snippet:lib_ta_dates%
+
+GetWeekDayUK(""%filltext:name=Convert Date (dd/mm/yyyy)%"");
+
+%filltop%
+","Day of Week from Date - (UK) (JavaScript)"
+"dowus","%snippet:lib_ta_dates%
+
+GetWeekDay(""%filltext:name=Convert Date (mm/dd/yyyy)%"");
+
+%filltop%","Day of Week from Date - (US) (JavaScript)"
+"ds+day","%snippet:lib_ta_dates%
+
+CurrentDateStampAddDays(%filltext:name=Days to Add:default=7%);
+%filltop%","Date Stamp - Current + N days (yyyy-mm-dd) [Fill In]"
+"ds+week","%snippet:lib_ta_dates%
+
+CurrentDateStampAddWeeks(%filltext:name=Weeks to Add:default=2%);
+%filltop%","Date Stamp - Current + N weeks (yyyy-mm-dd) [Fill In]"
+"dslastfri","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_FRI);","Date Stamp - Last Friday (yyyy-mm-dd) (JavaScript)"
+"dslastmon","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_MON);","Date Stamp - Last Monday (yyyy-mm-dd) (JavaScript)"
+"dslastsat","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_SAT);","Date Stamp - Last Saturday (yyyy-mm-dd) (JavaScript)"
+"dslastsun","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_SUN);","Date Stamp - Last Sunday (yyyy-mm-dd) (JavaScript)"
+"dslastthu","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_THU);","Date Stamp - Last Thursday (yyyy-mm-dd) (JavaScript)"
+"dslasttue","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_TUE);","Date Stamp - Last Tuesday (yyyy-mm-dd) (JavaScript)"
+"dslastwed","%snippet:lib_ta_dates%
+
+GetPrevDayDateStamp(CON_DAY_WED);","Date Stamp - Last Wednesday (yyyy-mm-dd) (JavaScript)"
+"dsnextfri","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_FRI);","Date Stamp - Next Friday (yyyy-mm-dd) (JavaScript)"
+"dsnextmon","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_MON);","Date Stamp - Next Monday (yyyy-mm-dd) (JavaScript)"
+"dsnextsat","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_SAT);","Date Stamp - Next Saturday (yyyy-mm-dd) (JavaScript)"
+"dsnextsun","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_SUN);","Date Stamp - Next Sunday (yyyy-mm-dd) (JavaScript)"
+"dsnextthu","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_THU);","Date Stamp - Next Thursday (yyyy-mm-dd) (JavaScript)"
+"dsnexttue","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_TUE);","Date Stamp - Next Tuesday (yyyy-mm-dd) (JavaScript)"
+"dsnextwed","%snippet:lib_ta_dates%
+
+GetNextDayDateStamp(CON_DAY_WED);","Date Stamp - Next Wednesday (yyyy-mm-dd) (JavaScript)"
+"dsnow+","%Y-%m-%d","Date Stamp - Current (yyyy-mm-dd)"
+"dstamp","%snippet:dsnow+%","Date Stamp - Current (yyyy-mm-dd) [Alternate]"
+"dstom","%@+1D%Y-%m-%d","Date Stamp - Tomorrow (yyyy-mm-dd)"
+"dsyest","%@-1D%Y-%m-%d","Date Stamp - Yesterday (yyyy-mm-dd)"
+"dt+day","%snippet:lib_ta_dates%
+
+CurrentDateAddDays(%filltext:name=Days to Add:default=7%);
+%filltop%","Date - Current + N days (dd/mm/yyyy) [Fill In]"
+"dt+week","%snippet:lib_ta_dates%
+
+CurrentDateAddWeeks(%filltext:name=Weeks to Add:default=2%);
+%filltop%","Date - Current + N weeks (dd/mm/yyyy) [Fill In]"
+"dtlastfri","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_FRI);","Date - Last Friday (dd/mm/yyyy) (JavaScript)"
+"dtlastmon","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_MON);","Date - Last Monday (dd/mm/yyyy) (JavaScript)"
+"dtlastsat","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_SAT);","Date - Last Saturday (dd/mm/yyyy) (JavaScript)"
+"dtlastsun","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_SUN);","Date - Last Sunday (dd/mm/yyyy) (JavaScript)"
+"dtlastthu","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_THU);","Date - Last Thursday (dd/mm/yyyy) (JavaScript)"
+"dtlasttue","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_TUE);","Date - Last Tuesday (dd/mm/yyyy) (JavaScript)"
+"dtlastwed","%snippet:lib_ta_dates%
+
+GetPrevDayDate(CON_DAY_WED);","Date - Last Wednesday (dd/mm/yyyy) (JavaScript)"
+"dtnextfri","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_FRI);","Date - Next Friday (dd/mm/yyyy) (JavaScript)"
+"dtnextmon","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_MON);","Date - Next Monday (dd/mm/yyyy) (JavaScript)"
+"dtnextsat","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_SAT);","Date - Next Saturday (dd/mm/yyyy) (JavaScript)"
+"dtnextsun","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_SUN);","Date - Next Sunday (dd/mm/yyyy) (JavaScript)"
+"dtnextthu","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_THU);","Date - Next Thursday (dd/mm/yyyy) (JavaScript)"
+"dtnexttue","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_TUE);","Date - Next Tuesday (dd/mm/yyyy) (JavaScript)"
+"dtnextwed","%snippet:lib_ta_dates%
+
+GetNextDayDate(CON_DAY_WED);","Date - Next Wednesday (dd/mm/yyyy) (JavaScript)"
+"dtnow+","%d/%m/%Y","Date - Current (dd/mm/yyyy)"
+"dttom","%@+1D%d/%m/%Y","Date - Tomorrow (dd/mm/yyyy)"
+"dtyest","%@-1D%d/%m/%Y","Date - Yesterday (dd/mm/yyyy)"
+"lib_ta_dates","function CurrentDateObjectAddDays(p_intDays){
+	var objDate = new Date();
+	var intDay = 1000 * 60 * 60 * 24;
+	objDate.setDate(objDate.getDate() + p_intDays);
+	return objDate;
+}
+
+function CurrentDateAddDays(p_intDays){
+	var objDate = CurrentDateObjectAddDays(p_intDays);
+	return PrePadZero(objDate.getDate()) + ""/"" + PrePadZero(objDate.getMonth()+1) + ""/"" + objDate.getFullYear();
+}
+
+function CurrentDateStampAddDays(p_intDays){
+	var objDate = CurrentDateObjectAddDays(p_intDays);
+	return objDate.getFullYear() + ""-"" + PrePadZero(objDate.getMonth()+1) + ""-"" + PrePadZero(objDate.getDate());
+}
+
+function CurrentDateAddWeeks(p_intWeeks){
+	return CurrentDateAddDays(7 * p_intWeeks);
+}
+
+function CurrentDateStampAddWeeks(p_intWeeks){
+	return CurrentDateStampAddDays(7 * p_intWeeks);
+}
+
+function PrePadZero(p_intInput) { 
+	return (p_intInput < 10) ? '0' + p_intInput : p_intInput; 
+}
+
+//Constants for JavaScript days of the week IDs
+var CON_DAY_SUN = 0;
+var CON_DAY_MON = 1;
+var CON_DAY_TUE = 2;
+var CON_DAY_WED = 3;
+var CON_DAY_THU = 4;
+var CON_DAY_FRI = 5;
+var CON_DAY_SAT = 6;
+
+
+//Return the next Monday/Tuesday/Wednesday/etc. after today
+function NextDay(p_dtStartDate, p_intDay) {
+    var dtFinalDate = new Date(p_dtStartDate||new Date());
+    dtFinalDate.setDate(dtFinalDate.getDate() + (p_intDay - 1 - dtFinalDate.getDay() + 7) % 7 + 1);
+    return dtFinalDate;
+}
+
+//Return the last Monday/Tuesday/Wednesday/etc. before today
+function PrevDay(p_dtStartDate, p_intDay) {
+	//Move us just over a week back
+	var dtModifiedDate = new Date();
+	dtModifiedDate.setDate(p_dtStartDate.getDate() - 8);
+
+	//Now add forward
+	return NextDay(dtModifiedDate, p_intDay);
+}
+
+
+function GetNextDay(p_intDay){
+	var objDate = new Date();
+	return NextDay(objDate, p_intDay);
+}
+
+
+function GetPrevDay(p_intDay){
+	var objDate = new Date();
+	return PrevDay(objDate, p_intDay);
+}
+
+function GetNextDayDate(p_intDay){
+	return FormatDate_ddmmyyyy(GetNextDay(p_intDay));
+}
+
+
+function GetPrevDayDate(p_intDay){
+	return FormatDate_ddmmyyyy(GetPrevDay(p_intDay));
+}
+
+function GetNextDayDateStamp(p_intDay){
+	return FormatDate_yyyymmdd(GetNextDay(p_intDay));
+}
+
+
+function GetPrevDayDateStamp(p_intDay){
+	return FormatDate_yyyymmdd(GetPrevDay(p_intDay));
+}
+
+function FormatDate_ddmmyyyy(objDate){
+	return PrePadZero(objDate.getDate()) + ""/"" + PrePadZero(objDate.getMonth() + 1) + ""/"" + objDate.getFullYear();
+}
+
+function FormatDate_yyyymmdd(objDate){
+	return objDate.getFullYear() + ""-"" + PrePadZero(objDate.getMonth() + 1) + ""-"" + PrePadZero(objDate.getDate());
+}
+
+function GetWeekDay(p_strDate) {
+	//Return day of week from a date string formatted mm/dd/yyyy
+	var dtInput = new Date(p_strDate);
+
+	//Hold the days of the week in an array
+	var astrWeekDay = new Array(7);
+	astrWeekDay[0]=  ""Sunday"";
+	astrWeekDay[1] = ""Monday"";
+	astrWeekDay[2] = ""Tuesday"";
+	astrWeekDay[3] = ""Wednesday"";
+	astrWeekDay[4] = ""Thursday"";
+	astrWeekDay[5] = ""Friday"";
+	astrWeekDay[6] = ""Saturday"";
+ 
+	//Read back the day of the week from the array
+	return astrWeekDay[dtInput.getDay()];
+}
+
+function GetWeekDayUK(p_strDate) {
+	//Return day of week from a date string formatted dd/mm/yyyy
+	return GetWeekDay(ConvertUKtoUSDateFormat(p_strDate));
+}
+
+function ConvertUKtoUSDateFormat(p_strUKDate){
+	//Convert ""dd/mm/yyyy"" to ""mm/dd/yyyy"" - e.g. to use as input to a JavaScript date object
+	return p_strUKDate.replace(/^(\d{1,2}\/)(\d{1,2}\/)(\d{4})$/,""$2$1$3"");
+}","* Library - Date Functions"
+"tsnow+","%Y-%m-%d-%H.%M.%S","Time Stamp - Current (yyyy-mm-dd-hh.MM.ss.)"
+"tstamp","%snippet:tsnow%","Time Stamp - Current (yyyy-mm-dd-hh.MM.ss) [Alternate]"

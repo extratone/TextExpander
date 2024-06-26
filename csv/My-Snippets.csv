@@ -1,0 +1,20 @@
+﻿";em","asphaltapostle@icloud.com","tutorialEmail"
+";home","1714 Oak Cliff Pl.
+Columbia, MO 65203
+United States","tutorialHome"
+";ph","+1 (573) 823-4380","tutorialPhone"
+";sig1","Best regards,
+David Blue
+Project Manager
+Acme Inc.","tutorialSignature 1"
+";thxdon","Dear %filltext:name=person name:width=25%,
+
+Thank you for your donation of $%filltext:name=amount:width=4%. We greatly appreciate your help, and will use the funds for %fillpopup:name=popup 4:default=our educational program:our health clinic:general purposes%.
+
+Since we are a non-profit organization, your donation of $%filltext:name=amount:width=4% should be tax-deductible.
+
+Thank you,
+","tutorialFillin"
+";web","https://bilge.world","tutorialWeb url"
+"ddate","%B %e, %Y","tutorialDate"
+"ttime","%1I:%M %p","tutorialTime"

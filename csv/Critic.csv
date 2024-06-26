@@ -1,0 +1,5 @@
+﻿";com","{>>%|<<}","Comment"
+";del","{--%|--}","Deletion"
+";hi","{==%|==}{>><<}","Highlight"
+";ins","{++%|++}","Insertion"
+";sub","{~~%|~> ~~}","Substitution"

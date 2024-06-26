@@ -1,0 +1,124 @@
+﻿"~loremimdb","#!/usr/bin/ruby
+require 'cgi'
+title = '%filltext:name=Title%'
+max_chars = '%filltext:name=Max characters:default=8000:width=7%'.to_i
+max_grafs = '%filltext:name=Max paragraphs:default=6:width=4%'.to_i
+%fillpart:name=Filter profanity?%swear_filter = true%fillpartend%
+%fillpart:name=Strict profanity filter?%strict_filter = true%fillpartend%
+%fillpart:name=Disable shuffling?:default=no%shuffle = false%fillpartend%
+
+max_chars = 1000000 if max_chars == 0
+max_grafs = 1000000 if max_grafs == 0
+swear_filter ||= false
+strict_filter ||= false
+shuffle ||= true
+debug = false
+
+if debug
+    max_chars = 10000
+    max_grafs = 10
+    title = ARGV.join(' ')
+    swear_filter = true
+    strict_filter = true
+    shuffle = true
+end
+
+if title.strip == """"
+  rc_file = File.expand_path('~/.loremimdb')
+  if File.exists?(rc_file)
+    title = IO.read(rc_file).gsub(/\n+/,',')
+  else
+    Process.exit 1
+  end
+end
+
+def class_exists?(class_name)
+  klass = Module.const_get(class_name)
+  return klass.is_a?(Class)
+rescue NameError
+  return false
+end
+
+if class_exists? 'Encoding'
+  Encoding.default_external = Encoding::UTF_8 if Encoding.respond_to?('default_external')
+  Encoding.default_internal = Encoding::UTF_8 if Encoding.respond_to?('default_internal')
+end
+
+class String
+  def filter_swears(strict=false)
+    chars = %w( ! @ # $ * % )
+    swears = %w( shit fuck cunt )
+    swears.concat(%w( whore bitch damn hell goddammit dick cock pussy )) if strict
+    self.gsub!(/(#{swears.join('|')})/i) {|swear|
+      out = """"
+      pre = strict ? """" : swear.slice!(0,1)
+      post = strict ? """" : swear.slice!(-1)
+      swear.length.times do
+        out += chars[rand(chars.length)]
+      end
+      pre + out + post
+    }
+    self
+  end
+end
+
+title = title.force_encoding('utf-8') if title.respond_to?('force_encoding')
+
+movies = title.split(/ *, */)
+out_grafs = []
+
+movies.each {|movie|
+  # r = strict_filter ? """" : "",us:r""
+  search = %x{curl -Ss 'http://www.imdb.com/search/title?certificates=us:g,us:pg,us:pg_13,us:r&title=#{CGI.escape(movie)}&title_type=feature&view=simple'}.strip
+  if search && search != """"
+    titles = search.scan(/<td class=""title"">\s*<a href=""(\/title\/[^\/]+)/)
+
+    if titles.empty?
+      next
+    end
+
+    all_quotes = []
+
+    titles.each {|t|
+      result = ""http://www.imdb.com/#{t[0]}/quotes""
+      quotes = %x{curl -Ss '#{result}'}.strip
+
+      # find each quote block
+      quotes.scan(/""sodatext"">(.*?)<\/div/mi).each {|qs|
+        # find each quote in block
+        qs[0].scan(/<p>(.*?)<\/p>/mi).each {|q|
+          # remove character name prefixes
+          quote = q[0].strip.gsub(/(<a href=""\/name\/.*?>)?\s*<span class=""character"".*?<\/span>\s*(<\/a>)?:/mi,'')
+          quote.gsub!(/\n+/,' ') # replace newlines with spaces
+          quote.gsub!(/<\/?.*?>/,'') # remove all HTML tags
+          # turn lyric line separators into hard breaks
+          quote.gsub!(/\[.*?\]/,'') # remove stage directives
+          if quote =~ /\//
+            quote = ""%pbr%> "" + quote.gsub!(/ *\/ */,""  \n"") + ""\n""
+          end
+          all_quotes.push(quote) # save single, cleaned quote
+        }
+      }
+      break unless all_quotes.empty?
+    }
+  end
+
+  all_quotes.delete_if {|s| s.strip == """" }.map! {|s| s.lstrip.gsub(/%pbr%/,""\n\n"") }
+
+  until all_quotes.empty? do
+    out_grafs.push(all_quotes.slice!(0,4).join("" "").sub(/([^!.?])$/i,'\1.'))
+  end
+
+}
+Process.exit 1 if out_grafs.empty?
+
+out_grafs.shuffle! if shuffle
+
+out = out_grafs[0..max_grafs-1].join(""\n\n"").slice(0..max_chars-1).sub(/(?![!.?])[^!.?\n ]+?$/mi,'').strip
+
+if swear_filter || strict_filter
+  puts out.filter_swears(strict_filter)
+else
+  puts out
+end
+","IMDB Ipsum"

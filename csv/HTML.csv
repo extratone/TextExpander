@@ -1,0 +1,98 @@
+﻿"","<br />",""
+",,a","<a href=""%clipboard"">%|</a>","Clipboard Link"
+",,img","<img src=""http://placehold.it/%fill:width%x%fill:height%"" />","Placehold.it"
+",,unimg","<img src=""http://unsplash.it/%fill:width%/%fill:height%"" />","Unsplash"
+",a","<a href=""%|""></a>",""
+",button","<button type=""submit"" name=""submit"" value=""submit"">
+	<img src=""%|"" width="""" height="""" alt="""" />
+</button>
+			",""
+",checkbox","<input type=""checkbox"" name=""%|"" value="""" />",""
+",dd","<dd>%|</dd>",""
+",div","<div>%|</div>","<div>"
+",dl","<dl>
+	<dt>%|</dt>
+	<dd></dd>
+	<dt></dt>
+	<dd></dd>
+</dl>",""
+",dt","<dt>%|</dt>",""
+",em","<em>%|</em>",""
+",form","<form action=""%|"" method="""">
+</form>
+			",""
+",h1","<h1>%|</h1>","<h1>"
+",h2","<h2>%|</h2>","<h2>"
+",h3","<h3>%|</h3>","<h3>"
+",h4","<h4>%|</h4>","<h4>"
+",h5","<h5>%|</h5>","<h5>"
+",h6","<h6>%|</h6>","<h6>"
+",header","<header>%|</header>","<header>"
+",hidden","<input type=""hidden"" name=""%|"" value="""" />",""
+",html","<!DOCTYPE html>
+<!--[if lt IE 7]> <html class=""no-js lt-ie9 lt-ie8 lt-ie7""> <![endif]-->
+<!--[if IE 7]>    <html class=""no-js lt-ie9 lt-ie8""> <![endif]-->
+<!--[if IE 8]>    <html class=""no-js lt-ie9""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class=""no-js""> <!--<![endif]-->
+<head>
+    <meta charset=""utf-8"">
+    <meta http-equiv=""X-UA-Compatible"" content=""IE=edge,chrome=1"">
+
+    <title></title>
+    <meta name=""description"" content="""">
+    <meta name=""viewport"" content=""width=device-width"">
+
+    <link rel=""sitemap"" type=""application/xml"" title=""Sitemap"" href=""/sitemap.xml"" />
+    <link rel=""alternate"" type=""application/rss+xml"" title=""RSS"" href=""/rss.xml"" />
+    <link rel=""author"" href=""/humans.txt"" />
+
+    <link rel=""stylesheet"" href=""/css/main.css"">
+    <script src=""/js/vendor/modernizr-2.5.3.min.js""></script>
+</head>
+<body>
+    <!--[if lt IE 7]><p class=""chromeframe"">Your browser is <em>ancient!</em> <a href=""http://browsehappy.com/"">Upgrade to a different browser</a> or <a href=""http://www.google.com/chromeframe/?redirect=true"">install Google Chrome Frame</a> to experience this site.</p><![endif]-->
+
+    
+    <script src=""//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js""></script>
+    <script>window.jQuery || document.write('<script src=""/js/vendor/jquery-1.7.2.min.js""><\/script>')</script>
+
+    <script src=""/js/plugins.js""></script>
+    <script src=""/js/main.js""></script>
+    
+    <script>
+        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+        s.parentNode.insertBefore(g,s)}(document,'script'));
+    </script>
+</body>
+</html>","HTML Template"
+",img","<img src=""%|"" alt="""" width="""" height="""" border=""0"" />",""
+",li","<li>%|</li>","<li>"
+",ol","<ol>
+	<li>%|</li>
+</ol>","<ol>"
+",p","<p>%|</p>","<p>"
+",radio","<input type=""radio"" name=""%|"" value="""" />",""
+",reset","<input type=""reset"" value=""%|"" />",""
+",script","<script type=""text/javascript"" language=""Javascript"" src=""%|""></script>",""
+",select","<select name=""%|"">
+	<option value=""""></option>
+	<option value=""""></option>
+	<option value=""""></option>
+</select>",""
+",span","<span>%|</span>","<span>"
+",strong","<strong>%|</strong>","<strong>"
+",submit","<input type=""submit"" value=""%|"" />",""
+",table","<table border=""0"" width="""">
+	<tr>
+		<td>%|</td>
+	</tr>
+</table>",""
+",td","<td>%|</td>",""
+",textarea","<textarea name=""textarea"" rows="""" cols="""" wrap=""wrap"">%|</textarea>",""
+",textfield","<input type=""text"" name=""%|"" value=""""/>",""
+",ul","<ul>
+	<li>%|</li>
+</ul>","<ul>"
+",ytthumb","http://img.youtube.com/vi/%filltext:name=videoID%/%fillpopup:name=Images:default.jpg:hqdefault.jpg:mqdefault.jpg:maxresdefault.jpg%","YouTube Thumbnail"

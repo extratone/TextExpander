@@ -1,0 +1,236 @@
+﻿"","-- The base folder where you want to backup the TextExpander snippets
+set strBaseFolder to ""/Users/blue/Library/Mobile Documents/com~apple~CloudDocs/Expansion""
+-- Set bTimebased to true to save to a new sub directory on each run
+set bTimebased to false
+-- Set bZip to archive exported snippet groups
+set bZip to false
+
+-- ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+-- If any time based processing is to be used append a timestamp to the directory
+if (bTimebased or bZip) then
+	set strBaseFolder to strBaseFolder & ""/"" & pyTimestamp(current date)
+end if
+
+-- Create any required directory structure
+do shell script ""mkdir -p \"""" & strBaseFolder & ""/\""""
+
+-- Export all TextExpander snippet groups
+tell application ""TextExpander""
+	repeat with objGroup in groups
+		set strFilename to strBaseFolder & ""/"" & (name of objGroup) & "".textexpander""
+		save objGroup in strFilename
+	end repeat
+	
+	
+	-- If the option is set ZIP the resulting folder of files
+	if bZip then
+		-- Create the ZIP file
+		do shell script ""zip -jr \"""" & strBaseFolder & "".zip\"" \"""" & strBaseFolder & ""/\""""
+		-- Remove the intermediate directory of files
+		do shell script ""rm -rf \"""" & strBaseFolder & ""/\""""
+		display notification (((count groups) as string) & "" snippet groups backed up to 
+"" & strBaseFolder & "".zip"") with title ""TextExpander Snippet Backup""
+	else
+		display notification (((count groups) as string) & "" snippet groups backed up to 
+"" & strBaseFolder) with title ""TextExpander Snippet Backup""
+	end if
+end tell
+
+-- Timestamp generation script based on script published by MacDrifter
+-- http://www.macdrifter.com/2011/12/timestamps-in-applescript.html
+on pyTimestamp(AS_Date)
+	set timeFormat to quoted form of ""%Y-%m-%d-%H.%M.%S""
+	return (do shell script ""/usr/bin/python -c \""import time, dateutil.parser; print dateutil.parser.parse('"" & AS_Date & ""').strftime("" & timeFormat & ""); \"""")
+end pyTimestamp",""
+"2dir","tell application ""System Events""
+  tell process ""Finder""
+  	if window 1 exists then
+			tell application ""Finder""
+				set thePath to get quoted form of POSIX path of (target of front Finder window as text)
+				return ""cd "" & thePath & return
+			end tell
+		else
+			display alert ""Finder doesn't have a window open."" as warning giving up after 2
+		end if
+	end tell
+end tell","AppleScript to switch to the current Finder directory while navigating the command line. Run as a TextExpander snippet (set to ""AppleScript"") for maximum utility."
+"CTMDUL","-- Initialise the script settings
+-- Set the browser.
+--   Valid options are [ ""Chrome"" | ""Safari"" ]
+set strBrowser to ""Chrome""
+-- Set the output style.
+--   Valid options are [ ""Text"" | ""HTML-P"" | ""HTML-BR"" | ""HTML-UL"" | ""HTML-OL"" | ""MD"" | ""MD-UL"" | ""MD-OL"" ]
+--     Text = Title on one line, URL on next line, blank line.
+--     HTML-P = Title as HTML hyperlink with one link per paragraph.
+--     HTML-BR = Title as HTML hyperlink with one link per line.
+--     HTML-UL = Title as HTML hyperlink with one link per entry in a bulleted list.
+--     HTML-OL = Title as HTML hyperlink with one link per entry in a numbered list.
+--     MD = Title as Markdown hyperlink with one link per line.
+--     MD-UL = Title as Markdown hyperlink with one link per entry in a bulleted list.
+--     MD-OL = Title as Markdown hyperlink with one link per entry in a numbered list.
+set strStyle to ""MD-UL""
+-- Set the line end.
+--   This is added to the end of each line of output (but will not be included in the hyperlink
+set strLineEnd to "".""
+
+
+
+
+-- Initialise the output string
+set strOutput to """"
+
+
+if strBrowser = ""Chrome"" then
+	tell application ""Chromium""
+		-- Get all the Chrome Windows
+		set listChromeWindows to every window
+		-- Loop through every Chrome window
+		repeat with objChromeWindow in listChromeWindows
+			-- Get all the Chrome Tabs
+			set listChromeTabs to every tab in objChromeWindow
+			-- Loop through every Chrome tab
+			repeat with objTab in listChromeTabs
+				-- Retrieve the tab properties
+				set strTitle to the title of objTab
+				set strURL to the URL of objTab
+				-- Change double to single quotes in the title as these are used in 
+				-- specifying hyperlink attributes
+				set strTitle to my Substitute(strTitle, ""\"""", ""'"")
+				-- Call the top level handler to format the properties
+				set strOutput to strOutput & my formatOutput(strTitle, strURL)
+			end repeat
+		end repeat
+	end tell
+else if strBrowser = ""Safari"" then
+	tell application ""Safari""
+		-- Get all the Safari Windows
+		set listSafariWindows to every window
+		-- Loop through every Safari window
+		repeat with objWindow in listSafariWindows
+			set listSafariTabs to every tab in objWindow
+			-- Get all the Safari Tabs
+			repeat with objTab in listSafariTabs
+				-- Retrieve the tab properties
+				set strTitle to the name of objTab
+				set strURL to the URL of objTab
+				-- Change double to single quotes in the title as these are used in 
+				-- specifying hyperlink attributes
+				set strTitle to my Substitute(strTitle, ""\"""", ""'"")
+				-- Call the top level handler to format the properties
+				set strOutput to strOutput & my formatOutput(strTitle, strURL)
+			end repeat
+		end repeat
+	end tell
+else
+	set strOutput to ""ERROR: Unknown Browser""
+end if
+
+
+
+
+-- Wrap the output in the HTML for bulleted lists
+if strStyle = ""HTML-UL"" then
+	-- Remove the last return
+	set strOutput to (characters 1 thru ((count of characters of strOutput) - 1) of text of strOutput) as text
+	set strOutput to ""<ul>"" & return & strOutput & return & ""</ul>""
+end if
+
+
+
+
+-- Wrap the output in the HTML for ordered lists
+if strStyle = ""HTML-OL"" then
+	-- Remove the last return
+	set strOutput to (characters 1 thru ((count of characters of strOutput) - 1) of text of strOutput) as text
+	set strOutput to ""<ol>"" & return & strOutput & return & ""</ol>""
+end if
+
+
+
+
+-- Finally return the output
+return strOutput
+-- display dialog strOutput buttons {""Ok""}
+
+
+
+
+-- HELPERS
+-- Format the tab properties
+on formatOutput(p_strTitle, p_strURL)
+	if my strStyle = ""Text"" then
+		return p_strTitle & my strLineEnd & return & p_strURL & return & return
+	else if my strStyle = ""HTML-P"" then
+		return ""<p><a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""</p>"" & return
+	else if my strStyle = ""HTML-BR"" then
+		return ""<a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""<br/>"" & return
+	else if my strStyle = ""HTML-UL"" then
+		return tab & ""<li><a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""</li>"" & return
+	else if my strStyle = ""HTML-OL"" then
+		return tab & ""<li><a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""</li>"" & return
+	else if my strStyle = ""MD"" then
+		return ""["" & p_strTitle & ""]("" & p_strURL & "" \"""" & p_strTitle & ""\"")"" & my strLineEnd & return
+	else if my strStyle = ""MD-UL"" then
+		return ""- ["" & p_strTitle & ""]("" & p_strURL & "" \"""" & p_strTitle & ""\"")"" & my strLineEnd & return
+	else if my strStyle = ""MD-OL"" then
+		return ""1. ["" & p_strTitle & ""]("" & p_strURL & "" \"""" & p_strTitle & ""\"")"" & my strLineEnd & return
+	else
+		return ""ERROR: Unknown Style""
+	end if
+end formatOutput
+
+
+-- Replace one set of characters in a string with another set
+on Substitute(p_strSource, p_strFind, p_strReplace)
+	-- Save the initial delimiter
+	set strInitialDelimiter to text item delimiters of AppleScript
+	
+	-- Carry out the substitution by delimiting using the find string and then
+	-- converting back to a string using the new replacement text as the delimiter
+	set AppleScript's text item delimiters to the p_strFind
+	set the listTextItems to every text item of p_strSource
+	set AppleScript's text item delimiters to the p_strReplace
+	set strOutput to the listTextItems as string
+	
+	-- Restore the initial delimiter
+	set AppleScript's text item delimiters to strInitialDelimiter
+	
+	-- Return the new string
+	return strOutput
+end Substitute
+","Browser Tab List - Chrome (AS)"
+"STMDUL","-- Initialise the script settings-- Set the browser.--   Valid options are [ ""Chrome"" | ""Safari"" ]set strBrowser to ""Safari""-- Set the output style.--   Valid options are [ ""Text"" | ""HTML-P"" | ""HTML-BR"" | ""HTML-UL"" | ""HTML-OL"" | ""MD"" | ""MD-UL"" | ""MD-OL"" ]--     Text = Title on one line, URL on next line, blank line.--     HTML-P = Title as HTML hyperlink with one link per paragraph.--     HTML-BR = Title as HTML hyperlink with one link per line.--     HTML-UL = Title as HTML hyperlink with one link per entry in a bulleted list.--     HTML-OL = Title as HTML hyperlink with one link per entry in a numbered list.--     MD = Title as Markdown hyperlink with one link per line.--     MD-UL = Title as Markdown hyperlink with one link per entry in a bulleted list.--     MD-OL = Title as Markdown hyperlink with one link per entry in a numbered list.set strStyle to ""Text""-- Set the line end.--   This is added to the end of each line of output (but will not be included in the hyperlinkset strLineEnd to "".""-- Initialise the output stringset strOutput to """"if strBrowser = ""Chrome"" then	tell application ""Google Chrome""		-- Get all the Chrome Windows		set listChromeWindows to every window		-- Loop through every Chrome window		repeat with objChromeWindow in listChromeWindows			-- Get all the Chrome Tabs			set listChromeTabs to every tab in objChromeWindow			-- Loop through every Chrome tab			repeat with objTab in listChromeTabs				-- Retrieve the tab properties				set strTitle to the title of objTab				set strURL to the URL of objTab
+				-- Change double to single quotes in the title as these are used in 
+				-- specifying hyperlink attributes
+				set strTitle to my Substitute(strTitle, ""\"""", ""'"")				-- Call the top level handler to format the properties				set strOutput to strOutput & my formatOutput(strTitle, strURL)			end repeat		end repeat	end tellelse if strBrowser = ""Safari"" then	tell application ""Safari""		-- Get all the Safari Windows		set listSafariWindows to every window		-- Loop through every Safari window		repeat with objWindow in listSafariWindows			set listSafariTabs to every tab in objWindow			-- Get all the Safari Tabs			repeat with objTab in listSafariTabs				-- Retrieve the tab properties				set strTitle to the name of objTab				set strURL to the URL of objTab
+				-- Change double to single quotes in the title as these are used in 
+				-- specifying hyperlink attributes
+				set strTitle to my Substitute(strTitle, ""\"""", ""'"")				-- Call the top level handler to format the properties				set strOutput to strOutput & my formatOutput(strTitle, strURL)			end repeat		end repeat	end tellelse	set strOutput to ""ERROR: Unknown Browser""end if-- Wrap the output in the HTML for bulleted listsif strStyle = ""HTML-UL"" then	-- Remove the last return	set strOutput to (characters 1 thru ((count of characters of strOutput) - 1) of text of strOutput) as text	set strOutput to ""<ul>"" & return & strOutput & return & ""</ul>""end if-- Wrap the output in the HTML for ordered listsif strStyle = ""HTML-OL"" then	-- Remove the last return	set strOutput to (characters 1 thru ((count of characters of strOutput) - 1) of text of strOutput) as text	set strOutput to ""<ol>"" & return & strOutput & return & ""</ol>""end if-- Finally return the outputreturn strOutput— display dialog strOutput buttons {""Ok""}-- HELPERS-- Format the tab propertieson formatOutput(p_strTitle, p_strURL)	if my strStyle = ""Text"" then		return p_strTitle & my strLineEnd & return & p_strURL & return & return	else if my strStyle = ""HTML-P"" then		return ""<p><a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""</p>"" & return	else if my strStyle = ""HTML-BR"" then		return ""<a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""<br/>"" & return	else if my strStyle = ""HTML-UL"" then		return tab & ""<li><a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""</li>"" & return	else if my strStyle = ""HTML-OL"" then		return tab & ""<li><a href=\"""" & p_strURL & ""\"">"" & p_strTitle & ""</a>"" & my strLineEnd & ""</li>"" & return	else if my strStyle = ""MD"" then		return ""["" & p_strTitle & ""]("" & p_strURL & "" \"""" & p_strTitle & ""\"")"" & my strLineEnd & return	else if my strStyle = ""MD-UL"" then		return ""* ["" & p_strTitle & ""]("" & p_strURL & "" \"""" & p_strTitle & ""\"")"" & my strLineEnd & return	else if my strStyle = ""MD-OL"" then		return ""1. ["" & p_strTitle & ""]("" & p_strURL & "" \"""" & p_strTitle & ""\"")"" & my strLineEnd & return	else		return ""ERROR: Unknown Style""	end ifend formatOutput-- Replace one set of characters in a string with another seton Substitute(p_strSource, p_strFind, p_strReplace)	-- Save the initial delimiter	set strInitialDelimiter to text item delimiters of AppleScript		-- Carry out the substitution by delimiting using the find string and then	-- converting back to a string using the new replacement text as the delimiter	set AppleScript's text item delimiters to the p_strFind	set the listTextItems to every text item of p_strSource	set AppleScript's text item delimiters to the p_strReplace	set strOutput to the listTextItems as string		-- Restore the initial delimiter	set AppleScript's text item delimiters to strInitialDelimiter		-- Return the new string	return strOutputend Substitute","Browser Tab List - Safari (AS)"
+"cc","tell application ""Script Editor""
+	set the clipboard to """"
+end tell
+","Clear's the system clipboard contents with AppleScript."
+"clear","tell application ""System Events""
+    try
+        set the clipboard to """"
+    on error err_message
+        display dialog err_message
+    end try
+end tell","Clear the system clipboard with AppleScript."
+"machd","set theResult to do shell script ""df -h | grep disk1s5s1""","Runs an AppleScript using `df` to query file space information about the main system harddrive."
+"scpt","```applescript
+%pasteboard
+```","Wrap Applescript code."
+"sms","tell application ""Messages""
+	
+	set targetBuddy to ""+15738234380""
+	set targetService to id of 1st account whose service type = iMessage
+	
+	
+	set textMessage to (the clipboard)
+	
+	set theBuddy to participant targetBuddy of account id targetService
+	send textMessage to theBuddy
+	
+end tell","Send the current contents of the system clipboard to the provided telephone number via the Messages Mac app."

@@ -1,0 +1,490 @@
+﻿"","if ('createTouch' in document)
+{
+    try
+    {
+        var ignore = /:hover/;
+        for (var i=0; i<document.styleSheets.length; i++)
+        {
+            var sheet = document.styleSheets[i];
+            for (var j=sheet.cssRules.length-1; j>=0; j--)
+            {
+                var rule = sheet.cssRules[j];
+                if (rule.type === CSSRule.STYLE_RULE && ignore.test(rule.selectorText))
+                {
+                    sheet.deleteRule(j);
+                }
+            }
+        }
+    }
+    catch(e){}
+}","Remove Hover Styles on iOS"
+",Oconlog","console.log('%O', %|);","console.log() JS object"
+",cconlog","console.log('%c%|', 'color: blue;');","console.log() Styled"
+",conassert","console.assert(condition, '');","console.assert()"
+",conerror","console.error('%|');","console.error()"
+",congroup","console.group('%|');
+// ...
+console.groupEnd();","console.group()"
+",conlog","console.log('%|');","console.log()"
+",contime","console.time('%filltext:name=label%');
+// … %|
+console.timeEnd('%filltext:name=label%');","console.time()"
+",conwarn","console.warn('%|');","console.warn()"
+",docready","$(document).ready(function(){
+	%|
+});",""
+",eprevent","e.preventDefault();","PreventDefault"
+",es6objtemplate","var %| = {
+  init() {
+    this.cache();
+    this.bindEvents();
+  }
+
+  cache() {
+    
+  }
+
+  bindEvents() {
+    
+  }
+}","Object Template ES6"
+",jsaddcssrule","function addCssRule(sheet, selector, rules, index) {
+  if(sheet.insertRule) {
+    sheet.insertRule(selector + ""{"" + rules + ""}"", index);
+  }
+  else {
+    sheet.addRule(selector, rules, index);
+  }
+}
+
+// addCssRule(document.styleSheets[0], '', '');",""
+",jsafter","document.querySelector('%|').insertAdjacentHTML('afterend', '<div></div>')","Add After Elem"
+",jsajaxcache","var ajaxCache = {};
+
+$('#ajaxForm').on('submit', function(e) {
+  var key = $('#field').val(); // get a key to store/cache for lookup
+
+  if ( !ajaxCache[key] ) {
+    ajaxCache[key] = $.ajax({
+      url: 'http://',
+      dataType: 'jsonp',
+      data: {},
+      timeout: 15000
+    });
+  }
+  ajaxCache[key].done().fail().always();
+
+  e.preventDefault();
+});","jQuery Ajax Cache"
+",jsappend","document.querySelector('%|').insertAdjacentHTML('beforeend', '<div></div>')","Append Elem"
+",jsbefore","document.querySelector('%|').insertAdjacentHTML('beforebegin', '<div></div>')","Add Before Elem"
+",jsdelete","document.querySelector('%filltext:name=elem%').parentNode.removeChild(document.querySelector('%filltext:name=elem%'))","Remove Elem"
+",jsevtdel","el.addEventListener(""click"",function(e) {
+  if(e.target && e.target.nodeName == ""%|"") {
+    // ...
+  }
+});","Event Delegation"
+",jsextend","function extend(destination, source) {
+    var toString = Object.prototype.toString,
+        objTest = toString.call({});
+    for (var property in source) {
+        if (source[property] && objTest == toString.call(source[property])) {
+            destination[property] = destination[property] || {};
+            extend(destination[property], source[property]);
+        } else {
+            destination[property] = source[property];
+        }
+    }
+    return destination;
+};",""
+",jshintrc","{
+  // JSHint Default Configuration File (as on JSHint website)
+  // See http://jshint.com/docs/ for more details
+
+  ""maxerr""        : 50,       // {int} Maximum error before stopping
+
+  // Enforcing
+  ""bitwise""       : true,     // true: Prohibit bitwise operators (&, |, ^, etc.)
+  ""camelcase""     : false,    // true: Identifiers must be in camelCase
+  ""curly""         : true,     // true: Require {} for every new block or scope
+  ""eqeqeq""        : true,     // true: Require triple equals (===) for comparison
+  ""forin""         : true,     // true: Require filtering for..in loops with obj.hasOwnProperty()
+  ""immed""         : false,    // true: Require immediate invocations to be wrapped in parens e.g. `(function () { } ());`
+  ""indent""        : 4,        // {int} Number of spaces to use for indentation
+  ""latedef""       : false,    // true: Require variables/functions to be defined before being used
+  ""newcap""        : false,    // true: Require capitalization of all constructor functions e.g. `new F()`
+  ""noarg""         : true,     // true: Prohibit use of `arguments.caller` and `arguments.callee`
+  ""noempty""       : true,     // true: Prohibit use of empty blocks
+  ""nonew""         : false,    // true: Prohibit use of constructors for side-effects (without assignment)
+  ""plusplus""      : false,    // true: Prohibit use of `++` & `--`
+  ""quotmark""      : false,    // Quotation mark consistency:
+                              //   false    : do nothing (default)
+                              //   true     : ensure whatever is used is consistent
+                              //   ""single"" : require single quotes
+                              //   ""double"" : require double quotes
+  ""undef""         : true,     // true: Require all non-global variables to be declared (prevents global leaks)
+  ""unused""        : true,     // true: Require all defined variables be used
+  ""strict""        : true,     // true: Requires all functions run in ES5 Strict Mode
+  ""trailing""      : false,    // true: Prohibit trailing whitespaces
+  ""maxparams""     : false,    // {int} Max number of formal params allowed per function
+  ""maxdepth""      : false,    // {int} Max depth of nested blocks (within functions)
+  ""maxstatements"" : false,    // {int} Max number statements per function
+  ""maxcomplexity"" : false,    // {int} Max cyclomatic complexity per function
+  ""maxlen""        : false,    // {int} Max number of characters per line
+
+  // Relaxing
+  ""asi""           : false,     // true: Tolerate Automatic Semicolon Insertion (no semicolons)
+  ""boss""          : false,     // true: Tolerate assignments where comparisons would be expected
+  ""debug""         : false,     // true: Allow debugger statements e.g. browser breakpoints.
+  ""eqnull""        : false,     // true: Tolerate use of `== null`
+  ""es5""           : false,     // true: Allow ES5 syntax (ex: getters and setters)
+  ""esnext""        : false,     // true: Allow ES.next (ES6) syntax (ex: `const`)
+  ""moz""           : false,     // true: Allow Mozilla specific syntax (extends and overrides esnext features)
+                               // (ex: `for each`, multiple try/catch, function expression…)
+  ""evil""          : false,     // true: Tolerate use of `eval` and `new Function()`
+  ""expr""          : false,     // true: Tolerate `ExpressionStatement` as Programs
+  ""funcscope""     : false,     // true: Tolerate defining variables inside control statements""
+  ""globalstrict""  : false,     // true: Allow global ""use strict"" (also enables 'strict')
+  ""iterator""      : false,     // true: Tolerate using the `__iterator__` property
+  ""lastsemic""     : false,     // true: Tolerate omitting a semicolon for the last statement of a 1-line block
+  ""laxbreak""      : false,     // true: Tolerate possibly unsafe line breakings
+  ""laxcomma""      : false,     // true: Tolerate comma-first style coding
+  ""loopfunc""      : false,     // true: Tolerate functions being defined in loops
+  ""multistr""      : false,     // true: Tolerate multi-line strings
+  ""proto""         : false,     // true: Tolerate using the `__proto__` property
+  ""scripturl""     : false,     // true: Tolerate script-targeted URLs
+  ""smarttabs""     : false,     // true: Tolerate mixed tabs/spaces when used for alignment
+  ""shadow""        : false,     // true: Allows re-define variables later in code e.g. `var x=1; x=2;`
+  ""sub""           : false,     // true: Tolerate using `[]` notation when it can still be expressed in dot notation
+  ""supernew""      : false,     // true: Tolerate `new function () { ... };` and `new Object;`
+  ""validthis""     : false,     // true: Tolerate using this in a non-constructor function
+
+  // Environments
+  ""browser""       : true,     // Web Browser (window, document, etc)
+  ""couch""         : false,    // CouchDB
+  ""devel""         : true,     // Development/debugging (alert, confirm, etc)
+  ""dojo""          : false,    // Dojo Toolkit
+  ""jquery""        : false,    // jQuery
+  ""mootools""      : false,    // MooTools
+  ""node""          : false,    // Node.js
+  ""nonstandard""   : false,    // Widely adopted globals (escape, unescape, etc)
+  ""prototypejs""   : false,    // Prototype and Scriptaculous
+  ""rhino""         : false,    // Rhino
+  ""worker""        : false,    // Web Workers
+  ""wsh""           : false,    // Windows Scripting Host
+  ""yui""           : false,    // Yahoo User Interface
+
+  // Legacy
+  ""nomen""         : false,    // true: Prohibit dangling `_` in variables
+  ""onevar""        : false,    // true: Allow only one `var` statement per function
+  ""passfail""      : false,    // true: Stop on first error
+  ""white""         : false,    // true: Check against strict whitespace and indentation rules
+
+  // Custom Globals
+  ""predef""        : [ ]       // additional predefined global variables
+}","JSHint Config File"
+",jsidelem","document.getElementById('%|');","getElementById"
+",jsnext","var next = document.querySelector('%|').nextSibling;
+while( next.nodeType > 1 ) next = next.nextSibling","Next Sibling"
+",jsparent","document.querySelector('%|').parentNode","Parent Node"
+",jsprepend","document.querySelector('%|').insertAdjacentHTML('afterbegin', '<div></div>')","Prepend Elem"
+",jspreventhover","var body = document.body,
+    scrollTimer;
+
+window.addEventListener('scroll', function() {
+  clearTimeout(scrollTimer);
+  if(!body.classList.contains('disable-hover')) {
+    body.classList.add('disable-hover');
+  }
+  
+  scrollTimer = setTimeout(function(){
+    body.classList.remove('disable-hover');
+  }, 500);
+}, false);
+
+/*
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important;
+}
+*/","Prevent Hover On Scroll"
+",jsquery","document.querySelectorAll('%|');","querySelectorAll"
+",jsrect","var %filltext:name=elRect% = document.querySelector('%|').getBoundingClientRect();","Get el bounding rect"
+",jstoggleclass","function toggleClass(elem, className) {
+  var newClass = ' ' + elem.className.replace( /[\t\r\n]/g, ' ' ) + ' ';
+  if (hasClass(elem, className)) {
+    while (newClass.indexOf(' ' + className + ' ') >= 0 ) {
+      newClass = newClass.replace( ' ' + className + ' ' , ' ' );
+    }
+    elem.className = newClass.replace(/^\s+|\s+$/g, '');
+  } else {
+    elem.className += ' ' + className;
+  }
+}","Toggle Class"
+",jstypeof","function typeOf(value) {
+    var s = typeof value;
+    if (s === 'object') {
+        if (value) {
+            if (value instanceof Array) {
+                s = 'array';
+            }
+        } else {
+            s = 'null';
+        }
+    }
+    return s;
+}","typeOf"
+",keycheck","if(""%filltext:name=Feature%"" in navigator) {
+    %|
+}
+","Key Check"
+",objtemplate","var obj = {
+  init: function( config ) {
+    this.config = config;
+
+    this.cache();
+    this.bindEvents();
+
+    //...
+  },
+
+  cache: function() {
+    // this.container = $('div');
+  },
+
+  bindEvents: function() {
+    // on click/change/etc methods
+  }
+}","Object Template"
+",oconlog","console.log('%o', %|);","console.log() DOM element"
+",siaf","(function() {
+  
+}());","selfInvokingFunction"
+",tmto","TweenMax.to(%filltext:name=el%, %filltext:name=time:default=0.2%, {
+  %|
+});","TweenMax.to"
+",usestrict","'use strict';","Use Strict"
+"all","%fillpart:name=Convert clipboard to camel case%%snippet:camel%%fillpartend%
+%fillpart:name=Convert clipboard to title case%%snippet:title%%fillpartend%
+%fillpart:name=Trim whitespace from clipboard text%%snippet:trimws%%fillpartend%
+%fillpart:name=Copy 10-digit phone number to clipboard | expands as (123) 456-7890%%snippet:ph2%%fillpartend%
+%fillpart:name=Copy 10-digit phone number to clipboard | expands as 123.456.7890%%snippet:ph1%%fillpartend%
+%fillpart:name=Quote text%%snippet:quotereply%%fillpartend%
+%fillpart:name=Get URL path from clipboard%%snippet:geturlpath%%fillpartend%
+%fillpart:name=Renumber list%%snippet:renumber%%fillpartend%
+%fillpart:name=Alphabetize list%%snippet:alpha%%fillpartend%
+%fillpart:name=Reverse%%snippet:clip.reverse%%fillpartend%
+%filltop%","Summary Snippet"
+"alpha","/************
+Description: This snippet will alphabetize a list
+
+Instructions:
+
+1. Copy a list to your clipboard
+2. Expand snippet.
+
+Sample Input:
+
+Banana
+Orange
+Apple
+
+
+Output:
+
+Apple
+Banana
+Orange
+*************/
+
+TextExpander.pasteboardText.split(""\n"").sort().join(""\n"");","Alphabetize list on clipboard"
+"camel","// h/t: https://www.geeksforgeeks.org/how-to-convert-string-to-camel-case-in-javascript/
+function toCamelCase(str) { 
+    return str.replace(/(?:^\w|[A-Z]|\b\w)/g, function(word, index) { 
+        return index == 0 ? word.toLowerCase() : word.toUpperCase();
+        }).replace(/\s+/g, ''); 
+} 
+
+toCamelCase(TextExpander.pasteboardText);","Convert clipboard to camel case"
+"case","%fillpart:name=Title Case:default=no%%snippet:titlecase%%fillpartend%
+%fillpart:name=camelCase:default=no%%snippet:case-camel%%fillpartend%%filltop%","Fill-in for different case options | #skip"
+"fandr","// 
+TextExpander.pasteboardText.replace(/%filltext:name=Find%/g,""%filltext:name=Replace%"")%filltop%","Find and replace on clipboard (this is case sensitive)"
+"makepopup","// This snippet expects one option per line
+
+var options = TextExpander.pasteboardText.split(/\r\n|\n|\r/);
+
+TextExpander.pasteboardText = ""%"" + ""fillpopup:name=My Popup:"" + options.join("":"") + ""%"";
+
+`The popup menu macro code is now on your clipboard. Please do the following:
+
+1. Create a new snippet.
+2. Set the content to AppleScript via the dropdown menu above the content.
+3. Paste your clipboard into the content area.
+4. Set the content to Plain text via the dropdown menu above the content.
+
+Here is a brief video demonstration:
+
+https://share.getcloudapp.com/2NuwB5yp
+`","Create a popup menu from options on clipboard"
+"path","/************
+Description: This snippet will paste the path of the url on the clipboard.
+
+Instructions:
+
+1. Copy a full url to the clipboard.
+2. Expand snippet.
+
+Sample Input:
+
+https://stackoverflow.com/questions/6941533/get-protocol-domain-and-port-from-url
+
+Output:
+
+/questions/6941533/get-protocol-domain-and-port-from-url
+*************/
+// ht: https://stackoverflow.com/questions/6941533/get-protocol-domain-and-port-from-url
+const url = new URL(TextExpander.pasteboardText);
+
+url.pathname;
+","Get URL path from clipboard"
+"ph1","var s2 = (""""+TextExpander.pasteboardText).replace(/\D/g, '');
+var m = s2.match(/^(\d{3})(\d{3})(\d{4})$/);
+if(m) m[1] + ""."" + m[2] + ""."" + m[3];
+else """";","Copy 10-digit phone number to clipboard | expands as 123.456.7890"
+"ph2","var s2 = (""""+TextExpander.pasteboardText).replace(/\D/g, '');
+var m = s2.match(/^(\d{3})(\d{3})(\d{4})$/);
+if(m) `(${m[1]}) ${m[2]}-${m[3]}`;
+else """";","Copy 10-digit phone number to clipboard | expands as (123) 456-7890"
+"phx","%fillpart:name=123.456.7890:default=no%%snippet:ph1%%fillpartend%
+%fillpart:name=(123) 456-7890:default=no%%snippet:ph2%%fillpartend%%filltop%","Fill-in for different phone number options | #skip"
+"pretty","JSON.stringify(%clipboard, null, 2);",""
+"quotereply","/************
+Description: This snippet will use >> to quote reply text copied to your clipboard.
+
+Instructions:
+
+1. Copy the text you'd like to quote to your clipboard.
+2. Expand snippet.
+
+Sample Input:
+
+Dictumst imperdiet porta lacinia. Blandit nec pellentesque himenaeos fames elementum leo sagittis. Dictum conubia viverra at nullam orci vivamus. Torquent accumsan etiam. Tempor accumsan suscipit. Integer nostra himenaeos praesent fermentum.
+
+Output:
+
+>>Dictumst imperdiet porta lacinia. Blandit nec pellentesque himenaeos fames elementum leo sagittis. Dictum conubia viverra
+>>at nullam orci vivamus. Torquent accumsan etiam. Tempor accumsan suscipit. Integer nostra himenaeos praesent
+>>fermentum.
+*************/
+
+var theString = TextExpander.pasteboardText;
+
+var theLines = theString.split(""\n"");
+
+var output = """";
+
+for(aLine of theLines){
+    var theWords = aLine.split("" "");
+    var ct = 0;
+    if(theWords.length > 1) output = output + "">>"";
+    for(aWord of theWords){
+        if(ct < 15) output = output + "" "" + aWord;
+        else{
+            output = output + ""\n>>"" + aWord;
+            ct = 1;
+			}
+			ct++;
+    }
+    output = output + ""\n"";
+}
+
+output;","Quote text on clipboard"
+"renumber","/************
+Description: This snippet will renumber a list that is copied to your clipboard.
+
+Instructions:
+
+1. Copy an incorrectly numbered list to your clipboard.
+2. Expand snippet.
+
+Sample Input
+
+1. item 1
+3. item 2
+2. item 3
+
+Output:
+
+1. item 1
+2. item 2
+3. item 3
+*************/
+
+inputString = ""Line 0\n"" + TextExpander.pasteboardText;
+
+// attempt to remove zero width space
+inputString = inputString.replace(/[\u200B-\u200D\uFEFF]/g, '');
+
+var regExp = /\d+(.)/;
+var matches = regExp.exec(inputString);
+listDelimiter = matches[1];
+
+var items = inputString.split(/[\r\n][0-9]+./);
+
+var output = """";
+
+for(var i = 1; i < items.length; i++){
+    output = output + i + listDelimiter + items[i];
+    if(i != items.length-1) output = output + ""\n"";
+}
+
+output;","Renumber list on clipboard"
+"reverse","TextExpander.pasteboardText.split("""").reverse().join("""");",""
+"title","function capitalizeFirstLetter(input){
+    return input.charAt(0).toUpperCase() + input.substring(1);
+}
+
+var lowerCaseWords = [
+""a"",
+""an"",
+""the"",
+""for"",
+""and"",
+""nor"",
+""but"",
+""or"",
+""yet"",
+""so"",
+""such"",
+""as"",
+""at"",
+""around"",
+""by"",
+""after"",
+""along"",
+""for"",
+""from"",
+""of"",
+""on"",
+""to"",
+""with"",
+""without""
+];
+
+var words = TextExpander.pasteboardText.toLowerCase().split("" "");
+
+for(var i = 0; i < words.length; i++){
+    if(!lowerCaseWords.includes(words[i]) || i == 0 || i == words.length-1) words[i] = capitalizeFirstLetter(words[i]);
+}
+
+words.join("" "");","Convert clipboard to title case"
+"toCSV","// Lines to CSV: Turns a regular list of elements to a list of comma separated elements (CSV)
+// Courtesy of Guillermo Ermel
+TextExpander.pasteboardText.replace(/(\n|\r)+\b/ig, "", "")","Lines to CSV"
+"toLines","// CSV to Newline: Turns a list of comma separated elements (CSV) to a list with each element on its own line
+// Courtesy of Guillermo Ermel
+TextExpander.pasteboardText.replace(/\s*\,\s*/gim, ""\n"")","CSV to Newline"
+"trimws","var input = TextExpander.pasteboardText;
+
+input.trim();","Trim whitespace from clipboard text"

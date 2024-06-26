@@ -1,0 +1,7 @@
+﻿"3ts","%@+3h%m%d%Y-%H%M%S","Timestamp in DavodTime + 3 hours"
+"date","%m%d%Y","Date in DavodTime™"
+"davodtime","MMddYYYY-HHmmss","Print DavodTime™  format meta (mostly used for Calendar actions in Siri Shortcuts.)"
+"ddtime","[[date|%%m%%d%%Y-%%H%%M%%S]]","DavodTime Drafts Template Tag."
+"strf","%%m%%d%%Y-%%H%%M%%S","DavodTime Drafts Template Tag."
+"ts","%m%d%Y-%H%M%S","Timestamp in DavodTime"
+"wikitime","https://github.com/extratone/bilge/wiki/DavodTime","URL to the entry for DavodTime™ in The Psalms’ GitHub repo Wiki. "

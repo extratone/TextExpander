@@ -1,0 +1,131 @@
+﻿"~mad","#!/usr/bin/ruby
+
+datestring=""%filltext:name=Date String:default=today%""
+format=""%fillpopup:name=Format:default=iso:short:long:slashed%""
+
+### Convert Date action
+### Copyright 2013 Brett Terpstra <http://brettterpstra.com>
+### Freely distribute and edit, but please maintain attribution
+require 'Time'
+
+class DateUtils
+
+  def initialize(time_zone = 'America/Chicago')
+    @time_zone = time_zone
+  end
+
+  def parsedate(date,format,unpad=false)
+    date = Time.parse(%x{php -r ""date_default_timezone_set('#{@time_zone}');echo strftime('%c',strtotime('#{date}'));""})
+    parsed = date.strftime(format).gsub(/%o/,""#{ordinal(date.strftime('%e').to_i)}"")
+    parsed.gsub!(/(^|-|\/|\s)0/,""\\1"") if unpad
+    # if there's no space between time and meridiem, downcase it
+    parsed.gsub!(/(\d)(AM|PM)/) {|m| $1 + $2.downcase }
+    return parsed =~ /1969/ ? false : parsed
+  end
+
+  # Returns an ordinal number. 13 -> 13th, 21 -> 21st etc.
+  def ordinal(number)
+    if (11..13).include?(number.to_i % 100)
+      ""#{number}th""
+    else
+      case number.to_i % 10
+      when 1; ""#{number}st""
+      when 2; ""#{number}nd""
+      when 3; ""#{number}rd""
+      else    ""#{number}th""
+      end
+    end
+  end
+
+  def timeize(time_string,format)
+    # Uses standard strftime format, but %0I will pad single-digit hours
+    if time_string =~ /(\d{1,2})(?::(\d\d))?(?:\s*(a|p)m?)?/i
+      hour = $1.to_i
+      minute = $2.nil? ? ""00"" : $2.to_i
+      meridiem = $3
+      meridiem = hour > 12 ? ""p"" : ""a"" if meridiem.nil?
+      format.gsub!(/%H/) {|m|
+        hour = hour < 12 && meridiem == ""p"" ? hour + 12 : hour
+        hour = 0 if hour == 12 && meridiem == ""a""
+        hour < 10 ? ""0"" + hour.to_s : hour
+      }
+      format.gsub!(/%(0)?I/) {|m|
+        hour = hour > 12 ? hour - 12 : hour
+        $1 == ""0"" && hour < 10 ? ""0"" + hour.to_s : hour
+      }
+      format.gsub!(/%M/,minute.to_s)
+      format.gsub!(/%p/,meridiem.downcase + ""m"")
+      format.gsub!(/%P/,meridiem.upcase + ""M"")
+    end
+    format
+  end
+end
+
+original = format + "" "" + datestring
+
+# split input and handle thursday@3 format
+input = original.gsub(/(\S)@(\S)/,""\\1 at \\2"").split("" "")
+unpad = true
+du = DateUtils.new
+
+# %%o is replaced with ordinal day
+format = case input[0]
+when 'date' then '%m/%d/%y' # slashed date
+when 'local' then '%F' # localized date
+when 'short' then '%a, %b %%o, %Y' # abbreviated full date
+when 'long' then '%A, %B %%o, %Y' # long full date
+when 'iso' then '%Y-%m-%d'
+else false
+end
+
+# turn off leading zero removal for certain types
+unpad = false if input[0] =~ /(date|local|iso)/
+
+# handle +# to advance # days
+input.map! {|part|
+  part.gsub(/^\+(\d+)$/,""\\1 days"").gsub(/^at$/,'')
+}
+
+# time formatting
+time_format = """"
+time_string = """"
+if original.gsub(/\+\d+/,'') =~ /((?:at|@) *)?(\d{1,2}(:\d\d)?(\s*(a|p)m?)?)/i
+  time_string = $2
+  time_format = case input[0]
+  when 'iso' then du.timeize(time_string,"" %H:%M"")
+  when 'long' then du.timeize(time_string,"" at %I:%M%p"")
+  else du.timeize(time_string,"" %I:%M %P"")
+  end
+
+  input.delete_if { |item|
+    item =~ /^(@|at|@?\d{1,2}(:\d\d)?((a|p)m?)?|((a|p)m?))$/i
+  }
+end
+date_string = """"
+if format
+  if input.length > 1
+    if original.gsub(/((@|at)\s*)?#{time_string}/,'') =~ /^[\s\n]*$/m
+      date_string = ""today #{time_format}""
+    else
+      date_string = input[1..input.length].join("" "")
+    end
+  else
+    date_string = ""today""
+  end
+else
+  if original.gsub(/((@|at)\s*)?#{time_string}/,'') =~ /^[\s\n]*$/m
+	date_string = ""today #{time_format}""
+  else
+    date_string = input.join("" "")
+  end
+  unpad = false
+  format = '%F'
+end
+
+output = du.parsedate(date_string,format + time_format,unpad)
+
+if output
+  print output
+else
+  print original
+end","Make a Date 2"
